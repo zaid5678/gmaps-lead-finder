@@ -20,6 +20,7 @@ from dataclasses import dataclass, field, asdict
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from urllib.parse import quote_plus
 
 from playwright.sync_api import sync_playwright, Page, Playwright, Browser, TimeoutError as PwTimeout
 
@@ -202,37 +203,43 @@ class GoogleMapsScraper:
                 'button:has-text("Reject all")',
                 'button[aria-label="Accept all"]',
                 '[action*="consent"] button:first-child',
+                'form[action*="consent"] button',
             ]:
                 btn = self.page.locator(selector).first
                 if btn.is_visible(timeout=2000):
                     btn.click()
+                    human_delay(2, 3)
+                    self.page.wait_for_load_state("domcontentloaded", timeout=15000)
                     human_delay(1, 2)
                     return
         except Exception:
             pass
 
+    def _handle_consent_redirect(self):
+        """If Google redirected to consent.google.com, handle it."""
+        if "consent.google" in self.page.url:
+            log.info("Google consent page detected — accepting…")
+            self._accept_cookies()
+            human_delay(2, 4)
+
     def navigate_to_maps(self):
         """Load Google Maps and handle any consent screen."""
         log.info("Loading Google Maps…")
         self.page.goto(self.MAPS_URL, wait_until="domcontentloaded", timeout=30000)
-        human_delay(2, 4)
+        human_delay(1, 2)
+        self._handle_consent_redirect()
         self._accept_cookies()
+        human_delay(1, 2)
 
     # ── searching ───────────────────────────────────────────
     def search(self, query: str):
-        """Type a search query into the Maps search box and submit."""
+        """Navigate directly to the Maps search URL for the given query."""
         log.info(f"Searching: {query}")
-        search_box = self.page.locator('#searchboxinput')
-        search_box.click()
-        human_delay(0.3, 0.6)
-        search_box.fill("")
-        human_delay(0.2, 0.4)
-        # Type character-by-character to look human
-        for char in query:
-            search_box.press(char)
-            time.sleep(random.uniform(0.03, 0.10))
-        human_delay(0.5, 1.0)
-        search_box.press("Enter")
+        search_url = f"{self.MAPS_URL}/search/{quote_plus(query)}/"
+        self.page.goto(search_url, wait_until="domcontentloaded", timeout=30000)
+        human_delay(1, 2)
+        self._handle_consent_redirect()
+        self._accept_cookies()
         human_delay(3, 5)  # wait for results to render
 
     # ── scrolling results panel ─────────────────────────────
@@ -384,7 +391,6 @@ class GoogleMapsScraper:
     ) -> list[Business]:
         """Run a full search → scroll → extract cycle for one keyword + location."""
         query = f"{keyword} in {location}"
-        self.navigate_to_maps()
         self.search(query)
 
         # Scroll to load results
@@ -531,8 +537,8 @@ def build_parser() -> argparse.ArgumentParser:
         help="Comma-separated business types (default: barber,takeaway,nail salon)",
     )
     p.add_argument(
-        "--cities", type=str, default=",".join(DEFAULT_LOCATIONS),
-        help='Comma-separated locations (default: "London, UK,Manchester, UK,Birmingham, UK")',
+        "--cities", type=str, default="|".join(DEFAULT_LOCATIONS),
+        help='Pipe-separated locations (default: "London, UK|Manchester, UK|Birmingham, UK")',
     )
     p.add_argument(
         "--min-reviews", type=int, default=DEFAULT_MIN_REVIEWS,
@@ -557,7 +563,7 @@ def main():
     args = build_parser().parse_args()
 
     keywords = [k.strip() for k in args.keywords.split(",") if k.strip()]
-    locations = [l.strip() for l in args.cities.split(",") if l.strip()]
+    locations = [l.strip() for l in args.cities.split("|") if l.strip()]
     min_reviews = args.min_reviews
     min_rating = args.min_rating
     max_results = args.max_results
