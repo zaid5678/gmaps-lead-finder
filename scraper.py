@@ -61,6 +61,7 @@ DEFAULT_MIN_REVIEWS = 50
 DEFAULT_MIN_RATING = 0.0
 DEFAULT_MAX_RESULTS_PER_SEARCH = 15
 OUTPUT_DIR = Path("output")
+README_PATH = Path("README.md")
 HEADLESS = True
 
 # Email
@@ -478,22 +479,116 @@ def sort_by_opportunity(businesses: list[Business]) -> list[Business]:
 
 
 # ─────────────────────────────────────────────────────────────
-# CSV EXPORT
+# README EXPORT
 # ─────────────────────────────────────────────────────────────
-def save_csv(businesses: list[Business], filepath: Path):
-    filepath.parent.mkdir(parents=True, exist_ok=True)
-    fieldnames = [
-        "name", "address", "phone", "rating", "review_count",
-        "website", "category", "instagram", "third_party_only",
-        "search_keyword", "search_location", "maps_url",
-    ]
-    with open(filepath, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        for biz in businesses:
-            row = asdict(biz)
-            writer.writerow({k: row[k] for k in fieldnames})
-    log.info(f"Saved {len(businesses)} rows → {filepath}")
+_LEADS_HEADER = "## Leads"
+_LEGAL_MARKER = "## Legal Note"
+
+
+def _table_rows(businesses) -> str:
+    """Build markdown table rows from Business objects or CSV dicts."""
+    rows = ""
+    for b in businesses:
+        if isinstance(b, Business):
+            name     = b.name
+            category = b.category
+            location = b.search_location
+            phone    = b.phone
+            reviews  = str(b.review_count)
+            rating   = f"{b.rating:.1f}"
+            maps_url = b.maps_url
+        else:
+            name     = b.get("name", "")
+            category = b.get("category", "")
+            location = b.get("search_location", "")
+            phone    = b.get("phone", "")
+            reviews  = b.get("review_count", "")
+            rating   = b.get("rating", "")
+            maps_url = b.get("maps_url", "")
+
+        name     = name.replace("|", "\\|").replace("\n", " ").strip()
+        phone    = phone.replace("|", "\\|").strip()
+        category = category.replace("|", "\\|").strip()
+        link     = f"[Maps]({maps_url})" if maps_url else ""
+
+        rows += (
+            f"| {name} | {category} | {location} | {phone} "
+            f"| {reviews} | {rating} | {link} |\n"
+        )
+    return rows
+
+
+def _build_section(title: str, date_str: str, businesses) -> str:
+    header = (
+        f"\n### {title} — {date_str} ({len(businesses)} leads)\n\n"
+        "| Business | Category | City | Phone | Reviews | Rating | Maps |\n"
+        "|----------|----------|------|-------|---------|--------|------|\n"
+    )
+    return header + _table_rows(businesses) + "\n"
+
+
+def _migrate_existing_csvs() -> str:
+    """Read all existing leads_*.csv files and return a combined markdown block."""
+    csv_files = sorted(OUTPUT_DIR.glob("leads_*.csv"))
+    if not csv_files:
+        return ""
+
+    block = ""
+    for csv_file in csv_files:
+        stem = csv_file.stem.replace("leads_", "")
+        try:
+            dt = datetime.strptime(stem, "%Y%m%d_%H%M%S")
+            date_str = dt.strftime("%d %b %Y %H:%M")
+        except ValueError:
+            date_str = stem
+
+        try:
+            with open(csv_file, newline="", encoding="utf-8") as f:
+                rows = list(csv.DictReader(f))
+        except Exception as exc:
+            log.warning(f"Could not read {csv_file}: {exc}")
+            continue
+
+        if rows:
+            block += _build_section(f"Previous leads ({csv_file.name})", date_str, rows)
+            block += "\n---\n"
+
+    return block
+
+
+def update_readme(new_leads: list[Business], section_title: str, readme_path: Path = README_PATH):
+    """
+    Append new_leads as a dated section to README.md just before ## Legal Note.
+    On the first call (no ## Leads section yet), migrates existing CSV files first.
+    """
+    content = readme_path.read_text(encoding="utf-8")
+    date_str = datetime.now().strftime("%d %b %Y %H:%M")
+
+    # First-time: create ## Leads section and migrate any existing CSVs
+    if _LEADS_HEADER not in content:
+        migration = _migrate_existing_csvs()
+        leads_block = (
+            f"{_LEADS_HEADER}\n\n"
+            "All leads are appended here automatically after each run.\n"
+            + migration
+        )
+        insert_at = content.find(_LEGAL_MARKER)
+        if insert_at == -1:
+            content += f"\n\n{leads_block}"
+        else:
+            content = content[:insert_at] + leads_block + "\n---\n\n" + content[insert_at:]
+
+    # Append new leads before ## Legal Note
+    if new_leads:
+        new_section = _build_section(section_title, date_str, new_leads)
+        insert_at = content.find(_LEGAL_MARKER)
+        if insert_at == -1:
+            content += new_section
+        else:
+            content = content[:insert_at] + new_section + "\n---\n\n" + content[insert_at:]
+
+    readme_path.write_text(content, encoding="utf-8")
+    log.info(f"Updated README.md — {len(new_leads)} leads added under '{section_title}'")
 
 
 # ─────────────────────────────────────────────────────────────
@@ -744,20 +839,9 @@ def main():
     new_leads = filter_new_leads(leads, seen)
     log.info(f"New leads (not previously seen): {len(new_leads)}")
 
-    # ── 5. SAVE CSVs ──────────────────────────────────────────
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    timestamp_fs = datetime.now().strftime("%Y%m%d_%H%M%S")
-
-    csv_path = OUTPUT_DIR / f"leads_{timestamp_fs}.csv"
-    save_csv(leads, csv_path)
-
-    all_path = OUTPUT_DIR / f"all_results_{timestamp_fs}.csv"
-    save_csv(sort_by_opportunity(unique), all_path)
-
-    if new_leads:
-        new_csv = OUTPUT_DIR / f"new_leads_{timestamp_fs}.csv"
-        save_csv(new_leads, new_csv)
-        log.info(f"New leads CSV: {new_csv}")
+    # ── 5. UPDATE README ──────────────────────────────────────
+    section_title = ", ".join(keywords)
+    update_readme(new_leads, section_title=section_title)
 
     # ── 6. EMAIL ──────────────────────────────────────────────
     email_sent = False
@@ -799,8 +883,7 @@ def main():
     log.info(f"Qualified leads:    {len(leads)}")
     log.info(f"New leads:          {len(new_leads)}")
     log.info(f"Email sent:         {email_sent}")
-    log.info(f"Leads file:         {csv_path}")
-    log.info(f"All results file:   {all_path}")
+    log.info(f"Leads written to:   {README_PATH}")
 
     if new_leads:
         log.info(f"\nTop 10 NEW leads by review count:")

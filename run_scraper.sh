@@ -37,8 +37,8 @@ echo "[run_scraper.sh] Starting at $(date)" | tee -a "$LOG_FILE"
 echo "[run_scraper.sh] Python: $PYTHON"     | tee -a "$LOG_FILE"
 
 # ── Run ──────────────────────────────────────────────────────
+# Add --send-email below when you're ready to receive email alerts
 "$PYTHON" "$SCRIPT_DIR/scraper.py" \
-    --send-email \
     "$@" \
     >> "$LOG_FILE" 2>&1
 
