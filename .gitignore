@@ -1,5 +1,8 @@
 .env
 .venv/
-output/
+output/logs/
+output/leads_*.csv
+output/all_results_*.csv
+output/new_leads_*.csv
 __pycache__/
 *.pyc
