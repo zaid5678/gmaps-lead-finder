@@ -276,6 +276,24 @@ All leads are appended here automatically after each run.
 
 ---
 
+
+### private doctor, private dentist, private GP, physiotherapist, chiropractor, optician, private clinic, cosmetic clinic, private dermatologist, private psychiatrist — 04 Apr 2026 02:04 (9 leads)
+
+| Business | Category | City | Phone | Reviews | Rating | Maps |
+|----------|----------|------|-------|---------|--------|------|
+| Ascenti Physio Manchester Spinningfields |  | Manchester, UK | 0330 678 0850 | 113 | 4.8 | [Maps](https://www.google.com/maps/place/Ascenti+Physio+Manchester+Spinningfields/data=!4m7!3m6!1s0x487bb1a259f1e0f1:0x42746b9e24131ad!8m2!3d53.479909!4d-2.251089!16s%2Fg%2F11hz99h456!19sChIJ8eDxWaKxe0gRrTFB4rlGJwQ?authuser=0&hl=en&rclk=1) |
+| Reqover Clinic |  | Manchester, UK | 07780 724715 | 68 | 4.9 | [Maps](https://www.google.com/maps/place/Reqover+Clinic/data=!4m7!3m6!1s0x487bb1099165e027:0x89188c89fc0c39a6!8m2!3d53.4683353!4d-2.2173177!16s%2Fg%2F11whml07hw!19sChIJJ-BlkQmxe0gRpjkM_ImMGIk?authuser=0&hl=en&rclk=1) |
+| The City and Travel Clinic |  | London, UK | 020 7062 2385 | 54 | 4.0 | [Maps](https://www.google.com/maps/place/The+City+and+Travel+Clinic/data=!4m7!3m6!1s0x48760512a850de7d:0xd7d9fca48f1fe29c!8m2!3d51.5023025!4d-0.1543379!16s%2Fg%2F11qpl6czjy!19sChIJfd5QqBIFdkgRnOIfj6T82dc?authuser=0&hl=en&rclk=1) |
+| The Eye Centre |  | Manchester, UK | 0161 478 7473 | 53 | 4.8 | [Maps](https://www.google.com/maps/place/The+Eye+Centre/data=!4m7!3m6!1s0x487bb3d797477505:0xb01df18d4420f6aa!8m2!3d53.4553853!4d-2.1980766!16s%2Fg%2F1pxqdkrz9!19sChIJBXVHl9eze0gRqvYgRI3xHbA?authuser=0&hl=en&rclk=1) |
+| The Ancoats Refinery |  | Manchester, UK | 07533 862172 | 37 | 5.0 | [Maps](https://www.google.com/maps/place/The+Ancoats+Refinery/data=!4m7!3m6!1s0x487bb1bb9b48216b:0x7b5e7a623b35d5df!8m2!3d53.4838743!4d-2.2292122!16s%2Fg%2F1td_b70k!19sChIJayFIm7uxe0gR39U1O2J6Xns?authuser=0&hl=en&rclk=1) |
+| HCA Healthcare UK - Manchester Central |  | Manchester, UK | 0345 437 0691 | 28 | 3.4 | [Maps](https://www.google.com/maps/place/HCA+Healthcare+UK+-+Manchester+Central/data=!4m7!3m6!1s0x487bb1c152f65549:0xdf162cac3a223e92!8m2!3d53.4830557!4d-2.2451809!16s%2Fg%2F1vr3cnlc!19sChIJSVX2UsGxe0gRkj4iOqwsFt8?authuser=0&hl=en&rclk=1) |
+| Manchester Private Hospital |  | Manchester, UK | 0161 507 8822 | 17 | 3.8 | [Maps](https://www.google.com/maps/place/Manchester+Private+Hospital/data=!4m7!3m6!1s0x48761b413343383d:0xd0856b185b30ae12!8m2!3d51.5207652!4d-0.1492013!16s%2Fg%2F11h48rvyj3!19sChIJPThDM0EbdkgREq4wWxhrhdA?authuser=0&hl=en&rclk=1) |
+| Private Doctor Clinic |  | London, UK | 020 3474 6300 | 9 | 4.6 | [Maps](https://www.google.com/maps/place/Private+Doctor+Clinic/data=!4m7!3m6!1s0x4876057dabe652a1:0x1ca3b80593d00c93!8m2!3d51.4848553!4d-0.1746473!16s%2Fg%2F11g7yb6cm2!19sChIJoVLmq30FdkgRkwzQkwW4oxw?authuser=0&hl=en&rclk=1) |
+| Leskupu Clinic |  | London, UK | 07540 637496 | 8 | 4.5 | [Maps](https://www.google.com/maps/place/Leskupu+Clinic/data=!4m7!3m6!1s0x48760548ed6e31cf:0xbfbd8e2470d1624!8m2!3d51.5081739!4d-0.153161!16s%2Fg%2F11fhxqsxbw!19sChIJzzFu7UgFdkgRJBYNR-LY-ws?authuser=0&hl=en&rclk=1) |
+
+
+---
+
 ## Legal Note
 
 This tool is for personal lead generation research. Be mindful of Google's Terms of Service. Use responsibly, don't hammer their servers, and respect the businesses you contact. Consider using the Google Maps Platform API for production-scale usage.
