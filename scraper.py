@@ -34,14 +34,11 @@ from playwright.sync_api import sync_playwright, Page, Playwright, Browser, Time
 # CONFIGURATION — edit these defaults or override via CLI args
 # ─────────────────────────────────────────────────────────────
 DEFAULT_KEYWORDS = [
-    "barber",
-    "plumber",
-    "electrician",
-    "restaurant",
-    "cafe",
-    "dentist",
-    "personal trainer",
-    "car mechanic",
+    "roofer",
+    "roofing company",
+    "roofing contractor",
+    "flat roofing",
+    "roof repair",
 ]
 
 DEFAULT_LOCATIONS = [
@@ -64,9 +61,10 @@ OUTPUT_DIR = Path("output")
 README_PATH = Path("README.md")
 HEADLESS = True
 
-# Email
+# Email / outreach
 EMAIL_RECIPIENT = "zfkhan321@gmail.com"
 SEEN_LEADS_PATH = OUTPUT_DIR / "seen_leads.json"
+OUTREACH_SENT_PATH = OUTPUT_DIR / "outreach_sent.json"
 
 # Anti-detection tuning
 MIN_DELAY = 1.0
@@ -90,6 +88,7 @@ class Business:
     name: str = ""
     address: str = ""
     phone: str = ""
+    email: str = ""
     rating: float = 0.0
     review_count: int = 0
     website: str = ""
@@ -364,6 +363,13 @@ class GoogleMapsScraper:
         except Exception:
             data["website"] = ""
 
+        try:
+            email_link = self.page.locator('a[href^="mailto:"]').first
+            raw = email_link.get_attribute("href") or ""
+            data["email"] = re.sub(r"^mailto:", "", raw).strip()
+        except Exception:
+            data["email"] = ""
+
         data["instagram"] = extract_instagram(self.page)
         data["third_party_only"] = detect_third_party(self.page)
 
@@ -404,6 +410,7 @@ class GoogleMapsScraper:
                     name=data.get("name", ""),
                     address=data.get("address", ""),
                     phone=data.get("phone", ""),
+                    email=data.get("email", ""),
                     rating=data.get("rating", 0.0),
                     review_count=data.get("review_count", 0),
                     website=data.get("website", ""),
@@ -633,7 +640,204 @@ def mark_leads_seen(leads: list[Business], seen: dict) -> dict:
 
 
 # ─────────────────────────────────────────────────────────────
-# EMAIL
+# OUTREACH TRACKING
+# ─────────────────────────────────────────────────────────────
+def load_outreach_sent(path: Path = OUTREACH_SENT_PATH) -> dict:
+    """Load outreach registry: {fingerprint: ISO-timestamp}."""
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (json.JSONDecodeError, OSError) as exc:
+        log.warning(f"Could not read outreach_sent.json: {exc} — treating as empty")
+        return {}
+
+
+def save_outreach_sent(sent: dict, path: Path = OUTREACH_SENT_PATH):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(sent, f, indent=2, ensure_ascii=False)
+    log.info(f"Saved outreach registry ({len(sent)} total) → {path}")
+
+
+def filter_not_yet_contacted(leads: list[Business], sent: dict) -> list[Business]:
+    return [biz for biz in leads if biz.fingerprint not in sent]
+
+
+def mark_outreach_sent(leads: list[Business], sent: dict) -> dict:
+    now_iso = datetime.now(timezone.utc).isoformat()
+    for biz in leads:
+        fp = biz.fingerprint
+        if fp not in sent:
+            sent[fp] = now_iso
+    return sent
+
+
+# ─────────────────────────────────────────────────────────────
+# OUTREACH HELPERS
+# ─────────────────────────────────────────────────────────────
+def normalize_uk_phone(phone: str) -> Optional[str]:
+    """Convert a UK phone string to E.164 format (+44...) for Twilio."""
+    if not phone:
+        return None
+    digits = re.sub(r"[^\d+]", "", phone)
+    if digits.startswith("+44") and len(digits) >= 12:
+        return digits
+    if digits.startswith("44") and len(digits) >= 12:
+        return "+" + digits
+    if digits.startswith("0") and len(digits) >= 10:
+        return "+44" + digits[1:]
+    return None
+
+
+def _outreach_email_body(biz: Business) -> str:
+    greeting = f"Hi {biz.name}," if biz.name else "Hi,"
+    return f"""{greeting}
+
+I hope you're well.
+
+I came across your business on Google and wanted to reach out with a quick idea that could help bring in more enquiries.
+
+At the moment, many customers searching for services like yours tend to compare a few options online before making a decision. If there isn't a clear, professional website, they often move on to competitors who make it easier to view services, pricing, and contact details in one place.
+
+A simple, well-structured website can help you:
+- show what you offer more clearly
+- build trust with new customers instantly
+- and turn more online searches into actual enquiries
+
+I build clean, straightforward websites designed specifically to generate enquiries for local businesses, so I thought it might be useful to connect.
+
+If you're open to it, I can put together a quick example for your business so you can see how it would look before making any decision.
+
+Thanks,
+Zaid"""
+
+
+def _outreach_sms_body(biz: Business) -> str:
+    greeting = f"Hi {biz.name}," if biz.name else "Hi,"
+    return (
+        f"{greeting} hope you're well.\n\n"
+        "I came across your business and wanted to reach out — quick idea that could "
+        "help bring in more enquiries.\n\n"
+        "At the moment, a lot of people searching online compare a few options before "
+        "choosing, and without a simple website they often go with competitors who make "
+        "it easier to view services and contact details.\n\n"
+        "A clean, simple website can help you show what you do more clearly and turn "
+        "more of those searches into actual customers.\n\n"
+        "If you're open to it, I can show you a quick example for your business 👍"
+    )
+
+
+# ─────────────────────────────────────────────────────────────
+# OUTREACH SENDERS
+# ─────────────────────────────────────────────────────────────
+def send_email_outreach(leads: list[Business], gmail_user: str, app_password: str) -> list[Business]:
+    """Send cold-outreach emails FROM gmail_user TO each lead that has an email address.
+    Returns the list of leads successfully emailed."""
+    if not gmail_user or not app_password:
+        raise RuntimeError("Set GMAIL_USER and GMAIL_APP_PASSWORD to send outreach emails.")
+
+    emailable = [b for b in leads if b.email]
+    if not emailable:
+        log.info("No leads have email addresses — skipping email outreach.")
+        return []
+
+    succeeded: list[Business] = []
+    with smtplib.SMTP("smtp.gmail.com", 587) as server:
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
+        server.login(gmail_user, app_password)
+
+        for biz in emailable:
+            try:
+                msg = MIMEMultipart("alternative")
+                msg["Subject"] = "Quick idea to bring in more local customers"
+                msg["From"] = gmail_user
+                msg["To"] = biz.email
+                msg.attach(MIMEText(_outreach_email_body(biz), "plain", "utf-8"))
+                server.sendmail(gmail_user, biz.email, msg.as_string())
+                log.info(f"  Outreach email → {biz.name} <{biz.email}>")
+                succeeded.append(biz)
+            except Exception as exc:
+                log.warning(f"  Email failed for {biz.name} ({biz.email}): {exc}")
+
+    log.info(f"Email outreach: {len(succeeded)}/{len(emailable)} sent.")
+    return succeeded
+
+
+def send_sms_outreach(leads: list[Business], account_sid: str, auth_token: str, from_number: str) -> list[Business]:
+    """Send SMS outreach via Twilio to each lead with a phone number.
+    Returns the list of leads successfully messaged."""
+    try:
+        from twilio.rest import Client  # type: ignore
+    except ImportError:
+        raise RuntimeError("twilio package not installed. Run: pip install twilio")
+
+    client = Client(account_sid, auth_token)
+    dialable = [(b, normalize_uk_phone(b.phone)) for b in leads]
+    dialable = [(b, e164) for b, e164 in dialable if e164]
+
+    if not dialable:
+        log.info("No leads have dialable phone numbers — skipping SMS outreach.")
+        return []
+
+    succeeded: list[Business] = []
+    for biz, e164 in dialable:
+        try:
+            client.messages.create(
+                body=_outreach_sms_body(biz),
+                from_=from_number,
+                to=e164,
+            )
+            log.info(f"  SMS → {biz.name} ({e164})")
+            succeeded.append(biz)
+        except Exception as exc:
+            log.warning(f"  SMS failed for {biz.name} ({e164}): {exc}")
+
+    log.info(f"SMS outreach: {len(succeeded)}/{len(dialable)} sent.")
+    return succeeded
+
+
+def send_whatsapp_outreach(leads: list[Business], account_sid: str, auth_token: str, from_whatsapp: str) -> list[Business]:
+    """Send WhatsApp outreach via Twilio to each lead with a phone number.
+    from_whatsapp should be in the form 'whatsapp:+14155238886' (Twilio sandbox)
+    or 'whatsapp:+44XXXXXXXXXX' (approved production number).
+    Returns the list of leads successfully messaged."""
+    try:
+        from twilio.rest import Client  # type: ignore
+    except ImportError:
+        raise RuntimeError("twilio package not installed. Run: pip install twilio")
+
+    client = Client(account_sid, auth_token)
+    dialable = [(b, normalize_uk_phone(b.phone)) for b in leads]
+    dialable = [(b, e164) for b, e164 in dialable if e164]
+
+    if not dialable:
+        log.info("No leads have dialable phone numbers — skipping WhatsApp outreach.")
+        return []
+
+    succeeded: list[Business] = []
+    for biz, e164 in dialable:
+        try:
+            client.messages.create(
+                body=_outreach_sms_body(biz),
+                from_=from_whatsapp,
+                to=f"whatsapp:{e164}",
+            )
+            log.info(f"  WhatsApp → {biz.name} ({e164})")
+            succeeded.append(biz)
+        except Exception as exc:
+            log.warning(f"  WhatsApp failed for {biz.name} ({e164}): {exc}")
+
+    log.info(f"WhatsApp outreach: {len(succeeded)}/{len(dialable)} sent.")
+    return succeeded
+
+
+# ─────────────────────────────────────────────────────────────
+# EMAIL (digest notification to self)
 # ─────────────────────────────────────────────────────────────
 def build_email_html(leads: list[Business], run_timestamp: str) -> str:
     rows_html = ""
@@ -775,6 +979,15 @@ def build_parser() -> argparse.ArgumentParser:
             "Requires GMAIL_USER and GMAIL_APP_PASSWORD env vars."
         ),
     )
+    p.add_argument(
+        "--send-outreach", action="store_true",
+        help=(
+            "Automatically send cold-outreach to each new lead via email "
+            "(if they have an address), SMS, and WhatsApp. "
+            "Requires GMAIL_USER, GMAIL_APP_PASSWORD, TWILIO_ACCOUNT_SID, "
+            "TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER, and TWILIO_WHATSAPP_FROM env vars."
+        ),
+    )
     return p
 
 
@@ -788,6 +1001,7 @@ def main():
     max_results = args.max_results
     headless = not args.visible
     do_email = args.send_email
+    do_outreach = args.send_outreach
 
     run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
     total_searches = len(keywords) * len(locations)
@@ -799,7 +1013,7 @@ def main():
     log.info(f"Locations ({len(locations)}): {locations}")
     log.info(f"Min reviews: {min_reviews}  |  Min rating: {min_rating}")
     log.info(f"Max results: {max_results} per search  |  Total searches: {total_searches}")
-    log.info(f"Send email:  {do_email}")
+    log.info(f"Send email:  {do_email}  |  Send outreach: {do_outreach}")
     log.info("=" * 60)
 
     # ── 1. SCRAPE ─────────────────────────────────────────────
@@ -857,7 +1071,36 @@ def main():
             except Exception as exc:
                 log.error(f"Email send failed: {exc}")
 
-    # ── 7. PERSIST SEEN LEADS ─────────────────────────────────
+    # ── 7. OUTREACH ───────────────────────────────────────────
+    outreach_email_count = 0
+    if do_outreach:
+        outreach_sent = load_outreach_sent()
+        to_contact = filter_not_yet_contacted(new_leads, outreach_sent)
+
+        if not to_contact:
+            log.info("All new leads already contacted — outreach skipped.")
+        else:
+            log.info(f"Sending outreach to {len(to_contact)} lead(s)…")
+            gmail_user = os.environ.get("GMAIL_USER", "").strip()
+            app_password = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
+
+            # Email outreach (only leads that have an email address on Maps)
+            if gmail_user and app_password:
+                try:
+                    emailed = send_email_outreach(to_contact, gmail_user, app_password)
+                    outreach_email_count = len(emailed)
+                except Exception as exc:
+                    log.error(f"Email outreach failed: {exc}")
+            else:
+                log.warning("GMAIL_USER / GMAIL_APP_PASSWORD not set — skipping email outreach.")
+
+            # SMS + WhatsApp outreach available — add Twilio credentials to enable
+            # send_sms_outreach / send_whatsapp_outreach functions are ready to use
+
+            mark_outreach_sent(to_contact, outreach_sent)
+            save_outreach_sent(outreach_sent)
+
+    # ── 8. PERSIST SEEN LEADS ─────────────────────────────────
     # In email mode: only mark as seen after a successful send so that
     # failed sends retry on the next cron run.
     # In non-email mode: always mark seen to keep daily runs fresh.
@@ -874,7 +1117,7 @@ def main():
         mark_leads_seen(leads, seen)
         save_seen_leads(seen)
 
-    # ── 8. SUMMARY ────────────────────────────────────────────
+    # ── 9. SUMMARY ────────────────────────────────────────────
     log.info("\n" + "=" * 60)
     log.info("SUMMARY")
     log.info("=" * 60)
@@ -883,6 +1126,7 @@ def main():
     log.info(f"Qualified leads:    {len(leads)}")
     log.info(f"New leads:          {len(new_leads)}")
     log.info(f"Email sent:         {email_sent}")
+    log.info(f"Outreach email:     {outreach_email_count}")
     log.info(f"Leads written to:   {README_PATH}")
 
     if new_leads:

@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 300    # 5-hour hard limit
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # opt into Node 24 ahead of June 2026 forced migration
+
     permissions:
       contents: write       # needed to push README + seen_leads.json back
 
@@ -36,18 +39,22 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python scraper.py \
-            --keywords "barber,plumber,electrician,restaurant,cafe,dentist,personal trainer,car mechanic" \
+            --keywords "roofer,roofing company,roofing contractor,flat roofing,roof repair" \
             --cities "London, UK|Manchester, UK|Birmingham, UK|Leeds, UK|Liverpool, UK|Sheffield, UK|Bristol, UK|Nottingham, UK|Leicester, UK|Newcastle, UK" \
             --min-reviews 50 \
             --max-results 15 \
-            --send-email
+            --send-email \
+            --send-outreach
 
       - name: Commit updated README and seen leads
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add README.md output/seen_leads.json
-          git diff --cached --quiet && echo "Nothing to commit" || \
+          git add README.md output/seen_leads.json output/outreach_sent.json
+          if git diff --cached --quiet; then
+            echo "Nothing to commit — skipping push"
+          else
             git commit -m "chore: daily lead scraper run $(date -u '+%Y-%m-%d')"
-          git push origin main
+            git push origin main
+          fi
