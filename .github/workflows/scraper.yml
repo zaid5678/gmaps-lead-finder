@@ -51,7 +51,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git pull --rebase origin main
-          git add README.md output/seen_leads.json output/outreach_sent.json
+          git add README.md output/
           if git diff --cached --quiet; then
             echo "Nothing to commit — skipping push"
           else
