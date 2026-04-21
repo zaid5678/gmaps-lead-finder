@@ -1,8 +1,264 @@
-# Google Maps Lead Scraper 🇬🇧
+# UK Lead Finder — Fully Automated Scraper + Email Outreach
 
-Find UK businesses on Google Maps that **don't have a website** — sorted by review count so you target the highest-demand opportunities first.
+Find UK businesses with **no website** across 7 sources simultaneously, then email them automatically with a 3-stage follow-up sequence — all from one command.
 
-Built for selling web development services to established businesses that are missing an online presence.
+Built for selling web development services to local businesses missing an online presence.
+
+---
+
+## Quick Start
+
+```bash
+# 1. Clone and set up
+bash setup.sh          # installs all dependencies, creates .env
+
+# 2. Add your Gmail app password
+nano .env              # set GMAIL_APP_PASSWORD
+
+# 3. Preview everything (no emails sent)
+python run_all.py --dry-run
+
+# 4. Run once
+python run_all.py
+
+# 5. Run on a 7-day loop forever
+python run_all.py --loop
+```
+
+> **One command does it all:** scrapes 7 directories → finds businesses without websites → sends personalised cold emails → automatically follows up on Day 3 and Day 7.
+
+---
+
+## How It Works
+
+```
+run_all.py
+├── Step 1 — scraper_master.py  (7 sources, parallel)
+│   ├── Yell.com
+│   ├── Thomson Local
+│   ├── TrustATrader
+│   ├── Checkatrade
+│   ├── Yelp UK          (Playwright — optional)
+│   ├── Bark.com         (Playwright — optional)
+│   └── Google Maps      (Playwright — optional)
+│            └── output/all_leads.csv
+│
+└── Step 2 — auto_emailer.py  (Gmail SMTP)
+    ├── Initial email    (first contact)
+    ├── Follow-up 1      (Day 3 — if no reply)
+    └── Follow-up 2      (Day 7 — last attempt)
+```
+
+### Lead filtering
+- Only businesses with **no website** (or only food-delivery aggregators like Uber Eats)
+- Google Maps results also filtered by minimum review count (≥50 by default)
+- All sources deduplicated by MD5(name + address)
+
+### Email sequence
+| Step | When | Subject template |
+|------|------|-----------------|
+| Initial | Immediately | "Quick idea for {name} — get online for £500" |
+| Follow-up 1 | Day 3 | "Following up — website for {name}" |
+| Follow-up 2 | Day 7 | "Last message — {name} website" |
+
+Emails skipped if lead has already received that template, replied, or unsubscribed.
+
+---
+
+## Setup
+
+### Prerequisites
+- **Python 3.10+**
+- **Gmail account** with 2-Step Verification enabled
+
+### 1. Install everything
+
+```bash
+bash setup.sh
+```
+
+This installs all pip packages, downloads Playwright's Chromium browser, creates `output/`, and validates your `.env`.
+
+### 2. Get a Gmail App Password
+
+1. Go to [myaccount.google.com/security](https://myaccount.google.com/security)
+2. Enable **2-Step Verification**
+3. Search **"App passwords"**
+4. App: **Mail** | Device: **Other** | Name: `lead-finder`
+5. Copy the 16-character password (e.g. `wsgj nmyg lrlf cnnr`)
+
+### 3. Configure `.env`
+
+```bash
+GMAIL_EMAIL=zfkhan321@gmail.com
+GMAIL_APP_PASSWORD=wsgj nmyg lrlf cnnr
+```
+
+---
+
+## Usage
+
+### Master orchestrator (recommended)
+
+```bash
+# Run everything once
+python run_all.py
+
+# Run every 7 days in the background
+python run_all.py --loop
+
+# Custom interval (every 3 days)
+python run_all.py --loop --interval 3
+
+# Use all 35 categories × top 50 UK cities
+python run_all.py --all-categories --all-cities
+
+# Include Playwright sources (Yelp, Bark, Google Maps) with 3 browser processes
+python run_all.py --sources yell,thomson_local,trustatrader,checkatrade,yelp,bark,google_maps --pw-workers 3
+
+# Scrape only, no email
+python run_all.py --scrape-only
+
+# Email only (skip scraping)
+python run_all.py --email-only
+
+# Check campaign stats
+python run_all.py --stats
+```
+
+### Individual tools
+
+```bash
+# Multi-source scraper
+python scraper_master.py                          # default 15 categories, 10 cities
+python scraper_master.py --all-categories --all-cities --workers 10
+python scraper_master.py --sources yell,checkatrade --dry-run
+
+# Automated emailer
+python auto_emailer.py --dry-run                  # preview all pending emails
+python auto_emailer.py                            # send all phases
+python auto_emailer.py --phase initial            # initial outreach only
+python auto_emailer.py --phase follow_up_1        # Day-3 follow-ups only
+python auto_emailer.py --stats-only               # campaign stats only
+python auto_emailer.py --limit 30                 # cap at 30 emails
+
+# Original Google Maps scraper (still works standalone)
+python scraper.py --keywords "plumber,electrician" --cities "London, UK|Manchester, UK"
+```
+
+### Output files
+
+| File | Description |
+|------|-------------|
+| `output/all_leads.csv` | Unified leads from all sources — append-only, tracked across runs |
+| `output/leads_*.csv` | Per-run leads from Google Maps scraper |
+| `output/all_results_*.csv` | All raw Google Maps results (unfiltered) |
+| `output/logs/email_log.txt` | Full email activity log |
+| `output/logs/run_*.log` | Scraper run logs |
+
+### all_leads.csv columns
+
+| Column | Description |
+|--------|-------------|
+| `fingerprint` | MD5(name+address) — deduplication key |
+| `name` | Business name |
+| `address` | Full address |
+| `city` | City scraped from |
+| `phone` | Phone number |
+| `email` | Email address (empty for most leads) |
+| `industry` | Business category |
+| `source` | Which directory (yell, google_maps, etc.) |
+| `website` | Empty = confirmed no website |
+| `contacted` | `yes` once initial email sent |
+| `contacted_date` | ISO timestamp of initial email |
+| `follow_up_1_sent` | `yes` once Day-3 email sent |
+| `follow_up_2_sent` | `yes` once Day-7 email sent |
+| `replied` | Mark `yes` manually when a lead replies |
+| `unsubscribed` | Mark `yes` manually on STOP replies |
+
+---
+
+## Rate Limits & Best Practices
+
+### Email sending
+- Default: **8–12 seconds** between emails → ~45 emails/hour
+- Gmail free tier: stay under **100 emails/day** to avoid flags
+- Use `--limit 50` to cap each run safely
+- Increase delay with `--delay-min 15 --delay-max 25` if your account is new
+
+### Scraping
+- HTTP scrapers (Yell, Thomson Local, etc.): throttled to **2–4 seconds** per request
+- Playwright scrapers (Yelp, Bark, Maps): human-like delays built-in
+- Recommended: **≤500 Google Maps listings per session** to avoid CAPTCHA
+- Parallel browsers (`--pw-workers`): keep at 2–3 max
+
+### Tracking unsubscribes
+When someone replies "STOP", open `output/all_leads.csv` and set their `unsubscribed` column to `yes`. The emailer will skip them automatically.
+
+---
+
+## Sources Explained
+
+| Source | Method | Quality | Notes |
+|--------|--------|---------|-------|
+| Yell.com | HTTP + BS4 | High | UK's largest business directory |
+| Thomson Local | HTTP + BS4 | High | Traditional UK directory |
+| TrustATrader | HTTP + BS4 | Medium | Trade services only |
+| Checkatrade | HTTP + BS4 | Medium | Trade services, may need Playwright |
+| Yelp UK | Playwright | Medium | JS-rendered; uses `--pw-workers` |
+| Bark.com | Playwright | Medium | Service marketplace; profiles rarely have websites |
+| Google Maps | Playwright | High | Best data quality; needs `--sources` flag to include |
+
+> Playwright sources are excluded from the default `--sources` list to keep the first run fast. Add `yelp,bark,google_maps` to `--sources` once you're comfortable with the system.
+
+---
+
+## Project Structure
+
+```
+gmaps-lead-finder/
+├── run_all.py           # Master orchestrator — run this
+├── scraper_master.py    # Multi-source scraper (7 directories)
+├── auto_emailer.py      # Automated email sender (3-stage sequence)
+├── scraper.py           # Original Google Maps scraper (still used internally)
+├── email_sender.py      # Standalone email sender for per-run CSVs
+├── email_templates.py   # Detailed email templates
+├── config.yaml          # All settings (delays, limits, SMTP)
+├── setup.sh             # One-time setup script
+├── requirements.txt     # Python dependencies
+├── .env                 # Credentials (gitignored)
+├── .env.template        # Template for .env
+└── output/
+    ├── all_leads.csv        # Unified leads (all sources, all runs)
+    ├── leads_*.csv          # Per-run Google Maps leads
+    ├── all_results_*.csv    # Per-run raw results
+    ├── seen_leads.json      # Deduplication registry (scraper.py)
+    ├── outreach_sent.json   # Outreach tracking (scraper.py)
+    └── logs/
+        ├── email_log.txt    # Full email activity log
+        └── run_*.log        # Scraper logs
+```
+
+---
+
+## Legal & Compliance
+
+**Cold email to businesses (B2B) under UK GDPR:**
+- B2B cold email is permitted under the **legitimate interests** basis when:
+  - You are contacting businesses (not individuals/consumers)
+  - The service is directly relevant to their trade
+  - You include your real contact details
+  - You honour opt-out requests immediately
+- This system always includes an unsubscribe instruction ("Reply STOP")
+- Review [ICO direct marketing guidance](https://ico.org.uk/for-organisations/direct-marketing) before running at scale
+
+**Web scraping:**
+- All scraped data is publicly available on the respective directories
+- The scrapers use human-like delays and respect rate limits
+- Do not scrape at volumes that would impair the target sites
+- Google Maps scraping is against Google's ToS — use the [Maps Platform API](https://developers.google.com/maps) for production-scale usage
+
+**This tool is for personal lead generation only — not for resale or third-party use.**
 
 ---
 
@@ -175,13 +431,131 @@ Reduce `--max-results` to 50, increase delays in the config section at the top o
 
 ```
 gmaps_lead_scraper/
-├── scraper.py          # Main script — everything in one file
-├── requirements.txt    # Python dependencies
-├── README.md           # This file
-└── output/             # CSV files (created on first run)
-    ├── leads_*.csv
-    └── all_results_*.csv
+├── scraper.py           # Main scraper — Google Maps extraction + filtering
+├── email_sender.py      # Standalone email automation script
+├── email_templates.py   # Cold email templates (initial, follow-up, final)
+├── config.yaml          # Settings for email, delays, and scraper
+├── requirements.txt     # Python dependencies
+├── .env                 # Credentials (gitignored — never commit this)
+├── .env.template        # Template for .env
+├── README.md            # This file
+└── output/              # Generated files (gitignored)
+    ├── leads_*.csv          # Filtered leads with email column
+    ├── all_results_*.csv    # All scraped businesses
+    ├── seen_leads.json      # Deduplication registry
+    └── outreach_sent.json   # Outreach tracking registry
 ```
+
+---
+
+## Email Automation
+
+### How it works
+
+`email_sender.py` reads your leads CSV, sends personalized cold emails via Gmail SMTP,
+and tracks who has been contacted directly in the CSV (adds `contacted`, `contacted_date`,
+`template_used`, and `send_status` columns).
+
+Three-stage outreach sequence:
+| Stage | Template | When to send |
+|-------|----------|--------------|
+| 1 | `initial` | First contact — introduces the website idea |
+| 2 | `follow_up` | ~3 days later — gentle reminder |
+| 3 | `final` | ~7 days later — last attempt, low pressure |
+
+### Setup
+
+#### 1. Get a Gmail App Password
+
+Regular Gmail passwords won't work — you need a 16-character **app password**:
+
+1. Go to [myaccount.google.com/security](https://myaccount.google.com/security)
+2. Enable **2-Step Verification** if not already on
+3. Search for **"App passwords"** in the search bar
+4. Select app: **Mail** → device: **Other** → name it `lead-finder`
+5. Copy the 16-character password (e.g. `wsgj nmyg lrlf cnnr`)
+
+#### 2. Add credentials to `.env`
+
+```bash
+GMAIL_USER=your_email@gmail.com
+GMAIL_APP_PASSWORD=wsgj nmyg lrlf cnnr
+```
+
+#### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+```bash
+# Preview all emails without sending anything (always safe to run)
+python email_sender.py --dry-run
+
+# Preview with full email body visible
+python email_sender.py --dry-run --verbose
+
+# Send initial outreach (reads credentials from .env automatically)
+python email_sender.py
+
+# Send initial outreach with explicit credentials
+python email_sender.py --email you@gmail.com --password "wsgj nmyg lrlf cnnr"
+
+# Send follow-ups (skips leads already sent initial)
+python email_sender.py --template follow_up
+
+# Send final follow-ups
+python email_sender.py --template final
+
+# Use a specific CSV file
+python email_sender.py --csv-file output/leads_20260420_120000.csv --template follow_up
+
+# Slow down to 20s between emails
+python email_sender.py --delay 20
+```
+
+### Scaling up the scraper
+
+```bash
+# Scrape all 25 business categories across default 10 cities
+python scraper.py --all-categories
+
+# Scrape default keywords across all 50 UK cities
+python scraper.py --all-cities
+
+# Full scale: all categories × all 50 cities (1,250 searches — takes hours)
+python scraper.py --all-categories --all-cities
+
+# Use 3 parallel browsers to speed up scraping (uses more memory)
+python scraper.py --workers 3 --all-categories
+
+# Combine: roofing across all cities with 2 workers
+python scraper.py --all-cities --workers 2
+```
+
+> **Parallel workers:** Each worker runs its own Chromium browser. Recommended maximum is 3 workers — more can trigger Google rate limiting or exhaust memory.
+
+### Best practices for cold email
+
+- **Volume:** Send no more than 50–100 emails per day from a single Gmail account
+- **Warm-up:** Start with 10–20/day and increase gradually over 1–2 weeks
+- **Personalisation:** The templates already include `{business_name}`, `{city}`, and `{industry}` — edit `email_templates.py` to customise further
+- **Avoid spam triggers:** Don't use ALL CAPS, excessive punctuation, or spammy phrases like "FREE!!!" or "CLICK NOW"
+- **Delays:** The default 5–10s delay between sends is intentional — increase to 15–30s for safer daily limits
+- **Unsubscribes:** Respect any reply asking not to be contacted again
+- **Focus on leads with emails:** Only businesses that have an email address visible on Google Maps will receive outreach. Most leads will need to be contacted by phone instead.
+
+### Legal disclaimer
+
+Cold email outreach to businesses (B2B) is generally permitted under GDPR when there is a **legitimate interest** — you are a sole trader offering a relevant service to businesses that could plausibly benefit. However:
+
+- Always include your real name and contact details in emails
+- Honour opt-out requests immediately
+- Do not scrape or email at mass scale without reviewing the ICO guidance on direct marketing
+- This tool is for **personal lead generation** — not for resale or automated bulk campaigns
+- Review [ico.org.uk/for-organisations/direct-marketing](https://ico.org.uk/for-organisations/direct-marketing) for UK rules
 
 ---
 

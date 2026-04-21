@@ -11,16 +11,16 @@ jobs:
     timeout-minutes: 300    # 5-hour hard limit
 
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # opt into Node 24 ahead of June 2026 forced migration
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     permissions:
-      contents: write       # needed to push README + seen_leads.json back
+      contents: write
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0    # full history so we can push back
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
@@ -34,20 +34,23 @@ jobs:
       - name: Install Playwright browsers
         run: playwright install chromium --with-deps
 
-      - name: Run scraper
+      - name: Create output directories
+        run: mkdir -p output/logs
+
+      - name: Scrape roofing leads
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_EMAIL: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
-          python scraper.py \
-            --keywords "roofer,roofing company,roofing contractor,flat roofing,roof repair" \
-            --cities "London, UK|Manchester, UK|Birmingham, UK|Leeds, UK|Liverpool, UK|Sheffield, UK|Bristol, UK|Nottingham, UK|Leicester, UK|Newcastle, UK" \
-            --min-reviews 50 \
-            --max-results 15 \
-            --send-email \
-            --send-outreach
+          python scraper_master.py \
+            --categories "roofer,roofing contractor,roof repair" \
+            --all-cities \
+            --max-results 20
 
-      - name: Commit updated README and seen leads
+      - name: Verify leads (filter businesses that actually have websites)
+        run: python verify_leads.py
+
+      - name: Commit and push updated leads
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -55,10 +58,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git pull --rebase origin main
-          git add README.md output/
+          git add output/all_leads.csv
           if git diff --cached --quiet; then
-            echo "Nothing to commit — skipping push"
+            echo "Nothing new to commit"
           else
-            git commit -m "chore: daily lead scraper run $(date -u '+%Y-%m-%d')"
+            git commit -m "chore: roofing leads scrape $(date -u '+%Y-%m-%d')"
             git push origin main
           fi

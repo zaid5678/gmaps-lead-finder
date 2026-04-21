@@ -14,12 +14,14 @@ import csv
 import hashlib
 import json
 import logging
+import math
 import os
 import random
 import re
 import smtplib
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, timezone
 from email.mime.multipart import MIMEMultipart
@@ -37,27 +39,106 @@ DEFAULT_KEYWORDS = [
     "roofer",
     "roofing company",
     "roofing contractor",
-    "flat roofing",
-    "roof repair",
 ]
 
 DEFAULT_LOCATIONS = [
     "London, UK",
     "Manchester, UK",
-    "Birmingham, UK",
-    "Leeds, UK",
-    "Liverpool, UK",
-    "Bristol, UK",
-    "Sheffield, UK",
-    "Nottingham, UK",
-    "Leicester, UK",
-    "Newcastle, UK",
 ]
 
-DEFAULT_MIN_REVIEWS = 50
+# Use with --all-categories flag
+ALL_BUSINESS_CATEGORIES = [
+    "barber",
+    "hairdresser",
+    "nail salon",
+    "beauty salon",
+    "restaurant",
+    "cafe",
+    "takeaway",
+    "pub",
+    "plumber",
+    "electrician",
+    "roofer",
+    "builder",
+    "painter decorator",
+    "locksmith",
+    "cleaner",
+    "handyman",
+    "car mechanic",
+    "MOT centre",
+    "car wash",
+    "dentist",
+    "physiotherapist",
+    "personal trainer",
+    "gym",
+    "tattoo studio",
+    "dog groomer",
+]
+
+# Use with --all-cities flag
+TOP_50_UK_CITIES = [
+    "London, UK",
+    "Manchester, UK",
+    "Birmingham, UK",
+    "Leeds, UK",
+    "Glasgow, UK",
+    "Edinburgh, UK",
+    "Bristol, UK",
+    "Liverpool, UK",
+    "Sheffield, UK",
+    "Newcastle upon Tyne, UK",
+    "Nottingham, UK",
+    "Leicester, UK",
+    "Cardiff, UK",
+    "Aberdeen, UK",
+    "Southampton, UK",
+    "Portsmouth, UK",
+    "Oxford, UK",
+    "Cambridge, UK",
+    "Reading, UK",
+    "Brighton, UK",
+    "Coventry, UK",
+    "Stoke-on-Trent, UK",
+    "Wolverhampton, UK",
+    "Derby, UK",
+    "Sunderland, UK",
+    "York, UK",
+    "Middlesbrough, UK",
+    "Bradford, UK",
+    "Huddersfield, UK",
+    "Milton Keynes, UK",
+    "Norwich, UK",
+    "Swansea, UK",
+    "Northampton, UK",
+    "Luton, UK",
+    "Peterborough, UK",
+    "Warrington, UK",
+    "Hull, UK",
+    "Plymouth, UK",
+    "Exeter, UK",
+    "Blackpool, UK",
+    "Bolton, UK",
+    "Oldham, UK",
+    "Wigan, UK",
+    "Stockport, UK",
+    "Salford, UK",
+    "Ipswich, UK",
+    "Crawley, UK",
+    "Guildford, UK",
+    "Chelmsford, UK",
+    "Preston, UK",
+]
+
+DEFAULT_MIN_REVIEWS = 0
 DEFAULT_MIN_RATING = 0.0
-DEFAULT_MAX_RESULTS_PER_SEARCH = 15
+DEFAULT_MAX_RESULTS_PER_SEARCH = 100
 OUTPUT_DIR = Path("output")
+ROOFERS_CSV = OUTPUT_DIR / "roofers_leads.csv"
+ROOFERS_FIELDNAMES = [
+    "fingerprint", "name", "city", "address", "phone", "email",
+    "rating", "review_count", "maps_url", "scraped_at",
+    "contacted", "contacted_date",
+]
 README_PATH = Path("README.md")
 HEADLESS = True
 
@@ -942,6 +1023,77 @@ def send_email(leads: list[Business], run_timestamp: str):
 
 
 # ─────────────────────────────────────────────────────────────
+# PARALLEL SCRAPING
+# ─────────────────────────────────────────────────────────────
+def _worker_scrape(task: tuple) -> list[dict]:
+    """
+    Worker function executed in a subprocess.
+    Each worker starts its own Playwright browser to avoid thread-safety issues.
+    Returns a list of plain dicts (Business dataclass fields) for safe pickling.
+    """
+    keyword, location, max_results, headless = task
+    # Re-configure logging for this subprocess so output appears in terminal
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [worker] %(levelname)-8s  %(message)s",
+        datefmt="%H:%M:%S",
+    )
+    with sync_playwright() as pw:
+        scraper = GoogleMapsScraper(pw, headless=headless)
+        try:
+            businesses = scraper.extract_businesses(keyword, location, max_results)
+            return [asdict(b) for b in businesses]
+        finally:
+            scraper.close()
+
+
+# ─────────────────────────────────────────────────────────────
+# CSV EXPORT
+# ─────────────────────────────────────────────────────────────
+def write_leads_csv(path: Path, businesses: list[Business]):
+    """Write a list of Business objects to a CSV file."""
+    if not businesses:
+        log.info(f"No records to write → {path}")
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fieldnames = list(asdict(businesses[0]).keys())
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        for biz in businesses:
+            writer.writerow(asdict(biz))
+    log.info(f"Saved {len(businesses)} records → {path}")
+
+
+# ─────────────────────────────────────────────────────────────
+# ROOFERS CSV — persistent, deduped across runs
+# ─────────────────────────────────────────────────────────────
+
+def load_roofers_csv(path: Path = ROOFERS_CSV) -> dict:
+    """Return {fingerprint: row_dict} from roofers_leads.csv."""
+    if not path.exists():
+        return {}
+    with open(path, newline="", encoding="utf-8") as f:
+        return {r["fingerprint"]: r for r in csv.DictReader(f) if r.get("fingerprint")}
+
+
+def save_roofers_csv(leads: dict, path: Path = ROOFERS_CSV):
+    """Write the full leads dict back to roofers_leads.csv."""
+    rows = list(leads.values())
+    if not rows:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    extra = sorted(set().union(*[r.keys() for r in rows]) - set(ROOFERS_FIELDNAMES))
+    fieldnames = ROOFERS_FIELDNAMES + extra
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        w.writeheader()
+        for row in rows:
+            w.writerow({k: row.get(k, "") for k in fieldnames})
+    log.info(f"Saved {len(rows)} leads → {path}")
+
+
+# ─────────────────────────────────────────────────────────────
 # CLI ENTRY POINT
 # ─────────────────────────────────────────────────────────────
 def build_parser() -> argparse.ArgumentParser:
@@ -988,32 +1140,35 @@ def build_parser() -> argparse.ArgumentParser:
             "TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER, and TWILIO_WHATSAPP_FROM env vars."
         ),
     )
+    p.add_argument(
+        "--workers", type=int, default=1,
+        help=(
+            "Number of parallel browser instances (default: 1 = sequential). "
+            "Each worker runs in a separate process. Recommended: 2-3 max."
+        ),
+    )
+    p.add_argument(
+        "--all-cities", action="store_true",
+        help=f"Use the built-in list of top 50 UK cities instead of --cities ({len(TOP_50_UK_CITIES)} cities).",
+    )
+    p.add_argument(
+        "--all-categories", action="store_true",
+        help=f"Use the built-in list of 25 business categories instead of --keywords ({len(ALL_BUSINESS_CATEGORIES)} categories).",
+    )
     return p
 
 
 def main():
     args = build_parser().parse_args()
 
-    keywords = [k.strip() for k in args.keywords.split(",") if k.strip()]
-    locations = [l.strip() for l in args.cities.split("|") if l.strip()]
-    min_reviews = args.min_reviews
-    min_rating = args.min_rating
-    max_results = args.max_results
-    headless = not args.visible
-    do_email = args.send_email
-    do_outreach = args.send_outreach
-
-    run_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M")
-    total_searches = len(keywords) * len(locations)
+    keywords  = ALL_BUSINESS_CATEGORIES if args.all_categories else [k.strip() for k in args.keywords.split(",") if k.strip()]
+    locations = TOP_50_UK_CITIES        if args.all_cities      else [l.strip() for l in args.cities.split("|")    if l.strip()]
+    headless  = not args.visible
+    all_tasks = [(kw, loc, args.max_results, headless) for loc in locations for kw in keywords]
 
     log.info("=" * 60)
-    log.info("Google Maps Lead Scraper")
-    log.info("=" * 60)
-    log.info(f"Keywords  ({len(keywords)}):  {keywords}")
-    log.info(f"Locations ({len(locations)}): {locations}")
-    log.info(f"Min reviews: {min_reviews}  |  Min rating: {min_rating}")
-    log.info(f"Max results: {max_results} per search  |  Total searches: {total_searches}")
-    log.info(f"Send email:  {do_email}  |  Send outreach: {do_outreach}")
+    log.info(f"Roofer Lead Scraper — {len(keywords)} keyword(s) × {len(locations)} city(ies) = {len(all_tasks)} searches")
+    log.info(f"Max results per search: {args.max_results}  |  Target: {len(all_tasks) * args.max_results} total")
     log.info("=" * 60)
 
     # ── 1. SCRAPE ─────────────────────────────────────────────
@@ -1022,122 +1177,105 @@ def main():
     with sync_playwright() as pw:
         scraper = GoogleMapsScraper(pw, headless=headless)
         try:
-            for location in locations:
-                for keyword in keywords:
-                    log.info(f"\n{'─'*50}")
-                    log.info(f"Scraping: \"{keyword}\" in \"{location}\"")
-                    log.info(f"{'─'*50}")
-                    results = scraper.extract_businesses(keyword, location, max_results)
-                    all_businesses.extend(results)
+            for i, (keyword, location, max_r, _) in enumerate(all_tasks):
+                log.info(f"\n[{i+1}/{len(all_tasks)}] '{keyword}' in '{location}'")
+                results = scraper.extract_businesses(keyword, location, max_r)
+                all_businesses.extend(results)
+                if i < len(all_tasks) - 1:
                     pause = random.uniform(5, 12)
                     log.info(f"Pausing {pause:.1f}s before next search…")
                     time.sleep(pause)
         except KeyboardInterrupt:
-            log.info("\nInterrupted — saving what we have so far…")
+            log.info("Interrupted — saving what we have…")
         finally:
             scraper.close()
 
-    log.info(f"\nTotal raw results: {len(all_businesses)}")
-
-    # ── 2. DEDUPLICATE ────────────────────────────────────────
+    # ── 2. FILTER: no website, deduplicate ────────────────────
     unique = deduplicate(all_businesses)
-    log.info(f"After deduplication: {len(unique)}")
+    leads  = [b for b in unique if not b.has_website]
+    log.info(f"Scraped: {len(all_businesses)}  |  Unique: {len(unique)}  |  No website: {len(leads)}")
 
-    # ── 3. FILTER (no website, reviews, rating) ───────────────
-    leads = filter_leads(unique, min_reviews=min_reviews, min_rating=min_rating)
-    log.info(f"After filtering (no website, >= {min_reviews} reviews): {len(leads)}")
-    leads = sort_by_opportunity(leads)
+    # ── 3. MERGE INTO roofers_leads.csv ───────────────────────
+    existing = load_roofers_csv()
+    now_iso  = datetime.now().isoformat()
+    added    = 0
+    for b in leads:
+        fp = b.fingerprint
+        if fp not in existing:
+            city = b.search_location.replace(", UK", "").strip()
+            existing[fp] = {
+                "fingerprint":    fp,
+                "name":           b.name,
+                "city":           city,
+                "address":        b.address,
+                "phone":          b.phone,
+                "email":          b.email,
+                "rating":         b.rating,
+                "review_count":   b.review_count,
+                "maps_url":       b.maps_url,
+                "scraped_at":     now_iso,
+                "contacted":      "",
+                "contacted_date": "",
+            }
+            added += 1
 
-    # ── 4. FIND NEW LEADS ─────────────────────────────────────
-    seen = load_seen_leads()
-    new_leads = filter_new_leads(leads, seen)
-    log.info(f"New leads (not previously seen): {len(new_leads)}")
+    save_roofers_csv(existing)
 
-    # ── 5. UPDATE README ──────────────────────────────────────
-    section_title = ", ".join(keywords)
-    update_readme(new_leads, section_title=section_title)
-
-    # ── 6. EMAIL ──────────────────────────────────────────────
-    email_sent = False
-    if do_email:
-        if not new_leads:
-            log.info("No new leads this run — email skipped.")
-        else:
-            try:
-                send_email(new_leads, run_timestamp)
-                email_sent = True
-            except RuntimeError as exc:
-                log.error(f"Email not sent — credential error: {exc}")
-            except Exception as exc:
-                log.error(f"Email send failed: {exc}")
-
-    # ── 7. OUTREACH ───────────────────────────────────────────
+    # ── 4. OUTREACH — skip anyone already contacted ───────────
     outreach_email_count = 0
-    if do_outreach:
+    if args.send_outreach:
         outreach_sent = load_outreach_sent()
-        to_contact = filter_not_yet_contacted(new_leads, outreach_sent)
+        to_contact = [b for b in leads if b.fingerprint not in outreach_sent]
 
         if not to_contact:
-            log.info("All new leads already contacted — outreach skipped.")
+            log.info("All leads already contacted — outreach skipped.")
         else:
-            log.info(f"Sending outreach to {len(to_contact)} lead(s)…")
-            gmail_user = os.environ.get("GMAIL_USER", "").strip()
+            gmail_user   = os.environ.get("GMAIL_USER", "").strip()
             app_password = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
-
-            # Email outreach (only leads that have an email address on Maps)
             if gmail_user and app_password:
                 try:
                     emailed = send_email_outreach(to_contact, gmail_user, app_password)
                     outreach_email_count = len(emailed)
+                    for b in emailed:
+                        if b.fingerprint in existing:
+                            existing[b.fingerprint]["contacted"]      = "yes"
+                            existing[b.fingerprint]["contacted_date"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+                    if emailed:
+                        save_roofers_csv(existing)
                 except Exception as exc:
                     log.error(f"Email outreach failed: {exc}")
             else:
-                log.warning("GMAIL_USER / GMAIL_APP_PASSWORD not set — skipping email outreach.")
-
-            # SMS + WhatsApp outreach available — add Twilio credentials to enable
-            # send_sms_outreach / send_whatsapp_outreach functions are ready to use
+                log.warning("GMAIL_USER / GMAIL_APP_PASSWORD not set — skipping outreach.")
 
             mark_outreach_sent(to_contact, outreach_sent)
             save_outreach_sent(outreach_sent)
 
-    # ── 8. PERSIST SEEN LEADS ─────────────────────────────────
-    # In email mode: only mark as seen after a successful send so that
-    # failed sends retry on the next cron run.
-    # In non-email mode: always mark seen to keep daily runs fresh.
-    if do_email:
-        if email_sent:
-            mark_leads_seen(new_leads, seen)
-            save_seen_leads(seen)
-        else:
-            log.warning(
-                "Email was requested but not sent — "
-                "seen_leads.json NOT updated; leads will retry next run."
-            )
-    else:
-        mark_leads_seen(leads, seen)
-        save_seen_leads(seen)
+    # ── 5. SUMMARY ────────────────────────────────────────────
+    total           = len(existing)
+    contacted_count = sum(1 for r in existing.values() if r.get("contacted") == "yes")
 
-    # ── 9. SUMMARY ────────────────────────────────────────────
     log.info("\n" + "=" * 60)
     log.info("SUMMARY")
     log.info("=" * 60)
-    log.info(f"Total scraped:      {len(all_businesses)}")
-    log.info(f"Unique businesses:  {len(unique)}")
-    log.info(f"Qualified leads:    {len(leads)}")
-    log.info(f"New leads:          {len(new_leads)}")
-    log.info(f"Email sent:         {email_sent}")
-    log.info(f"Outreach email:     {outreach_email_count}")
-    log.info(f"Leads written to:   {README_PATH}")
+    log.info(f"  New leads added:    {added}")
+    log.info(f"  Total in CSV:       {total}")
+    log.info(f"  Already contacted:  {contacted_count}")
+    log.info(f"  Not yet contacted:  {total - contacted_count}")
+    log.info(f"  Outreach sent:      {outreach_email_count}")
+    log.info(f"  CSV:                {ROOFERS_CSV}")
+    log.info("=" * 60)
 
-    if new_leads:
-        log.info(f"\nTop 10 NEW leads by review count:")
-        log.info(f"{'Name':<40} {'Reviews':>8} {'Rating':>6} {'City'}")
-        log.info(f"{'─'*40} {'─'*8} {'─'*6} {'─'*20}")
-        for biz in new_leads[:10]:
-            log.info(
-                f"{biz.name[:39]:<40} {biz.review_count:>8} "
-                f"{biz.rating:>6.1f} {biz.search_location}"
-            )
+    uncontacted = sorted(
+        [b for b in leads if b.fingerprint in existing and not existing[b.fingerprint].get("contacted")],
+        key=lambda b: b.review_count, reverse=True,
+    )
+    if uncontacted:
+        log.info(f"\nTop uncontacted leads:")
+        log.info(f"  {'Name':<40} {'Phone':<16} {'City'}")
+        log.info(f"  {'─'*40} {'─'*16} {'─'*20}")
+        for b in uncontacted[:10]:
+            city = b.search_location.replace(", UK", "")
+            log.info(f"  {b.name[:39]:<40} {b.phone:<16} {city}")
 
     log.info("\nDone.")
 

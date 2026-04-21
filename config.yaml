@@ -1,0 +1,31 @@
+# gmaps-lead-finder configuration
+# Credentials (GMAIL_EMAIL, GMAIL_APP_PASSWORD) belong in .env — never commit them here.
+
+email:
+  smtp_server: smtp.gmail.com
+  smtp_port: 587
+  sender_name: "Zaid Khan"
+  sender_email: "zfkhan321@gmail.com"
+
+outreach:
+  delay_min: 8          # seconds between emails — keep ≥8 to stay within Gmail limits
+  delay_max: 12
+  follow_up_1_after_days: 3    # send follow-up 1 this many days after initial
+  follow_up_2_after_days: 7    # send follow-up 2 this many days after initial
+  daily_limit: 50              # max emails/day (Gmail free tier safe limit: ~100)
+
+scraper:
+  # Per-source settings
+  max_results_per_search: 40   # results per category+city pair per source
+  http_workers: 8              # parallel threads for HTTP scrapers
+  pw_workers: 2                # parallel Playwright browser processes
+
+  # Google Maps (scraper.py) specific
+  gmaps_min_reviews: 50
+  gmaps_min_rating: 0.0
+  gmaps_max_results: 15
+
+csv:
+  all_leads: "output/all_leads.csv"          # unified leads file (all sources)
+  leads_per_run: "output/leads_*.csv"        # per-run files from scraper.py
+  all_results_per_run: "output/all_results_*.csv"
