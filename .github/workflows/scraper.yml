@@ -81,6 +81,12 @@ jobs:
       - name: Update README leads table
         run: python update_readme.py
 
+      - name: Email new leads to owner
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python notify_leads.py
+
       - name: Commit and push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
