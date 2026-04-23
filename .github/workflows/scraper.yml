@@ -8,7 +8,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 210    # 3.5-hour hard limit
+    timeout-minutes: 210
 
     permissions:
       contents: write
@@ -29,8 +29,41 @@ jobs:
       - name: Create output directories
         run: mkdir -p output/logs
 
-      # Each run targets a rotating batch of cities not yet scraped today.
-      # 3 trades x 4 cities x 8 results = 96 detail pages / 4 workers ≈ 1.5–2 hrs
+      - name: Select today's city batch
+        run: |
+          python3 - << 'EOF'
+          import os
+          from datetime import datetime
+
+          ALL_CITIES = [
+              "London", "Manchester", "Birmingham", "Leeds", "Glasgow",
+              "Edinburgh", "Bristol", "Liverpool", "Sheffield", "Newcastle",
+              "Nottingham", "Cardiff", "Leicester", "Bradford", "Coventry",
+              "Belfast", "Hull", "Stoke", "Wolverhampton", "Derby",
+              "Southampton", "Portsmouth", "Brighton", "Plymouth", "Reading",
+              "Bolton", "Luton", "Preston", "Aberdeen", "Milton Keynes",
+              "Sunderland", "Norwich", "Dundee", "Ipswich", "York",
+              "Gloucester", "Oxford", "Cambridge", "Peterborough", "Swansea",
+              "Blackpool", "Bournemouth", "Middlesbrough", "Swindon", "Huddersfield",
+              "Warrington", "Southend", "Telford", "Exeter", "Guildford",
+          ]
+
+          BATCH_SIZE   = 4
+          day          = datetime.now().timetuple().tm_yday
+          num_batches  = -(-len(ALL_CITIES) // BATCH_SIZE)   # ceil division
+          batch_idx    = (day - 1) % num_batches
+          start        = batch_idx * BATCH_SIZE
+          cities       = ALL_CITIES[start : start + BATCH_SIZE]
+          cities_str   = ",".join(cities)
+          label        = "/".join(cities)
+
+          print(f"Day {day} → batch {batch_idx + 1}/{num_batches}: {cities_str}")
+
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write(f"TODAY_CITIES={cities_str}\n")
+              f.write(f"CITY_BATCH_LABEL={label}\n")
+          EOF
+
       - name: Scrape leads
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_USER }}
@@ -38,7 +71,7 @@ jobs:
         run: |
           python scraper_master.py \
             --categories "roofer,plumber,electrician" \
-            --cities "Glasgow,Edinburgh,Cardiff,Southampton" \
+            --cities "$TODAY_CITIES" \
             --max-results 8 \
             --pw-workers 4
 
@@ -60,6 +93,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "Nothing new to commit"
           else
-            git commit -m "chore: leads scrape $(date -u '+%Y-%m-%d') — Glasgow/Edinburgh/Cardiff/Southampton"
+            git commit -m "chore: leads scrape $(date -u '+%Y-%m-%d') — $CITY_BATCH_LABEL"
             git push origin main
           fi
