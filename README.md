@@ -6,6 +6,58 @@ Built for selling web development services to local businesses missing an online
 
 ---
 
+## Current Leads
+
+<!-- LEADS_START -->
+_Last updated: 2026-04-23 17:11 UTC — 31 confirmed leads (no website) across 2 categories_
+
+| Category | Total scraped | Confirmed no website | With phone |
+|----------|:---:|:---:|:---:|
+| Barber | 1 | 1 | 1 |
+| Roofer | 30 | 30 | 27 |
+| **Total** | **31** | **31** | **28** |
+
+### All Leads (confirmed no website)
+
+| # | Business | City | Category | Phone | Contacted |
+|---|----------|------|----------|-------|:---------:|
+| 1 | Wicked VIP Mobile Barber | London | Barber | 07572 923289  |  |
+| 2 | Safeguard Roofing | Manchester | Roofer | 07759 852170  |  |
+| 3 | Lavelle Roofing | Manchester | Roofer | 07729 244037  |  |
+| 4 | Mark The Roof in Kings Heath Birmingham UK | Birmingham | Roofer | 07976 286141  |  |
+| 5 | DKRoofingSolutionsUK | Birmingham | Roofer | 07887 479143  |  |
+| 6 | Trade Right Roofing & Building LTD | Birmingham | Roofer | 0121 392 7863  |  |
+| 7 | Leeds & Bradford Roofing Services ( roof repairs Leeds & Bradford ) | Leeds | Roofer | 07592 113278  |  |
+| 8 | JPC Roofing | Leeds | Roofer | 07731 616123  |  |
+| 9 | TAYLOR ROOFING | Liverpool | Roofer | 07402 926246  |  |
+| 10 | Roofing Pro ltd | Liverpool | Roofer | 07836 699933  |  |
+| 11 | Chestnut Roofers and Builders | Liverpool | Roofer | 0151 733 0170  |  |
+| 12 | Roche Roofing | Liverpool | Roofer | 07799 723421  |  |
+| 13 | M.D Roofing | Liverpool | Roofer | 07392 428612  |  |
+| 14 | B J Roofing Ltd | Liverpool | Roofer | — |  |
+| 15 | Dunne's Roofing Specialists | Liverpool | Roofer | 0151 283 3715  |  |
+| 16 | The Bristol Roofers | Bristol | Roofer | 07458 943727  |  |
+| 17 | Bristol City Roofing | Bristol | Roofer | — |  |
+| 18 | Master Roofing & Cleaning | Bristol | Roofer | 07402 227866  |  |
+| 19 | KK Roofing Ltd | Bristol | Roofer | 07889 955819  |  |
+| 20 | Stay Dry Roofing Sheffield | Sheffield | Roofer | 07348 559002  |  |
+| 21 | James Lucas Roofing Services | Sheffield | Roofer | 07764 940522  |  |
+| 22 | Great Northern Roofing Company | Sheffield | Roofer | 07597 026537  |  |
+| 23 | C.Radford Roofing | Nottingham | Roofer | 07792 688227  |  |
+| 24 | Leicestershire Roofing Services Ltd | Leicester | Roofer | 07572 133999  |  |
+| 25 | D F Roofing Services | Leicester | Roofer | 07523 829279  |  |
+| 26 | DARREN DEACON ROOFING CONTRACTOR | Leicester | Roofer | 0116 224 8544  |  |
+| 27 | Roofing Services Leicester | Leicester | Roofer | — |  |
+| 28 | AM Roofing | Newcastle | Roofer | 07986 913292  |  |
+| 29 | TynesideRooflinesLtd | Newcastle | Roofer | 0191 640 7656  |  |
+| 30 | Shaun Cullen Roofing | Newcastle | Roofer | 07572 441434  |  |
+| 31 | Prime Roofing & Property Services Ltd | Newcastle | Roofer | 07466 279241  |  |
+
+_Emails sent:  / 31_
+<!-- LEADS_END -->
+
+---
+
 ## Quick Start
 
 ```bash

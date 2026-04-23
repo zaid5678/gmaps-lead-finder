@@ -2,23 +2,21 @@ name: Daily Lead Scraper
 
 on:
   schedule:
-    - cron: '0 8 * * *'   # 08:00 UTC daily (09:00 BST / 08:00 GMT)
+    - cron: '0 8 * * *'   # 08:00 UTC daily
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 240    # 4-hour hard limit (leaves headroom)
+    timeout-minutes: 210    # 3.5-hour hard limit
 
     permissions:
       contents: write
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
@@ -31,20 +29,26 @@ jobs:
       - name: Create output directories
         run: mkdir -p output/logs
 
-      - name: Scrape roofing leads
+      # Each run targets a rotating batch of cities not yet scraped today.
+      # 3 trades x 4 cities x 8 results = 96 detail pages / 4 workers ≈ 1.5–2 hrs
+      - name: Scrape leads
         env:
           GMAIL_EMAIL: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python scraper_master.py \
-            --categories "roofer" \
-            --cities "London,Manchester,Birmingham,Leeds,Liverpool,Bristol,Sheffield,Nottingham,Leicester,Newcastle" \
-            --max-results 15
+            --categories "roofer,plumber,electrician" \
+            --cities "Glasgow,Edinburgh,Cardiff,Southampton" \
+            --max-results 8 \
+            --pw-workers 4
 
-      - name: Verify leads (filter businesses that actually have websites)
+      - name: Verify leads (filter businesses that have websites)
         run: python verify_leads.py
 
-      - name: Commit and push updated leads
+      - name: Update README leads table
+        run: python update_readme.py
+
+      - name: Commit and push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -52,10 +56,10 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git pull --rebase origin main
-          git add output/all_leads.csv
+          git add output/all_leads.csv README.md
           if git diff --cached --quiet; then
             echo "Nothing new to commit"
           else
-            git commit -m "chore: roofing leads scrape $(date -u '+%Y-%m-%d')"
+            git commit -m "chore: leads scrape $(date -u '+%Y-%m-%d') — Glasgow/Edinburgh/Cardiff/Southampton"
             git push origin main
           fi
