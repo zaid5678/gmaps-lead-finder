@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 210
 
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
     permissions:
       contents: write
 
@@ -94,11 +97,11 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          git pull --rebase origin main
           git add output/all_leads.csv README.md
           if git diff --cached --quiet; then
             echo "Nothing new to commit"
           else
             git commit -m "chore: leads scrape $(date -u '+%Y-%m-%d') — $CITY_BATCH_LABEL"
-            git push origin main
+            # Push — if rejected (someone else pushed), rebase on top and retry
+            git push origin main || (git pull --rebase origin main && git push origin main)
           fi
