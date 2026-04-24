@@ -9,12 +9,14 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-23 17:14 UTC — 29 confirmed leads (no website) across 1 categories_
+_Last updated: 2026-04-24 22:31 UTC — 11 confirmed leads (no website) across 3 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Roofer | 36 | 29 | 34 |
-| **Total** | **36** | **29** | **34** |
+| Electrician | 2 | 2 | 2 |
+| Plumber | 2 | 2 | 2 |
+| Roofer | 37 | 7 | 35 |
+| **Total** | **41** | **11** | **39** |
 
 ### All Leads (confirmed no website)
 
@@ -24,33 +26,15 @@ _Last updated: 2026-04-23 17:14 UTC — 29 confirmed leads (no website) across 1
 | 2 | Roofing Pro ltd | Liverpool | Roofer | +44 7836 699933  |  |
 | 3 | James Lucas Roofing Services | Sheffield | Roofer | +44 7764 940522  |  |
 | 4 | Leicestershire Roofing Services Ltd | Leicester | Roofer | +44 7572 133999  |  |
-| 5 | MPS ROOFING SERVICES | London | Roofer | 07888 844547  |  |
-| 6 | Como Roofing UK Ltd | London | Roofer | 07534 288217  |  |
-| 7 | Roofing in London Limited | London | Roofer | 07365 773035  |  |
-| 8 | Fitz Roofing | London | Roofer | 020 3670 0226  |  |
-| 9 | Tr Roofing | London | Roofer | 07572 750482  |  |
-| 10 | West Kensington‎ Roofing | London | Roofer | 020 7126 7260  |  |
-| 11 | Fulham Roofers | London | Roofer | 020 3519 2878  |  |
-| 12 | Kentish Town Roofing | London | Roofer | 020 3519 0673  |  |
-| 13 | London Building & Roofing | London | Roofer | 07551 139005  |  |
-| 14 | Stj Roofing Lambeth | London | Roofer | 020 3670 4368  |  |
-| 15 | Zenith roofing & Building | London | Roofer | 020 8485 8769  |  |
-| 16 | TOB ROOFING & GUTTERING | London | Roofer | 07446 143745  |  |
-| 17 | i-tec Flat Roofing | London | Roofer | 020 7692 8381  |  |
-| 18 | Broadway Roofing Contractors | London | Roofer | 07444 712714  |  |
-| 19 | Safeguard Roofing | Manchester | Roofer | 07759 852170  |  |
-| 20 | All Seasons Roofing Ltd | Manchester | Roofer | 07879 153463  |  |
-| 21 | LT Roofing & Maintenance | Manchester | Roofer | 07565 218854  |  |
-| 22 | Lavelle Roofing | Manchester | Roofer | 07729 244037  |  |
-| 23 | Roofer Manchester ltd | Manchester | Roofer | 07493 219057  |  |
-| 24 | Roof Plus Uk Ltd | Manchester | Roofer | 07393 997535  |  |
-| 25 | Evolution Roofing | Manchester | Roofer | — |  |
-| 26 | Manchester Industrial Roofing | Manchester | Roofer | 0161 738 1347  |  |
-| 27 | Roof Maintainers Ltd | Manchester | Roofer | 07562 877658  |  |
-| 28 | K.H. ROOFING CONTRACTORS LTD | Manchester | Roofer | — |  |
-| 29 | J. HEMPSTOCK & CO LTD | Manchester | Roofer | 0161 223 2123  |  |
+| 5 | West Kensington‎ Roofing | London | Roofer | 020 7126 7260  |  |
+| 6 | Lavelle Roofing | Manchester | Roofer | 07729 244037  |  |
+| 7 | Roof Maintainers Ltd | Manchester | Roofer | 07562 877658  |  |
+| 8 | PlumbSquad - Emergency Plumber - Swansea | Swansea | Plumber | +44 1792 399604  |  |
+| 9 | GSW & Son Plumbing and Property services | Swansea | Plumber | +44 7766 815242  |  |
+| 10 | EK Electrician | Oxford | Electrician | +44 7879 332936  |  |
+| 11 | Power Plan Electrical | Swansea | Electrician | +44 7772 697053  |  |
 
-_Emails sent:  / 29_
+_Emails sent:  / 11_
 <!-- LEADS_END -->
 
 ---
