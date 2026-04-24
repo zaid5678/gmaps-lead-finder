@@ -8,7 +8,7 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 210
+    timeout-minutes: 240
 
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -73,10 +73,10 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python scraper_master.py \
-            --categories "roofer,plumber,electrician" \
+            --categories "roofer,plumber,electrician,barber,nail salon,beauty salon,hairdresser,cleaner,takeaway,gardener" \
             --cities "$TODAY_CITIES" \
-            --max-results 8 \
-            --pw-workers 4
+            --max-results 10 \
+            --pw-workers 6
 
       - name: Verify leads (filter businesses that have websites)
         run: python verify_leads.py
