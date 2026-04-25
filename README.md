@@ -9,14 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-24 22:31 UTC — 11 confirmed leads (no website) across 3 categories_
+_Last updated: 2026-04-25 09:51 UTC — 69 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Electrician | 2 | 2 | 2 |
-| Plumber | 2 | 2 | 2 |
-| Roofer | 37 | 7 | 35 |
-| **Total** | **41** | **11** | **39** |
+| Barber | 13 | 13 | 11 |
+| Beauty Salon | 6 | 6 | 4 |
+| Cleaner | 3 | 3 | 3 |
+| Electrician | 9 | 9 | 9 |
+| Gardener | 7 | 7 | 7 |
+| Hairdresser | 6 | 6 | 6 |
+| Nail Salon | 10 | 10 | 10 |
+| Plumber | 4 | 4 | 4 |
+| Roofer | 40 | 9 | 38 |
+| Takeaway | 2 | 2 | 2 |
+| **Total** | **100** | **69** | **94** |
 
 ### All Leads (confirmed no website)
 
@@ -33,8 +40,66 @@ _Last updated: 2026-04-24 22:31 UTC — 11 confirmed leads (no website) across 3
 | 9 | GSW & Son Plumbing and Property services | Swansea | Plumber | +44 7766 815242  |  |
 | 10 | EK Electrician | Oxford | Electrician | +44 7879 332936  |  |
 | 11 | Power Plan Electrical | Swansea | Electrician | +44 7772 697053  |  |
+| 12 | R M Clarke and Son Roofing | Bournemouth | Roofer | +44 7771 565990  |  |
+| 13 | Marton Roofing | Middlesbrough | Roofer | +44 1642 850366  |  |
+| 14 | J B Plumbing Ltd | Blackpool | Plumber | +44 7790 504006  |  |
+| 15 | Roman Plumbing & Bathrooms | Middlesbrough | Plumber | +44 7851 428906  |  |
+| 16 | LBI Electrical Contractors Ltd | Blackpool | Electrician | +44 7538 048063  |  |
+| 17 | Steve Stansfield electrical | Blackpool | Electrician | +44 7774 487572  |  |
+| 18 | Swindon Electrical Limited | Swindon | Electrician | +44 7710 576489  |  |
+| 19 | Johnson Electrical Contractors | Middlesbrough | Electrician | +44 7539 180347  |  |
+| 20 | CA Electrical Middlesbrough | Middlesbrough | Electrician | +44 7518 190930  |  |
+| 21 | BS Electrical | Middlesbrough | Electrician | +44 7909 545413  |  |
+| 22 | Unique Electrics Ltd NE | Middlesbrough | Electrician | +44 7930 141610  |  |
+| 23 | Kath's Barbers | Blackpool | Barber | +44 1253 764041  |  |
+| 24 | CozyClip Barber | Blackpool | Barber | +44 7366 395143  |  |
+| 25 | F1 Barber | Blackpool | Barber | +44 7311 253332  |  |
+| 26 | The Original Turkish Barber Blackpool | Blackpool | Barber | +44 7714 016279  |  |
+| 27 | Bodrum Turkish Barbers &#124; Bournemouth | Bournemouth | Barber | +44 7575 879676  |  |
+| 28 | M5 Barber | Bournemouth | Barber | — |  |
+| 29 | M & H Barber Shop Bournemouth | Bournemouth | Barber | +44 7456 174434  |  |
+| 30 | AU KUTS BARBERS | Swindon | Barber | +44 7308 426782  |  |
+| 31 | H S Hair Turkish Barber Shop | Swindon | Barber | +44 1793 434297  |  |
+| 32 | Bournemouth Nails | Bournemouth | Nail Salon | +44 1202 914936  |  |
+| 33 | Turkish golden Scissors | Middlesbrough | Barber | — |  |
+| 34 | Swift Clips Barber | Middlesbrough | Barber | +44 7555 055023  |  |
+| 35 | Scotty Barber Lounge | Middlesbrough | Barber | +44 7460 082388  |  |
+| 36 | Tolla Style barber shop | Middlesbrough | Barber | +44 7756 325120  |  |
+| 37 | TG Nails Blackpool | Blackpool | Nail Salon | +44 7365 789789  |  |
+| 38 | The Mani House | Blackpool | Nail Salon | +44 1253 428397  |  |
+| 39 | Infinity Nails & Beauty | Blackpool | Nail Salon | +44 1253 365885  |  |
+| 40 | Queen’s Nails | Blackpool | Nail Salon | +44 7428 890184  |  |
+| 41 | The Nail Studio Blackpool | Blackpool | Nail Salon | +44 1253 468092  |  |
+| 42 | Exotic Beauty and Nails | Middlesbrough | Nail Salon | +44 1642 240514  |  |
+| 43 | Beauty Studio nails Yana | Middlesbrough | Nail Salon | +44 7865 173684  |  |
+| 44 | Boro Nails Spa | Middlesbrough | Nail Salon | +44 7403 968694  |  |
+| 45 | Nailed Up | Middlesbrough | Nail Salon | +44 1642 210619  |  |
+| 46 | Perfect Symmetry Beauty Clinic | Blackpool | Beauty Salon | +44 1253 694441  |  |
+| 47 | Namaste Swindon Beauty Services | Swindon | Beauty Salon | — |  |
+| 48 | Manha's Hair And Beauty Salon | Middlesbrough | Beauty Salon | +44 7825 537783  |  |
+| 49 | One Stop Beauty | Middlesbrough | Beauty Salon | +44 7424 853477  |  |
+| 50 | PP luxury beauty home | Middlesbrough | Beauty Salon | +44 7395 410296  |  |
+| 51 | Salon Twenty-One | Middlesbrough | Beauty Salon | — |  |
+| 52 | Blades Hair Design | Bournemouth | Hairdresser | +44 7466 466224  |  |
+| 53 | Luxe Hair Lounge | Blackpool | Hairdresser | +44 1253 402220  |  |
+| 54 | The Salon & Co. | Blackpool | Hairdresser | +44 1253 699557  |  |
+| 55 | Guys & Dolls The Salon | Blackpool | Hairdresser | +44 1253 465366  |  |
+| 56 | The Copper House | Middlesbrough | Hairdresser | +44 1642 225898  |  |
+| 57 | Dominiaks | Middlesbrough | Hairdresser | +44 1642 593394  |  |
+| 58 | Fresh 'n' Clean | Middlesbrough | Cleaner | +44 7548 113534  |  |
+| 59 | Clean & Go (UK) | Middlesbrough | Cleaner | +44 7590 004655  |  |
+| 60 | Cleaning Service North East | Middlesbrough | Cleaner | +44 7720 652847  |  |
+| 61 | The Good Food Joint | Middlesbrough | Takeaway | +44 1642 651444  |  |
+| 62 | The Crispy Crunch | Swindon | Takeaway | +44 1793 380487  |  |
+| 63 | LSH Garden Services | Bournemouth | Gardener | +44 7427 098035  |  |
+| 64 | Westcoast Landscape Company | Blackpool | Gardener | +44 1253 462636  |  |
+| 65 | Grow Wild - Garden Services | Blackpool | Gardener | +44 7361 487531  |  |
+| 66 | Boro powerwashing+gardening services | Middlesbrough | Gardener | +44 7591 915117  |  |
+| 67 | Andy Landscapes Garden Centre | Middlesbrough | Gardener | +44 7930 686962  |  |
+| 68 | All season Gardening | Middlesbrough | Gardener | +44 7873 141254  |  |
+| 69 | Brookfield Fencing & landscaping | Middlesbrough | Gardener | +44 7918 165465  |  |
 
-_Emails sent:  / 11_
+_Emails sent:  / 69_
 <!-- LEADS_END -->
 
 ---
