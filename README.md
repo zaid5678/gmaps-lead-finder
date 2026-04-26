@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-26 10:05 UTC — 141 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-26 23:34 UTC — 143 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 35 | 24 | 32 |
-| Beauty Salon | 17 | 17 | 13 |
-| Cleaner | 10 | 10 | 10 |
+| Barber | 36 | 24 | 33 |
+| Beauty Salon | 18 | 17 | 14 |
+| Cleaner | 11 | 10 | 11 |
 | Electrician | 12 | 9 | 12 |
 | Gardener | 17 | 17 | 17 |
-| Hairdresser | 18 | 18 | 17 |
-| Nail Salon | 29 | 25 | 27 |
+| Hairdresser | 20 | 18 | 19 |
+| Nail Salon | 32 | 27 | 30 |
 | Plumber | 8 | 6 | 8 |
-| Roofer | 43 | 9 | 41 |
-| Takeaway | 6 | 6 | 6 |
-| **Total** | **195** | **141** | **183** |
+| Roofer | 45 | 9 | 43 |
+| Takeaway | 7 | 6 | 7 |
+| **Total** | **206** | **143** | **194** |
 
 ### All Leads (confirmed no website)
 
@@ -170,8 +170,10 @@ _Last updated: 2026-04-26 10:05 UTC — 141 confirmed leads (no website) across 
 | 139 | Neat & Tidy - Gardener - Southend-On-Sea | Southend | Gardener | +44 7495 271418  |  |
 | 140 | Mitch's Garden Maintenance | Telford | Gardener | +44 7818 343333  |  |
 | 141 | Davies Of Telford | Telford | Gardener | +44 1952 260948  |  |
+| 142 | Lux & Belle Hair And Nails Salon | Huddersfield | Nail Salon | +44 1484 702802  |  |
+| 143 | UK Top Nails | Southend | Nail Salon | +44 1702 601965  |  |
 
-_Emails sent:  / 141_
+_Emails sent:  / 143_
 <!-- LEADS_END -->
 
 ---
