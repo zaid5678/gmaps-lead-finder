@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-25 09:51 UTC — 69 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-26 10:05 UTC — 141 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 13 | 13 | 11 |
-| Beauty Salon | 6 | 6 | 4 |
-| Cleaner | 3 | 3 | 3 |
-| Electrician | 9 | 9 | 9 |
-| Gardener | 7 | 7 | 7 |
-| Hairdresser | 6 | 6 | 6 |
-| Nail Salon | 10 | 10 | 10 |
-| Plumber | 4 | 4 | 4 |
-| Roofer | 40 | 9 | 38 |
-| Takeaway | 2 | 2 | 2 |
-| **Total** | **100** | **69** | **94** |
+| Barber | 35 | 24 | 32 |
+| Beauty Salon | 17 | 17 | 13 |
+| Cleaner | 10 | 10 | 10 |
+| Electrician | 12 | 9 | 12 |
+| Gardener | 17 | 17 | 17 |
+| Hairdresser | 18 | 18 | 17 |
+| Nail Salon | 29 | 25 | 27 |
+| Plumber | 8 | 6 | 8 |
+| Roofer | 43 | 9 | 41 |
+| Takeaway | 6 | 6 | 6 |
+| **Total** | **195** | **141** | **183** |
 
 ### All Leads (confirmed no website)
 
@@ -98,8 +98,80 @@ _Last updated: 2026-04-25 09:51 UTC — 69 confirmed leads (no website) across 1
 | 67 | Andy Landscapes Garden Centre | Middlesbrough | Gardener | +44 7930 686962  |  |
 | 68 | All season Gardening | Middlesbrough | Gardener | +44 7873 141254  |  |
 | 69 | Brookfield Fencing & landscaping | Middlesbrough | Gardener | +44 7918 165465  |  |
+| 70 | Fixed Price Plumbing | Warrington | Plumber | +44 7836 350780  |  |
+| 71 | JB Plumbing and Heating | Telford | Plumber | +44 7793 098926  |  |
+| 72 | Barbarossa grooming | Warrington | Barber | +44 1925 629450  |  |
+| 73 | BOSS CUT | Warrington | Barber | +44 7508 666606  |  |
+| 74 | Miss Nails | Huddersfield | Nail Salon | — |  |
+| 75 | STYLISH CUTS TRADITIONAL TURKISH STYLE BARBERSHOP | Southend | Barber | — |  |
+| 76 | Zack Barbers | Southend | Barber | +44 7429 363631  |  |
+| 77 | Southend barber | Southend | Barber | +44 7476 753477  |  |
+| 78 | Turkish Barber | Telford | Barber | +44 7383 820443  |  |
+| 79 | Danny’s Barber Wellington | Telford | Barber | +44 7440 346698  |  |
+| 80 | Kurdish barber | Telford | Barber | +44 7788 406018  |  |
+| 81 | The Noble Man Barbershop | Telford | Barber | +44 7428 165343  |  |
+| 82 | Antalya Magic Cuts | Telford | Barber | +44 7481 744090  |  |
+| 83 | MMK Barbers | Telford | Barber | +44 7400 706428  |  |
+| 84 | Sun Nails Warrington | Warrington | Nail Salon | +44 7706 786868  |  |
+| 85 | Warrington Top Nail | Warrington | Nail Salon | +44 7474 939566  |  |
+| 86 | Millennium Nails | Warrington | Nail Salon | +44 1925 349095  |  |
+| 87 | U Nails Studio | Warrington | Nail Salon | +44 7704 661832  |  |
+| 88 | L&A Nails Spa | Southend | Nail Salon | +44 1702 243948  |  |
+| 89 | Nailux | Southend | Nail Salon | +44 1702 345587  |  |
+| 90 | Kitty Nails Essex | Southend | Nail Salon | +44 1702 817455  |  |
+| 91 | Luxury Nail Bar | Southend | Nail Salon | +44 1702 887035  |  |
+| 92 | Angel Nails | Southend | Nail Salon | +44 1702 602793  |  |
+| 93 | The Lounge Luxury Beauty | Warrington | Beauty Salon | +44 1925 571886  |  |
+| 94 | Win Nail Salon Wellington Telford | Telford | Nail Salon | +44 7405 116688  |  |
+| 95 | Vibe The House Of Beauty | Telford | Nail Salon | — |  |
+| 96 | Unique Nails | Telford | Nail Salon | +44 1952 610593  |  |
+| 97 | Steph's Nail Shack | Telford | Nail Salon | +44 7548 928957  |  |
+| 98 | Dolce Beauty | Telford | Nail Salon | +44 1952 447198  |  |
+| 99 | Belle Amour Studio | Huddersfield | Beauty Salon | — |  |
+| 100 | Glamors Beauty spot | Huddersfield | Beauty Salon | +44 7920 616005  |  |
+| 101 | SHRIJI BEAUTY TOUCH | Huddersfield | Beauty Salon | +44 7404 995198  |  |
+| 102 | DI Majestic | Huddersfield | Beauty Salon | +44 7459 214314  |  |
+| 103 | El Beaut Beauty & Aesthetics | Huddersfield | Beauty Salon | +44 1484 768270  |  |
+| 104 | Tranquil Hair & Beauty Day Spa | Huddersfield | Beauty Salon | +44 1484 424700  |  |
+| 105 | Heavenly Rose | Telford | Beauty Salon | +44 1952 660386  |  |
+| 106 | Identity Hair & Beauty Salon | Telford | Beauty Salon | +44 1952 606232  |  |
+| 107 | Pamper Me Pretty Hair & Beauty | Telford | Beauty Salon | +44 1952 929180  |  |
+| 108 | Lulus Beauty Bar | Telford | Beauty Salon | — |  |
+| 109 | Studio 11 Hair Salon | Huddersfield | Hairdresser | +44 1484 431779  |  |
+| 110 | Mods & Rockers Ltd | Huddersfield | Hairdresser | +44 1484 549010  |  |
+| 111 | Hidden Hair | Warrington | Hairdresser | +44 7446 763536  |  |
+| 112 | PAY AS YOU GO CLEANING AND DECORATING SERVICES | Huddersfield | Cleaner | +44 7762 425537  |  |
+| 113 | Fartown Dry Cleaners | Huddersfield | Cleaner | +44 1484 421848  |  |
+| 114 | D MCLEAN Warrington | Warrington | Cleaner | +44 7566 204107  |  |
+| 115 | Kings & Queens Unisex Salon & Barbers Southend, Essex | Southend | Hairdresser | +44 1702 334400  |  |
+| 116 | Cut U Up Hair & Beauty Salon | Southend | Hairdresser | +44 1702 870601  |  |
+| 117 | Head Hunters of Southend | Southend | Hairdresser | +44 1702 468269  |  |
+| 118 | NINETEEN HAIR & BEAUTY SALON | Southend | Hairdresser | +44 1702 831511  |  |
+| 119 | Arastocuts | Southend | Hairdresser | +44 1702 831820  |  |
+| 120 | The Stylers | Southend | Hairdresser | +44 1702 817834  |  |
+| 121 | Salon 23 | Southend | Hairdresser | +44 1702 817834  |  |
+| 122 | Lucie Harrison Hair | Telford | Hairdresser | — |  |
+| 123 | Hair by Mary | Telford | Hairdresser | +44 1952 616446  |  |
+| 124 | SOUTHEND NUMBER 1 CLEANING | Southend | Cleaner | +44 7438 376734  |  |
+| 125 | Deep Cleen | Southend | Cleaner | +44 800 170 0580  |  |
+| 126 | Jon Edwards Services Ltd | Telford | Cleaner | +44 1952 924562  |  |
+| 127 | Domestic Godesses Cleaning | Telford | Cleaner | +44 7796 675945  |  |
+| 128 | Urban Turban | Warrington | Takeaway | +44 1925 331888  |  |
+| 129 | Hunains | Huddersfield | Takeaway | +44 1484 533141  |  |
+| 130 | Broadway Kitchen | Huddersfield | Takeaway | +44 7502 292008  |  |
+| 131 | Munchy chicken Southend on sea | Southend | Takeaway | +44 1702 844831  |  |
+| 132 | Huddersfield Gardening Service | Huddersfield | Gardener | +44 1484 362494  |  |
+| 133 | M&M cleaning and garden services | Huddersfield | Gardener | +44 7789 408606  |  |
+| 134 | Local Gardening Services | Huddersfield | Gardener | +44 1484 420232  |  |
+| 135 | Easy green garden & commercial grounds maintenance | Warrington | Gardener | +44 7753 166311  |  |
+| 136 | Shades of Green (NW) Ltd | Warrington | Gardener | +44 1925 740995  |  |
+| 137 | Ian Berry Garden Care Services Ltd | Warrington | Gardener | +44 1925 636862  |  |
+| 138 | All in Garden Service | Southend | Gardener | +44 7940 267251  |  |
+| 139 | Neat & Tidy - Gardener - Southend-On-Sea | Southend | Gardener | +44 7495 271418  |  |
+| 140 | Mitch's Garden Maintenance | Telford | Gardener | +44 7818 343333  |  |
+| 141 | Davies Of Telford | Telford | Gardener | +44 1952 260948  |  |
 
-_Emails sent:  / 69_
+_Emails sent:  / 141_
 <!-- LEADS_END -->
 
 ---
