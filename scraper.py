@@ -137,7 +137,7 @@ ROOFERS_CSV = OUTPUT_DIR / "roofers_leads.csv"
 ROOFERS_FIELDNAMES = [
     "fingerprint", "name", "city", "address", "phone", "email",
     "rating", "review_count", "maps_url", "scraped_at",
-    "contacted", "contacted_date",
+    "contacted", "contacted_date", "is_priority", "pain_keywords_found",
 ]
 README_PATH = Path("README.md")
 HEADLESS = True
@@ -146,6 +146,23 @@ HEADLESS = True
 EMAIL_RECIPIENT = "zfkhan321@gmail.com"
 SEEN_LEADS_PATH = OUTPUT_DIR / "seen_leads.json"
 OUTREACH_SENT_PATH = OUTPUT_DIR / "outreach_sent.json"
+
+# Pain-signal keywords — found in reviews → priority lead
+PAIN_KEYWORDS = [
+    "no website",
+    "couldn't find",
+    "can't find",
+    "cannot find",
+    "had to call",
+    "no info online",
+    "no information online",
+    "hard to find",
+    "difficult to find",
+    "find online",
+    "not online",
+    "no number online",
+    "couldn't contact",
+]
 
 # Anti-detection tuning
 MIN_DELAY = 1.0
@@ -179,6 +196,8 @@ class Business:
     search_keyword: str = ""
     search_location: str = ""
     maps_url: str = ""
+    is_priority: bool = False
+    pain_keywords_found: str = ""
 
     @property
     def fingerprint(self) -> str:
@@ -223,6 +242,18 @@ def parse_rating(text: str) -> float:
     text = text.replace(",", ".")
     m = re.search(r"(\d+\.?\d*)", text)
     return float(m.group(1)) if m else 0.0
+
+
+def check_pain_signals(reviews: list[str], review_count: int) -> tuple[bool, str]:
+    """Return (is_priority, comma-separated keywords found) based on review text."""
+    if review_count < 10 or not reviews:
+        return False, ""
+    found: list[str] = []
+    for review in reviews:
+        for kw in PAIN_KEYWORDS:
+            if kw in review and kw not in found:
+                found.append(kw)
+    return bool(found), ", ".join(found)
 
 
 def detect_third_party(page: Page) -> str:
@@ -454,7 +485,40 @@ class GoogleMapsScraper:
         data["instagram"] = extract_instagram(self.page)
         data["third_party_only"] = detect_third_party(self.page)
 
+        # Only scrape reviews if worth checking (saves time on thin listings)
+        if data.get("review_count", 0) > 10:
+            data["recent_reviews"] = self._extract_recent_reviews()
+        else:
+            data["recent_reviews"] = []
+
         return data
+
+    def _extract_recent_reviews(self, max_reviews: int = 5) -> list[str]:
+        """Click the Reviews tab and return up to max_reviews lowercased review strings."""
+        reviews: list[str] = []
+        try:
+            tab = self.page.locator('button[aria-label*="Review"]').first
+            if tab.is_visible(timeout=1500):
+                tab.click()
+                human_delay(1.5, 2.5)
+        except Exception:
+            pass
+        try:
+            for sel in ["span.wiI7pd", "div.MyEned span", "div[data-review-id] span"]:
+                els = self.page.locator(sel).all()
+                if els:
+                    for el in els[:max_reviews]:
+                        try:
+                            txt = el.inner_text(timeout=1000).strip()
+                            if len(txt) > 20:
+                                reviews.append(txt.lower())
+                        except Exception:
+                            pass
+                    if reviews:
+                        break
+        except Exception:
+            pass
+        return reviews
 
     # ── main extraction loop ────────────────────────────────
     def extract_businesses(self, keyword: str, location: str, max_results: int) -> list[Business]:
@@ -487,13 +551,17 @@ class GoogleMapsScraper:
                 human_delay(1.5, 3.0)
 
                 data = self._extract_detail_from_panel()
+                rc = data.get("review_count", 0)
+                is_priority, pain_kw = check_pain_signals(
+                    data.get("recent_reviews", []), rc
+                )
                 biz = Business(
                     name=data.get("name", ""),
                     address=data.get("address", ""),
                     phone=data.get("phone", ""),
                     email=data.get("email", ""),
                     rating=data.get("rating", 0.0),
-                    review_count=data.get("review_count", 0),
+                    review_count=rc,
                     website=data.get("website", ""),
                     category=data.get("category", ""),
                     instagram=data.get("instagram", ""),
@@ -501,7 +569,11 @@ class GoogleMapsScraper:
                     search_keyword=keyword,
                     search_location=location,
                     maps_url=link,
+                    is_priority=is_priority,
+                    pain_keywords_found=pain_kw,
                 )
+                if is_priority:
+                    log.info(f"  ★ PRIORITY: {biz.name} — pain signals: [{pain_kw}]")
                 businesses.append(biz)
 
                 if (idx + 1) % 10 == 0:
@@ -921,20 +993,28 @@ def send_whatsapp_outreach(leads: list[Business], account_sid: str, auth_token: 
 # EMAIL (digest notification to self)
 # ─────────────────────────────────────────────────────────────
 def build_email_html(leads: list[Business], run_timestamp: str) -> str:
+    # Priority leads first, then by review count descending
+    sorted_leads = sorted(leads, key=lambda b: (not b.is_priority, -b.review_count))
+
+    priority_count = sum(1 for b in leads if b.is_priority)
     rows_html = ""
-    for biz in leads:
+    for biz in sorted_leads:
+        row_bg = "background:#fffde7;" if biz.is_priority else ""
         name_cell = (
             f'<a href="{biz.maps_url}" style="color:#1a73e8;text-decoration:none;">{biz.name}</a>'
             if biz.maps_url
             else biz.name
         )
+        if biz.is_priority:
+            name_cell = f'<strong style="color:#e65100;">[PRIORITY]</strong> {name_cell}'
         ig_cell = (
             f'<a href="{biz.instagram}" style="color:#1a73e8;">Instagram</a>'
             if biz.instagram
             else ""
         )
+        pain_cell = f'<span style="color:#b71c1c;font-size:11px;">{biz.pain_keywords_found}</span>' if biz.pain_keywords_found else ""
         rows_html += f"""
-        <tr>
+        <tr style="{row_bg}">
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{name_cell}</td>
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{biz.category}</td>
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{biz.search_location}</td>
@@ -942,8 +1022,14 @@ def build_email_html(leads: list[Business], run_timestamp: str) -> str:
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;text-align:right;font-weight:bold;">{biz.review_count}</td>
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;text-align:center;">{biz.rating:.1f}</td>
           <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{ig_cell}</td>
-          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{biz.third_party_only}</td>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{pain_cell}</td>
         </tr>"""
+
+    priority_note = (
+        f' &nbsp;·&nbsp; <strong style="color:#e65100;">{priority_count} priority</strong> (pain signals in reviews)'
+        if priority_count
+        else ""
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -960,7 +1046,7 @@ def build_email_html(leads: list[Business], run_timestamp: str) -> str:
     </h2>
     <p style="margin:0 0 24px;color:#5f6368;font-size:13px;">
       Run completed: <strong>{run_timestamp}</strong> &nbsp;·&nbsp;
-      <strong>{len(leads)}</strong> new lead(s) — businesses with no website and high review counts
+      <strong>{len(leads)}</strong> new lead(s){priority_note}
     </p>
 
     <table style="width:100%;border-collapse:collapse;font-size:13px;">
@@ -973,7 +1059,7 @@ def build_email_html(leads: list[Business], run_timestamp: str) -> str:
           <th style="padding:9px 12px;text-align:right;font-weight:600;color:#3c4043;">Reviews</th>
           <th style="padding:9px 12px;text-align:center;font-weight:600;color:#3c4043;">Rating</th>
           <th style="padding:9px 12px;text-align:left;font-weight:600;color:#3c4043;">Social</th>
-          <th style="padding:9px 12px;text-align:left;font-weight:600;color:#3c4043;">3rd Party</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:600;color:#3c4043;">Pain Signals</th>
         </tr>
       </thead>
       <tbody>{rows_html}
@@ -981,8 +1067,8 @@ def build_email_html(leads: list[Business], run_timestamp: str) -> str:
     </table>
 
     <p style="margin:24px 0 0;font-size:11px;color:#80868b;border-top:1px solid #f1f3f4;padding-top:12px;">
-      Sent automatically by gmaps-lead-finder. Leads are businesses with no website
-      meeting the minimum review threshold — sorted by review count (highest demand first).
+      Sent automatically by gmaps-lead-finder. Priority leads (highlighted) have no website and
+      reviews mentioning pain keywords — contact these first.
     </p>
   </div>
 </body>
@@ -1204,18 +1290,20 @@ def main():
         if fp not in existing:
             city = b.search_location.replace(", UK", "").strip()
             existing[fp] = {
-                "fingerprint":    fp,
-                "name":           b.name,
-                "city":           city,
-                "address":        b.address,
-                "phone":          b.phone,
-                "email":          b.email,
-                "rating":         b.rating,
-                "review_count":   b.review_count,
-                "maps_url":       b.maps_url,
-                "scraped_at":     now_iso,
-                "contacted":      "",
-                "contacted_date": "",
+                "fingerprint":         fp,
+                "name":                b.name,
+                "city":                city,
+                "address":             b.address,
+                "phone":               b.phone,
+                "email":               b.email,
+                "rating":              b.rating,
+                "review_count":        b.review_count,
+                "maps_url":            b.maps_url,
+                "scraped_at":          now_iso,
+                "contacted":           "",
+                "contacted_date":      "",
+                "is_priority":         "yes" if b.is_priority else "",
+                "pain_keywords_found": b.pain_keywords_found,
             }
             added += 1
 
@@ -1257,7 +1345,9 @@ def main():
     log.info("\n" + "=" * 60)
     log.info("SUMMARY")
     log.info("=" * 60)
+    priority_count = sum(1 for b in leads if b.is_priority)
     log.info(f"  New leads added:    {added}")
+    log.info(f"  Priority leads:     {priority_count}  (pain signals in reviews)")
     log.info(f"  Total in CSV:       {total}")
     log.info(f"  Already contacted:  {contacted_count}")
     log.info(f"  Not yet contacted:  {total - contacted_count}")
