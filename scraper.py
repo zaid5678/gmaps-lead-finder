@@ -847,13 +847,29 @@ def normalize_uk_phone(phone: str) -> Optional[str]:
 
 def _outreach_email_body(biz: Business) -> str:
     greeting = f"Hi {biz.name}," if biz.name else "Hi,"
+
+    if biz.is_priority and biz.pain_keywords_found:
+        pain_line = (
+            "I also noticed that a few of your recent Google reviews mention customers "
+            "having trouble finding your contact details or information online — which "
+            "suggests you may already be losing enquiries because there's nowhere to "
+            "send people."
+        )
+    else:
+        pain_line = (
+            "At the moment, many customers searching for services like yours tend to "
+            "compare a few options online before making a decision. If there isn't a "
+            "clear, professional website, they often move on to competitors who make it "
+            "easier to view services, pricing, and contact details in one place."
+        )
+
     return f"""{greeting}
 
 I hope you're well.
 
 I came across your business on Google and wanted to reach out with a quick idea that could help bring in more enquiries.
 
-At the moment, many customers searching for services like yours tend to compare a few options online before making a decision. If there isn't a clear, professional website, they often move on to competitors who make it easier to view services, pricing, and contact details in one place.
+{pain_line}
 
 A simple, well-structured website can help you:
 - show what you offer more clearly
