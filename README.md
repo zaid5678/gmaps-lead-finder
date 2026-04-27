@@ -747,7 +747,7 @@ Cold email outreach to businesses (B2B) is generally permitted under GDPR when t
 
 ## Leads
 
-All 25 leads scraped so far — priority leads (pain signals in reviews) listed first.
+All 26 leads scraped so far — priority leads (pain signals in reviews) listed first.
 
 | Business | City | Phone | Reviews | Rating | Priority | Maps |
 |----------|------|-------|---------|--------|----------|------|
@@ -776,6 +776,7 @@ All 25 leads scraped so far — priority leads (pain signals in reviews) listed 
 | Manchester Industrial Roofing | Manchester | 0161 738 1347 | 1 | 5.0 |  | [Maps](https://www.google.com/maps/place/Manchester+Industrial+Roofing/data=!4m7!3m6!1s0x487bb3f34ebdba0d:0x8f14175e42e53429!8m2!3d53.4362337!4d-2.1637626!16s%2Fg%2F1hm4m7_5_!19sChIJDbq9TvOze0gRKTTlQl4XFI8?authuser=0&hl=en&rclk=1) |
 | Roof Maintainers Ltd | Manchester | 07562 877658 | 0 | 0.0 |  | [Maps](https://www.google.com/maps/place/Roof+Maintainers+Ltd/data=!4m7!3m6!1s0x487bb1ad906e3289:0x4d7b2ad1ae810fd2!8m2!3d53.4952918!4d-2.2354163!16s%2Fg%2F11z427bbz9!19sChIJiTJukK2xe0gR0g-BrtEqe00?authuser=0&hl=en&rclk=1) |
 | K.H. ROOFING CONTRACTORS LTD | Manchester |  | 0 | 0.0 |  | [Maps](https://www.google.com/maps/place/K.H.+ROOFING+CONTRACTORS+LTD/data=!4m7!3m6!1s0x487bade709df7443:0x6c4e82942e8b8201!8m2!3d53.4327404!4d-2.2686078!16s%2Fg%2F11z631_sgc!19sChIJQ3TfCeete0gRAYKLLpSCTmw?authuser=0&hl=en&rclk=1) |
+| Pasha Fade | Huddersfield | +44 7510 012020 |  |  |  | [Maps](https://www.google.com/maps/place/Pasha+Fade/data=!4m7!3m6!1s0x487bdc426155827b:0x8f79bff79be27772!8m2!3d53.6595226!4d-1.7885688!16s%2Fg%2F11c45qx34h!19sChIJe4JVYULce0gRcnfim_e_eY8?authuser=0&hl=en&rclk=1) |
 
 
 ---
