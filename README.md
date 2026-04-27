@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-26 23:34 UTC — 143 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-27 10:45 UTC — 157 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 36 | 24 | 33 |
-| Beauty Salon | 18 | 17 | 14 |
-| Cleaner | 11 | 10 | 11 |
-| Electrician | 12 | 9 | 12 |
-| Gardener | 17 | 17 | 17 |
+| Barber | 42 | 29 | 39 |
+| Beauty Salon | 20 | 19 | 15 |
+| Cleaner | 12 | 11 | 12 |
+| Electrician | 13 | 9 | 13 |
+| Gardener | 21 | 21 | 21 |
 | Hairdresser | 20 | 18 | 19 |
-| Nail Salon | 32 | 27 | 30 |
+| Nail Salon | 33 | 27 | 31 |
 | Plumber | 8 | 6 | 8 |
-| Roofer | 45 | 9 | 43 |
-| Takeaway | 7 | 6 | 7 |
-| **Total** | **206** | **143** | **194** |
+| Roofer | 46 | 9 | 44 |
+| Takeaway | 9 | 8 | 8 |
+| **Total** | **224** | **157** | **210** |
 
 ### All Leads (confirmed no website)
 
@@ -172,8 +172,22 @@ _Last updated: 2026-04-26 23:34 UTC — 143 confirmed leads (no website) across 
 | 141 | Davies Of Telford | Telford | Gardener | +44 1952 260948  |  |
 | 142 | Lux & Belle Hair And Nails Salon | Huddersfield | Nail Salon | +44 1484 702802  |  |
 | 143 | UK Top Nails | Southend | Nail Salon | +44 1702 601965  |  |
+| 144 | Dream Cut | Guildford | Barber | +44 1483 497959  |  |
+| 145 | Mr fade traditional Turkish barber | Guildford | Barber | +44 7435 503184  |  |
+| 146 | Mckenzies Barber Lounge | Exeter | Barber | +44 7870 378783  |  |
+| 147 | International Barbers | Exeter | Barber | +44 7720 846695  |  |
+| 148 | City Barbers | Exeter | Barber | +44 1392 427320  |  |
+| 149 | The Beauty Hub by J & L | Exeter | Beauty Salon | — |  |
+| 150 | That hair & beauty lounge | Exeter | Beauty Salon | +44 7771 035983  |  |
+| 151 | Babylon | Exeter | Takeaway | +44 1392 342626  |  |
+| 152 | Ji The Chicken Shop (Guildford) | Guildford | Takeaway | — |  |
+| 153 | KARIS SMART CLEANING SERVICES LTD | Guildford | Cleaner | +44 7500 531685  |  |
+| 154 | Matthew's Gardening Services | Exeter | Gardener | +44 7720 644719  |  |
+| 155 | The Cornish Gardener | Guildford | Gardener | +44 7986 896285  |  |
+| 156 | ALC Garden Care | Guildford | Gardener | +44 7930 958827  |  |
+| 157 | The Guildford Landscaping Company | Guildford | Gardener | +44 1483 377140  |  |
 
-_Emails sent:  / 143_
+_Emails sent:  / 157_
 <!-- LEADS_END -->
 
 ---
