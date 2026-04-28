@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-27 10:45 UTC — 157 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-28 11:10 UTC — 173 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 42 | 29 | 39 |
-| Beauty Salon | 20 | 19 | 15 |
-| Cleaner | 12 | 11 | 12 |
-| Electrician | 13 | 9 | 13 |
-| Gardener | 21 | 21 | 21 |
-| Hairdresser | 20 | 18 | 19 |
-| Nail Salon | 33 | 27 | 31 |
-| Plumber | 8 | 6 | 8 |
+| Barber | 48 | 29 | 45 |
+| Beauty Salon | 21 | 19 | 16 |
+| Cleaner | 14 | 13 | 14 |
+| Electrician | 14 | 9 | 14 |
+| Gardener | 27 | 27 | 27 |
+| Hairdresser | 22 | 18 | 21 |
+| Nail Salon | 40 | 27 | 38 |
+| Plumber | 9 | 6 | 9 |
 | Roofer | 46 | 9 | 44 |
-| Takeaway | 9 | 8 | 8 |
-| **Total** | **224** | **157** | **210** |
+| Takeaway | 17 | 16 | 12 |
+| **Total** | **258** | **173** | **240** |
 
 ### All Leads (confirmed no website)
 
@@ -186,8 +186,24 @@ _Last updated: 2026-04-27 10:45 UTC — 157 confirmed leads (no website) across 
 | 155 | The Cornish Gardener | Guildford | Gardener | +44 7986 896285  |  |
 | 156 | ALC Garden Care | Guildford | Gardener | +44 7930 958827  |  |
 | 157 | The Guildford Landscaping Company | Guildford | Gardener | +44 1483 377140  |  |
+| 158 | Leeds Cleaning Service | Leeds | Cleaner | +44 113 870 7070  |  |
+| 159 | Classy Dry Cleaning & Laundry Company | Birmingham | Cleaner | +44 121 455 7100  |  |
+| 160 | 0161 Flamin Grill | Manchester | Takeaway | +44 161 566 4704  |  |
+| 161 | Crunchy falafel | London | Takeaway | — |  |
+| 162 | Hungama Indian Street Food | London | Takeaway | +44 20 4619 1671  |  |
+| 163 | Chinese Street Food Bar | London | Takeaway | — |  |
+| 164 | Yummy meal ltd | Birmingham | Takeaway | — |  |
+| 165 | Mr Tasty 1 | Birmingham | Takeaway | +44 121 714 5055  |  |
+| 166 | Akkawi | Leeds | Takeaway | — |  |
+| 167 | Smash Down Leeds | Leeds | Takeaway | +44 113 225 2173  |  |
+| 168 | Holland Park Gardener | London | Gardener | +44 7749 469410  |  |
+| 169 | South East London Garden Maintenance Contractors | London | Gardener | +44 7803 163716  |  |
+| 170 | EU Gardening services | Manchester | Gardener | +44 7496 786474  |  |
+| 171 | Genuine Gardener | Birmingham | Gardener | +44 333 014 2847  |  |
+| 172 | Natural Touch Gardening | Birmingham | Gardener | +44 7497 701672  |  |
+| 173 | D&S Gardening services | Leeds | Gardener | +44 7500 866910  |  |
 
-_Emails sent:  / 157_
+_Emails sent:  / 173_
 <!-- LEADS_END -->
 
 ---
