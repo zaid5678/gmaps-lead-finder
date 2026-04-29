@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-28 11:10 UTC — 173 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-29 11:02 UTC — 206 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 48 | 29 | 45 |
-| Beauty Salon | 21 | 19 | 16 |
+| Barber | 52 | 32 | 49 |
+| Beauty Salon | 23 | 21 | 18 |
 | Cleaner | 14 | 13 | 14 |
-| Electrician | 14 | 9 | 14 |
-| Gardener | 27 | 27 | 27 |
-| Hairdresser | 22 | 18 | 21 |
-| Nail Salon | 40 | 27 | 38 |
-| Plumber | 9 | 6 | 9 |
-| Roofer | 46 | 9 | 44 |
-| Takeaway | 17 | 16 | 12 |
-| **Total** | **258** | **173** | **240** |
+| Electrician | 15 | 9 | 15 |
+| Gardener | 32 | 32 | 31 |
+| Hairdresser | 24 | 20 | 23 |
+| Nail Salon | 50 | 37 | 48 |
+| Plumber | 12 | 7 | 12 |
+| Roofer | 47 | 9 | 45 |
+| Takeaway | 27 | 26 | 19 |
+| **Total** | **296** | **206** | **274** |
 
 ### All Leads (confirmed no website)
 
@@ -202,8 +202,41 @@ _Last updated: 2026-04-28 11:10 UTC — 173 confirmed leads (no website) across 
 | 171 | Genuine Gardener | Birmingham | Gardener | +44 333 014 2847  |  |
 | 172 | Natural Touch Gardening | Birmingham | Gardener | +44 7497 701672  |  |
 | 173 | D&S Gardening services | Leeds | Gardener | +44 7500 866910  |  |
+| 174 | Stockbridge Plumbing Solutions | Edinburgh | Plumber | +44 7841 939261  |  |
+| 175 | The Golden Scissors Barber | Edinburgh | Barber | +44 131 220 5414  |  |
+| 176 | OUR FADE | Liverpool | Barber | +44 7465 776566  |  |
+| 177 | Est 22 Barbers | Liverpool | Barber | +44 151 306 1692  |  |
+| 178 | Avish Nail & Beauty Salon | Glasgow | Nail Salon | +44 141 230 4489  |  |
+| 179 | Nail Express | Liverpool | Nail Salon | +44 151 708 7442  |  |
+| 180 | Beverly Hills Nails Co | Liverpool | Nail Salon | +44 151 708 6244  |  |
+| 181 | Nails By Feryal & Co. | Liverpool | Nail Salon | +44 7557 518378  |  |
+| 182 | Luxury Nails Bristol | Bristol | Nail Salon | +44 117 401 4157  |  |
+| 183 | HOUSE OF NAILS | Bristol | Nail Salon | +44 117 336 5414  |  |
+| 184 | Clifton nails & spa | Bristol | Nail Salon | +44 7756 024888  |  |
+| 185 | Nails Deluxe | Bristol | Nail Salon | +44 117 929 8288  |  |
+| 186 | Pinky Bar | Bristol | Nail Salon | +44 7743 044026  |  |
+| 187 | A&A Nails | Bristol | Nail Salon | +44 117 929 9991  |  |
+| 188 | Glamour Hair & Beauty | Edinburgh | Beauty Salon | +44 131 466 4523  |  |
+| 189 | Nirvana - House of Beauty | Liverpool | Beauty Salon | +44 151 707 8881  |  |
+| 190 | Blow Me Hairdressing | Bristol | Hairdresser | +44 117 329 2529  |  |
+| 191 | Hk Hair Salon 形髮廊 | Liverpool | Hairdresser | +44 7719 432245  |  |
+| 192 | Burgur Grill City Centre | Glasgow | Takeaway | +44 7919 448151  |  |
+| 193 | Argyle Newsagents Hot Food & Takeaway | Glasgow | Takeaway | +44 141 248 2589  |  |
+| 194 | City Shawarma | Glasgow | Takeaway | +44 141 387 4628  |  |
+| 195 | Kitchen of Anatolia | Bristol | Takeaway | +44 7842 404396  |  |
+| 196 | Rayan Kebab | Bristol | Takeaway | — |  |
+| 197 | Chicka Ciao’s | Edinburgh | Takeaway | — |  |
+| 198 | Chipsy Kings (حلال) | Edinburgh | Takeaway | +44 131 241 8561  |  |
+| 199 | Che | Edinburgh | Takeaway | — |  |
+| 200 | South Indian delicacy | Liverpool | Takeaway | +44 7943 068465  |  |
+| 201 | Bhookie | Liverpool | Takeaway | +44 7500 036142  |  |
+| 202 | Princes Street Gardens | Edinburgh | Gardener | +44 131 529 7921  |  |
+| 203 | North Liverpool Garden Services | Liverpool | Gardener | +44 7908 572336  |  |
+| 204 | JRJ Landscaping | Liverpool | Gardener | +44 151 515 6599  |  |
+| 205 | Mersey Gardens | Liverpool | Gardener | — |  |
+| 206 | Bellissimo Garden Services and Maintenance | Liverpool | Gardener | +44 7908 003081  |  |
 
-_Emails sent:  / 173_
+_Emails sent:  / 206_
 <!-- LEADS_END -->
 
 ---
