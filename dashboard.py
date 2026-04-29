@@ -86,7 +86,9 @@ HTML = """
     tr:hover td { background: #fafafa; }
     tr.priority td { background: #fffbeb; }
     tr.priority:hover td { background: #fef3c7; }
-    tr.contacted td { opacity: .55; }
+    tr.contacted td { background: #f0fdf4; color: #6b7280; }
+    tr.contacted td strong { text-decoration: line-through; font-weight: 400; }
+    tr.contacted .cb-wrap input { opacity: 1; }
 
     .badge-priority { display: inline-block; background: #fef3c7; color: #92400e;
                       border: 1px solid #fcd34d; border-radius: 4px; padding: 2px 7px;
@@ -276,17 +278,22 @@ async function onToggle(e) {
   lead.contacted = contacted ? "yes" : "";
   lead.contacted_date = contacted ? new Date().toISOString().slice(0, 16).replace("T", " ") : "";
 
-  const tr = e.target.closest("tr");
-  tr.classList.toggle("contacted", contacted);
-
-  showToast();
-  await fetch("/api/toggle", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ fingerprint: fp, contacted }),
-  });
-  hideToast();
+  // Update UI immediately — don't wait for the save
   updateStats();
+  render();
+
+  showToast("Saving…");
+  try {
+    await fetch("/api/toggle", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fingerprint: fp, contacted }),
+    });
+    showToast("Saved");
+  } catch {
+    showToast("Save failed — check server");
+  }
+  setTimeout(hideToast, 1200);
 }
 
 // Sorting
@@ -310,15 +317,14 @@ document.querySelectorAll("th[data-col]").forEach(th => {
 
 // Toast
 let toastTimer;
-function showToast() {
+function showToast(msg = "Saving…") {
   clearTimeout(toastTimer);
-  document.getElementById("saving-toast").classList.add("show");
-  document.getElementById("saving-toast").textContent = "Saving…";
+  const el = document.getElementById("saving-toast");
+  el.textContent = msg;
+  el.classList.add("show");
 }
 function hideToast() {
-  document.getElementById("saving-toast").textContent = "Saved";
-  toastTimer = setTimeout(() =>
-    document.getElementById("saving-toast").classList.remove("show"), 1200);
+  document.getElementById("saving-toast").classList.remove("show");
 }
 
 function esc(str) {
