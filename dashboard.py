@@ -5,11 +5,16 @@ Then open http://localhost:5000 in your browser.
 """
 
 import csv
+import subprocess
 import webbrowser
 from datetime import datetime
 from pathlib import Path
 
 from flask import Flask, jsonify, render_template_string, request
+
+README_PATH = Path("README.md")
+_LEADS_HEADER = "## Leads\n"
+_LEGAL_MARKER = "## Legal Note"
 
 CSV_PATH = Path("output/roofers_leads.csv")
 FIELDNAMES = [
@@ -54,6 +59,11 @@ HTML = """
              display: flex; align-items: center; justify-content: space-between; }
     header h1 { font-size: 18px; font-weight: 600; letter-spacing: .3px; }
     header span { font-size: 13px; color: #a0aec0; }
+    .sync-btn { background: #4f46e5; color: #fff; border: none; border-radius: 6px;
+                padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer;
+                transition: background .15s; }
+    .sync-btn:hover { background: #4338ca; }
+    .sync-btn:disabled { background: #6b7280; cursor: not-allowed; }
 
     .toolbar { padding: 16px 32px; display: flex; gap: 12px; align-items: center;
                flex-wrap: wrap; }
@@ -118,7 +128,10 @@ HTML = """
 
 <header>
   <h1>Leads Dashboard</h1>
-  <span id="live-count"></span>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <span id="live-count"></span>
+    <button class="sync-btn" id="sync-btn" onclick="syncToGitHub()">Push to GitHub</button>
+  </div>
 </header>
 
 <div class="stats">
@@ -332,6 +345,29 @@ function esc(str) {
     .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
+async function syncToGitHub() {
+  const btn = document.getElementById("sync-btn");
+  btn.disabled = true;
+  btn.textContent = "Pushing…";
+  showToast("Rebuilding README and pushing…");
+  try {
+    const res = await fetch("/api/sync", { method: "POST" });
+    const data = await res.json();
+    if (data.ok) {
+      showToast("Pushed to GitHub");
+    } else {
+      showToast("Push failed: " + (data.error || "unknown error"));
+    }
+  } catch {
+    showToast("Push failed — check server");
+  }
+  setTimeout(() => {
+    hideToast();
+    btn.disabled = false;
+    btn.textContent = "Push to GitHub";
+  }, 3000);
+}
+
 fetchLeads();
 </script>
 </body>
@@ -366,6 +402,62 @@ def api_toggle():
 
     save_leads(leads)
     return jsonify({"ok": True})
+
+
+@app.route("/api/sync", methods=["POST"])
+def api_sync():
+    """Rebuild README leads table from CSV and push to GitHub."""
+    try:
+        leads = load_leads()
+        leads.sort(key=lambda r: (r.get("is_priority", "") != "yes", -int(r.get("review_count") or 0)))
+
+        header = (
+            "| Business | City | Phone | Reviews | Rating | Contacted | Priority | Maps |\n"
+            "|----------|------|-------|---------|--------|-----------|----------|------|\n"
+        )
+        table_rows = ""
+        for r in leads:
+            name     = r.get("name", "").replace("|", "\\|").strip()
+            city     = r.get("city", "").strip()
+            phone    = r.get("phone", "").replace("|", "\\|").strip()
+            reviews  = r.get("review_count", "")
+            rating   = r.get("rating", "")
+            contacted = "Yes" if r.get("contacted") == "yes" else ""
+            priority  = "YES" if r.get("is_priority") == "yes" else ""
+            maps_url  = r.get("maps_url", "")
+            link      = f"[Maps]({maps_url})" if maps_url else ""
+            table_rows += f"| {name} | {city} | {phone} | {reviews} | {rating} | {contacted} | {priority} | {link} |\n"
+
+        contacted_count = sum(1 for r in leads if r.get("contacted") == "yes")
+        new_section = (
+            "## Leads\n\n"
+            f"**{len(leads)} total leads — {contacted_count} contacted, {len(leads) - contacted_count} remaining.**\n\n"
+            + header + table_rows + "\n"
+        )
+
+        content = README_PATH.read_text(encoding="utf-8")
+        leads_start = content.find("## Leads\n")
+        legal_start = content.find(_LEGAL_MARKER)
+        if leads_start == -1 or legal_start == -1:
+            return jsonify({"ok": False, "error": "Could not find README section markers"})
+
+        content = content[:leads_start] + new_section + "\n---\n\n" + content[legal_start:]
+        README_PATH.write_text(content, encoding="utf-8")
+
+        now = datetime.now().strftime("%Y-%m-%d %H:%M")
+        subprocess.run(["git", "add", "output/roofers_leads.csv", "README.md"], check=True)
+        subprocess.run(
+            ["git", "commit", "-m", f"Update contacted leads — {now}"],
+            check=True,
+        )
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+
+        return jsonify({"ok": True})
+
+    except subprocess.CalledProcessError as e:
+        return jsonify({"ok": False, "error": str(e)})
+    except Exception as e:
+        return jsonify({"ok": False, "error": str(e)})
 
 
 if __name__ == "__main__":
