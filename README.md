@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-29 11:02 UTC — 206 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-04-30 11:01 UTC — 213 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 52 | 32 | 49 |
-| Beauty Salon | 23 | 21 | 18 |
-| Cleaner | 14 | 13 | 14 |
-| Electrician | 15 | 9 | 15 |
-| Gardener | 32 | 32 | 31 |
+| Barber | 58 | 32 | 55 |
+| Beauty Salon | 29 | 22 | 23 |
+| Cleaner | 17 | 13 | 17 |
+| Electrician | 17 | 10 | 16 |
+| Gardener | 39 | 32 | 38 |
 | Hairdresser | 24 | 20 | 23 |
-| Nail Salon | 50 | 37 | 48 |
-| Plumber | 12 | 7 | 12 |
-| Roofer | 47 | 9 | 45 |
-| Takeaway | 27 | 26 | 19 |
-| **Total** | **296** | **206** | **274** |
+| Nail Salon | 57 | 40 | 55 |
+| Plumber | 16 | 7 | 16 |
+| Roofer | 49 | 10 | 47 |
+| Takeaway | 31 | 27 | 22 |
+| **Total** | **337** | **213** | **312** |
 
 ### All Leads (confirmed no website)
 
@@ -235,8 +235,15 @@ _Last updated: 2026-04-29 11:02 UTC — 206 confirmed leads (no website) across 
 | 204 | JRJ Landscaping | Liverpool | Gardener | +44 151 515 6599  |  |
 | 205 | Mersey Gardens | Liverpool | Gardener | — |  |
 | 206 | Bellissimo Garden Services and Maintenance | Liverpool | Gardener | +44 7908 003081  |  |
+| 207 | Lc Roofing Specialists | Sheffield | Roofer | +44 7542 593919  |  |
+| 208 | YKB Electricals | Sheffield | Electrician | — |  |
+| 209 | New York Nails Sheffield | Sheffield | Nail Salon | +44 114 275 6602  |  |
+| 210 | Beautiful Nails | Sheffield | Nail Salon | +44 114 268 7466  |  |
+| 211 | Emporium Nails | Nottingham | Nail Salon | +44 7936 519999  |  |
+| 212 | Me Me's Beauty Salon and Semi Permanent Makeup | Sheffield | Beauty Salon | +44 114 258 2931  |  |
+| 213 | SWAT BURG | Nottingham | Takeaway | +44 115 837 8953  |  |
 
-_Emails sent:  / 206_
+_Emails sent:  / 213_
 <!-- LEADS_END -->
 
 ---
