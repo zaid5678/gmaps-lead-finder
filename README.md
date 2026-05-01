@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-04-30 11:01 UTC — 213 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-01 10:47 UTC — 243 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 58 | 32 | 55 |
-| Beauty Salon | 29 | 22 | 23 |
-| Cleaner | 17 | 13 | 17 |
-| Electrician | 17 | 10 | 16 |
-| Gardener | 39 | 32 | 38 |
-| Hairdresser | 24 | 20 | 23 |
-| Nail Salon | 57 | 40 | 55 |
-| Plumber | 16 | 7 | 16 |
-| Roofer | 49 | 10 | 47 |
-| Takeaway | 31 | 27 | 22 |
-| **Total** | **337** | **213** | **312** |
+| Barber | 65 | 32 | 62 |
+| Beauty Salon | 38 | 23 | 31 |
+| Cleaner | 23 | 19 | 23 |
+| Electrician | 18 | 11 | 17 |
+| Gardener | 44 | 37 | 43 |
+| Hairdresser | 33 | 23 | 32 |
+| Nail Salon | 70 | 42 | 67 |
+| Plumber | 25 | 9 | 25 |
+| Roofer | 53 | 10 | 50 |
+| Takeaway | 41 | 37 | 31 |
+| **Total** | **410** | **243** | **381** |
 
 ### All Leads (confirmed no website)
 
@@ -242,8 +242,38 @@ _Last updated: 2026-04-30 11:01 UTC — 213 confirmed leads (no website) across 
 | 211 | Emporium Nails | Nottingham | Nail Salon | +44 7936 519999  |  |
 | 212 | Me Me's Beauty Salon and Semi Permanent Makeup | Sheffield | Beauty Salon | +44 114 258 2931  |  |
 | 213 | SWAT BURG | Nottingham | Takeaway | +44 115 837 8953  |  |
+| 214 | RL Plumbers and property maintenance | Bradford | Plumber | +44 7957 244887  |  |
+| 215 | Shah Electrical & Maintenance Services | Bradford | Electrician | +44 7425 959565  |  |
+| 216 | C Murray Plumbing & Heating | Belfast | Plumber | +44 7834 563703  |  |
+| 217 | The Nail Lounge Bradford | Bradford | Nail Salon | +44 1274 447887  |  |
+| 218 | Sanmei’s nails @ Beauty Section | Coventry | Nail Salon | +44 7367 988881  |  |
+| 219 | Libertes Hair & Beauty | Bradford | Beauty Salon | +44 1274 732843  |  |
+| 220 | Rogue By Jody | Belfast | Hairdresser | +44 28 9024 6162  |  |
+| 221 | Vintage Hair | Belfast | Hairdresser | +44 28 9066 3587  |  |
+| 222 | The Best Little Hair House In Belfast | Belfast | Hairdresser | +44 28 9073 8381  |  |
+| 223 | BrightClean - End Of Tenancy Specialists | Leicester | Cleaner | +44 7368 677486  |  |
+| 224 | Clean Wash | Bradford | Cleaner | +44 1274 521377  |  |
+| 225 | coin-op Launderette and Dry cleaning center | Bradford | Cleaner | +44 1274 685140  |  |
+| 226 | Krystal klean | Coventry | Cleaner | +44 7565 333237  |  |
+| 227 | Ariyola2clean | Coventry | Cleaner | +44 7432 671625  |  |
+| 228 | Time for You Domestic Cleaning | Coventry | Cleaner | +44 24 7659 2631  |  |
+| 229 | Nadeems Bradford | Bradford | Takeaway | +44 1274 492318  |  |
+| 230 | Hazro Pizza & Balti House | Bradford | Takeaway | +44 1274 918555  |  |
+| 231 | Maliks | Bradford | Takeaway | +44 1274 723856  |  |
+| 232 | Wok & Grill | Leicester | Takeaway | +44 116 344 0118  |  |
+| 233 | AJ's Food Bar Van | Leicester | Takeaway | +44 7787 310384  |  |
+| 234 | CHEF MR COOL | Leicester | Takeaway | +44 116 319 8964  |  |
+| 235 | Nathan's Fast Food | Leicester | Takeaway | +44 7389 191786  |  |
+| 236 | Thai Grass | Coventry | Takeaway | +44 7860 774483  |  |
+| 237 | Tokyo Express | Coventry | Takeaway | — |  |
+| 238 | Andhra Paradise | Belfast | Takeaway | +44 7350 992107  |  |
+| 239 | Four Seasons Landscaping | Coventry | Gardener | +44 7888 764350  |  |
+| 240 | Bradford Gardening Services | Bradford | Gardener | +44 7597 177445  |  |
+| 241 | Bradford Horticulture | Bradford | Gardener | +44 7751 891091  |  |
+| 242 | Belfast Tree & Garden Services - Pruned /Topped/Removed | Belfast | Gardener | +44 7707 832846  |  |
+| 243 | Garden Buddy | Belfast | Gardener | +44 7591 124249  |  |
 
-_Emails sent:  / 213_
+_Emails sent:  / 243_
 <!-- LEADS_END -->
 
 ---
