@@ -55,6 +55,12 @@ log = logging.getLogger("scraper_master")
 
 OUTPUT_DIR = Path("output")
 ALL_LEADS_CSV = OUTPUT_DIR / "all_leads.csv"
+ROOFERS_CSV = OUTPUT_DIR / "roofers_leads.csv"
+ROOFERS_FIELDNAMES = [
+    "fingerprint", "name", "city", "address", "phone", "email",
+    "rating", "review_count", "maps_url", "scraped_at",
+    "contacted", "contacted_date", "is_priority", "pain_keywords_found",
+]
 
 AGGREGATOR_DOMAINS = {
     "ubereats", "just-eat", "justeat", "deliveroo", "foodhub",
@@ -167,7 +173,7 @@ def load_existing_leads(path: Path = ALL_LEADS_CSV) -> dict:
 
 
 def save_all_leads(leads: dict, path: Path = ALL_LEADS_CSV):
-    """Write the full leads dict back to all_leads.csv."""
+    """Write the full leads dict back to all_leads.csv, then sync new entries to roofers_leads.csv."""
     rows = list(leads.values())
     if not rows:
         return
@@ -181,6 +187,48 @@ def save_all_leads(leads: dict, path: Path = ALL_LEADS_CSV):
         for row in rows:
             w.writerow({k: row.get(k, "") for k in fieldnames})
     log.info(f"Saved {len(rows)} total leads → {path}")
+    _sync_to_dashboard(leads)
+
+
+def _sync_to_dashboard(all_leads: dict):
+    """Merge any new entries from all_leads into roofers_leads.csv (dashboard source)."""
+    existing: dict = {}
+    if ROOFERS_CSV.exists():
+        with open(ROOFERS_CSV, newline="", encoding="utf-8") as f:
+            existing = {r["fingerprint"]: r for r in csv.DictReader(f) if r.get("fingerprint")}
+
+    added = 0
+    for fp, row in all_leads.items():
+        if not fp or fp in existing or not row.get("name", "").strip():
+            continue
+        existing[fp] = {
+            "fingerprint":         fp,
+            "name":                row.get("name", ""),
+            "city":                row.get("city", ""),
+            "address":             row.get("address", ""),
+            "phone":               row.get("phone", ""),
+            "email":               row.get("email", ""),
+            "rating":              "",
+            "review_count":        "",
+            "maps_url":            row.get("maps_url", ""),
+            "scraped_at":          row.get("scraped_at", ""),
+            "contacted":           "",
+            "contacted_date":      "",
+            "is_priority":         "",
+            "pain_keywords_found": "",
+        }
+        added += 1
+
+    if added == 0:
+        return
+
+    ROOFERS_CSV.parent.mkdir(parents=True, exist_ok=True)
+    with open(ROOFERS_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=ROOFERS_FIELDNAMES, extrasaction="ignore")
+        w.writeheader()
+        for row in existing.values():
+            w.writerow({k: row.get(k, "") for k in ROOFERS_FIELDNAMES})
+    log.info(f"Dashboard CSV updated — {added} new lead(s) added → {ROOFERS_CSV}")
 
 
 def merge_leads(new_leads: list, existing: dict) -> tuple:
