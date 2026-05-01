@@ -833,7 +833,7 @@ Cold email outreach to businesses (B2B) is generally permitted under GDPR when t
 
 ## Leads
 
-**410 total leads — 60 contacted, 350 remaining.**
+**410 total leads — 61 contacted, 349 remaining.**
 
 | Business | City | Phone | Reviews | Rating | Contacted | Priority | Maps |
 |----------|------|-------|---------|--------|-----------|----------|------|
@@ -1177,7 +1177,7 @@ Cold email outreach to businesses (B2B) is generally permitted under GDPR when t
 | Morgan Roofing | Bradford | +44 7836 655720 |  |  | Yes |  | [Maps](https://www.google.com/maps/place/Morgan+Roofing/data=!4m7!3m6!1s0x487be3da719cc499:0x4cf0354fbc25cdad!8m2!3d53.8182667!4d-1.7240113!16s%2Fg%2F1tdr7rcs!19sChIJmcSccdrje0gRrc0lvE818Ew?authuser=0&hl=en&rclk=1) |
 | Leeds & Bradford Roofing Services ( roof repairs Leeds & Bradford ) | Bradford | +44 7592 113278 |  |  | Yes |  | [Maps](https://www.google.com/maps/place/Leeds+%26+Bradford+Roofing+Services+%28+roof+repairs+Leeds+%26+Bradford+%29/data=!4m7!3m6!1s0x487be3a1e5686c5f:0x5f637e5a93e1932c!8m2!3d53.8268477!4d-1.6915297!16s%2Fg%2F11frp27zrk!19sChIJX2xo5aHje0gRLJPhk1p-Y18?authuser=0&hl=en&rclk=1) |
 | GC Roofing | Belfast | +44 7927 282276 |  |  | Yes |  | [Maps](https://www.google.com/maps/place/GC+Roofing/data=!4m7!3m6!1s0x486107c2874d3af5:0x6db12462987815c8!8m2!3d54.5689247!4d-6.0243795!16s%2Fg%2F11lgsjpr52!19sChIJ9TpNh8IHYUgRyBV4mGIksW0?authuser=0&hl=en&rclk=1) |
-| Delta Roofing NI ltd Belfast | Belfast |  |  |  |  |  | [Maps](https://www.google.com/maps/place/Delta+Roofing+NI+ltd+Belfast/data=!4m7!3m6!1s0x486108637d110827:0x1c72e9f3838f5a90!8m2!3d54.6001027!4d-5.9612101!16s%2Fg%2F1tdm7r1m!19sChIJJwgRfWMIYUgRkFqPg_Ppchw?authuser=0&hl=en&rclk=1) |
+| Delta Roofing NI ltd Belfast | Belfast |  |  |  | Yes |  | [Maps](https://www.google.com/maps/place/Delta+Roofing+NI+ltd+Belfast/data=!4m7!3m6!1s0x486108637d110827:0x1c72e9f3838f5a90!8m2!3d54.6001027!4d-5.9612101!16s%2Fg%2F1tdm7r1m!19sChIJJwgRfWMIYUgRkFqPg_Ppchw?authuser=0&hl=en&rclk=1) |
 | Leicester plumbing solutions | Leicester | +44 7557 965534 |  |  | Yes |  | [Maps](https://www.google.com/maps/place/Leicester+plumbing+solutions/data=!4m7!3m6!1s0xa47a040dd05d8a83:0xd438b950b3cbd0a0!8m2!3d52.6360771!4d-1.1311002!16s%2Fg%2F11tsn1lc1_!19sChIJg4pd0A0EeqQRoNDLs1C5ONQ?authuser=0&hl=en&rclk=1) |
 | Rudkin & Herbert Ltd | Leicester | +44 116 299 9150 |  |  |  |  | [Maps](https://www.google.com/maps/place/Rudkin+%26+Herbert+Ltd/data=!4m7!3m6!1s0x487760c6a1abb5af:0xa6183a1657c4cecf!8m2!3d52.626461!4d-1.1548253!16s%2Fg%2F1tklq1d7!19sChIJr7WrocZgd0gRz87EVxY6GKY?authuser=0&hl=en&rclk=1) |
 | SNM PLUMBING AND HEATING LTD | Leicester | +44 7712 063381 |  |  | Yes |  | [Maps](https://www.google.com/maps/place/SNM+PLUMBING+AND+HEATING+LTD/data=!4m7!3m6!1s0x487763c0eaeecb2b:0xde01c0ad61ff4f8f!8m2!3d52.64333!4d-1.0601624!16s%2Fg%2F11t4z053y6!19sChIJK8vu6sBjd0gRj0__Ya3AAd4?authuser=0&hl=en&rclk=1) |
