@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-01 10:47 UTC — 243 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-02 10:08 UTC — 256 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 65 | 32 | 62 |
-| Beauty Salon | 38 | 23 | 31 |
-| Cleaner | 23 | 19 | 23 |
-| Electrician | 18 | 11 | 17 |
-| Gardener | 44 | 37 | 43 |
-| Hairdresser | 33 | 23 | 32 |
-| Nail Salon | 70 | 42 | 67 |
-| Plumber | 25 | 9 | 25 |
-| Roofer | 53 | 10 | 50 |
-| Takeaway | 41 | 37 | 31 |
-| **Total** | **410** | **243** | **381** |
+| Barber | 74 | 33 | 71 |
+| Beauty Salon | 45 | 23 | 38 |
+| Cleaner | 30 | 22 | 30 |
+| Electrician | 23 | 11 | 22 |
+| Gardener | 51 | 39 | 50 |
+| Hairdresser | 46 | 26 | 45 |
+| Nail Salon | 83 | 44 | 79 |
+| Plumber | 31 | 11 | 31 |
+| Roofer | 56 | 10 | 53 |
+| Takeaway | 47 | 37 | 35 |
+| **Total** | **486** | **256** | **454** |
 
 ### All Leads (confirmed no website)
 
@@ -272,8 +272,21 @@ _Last updated: 2026-05-01 10:47 UTC — 243 confirmed leads (no website) across 
 | 241 | Bradford Horticulture | Bradford | Gardener | +44 7751 891091  |  |
 | 242 | Belfast Tree & Garden Services - Pruned /Topped/Removed | Belfast | Gardener | +44 7707 832846  |  |
 | 243 | Garden Buddy | Belfast | Gardener | +44 7591 124249  |  |
+| 244 | Jolly Plumber | Wolverhampton | Plumber | +44 7724 037174  |  |
+| 245 | J b plumbing and heating | Wolverhampton | Plumber | +44 7931 752038  |  |
+| 246 | Hull barbers | Hull | Barber | +44 7387 377901  |  |
+| 247 | Diamond Nails | Wolverhampton | Nail Salon | +44 1902 421788  |  |
+| 248 | ZH Nail and Beauty | Wolverhampton | Nail Salon | +44 7466 454702  |  |
+| 249 | Maxwell Hair | Derby | Hairdresser | +44 1332 341174  |  |
+| 250 | Style Studio | Stoke | Hairdresser | +44 1782 280929  |  |
+| 251 | Sahara 7 Hairdressing | Wolverhampton | Hairdresser | +44 7886 592464  |  |
+| 252 | Dry Clean Express | Wolverhampton | Cleaner | +44 1902 330512  |  |
+| 253 | Vanish Clean and Steam | Derby | Cleaner | +44 7538 930117  |  |
+| 254 | Derby Eco Housekeeping | Derby | Cleaner | +44 7792 768941  |  |
+| 255 | Hull Garden Maintenance | Hull | Gardener | +44 7368 633071  |  |
+| 256 | Perfect Harmony Landscapes | Wolverhampton | Gardener | +44 7581 268652  |  |
 
-_Emails sent:  / 243_
+_Emails sent:  / 256_
 <!-- LEADS_END -->
 
 ---
