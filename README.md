@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-02 10:08 UTC — 256 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-03 10:17 UTC — 294 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 74 | 33 | 71 |
-| Beauty Salon | 45 | 23 | 38 |
-| Cleaner | 30 | 22 | 30 |
-| Electrician | 23 | 11 | 22 |
-| Gardener | 51 | 39 | 50 |
-| Hairdresser | 46 | 26 | 45 |
-| Nail Salon | 83 | 44 | 79 |
-| Plumber | 31 | 11 | 31 |
-| Roofer | 56 | 10 | 53 |
-| Takeaway | 47 | 37 | 35 |
-| **Total** | **486** | **256** | **454** |
+| Barber | 87 | 46 | 81 |
+| Beauty Salon | 48 | 26 | 41 |
+| Cleaner | 32 | 24 | 32 |
+| Electrician | 25 | 13 | 24 |
+| Gardener | 56 | 44 | 55 |
+| Hairdresser | 48 | 28 | 47 |
+| Nail Salon | 90 | 51 | 86 |
+| Plumber | 33 | 13 | 33 |
+| Roofer | 57 | 10 | 54 |
+| Takeaway | 49 | 39 | 36 |
+| **Total** | **525** | **294** | **489** |
 
 ### All Leads (confirmed no website)
 
@@ -285,8 +285,46 @@ _Last updated: 2026-05-02 10:08 UTC — 256 confirmed leads (no website) across 
 | 254 | Derby Eco Housekeeping | Derby | Cleaner | +44 7792 768941  |  |
 | 255 | Hull Garden Maintenance | Hull | Gardener | +44 7368 633071  |  |
 | 256 | Perfect Harmony Landscapes | Wolverhampton | Gardener | +44 7581 268652  |  |
+| 257 | M1K Plumbing & Heating services | Portsmouth | Plumber | +44 7450 547748  |  |
+| 258 | TG Electrical | Southampton | Electrician | +44 7427 690196  |  |
+| 259 | MBS Electrical Services Ltd | Portsmouth | Electrician | +44 7734 006522  |  |
+| 260 | PlumbTec | Plymouth | Plumber | +44 7976 526405  |  |
+| 261 | B K barbers | Southampton | Barber | — |  |
+| 262 | Jasmine Nails | Southampton | Nail Salon | +44 7848 821284  |  |
+| 263 | CLASSY BARBER | Brighton | Barber | +44 7490 554409  |  |
+| 264 | Amir Gentleman Hair Salon | Brighton | Barber | +44 1273 809293  |  |
+| 265 | STAR BARBERS MEN'S GROOMING | Brighton | Barber | — |  |
+| 266 | Trimz Brighton Barbers | Brighton | Barber | +44 1273 567667  |  |
+| 267 | VIP BARBERS | Plymouth | Barber | +44 7868 665918  |  |
+| 268 | Lux Barbers | Plymouth | Barber | +44 7310 009740  |  |
+| 269 | Stoke Barbers | Plymouth | Barber | +44 7916 077486  |  |
+| 270 | Paradise Barber | Portsmouth | Barber | +44 7454 953219  |  |
+| 271 | BE BOSS Barbers | Portsmouth | Barber | — |  |
+| 272 | JM1 Stylist | Portsmouth | Barber | +44 7349 059995  |  |
+| 273 | Ace Barber | Portsmouth | Barber | +44 23 9307 9721  |  |
+| 274 | Meer Barbers | Portsmouth | Barber | +44 7305 367695  |  |
+| 275 | C M D Nails - Portsmouth | Portsmouth | Nail Salon | +44 7878 286136  |  |
+| 276 | Orange nails & spa ltd | Portsmouth | Nail Salon | +44 7831 535244  |  |
+| 277 | Perfection Nails & Beauty | Portsmouth | Nail Salon | +44 7718 097979  |  |
+| 278 | Angel Nails | Portsmouth | Nail Salon | +44 7727 896789  |  |
+| 279 | House Of Nails Brighton | Brighton | Nail Salon | +44 7999 966199  |  |
+| 280 | Angela's Nails, Plymouth | Plymouth | Nail Salon | +44 1752 226038  |  |
+| 281 | Lela Healing Sanctuary | Plymouth | Beauty Salon | +44 7935 611019  |  |
+| 282 | salon MUSE | Portsmouth | Beauty Salon | +44 23 9269 9444  |  |
+| 283 | Blossoms Beauty | Portsmouth | Beauty Salon | +44 23 9400 9377  |  |
+| 284 | Jaycee Unisex hairdressers | Plymouth | Hairdresser | +44 1752 229032  |  |
+| 285 | Hair @ The Terrace | Portsmouth | Hairdresser | +44 23 9285 1185  |  |
+| 286 | Maxydomestics Cleaning Services | Southampton | Cleaner | +44 7808 543363  |  |
+| 287 | Hi Tech Cleaning Services | Portsmouth | Cleaner | +44 7854 239961  |  |
+| 288 | HK PLACE | Brighton | Takeaway | +44 7577 196494  |  |
+| 289 | Tantuni | Plymouth | Takeaway | — |  |
+| 290 | Gardeningreina | Southampton | Gardener | +44 7587 023526  |  |
+| 291 | Radiant Gardens & Trees | Portsmouth | Gardener | +44 7772 057856  |  |
+| 292 | Gardens and Dreams | Portsmouth | Gardener | +44 7423 059610  |  |
+| 293 | Just joes garden maintenance | Plymouth | Gardener | +44 7742 697343  |  |
+| 294 | Createscape Landscaping & Fencing Services | Plymouth | Gardener | +44 1752 396206  |  |
 
-_Emails sent:  / 256_
+_Emails sent:  / 294_
 <!-- LEADS_END -->
 
 ---
