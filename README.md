@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-03 10:17 UTC — 294 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-04 11:15 UTC — 368 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 87 | 46 | 81 |
-| Beauty Salon | 48 | 26 | 41 |
-| Cleaner | 32 | 24 | 32 |
-| Electrician | 25 | 13 | 24 |
-| Gardener | 56 | 44 | 55 |
-| Hairdresser | 48 | 28 | 47 |
-| Nail Salon | 90 | 51 | 86 |
-| Plumber | 33 | 13 | 33 |
-| Roofer | 57 | 10 | 54 |
-| Takeaway | 49 | 39 | 36 |
-| **Total** | **525** | **294** | **489** |
+| Barber | 105 | 64 | 99 |
+| Beauty Salon | 55 | 33 | 47 |
+| Cleaner | 37 | 29 | 37 |
+| Electrician | 28 | 16 | 27 |
+| Gardener | 62 | 50 | 61 |
+| Hairdresser | 55 | 35 | 54 |
+| Nail Salon | 99 | 60 | 95 |
+| Plumber | 43 | 23 | 43 |
+| Roofer | 60 | 12 | 57 |
+| Takeaway | 56 | 46 | 42 |
+| **Total** | **600** | **368** | **562** |
 
 ### All Leads (confirmed no website)
 
@@ -323,8 +323,82 @@ _Last updated: 2026-05-03 10:17 UTC — 294 confirmed leads (no website) across 
 | 292 | Gardens and Dreams | Portsmouth | Gardener | +44 7423 059610  |  |
 | 293 | Just joes garden maintenance | Plymouth | Gardener | +44 7742 697343  |  |
 | 294 | Createscape Landscaping & Fencing Services | Plymouth | Gardener | +44 1752 396206  |  |
+| 295 | Meadow Roofing & Building Reading | Reading | Roofer | +44 118 409 1081  |  |
+| 296 | Reading Roofline LTD | Reading | Roofer | +44 7541 221082  |  |
+| 297 | R&R Plumbing & Heating Bolton Ltd | Bolton | Plumber | +44 7718 534333  |  |
+| 298 | Zak plumbing and heating Bolton | Bolton | Plumber | +44 7404 283428  |  |
+| 299 | JC Plumbing and Heating | Bolton | Plumber | +44 7515 885660  |  |
+| 300 | Electrical Eddy | Bolton | Electrician | +44 7487 733972  |  |
+| 301 | Electro solutions | Luton | Electrician | +44 7788 988537  |  |
+| 302 | Luton Electrical services Domestic & Commercial. | Luton | Electrician | +44 7399 635996  |  |
+| 303 | Acl Plumbing & Heating | Preston | Plumber | +44 7740 964827  |  |
+| 304 | Martin Fox Plumbing and Heating Services | Preston | Plumber | +44 7725 545275  |  |
+| 305 | Rapid Fix Plumbing & Gas | Preston | Plumber | +44 7904 682802  |  |
+| 306 | Luton Plumbing & Heating | Luton | Plumber | +44 7432 802555  |  |
+| 307 | WK Heating & Plumbing | Luton | Plumber | +44 7930 000505  |  |
+| 308 | Sheriff Heating and Plumbing Services | Luton | Plumber | +44 7979 221133  |  |
+| 309 | KT Plumbing | Luton | Plumber | +44 7360 075504  |  |
+| 310 | Top Barbers | Reading | Barber | +44 118 996 7833  |  |
+| 311 | The Nail Lounge | Reading | Nail Salon | +44 7756 580966  |  |
+| 312 | Club Boys Barber | Bolton | Barber | +44 7707 188612  |  |
+| 313 | Man cave barber | Bolton | Barber | +44 7895 977778  |  |
+| 314 | Dean’s barbers shop | Bolton | Barber | +44 1204 383238  |  |
+| 315 | Neo’s Turkish barber | Bolton | Barber | +44 7561 224169  |  |
+| 316 | Luxe Cuts barber | Bolton | Barber | +44 7500 076322  |  |
+| 317 | DANNY'S BARBER | Preston | Barber | +44 7757 114544  |  |
+| 318 | More Blessings Barber Shop | Preston | Barber | +44 1772 962100  |  |
+| 319 | Royal Barbers | Preston | Barber | +44 7454 656156  |  |
+| 320 | Best Hamoz Barber | Preston | Barber | +44 7480 328440  |  |
+| 321 | Claws Nails & Beauty Salon | Bolton | Nail Salon | +44 7813 752814  |  |
+| 322 | Bling Nails & Spa Beauty | Bolton | Nail Salon | +44 7707 666868  |  |
+| 323 | Kurd Cut Barbers | Luton | Barber | +44 7575 396360  |  |
+| 324 | Kurdish Barber | Luton | Barber | +44 7412 697065  |  |
+| 325 | Twenty Nine Barbers | Luton | Barber | +44 7538 773365  |  |
+| 326 | Exclusive Barbers | Luton | Barber | +44 1582 753011  |  |
+| 327 | Ashcroft Barbers Luton | Luton | Barber | +44 7490 406291  |  |
+| 328 | Kings Barbers | Luton | Barber | +44 1582 361412  |  |
+| 329 | Fresh Trims Barbers | Luton | Barber | +44 7448 873430  |  |
+| 330 | La Casa De Barber | Luton | Barber | +44 1582 797330  |  |
+| 331 | Lux Nails | Luton | Nail Salon | +44 7749 778086  |  |
+| 332 | HA’s Nails & Beauty | Luton | Nail Salon | +44 7828 819393  |  |
+| 333 | Luxury Nails 24 | Luton | Nail Salon | +44 7473 571602  |  |
+| 334 | Nailed By Zaina | Luton | Nail Salon | +44 7946 111891  |  |
+| 335 | Cici Nails & Spa | Preston | Nail Salon | +44 7877 810470  |  |
+| 336 | EIGHTY-6 NAIL STUDIO | Preston | Nail Salon | +44 7940 248686  |  |
+| 337 | Ash Beauty Spot | Luton | Beauty Salon | +44 7766 112631  |  |
+| 338 | Blossom Beauty Studio | Luton | Beauty Salon | +44 7413 302021  |  |
+| 339 | Beauty Lounge | Bolton | Beauty Salon | +44 1204 776846  |  |
+| 340 | Glam hair salon | Bolton | Beauty Salon | +44 7404 646575  |  |
+| 341 | Salon 11 - Bolton Hairdressers & Beauticians | Bolton | Beauty Salon | +44 1204 776064  |  |
+| 342 | Nilu's Advanced Beauty | Bolton | Beauty Salon | +44 7591 244111  |  |
+| 343 | The Hamilton - Hair & Beauty Salon | Preston | Beauty Salon | — |  |
+| 344 | Sharpedge hair & Beauty | Reading | Hairdresser | +44 118 950 3406  |  |
+| 345 | Cutting Room | Luton | Hairdresser | +44 7985 245750  |  |
+| 346 | Alchemy hair | Bolton | Hairdresser | +44 1204 846477  |  |
+| 347 | Her HQ | Bolton | Hairdresser | +44 1204 465423  |  |
+| 348 | Hair stories | Bolton | Hairdresser | +44 7533 013243  |  |
+| 349 | Just Cleaning, domestic cleaning | Reading | Cleaner | +44 7796 481499  |  |
+| 350 | Adam Hair Salon | Preston | Hairdresser | +44 7885 552065  |  |
+| 351 | Salon 58 | Preston | Hairdresser | +44 1772 378392  |  |
+| 352 | Bolton Clean Street Launderette and Dry Cleaning | Bolton | Cleaner | +44 1204 63683  |  |
+| 353 | Falcon Speedy LTD | Luton | Cleaner | +44 7375 086899  |  |
+| 354 | MAP Laundry & Dry Cleaners | Preston | Cleaner | +44 7470 880801  |  |
+| 355 | Local Cleaners North West Ltd | Preston | Cleaner | +44 1772 369655  |  |
+| 356 | Tobiko Thai Bolton | Bolton | Takeaway | +44 7849 533935  |  |
+| 357 | UK Takeaway Bolton | Bolton | Takeaway | — |  |
+| 358 | Frangos Preston | Preston | Takeaway | +44 1772 203020  |  |
+| 359 | Royal Shawarma | Preston | Takeaway | +44 1772 880880  |  |
+| 360 | Street Food Junction (Pure Vegetarian) | Luton | Takeaway | +44 7415 522158  |  |
+| 361 | Luton Biryani | Luton | Takeaway | +44 7887 972024  |  |
+| 362 | Flava Kitchen | Luton | Takeaway | +44 7394 630925  |  |
+| 363 | SM Garden Maintenance | Bolton | Gardener | +44 7305 108189  |  |
+| 364 | Fantastic Gardeners Reading | Reading | Gardener | +44 7429 499368  |  |
+| 365 | J&W Garden Services | Luton | Gardener | +44 7903 004393  |  |
+| 366 | CTW Garden Services | Luton | Gardener | +44 7966 653709  |  |
+| 367 | FG Garden Design Ltd | Preston | Gardener | +44 1772 280296  |  |
+| 368 | Hedge Gardening & Van services | Preston | Gardener | +44 7346 279113  |  |
 
-_Emails sent:  / 294_
+_Emails sent:  / 368_
 <!-- LEADS_END -->
 
 ---
