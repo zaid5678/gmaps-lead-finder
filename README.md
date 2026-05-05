@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-04 11:15 UTC — 368 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-05 11:02 UTC — 405 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 105 | 64 | 99 |
-| Beauty Salon | 55 | 33 | 47 |
-| Cleaner | 37 | 29 | 37 |
-| Electrician | 28 | 16 | 27 |
-| Gardener | 62 | 50 | 61 |
-| Hairdresser | 55 | 35 | 54 |
-| Nail Salon | 99 | 60 | 95 |
-| Plumber | 43 | 23 | 43 |
-| Roofer | 60 | 12 | 57 |
-| Takeaway | 56 | 46 | 42 |
-| **Total** | **600** | **368** | **562** |
+| Barber | 120 | 72 | 113 |
+| Beauty Salon | 57 | 35 | 48 |
+| Cleaner | 39 | 31 | 39 |
+| Electrician | 34 | 17 | 33 |
+| Gardener | 66 | 54 | 65 |
+| Hairdresser | 61 | 41 | 59 |
+| Nail Salon | 110 | 71 | 106 |
+| Plumber | 45 | 23 | 45 |
+| Roofer | 62 | 12 | 59 |
+| Takeaway | 59 | 49 | 43 |
+| **Total** | **653** | **405** | **610** |
 
 ### All Leads (confirmed no website)
 
@@ -397,8 +397,45 @@ _Last updated: 2026-05-04 11:15 UTC — 368 confirmed leads (no website) across 
 | 366 | CTW Garden Services | Luton | Gardener | +44 7966 653709  |  |
 | 367 | FG Garden Design Ltd | Preston | Gardener | +44 1772 280296  |  |
 | 368 | Hedge Gardening & Van services | Preston | Gardener | +44 7346 279113  |  |
+| 369 | STS Electricals North East Ltd | Sunderland | Electrician | +44 7801 014650  |  |
+| 370 | BOSS CUTZ NORWICH | Norwich | Barber | +44 1603 572507  |  |
+| 371 | Tina Nails | Milton Keynes | Nail Salon | +44 7832 991857  |  |
+| 372 | City Nails and Spa | Milton Keynes | Nail Salon | +44 1908 668880  |  |
+| 373 | John’s Barbers | Sunderland | Barber | +44 7828 540539  |  |
+| 374 | Hidden Barber’s | Sunderland | Barber | — |  |
+| 375 | Jacks Barber Shop | Sunderland | Barber | +44 7964 226529  |  |
+| 376 | Roker barber | Sunderland | Barber | +44 7958 313232  |  |
+| 377 | Marmaris Barbers | Sunderland | Barber | +44 7751 535719  |  |
+| 378 | Fade zone Barber shop | Sunderland | Barber | +44 7397 063190  |  |
+| 379 | P J's Barber Shop | Sunderland | Barber | +44 191 567 5800  |  |
+| 380 | Nails Norwich | Norwich | Nail Salon | +44 7904 180908  |  |
+| 381 | High Class Nails | Norwich | Nail Salon | +44 7828 805568  |  |
+| 382 | Hannah Nails & Spa | Sunderland | Nail Salon | +44 7498 586609  |  |
+| 383 | Hollywood Nails & Spa | Sunderland | Nail Salon | +44 191 510 2222  |  |
+| 384 | The Nail Lab | Sunderland | Nail Salon | +44 7301 010234  |  |
+| 385 | Sexy Nails Sunderland | Sunderland | Nail Salon | +44 7383 770076  |  |
+| 386 | Diamond Nails | Sunderland | Nail Salon | +44 7384 999968  |  |
+| 387 | Nails by liviaa | Sunderland | Nail Salon | +44 7845 284161  |  |
+| 388 | Diva Nails Sunderland | Sunderland | Nail Salon | +44 7365 358889  |  |
+| 389 | Vintage Lily Hair & Beauty Salon | Sunderland | Beauty Salon | +44 7515 314205  |  |
+| 390 | Golden Touch | Sunderland | Beauty Salon | — |  |
+| 391 | Black Door Hairdressing | Sunderland | Hairdresser | +44 7852 402432  |  |
+| 392 | City Snippers | Sunderland | Hairdresser | +44 7960 513155  |  |
+| 393 | Zigz Hair Salon | Sunderland | Hairdresser | +44 191 565 5718  |  |
+| 394 | Leigh's Hair & Beauty | Sunderland | Hairdresser | +44 7957 660386  |  |
+| 395 | Hughes Unisex Hairdressing | Sunderland | Hairdresser | +44 191 567 7794  |  |
+| 396 | The Wolf Pack Salon | Norwich | Hairdresser | — |  |
+| 397 | First Class Cleaning Aberdeen | Aberdeen | Cleaner | +44 1224 674984  |  |
+| 398 | A* Pennywell Laundry Services | Sunderland | Cleaner | +44 7395 323541  |  |
+| 399 | SPUD5 | Milton Keynes | Takeaway | — |  |
+| 400 | Taste Of Paradise | Milton Keynes | Takeaway | +44 7579 644457  |  |
+| 401 | Italian Streetfood | Norwich | Takeaway | — |  |
+| 402 | Dougies Garden Service Ltd | Milton Keynes | Gardener | +44 7713 157799  |  |
+| 403 | Adair U 2 Grow Landscapes | Sunderland | Gardener | +44 7910 758129  |  |
+| 404 | Watson’s Garden Maintenance | Sunderland | Gardener | +44 7586 732502  |  |
+| 405 | The Norwich Gardener | Norwich | Gardener | +44 7736 114920  |  |
 
-_Emails sent:  / 368_
+_Emails sent:  / 405_
 <!-- LEADS_END -->
 
 ---
