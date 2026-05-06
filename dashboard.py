@@ -16,7 +16,8 @@ README_PATH = Path("README.md")
 _LEADS_HEADER = "## Leads\n"
 _LEGAL_MARKER = "## Legal Note"
 
-CSV_PATH = Path("output/roofers_leads.csv")
+CSV_PATH      = Path("output/roofers_leads.csv")
+ALL_LEADS_CSV = Path("output/all_leads.csv")
 FIELDNAMES = [
     "fingerprint", "name", "city", "address", "phone", "email",
     "rating", "review_count", "maps_url", "scraped_at",
@@ -27,13 +28,47 @@ app = Flask(__name__)
 
 
 def load_leads() -> list[dict]:
-    if not CSV_PATH.exists():
-        return []
-    with open(CSV_PATH, newline="", encoding="utf-8") as f:
-        return [r for r in csv.DictReader(f) if r.get("name", "").strip()]
+    """Load from roofers_leads.csv, auto-merging any new leads from all_leads.csv."""
+    # Read existing dashboard entries (preserves contacted status)
+    roofers: dict = {}
+    if CSV_PATH.exists():
+        with open(CSV_PATH, newline="", encoding="utf-8") as f:
+            roofers = {r["fingerprint"]: r for r in csv.DictReader(f) if r.get("fingerprint")}
+
+    # Merge in any leads from all_leads.csv not yet in the dashboard
+    added = 0
+    if ALL_LEADS_CSV.exists():
+        with open(ALL_LEADS_CSV, newline="", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                fp = row.get("fingerprint", "").strip()
+                if not fp or fp in roofers or not row.get("name", "").strip():
+                    continue
+                roofers[fp] = {
+                    "fingerprint":         fp,
+                    "name":                row.get("name", ""),
+                    "city":                row.get("city", ""),
+                    "address":             row.get("address", ""),
+                    "phone":               row.get("phone", ""),
+                    "email":               row.get("email", ""),
+                    "rating":              "",
+                    "review_count":        "",
+                    "maps_url":            row.get("maps_url", ""),
+                    "scraped_at":          row.get("scraped_at", ""),
+                    "contacted":           "",
+                    "contacted_date":      "",
+                    "is_priority":         "",
+                    "pain_keywords_found": "",
+                }
+                added += 1
+
+    if added:
+        save_leads(list(roofers.values()))
+
+    return [r for r in roofers.values() if r.get("name", "").strip()]
 
 
 def save_leads(leads: list[dict]):
+    CSV_PATH.parent.mkdir(parents=True, exist_ok=True)
     extra = sorted(set().union(*[r.keys() for r in leads]) - set(FIELDNAMES))
     fieldnames = FIELDNAMES + extra
     with open(CSV_PATH, "w", newline="", encoding="utf-8") as f:
