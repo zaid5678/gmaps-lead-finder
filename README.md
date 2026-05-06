@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-05 11:02 UTC — 405 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-06 11:15 UTC — 438 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 120 | 72 | 113 |
-| Beauty Salon | 57 | 35 | 48 |
-| Cleaner | 39 | 31 | 39 |
-| Electrician | 34 | 17 | 33 |
-| Gardener | 66 | 54 | 65 |
-| Hairdresser | 61 | 41 | 59 |
-| Nail Salon | 110 | 71 | 106 |
-| Plumber | 45 | 23 | 45 |
-| Roofer | 62 | 12 | 59 |
-| Takeaway | 59 | 49 | 43 |
-| **Total** | **653** | **405** | **610** |
+| Barber | 130 | 79 | 123 |
+| Beauty Salon | 61 | 39 | 52 |
+| Cleaner | 40 | 32 | 40 |
+| Electrician | 35 | 17 | 34 |
+| Gardener | 70 | 58 | 69 |
+| Hairdresser | 65 | 45 | 63 |
+| Nail Salon | 120 | 81 | 116 |
+| Plumber | 48 | 23 | 47 |
+| Roofer | 67 | 12 | 64 |
+| Takeaway | 62 | 52 | 44 |
+| **Total** | **698** | **438** | **652** |
 
 ### All Leads (confirmed no website)
 
@@ -434,8 +434,41 @@ _Last updated: 2026-05-05 11:02 UTC — 405 confirmed leads (no website) across 
 | 403 | Adair U 2 Grow Landscapes | Sunderland | Gardener | +44 7910 758129  |  |
 | 404 | Watson’s Garden Maintenance | Sunderland | Gardener | +44 7586 732502  |  |
 | 405 | The Norwich Gardener | Norwich | Gardener | +44 7736 114920  |  |
+| 406 | Dundee Barbers & Skinfade | Dundee | Barber | +44 7447 647227  |  |
+| 407 | New İstanbul Barber | Ipswich | Barber | +44 7308 677767  |  |
+| 408 | Guevara Barber | Gloucester | Barber | +44 7868 657478  |  |
+| 409 | Southgate Barber Shop | Gloucester | Barber | +44 7466 277291  |  |
+| 410 | Northgate Barber Shop | Gloucester | Barber | +44 7435 288705  |  |
+| 411 | The Barbers | Gloucester | Barber | +44 1452 300679  |  |
+| 412 | Boys2Men Barbers | Gloucester | Barber | +44 7498 498716  |  |
+| 413 | En Rose Nails & Spa | Dundee | Nail Salon | +44 1382 200575  |  |
+| 414 | Luxury Nails Dundee | Dundee | Nail Salon | +44 7455 781667  |  |
+| 415 | Angel nails spa Dundee | Dundee | Nail Salon | +44 7722 089568  |  |
+| 416 | Sun Nails & Spa | Dundee | Nail Salon | +44 7493 688788  |  |
+| 417 | Sky nails & spa | Dundee | Nail Salon | +44 1382 224512  |  |
+| 418 | Lotus Nails Spa | Ipswich | Nail Salon | +44 1473 217773  |  |
+| 419 | Last Night's Nails | Ipswich | Nail Salon | +44 7973 923042  |  |
+| 420 | Coconails & Beauty Salon | Ipswich | Nail Salon | +44 1473 225888  |  |
+| 421 | Elegant Nails | Ipswich | Nail Salon | +44 1473 517461  |  |
+| 422 | Pretty like you | Ipswich | Nail Salon | +44 1473 805978  |  |
+| 423 | The Salon Hair & Beauty | Dundee | Beauty Salon | +44 7977 641985  |  |
+| 424 | S. Unique Beauty | York | Beauty Salon | +44 7404 797054  |  |
+| 425 | Angel beauty Salon | Ipswich | Beauty Salon | +44 7403 417064  |  |
+| 426 | Beauty Within Studio | Gloucester | Beauty Salon | +44 7734 683402  |  |
+| 427 | Salonori - Hairdressers in Dundee | Dundee | Hairdresser | +44 1382 228698  |  |
+| 428 | Lawrence James | Dundee | Hairdresser | +44 1382 566856  |  |
+| 429 | Derek Arnell | Gloucester | Hairdresser | +44 1452 300205  |  |
+| 430 | Ho & Co Hairdressing | Gloucester | Hairdresser | +44 1452 311580  |  |
+| 431 | Anglia Dry Cleaners | Ipswich | Cleaner | +44 1473 279804  |  |
+| 432 | Desi Food Junction | Ipswich | Takeaway | — |  |
+| 433 | The Biga+ | York | Takeaway | — |  |
+| 434 | Nowruz Kebab | Gloucester | Takeaway | +44 1452 909677  |  |
+| 435 | Darren Reid Gardening Services Ltd | Dundee | Gardener | +44 7415 757197  |  |
+| 436 | Bramble & Nettle Gardening Services | Ipswich | Gardener | +44 7932 438146  |  |
+| 437 | Greenleaf garden services | Ipswich | Gardener | +44 7920 866352  |  |
+| 438 | Kyle Emery Gardening Services | Gloucester | Gardener | +44 7506 334202  |  |
 
-_Emails sent:  / 405_
+_Emails sent:  / 438_
 <!-- LEADS_END -->
 
 ---
