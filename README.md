@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-06 11:15 UTC — 438 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-07 11:26 UTC — 473 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 130 | 79 | 123 |
-| Beauty Salon | 61 | 39 | 52 |
-| Cleaner | 40 | 32 | 40 |
-| Electrician | 35 | 17 | 34 |
-| Gardener | 70 | 58 | 69 |
-| Hairdresser | 65 | 45 | 63 |
-| Nail Salon | 120 | 81 | 116 |
-| Plumber | 48 | 23 | 47 |
-| Roofer | 67 | 12 | 64 |
-| Takeaway | 62 | 52 | 44 |
-| **Total** | **698** | **438** | **652** |
+| Barber | 140 | 85 | 132 |
+| Beauty Salon | 66 | 44 | 56 |
+| Cleaner | 42 | 34 | 42 |
+| Electrician | 36 | 17 | 35 |
+| Gardener | 74 | 62 | 73 |
+| Hairdresser | 69 | 49 | 67 |
+| Nail Salon | 130 | 91 | 125 |
+| Plumber | 49 | 23 | 48 |
+| Roofer | 69 | 12 | 66 |
+| Takeaway | 66 | 56 | 45 |
+| **Total** | **741** | **473** | **689** |
 
 ### All Leads (confirmed no website)
 
@@ -467,8 +467,43 @@ _Last updated: 2026-05-06 11:15 UTC — 438 confirmed leads (no website) across 
 | 436 | Bramble & Nettle Gardening Services | Ipswich | Gardener | +44 7932 438146  |  |
 | 437 | Greenleaf garden services | Ipswich | Gardener | +44 7920 866352  |  |
 | 438 | Kyle Emery Gardening Services | Gloucester | Gardener | +44 7506 334202  |  |
+| 439 | Classy Barbers | Oxford | Barber | +44 1865 248009  |  |
+| 440 | Istanbul barbers | Cambridge | Barber | +44 7835 027653  |  |
+| 441 | Stars Barber | Cambridge | Barber | +44 7467 739562  |  |
+| 442 | Park End Nails | Oxford | Nail Salon | +44 1865 580505  |  |
+| 443 | Amy Nails | Oxford | Nail Salon | +44 1865 790909  |  |
+| 444 | Oxford Luxury Nails Svitlana 🇺🇦🇬🇧 | Oxford | Nail Salon | +44 7862 970311  |  |
+| 445 | The Kimono Nail Studio | Cambridge | Nail Salon | +44 1223 315150  |  |
+| 446 | Top Nails Cambridge | Cambridge | Nail Salon | +44 1223 350011  |  |
+| 447 | The Barber's Lounge | Peterborough | Barber | — |  |
+| 448 | Barbers club | Peterborough | Barber | +44 7856 192169  |  |
+| 449 | Snip&Style Barber | Peterborough | Barber | +44 7575 240075  |  |
+| 450 | J&J Beauty Salon | Oxford | Beauty Salon | +44 1865 958937  |  |
+| 451 | Luxe nail and spa | Peterborough | Nail Salon | +44 1733 913540  |  |
+| 452 | DmNails Fletton peterborough | Peterborough | Nail Salon | — |  |
+| 453 | JD Nails and beauty | Peterborough | Nail Salon | +44 1733 347970  |  |
+| 454 | LV Nails | Swansea | Nail Salon | +44 7961 741828  |  |
+| 455 | Swansea Nails Studio | Swansea | Nail Salon | +44 7828 256687  |  |
+| 456 | Kavita's Beauty Bay | Swansea | Beauty Salon | +44 7501 475558  |  |
+| 457 | NINA Beauty Swansea | Swansea | Beauty Salon | +44 7771 919339  |  |
+| 458 | "Retro" beauty salon | Peterborough | Beauty Salon | — |  |
+| 459 | Gemmalous Beauty Bar | Peterborough | Beauty Salon | +44 1733 855038  |  |
+| 460 | Slix Hair Salon | Swansea | Hairdresser | +44 1792 469855  |  |
+| 461 | Replay Swansea | Swansea | Hairdresser | +44 1792 468271  |  |
+| 462 | Natalia Sanchez hairdressing | Swansea | Hairdresser | +44 1792 644400  |  |
+| 463 | Head Office | Swansea | Hairdresser | +44 1792 462787  |  |
+| 464 | Cleaners Peterborough | Peterborough | Cleaner | +44 1733 530584  |  |
+| 465 | My Rob Cleaning | Swansea | Cleaner | +44 7936 816914  |  |
+| 466 | Rozana Oxford | Oxford | Takeaway | — |  |
+| 467 | Najar's Place | Oxford | Takeaway | +44 7402 351113  |  |
+| 468 | Thai Express | Swansea | Takeaway | — |  |
+| 469 | Hook'd Peterborough | Peterborough | Takeaway | — |  |
+| 470 | Oxford My Garden | Oxford | Gardener | +44 7941 093343  |  |
+| 471 | Gardener Oxford | Oxford | Gardener | +44 1865 600070  |  |
+| 472 | Gardener in Peterborough | Peterborough | Gardener | +44 7802 788245  |  |
+| 473 | Peterborough Garden Maintenance | Peterborough | Gardener | +44 7766 438589  |  |
 
-_Emails sent:  / 438_
+_Emails sent:  / 473_
 <!-- LEADS_END -->
 
 ---
