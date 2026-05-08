@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-07 11:26 UTC — 473 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-08 10:16 UTC — 475 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 140 | 85 | 132 |
-| Beauty Salon | 66 | 44 | 56 |
-| Cleaner | 42 | 34 | 42 |
+| Beauty Salon | 68 | 46 | 58 |
+| Cleaner | 44 | 34 | 44 |
 | Electrician | 36 | 17 | 35 |
 | Gardener | 74 | 62 | 73 |
-| Hairdresser | 69 | 49 | 67 |
+| Hairdresser | 70 | 49 | 68 |
 | Nail Salon | 130 | 91 | 125 |
 | Plumber | 49 | 23 | 48 |
-| Roofer | 69 | 12 | 66 |
+| Roofer | 70 | 12 | 67 |
 | Takeaway | 66 | 56 | 45 |
-| **Total** | **741** | **473** | **689** |
+| **Total** | **747** | **475** | **695** |
 
 ### All Leads (confirmed no website)
 
@@ -502,8 +502,10 @@ _Last updated: 2026-05-07 11:26 UTC — 473 confirmed leads (no website) across 
 | 471 | Gardener Oxford | Oxford | Gardener | +44 1865 600070  |  |
 | 472 | Gardener in Peterborough | Peterborough | Gardener | +44 7802 788245  |  |
 | 473 | Peterborough Garden Maintenance | Peterborough | Gardener | +44 7766 438589  |  |
+| 474 | Beauty Base | Blackpool | Beauty Salon | +44 7473 094546  |  |
+| 475 | Brow Junction | Middlesbrough | Beauty Salon | +44 7867 221579  |  |
 
-_Emails sent:  / 473_
+_Emails sent:  / 475_
 <!-- LEADS_END -->
 
 ---
