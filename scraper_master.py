@@ -78,7 +78,8 @@ USER_AGENTS = [
 DEFAULT_CATEGORIES = [
     "barber", "plumber", "electrician", "roofer", "restaurant",
     "cafe", "beauty salon", "car mechanic", "dentist", "cleaner",
-    "hairdresser", "nail salon", "locksmith", "painter decorator", "gardener",
+    "window cleaner", "hairdresser", "nail salon", "locksmith",
+    "painter decorator", "gardener",
 ]
 
 ALL_CATEGORIES = [
@@ -88,7 +89,8 @@ ALL_CATEGORIES = [
     "painter decorator", "locksmith", "mechanic", "car wash",
     "dentist", "physiotherapist", "chiropractor", "gym", "personal trainer",
     "yoga studio", "accountant", "solicitor", "estate agent",
-    "driving instructor", "tutor", "cleaner", "gardener",
+    "driving instructor", "tutor", "cleaner", "window cleaner",
+    "window cleaning", "window cleaning service", "gardener",
     "landscaper", "pet groomer", "vet",
 ]
 

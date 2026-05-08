@@ -404,6 +404,20 @@ async function syncToGitHub() {
 }
 
 fetchLeads();
+
+// Auto-refresh leads every 30 seconds to pick up new scrapes
+setInterval(async () => {
+  const res = await fetch("/api/leads");
+  const fresh = await res.json();
+  if (fresh.length !== allLeads.length) {
+    const added = fresh.length - allLeads.length;
+    allLeads = fresh;
+    render();
+    updateStats();
+    if (added > 0) showToast(`${added} new lead${added > 1 ? "s" : ""} added`);
+    setTimeout(hideToast, 2500);
+  }
+}, 30000);
 </script>
 </body>
 </html>

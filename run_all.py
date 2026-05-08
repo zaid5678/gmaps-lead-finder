@@ -22,6 +22,7 @@ import argparse
 import csv
 import logging
 import os
+import subprocess
 import sys
 import time
 from datetime import datetime
@@ -229,6 +230,61 @@ def step_email(args_ns):
 # MAIN LOOP
 # ─────────────────────────────────────────────────────────────
 
+def step_push_github():
+    """Rebuild README leads table and push CSV + README to GitHub."""
+    log.info("─" * 52)
+    log.info("STEP — Pushing to GitHub")
+    log.info("─" * 52)
+    try:
+        from dashboard import load_leads, README_PATH, _LEGAL_MARKER
+
+        leads = load_leads()
+        leads.sort(key=lambda r: (r.get("is_priority", "") != "yes", -int(r.get("review_count") or 0)))
+
+        header = (
+            "| Business | City | Phone | Reviews | Rating | Contacted | Priority | Maps |\n"
+            "|----------|------|-------|---------|--------|-----------|----------|------|\n"
+        )
+        table_rows = ""
+        for r in leads:
+            name      = r.get("name", "").replace("|", "\\|").strip()
+            city      = r.get("city", "").strip()
+            phone     = r.get("phone", "").replace("|", "\\|").strip()
+            reviews   = r.get("review_count", "")
+            rating    = r.get("rating", "")
+            contacted = "Yes" if r.get("contacted") == "yes" else ""
+            priority  = "YES" if r.get("is_priority") == "yes" else ""
+            maps_url  = r.get("maps_url", "")
+            link      = f"[Maps]({maps_url})" if maps_url else ""
+            table_rows += f"| {name} | {city} | {phone} | {reviews} | {rating} | {contacted} | {priority} | {link} |\n"
+
+        contacted_count = sum(1 for r in leads if r.get("contacted") == "yes")
+        new_section = (
+            "## Leads\n\n"
+            f"**{len(leads)} total leads — {contacted_count} contacted, {len(leads) - contacted_count} remaining.**\n\n"
+            + header + table_rows + "\n"
+        )
+
+        content = README_PATH.read_text(encoding="utf-8")
+        leads_start = content.find("## Leads\n")
+        legal_start = content.find(_LEGAL_MARKER)
+        if leads_start != -1 and legal_start != -1:
+            content = content[:leads_start] + new_section + "\n---\n\n" + content[legal_start:]
+            README_PATH.write_text(content, encoding="utf-8")
+
+        now = datetime.now().strftime("%Y-%m-%d %H:%M")
+        subprocess.run(["git", "add", "output/roofers_leads.csv", "output/all_leads.csv", "README.md"], check=True)
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"])
+        if result.returncode != 0:
+            subprocess.run(["git", "commit", "-m", f"chore: leads scrape {now}"], check=True)
+            subprocess.run(["git", "push", "origin", "main"], check=True)
+            log.info(f"Pushed {len(leads)} leads to GitHub")
+        else:
+            log.info("Nothing new to push")
+    except Exception as exc:
+        log.warning(f"GitHub push failed (non-fatal): {exc}")
+
+
 def run_once(args):
     start = datetime.now()
     log.info("╔" + "═" * 58 + "╗")
@@ -243,6 +299,9 @@ def run_once(args):
 
     stats = read_stats(ALL_LEADS)
     print_stats(stats)
+
+    if not args.dry_run:
+        step_push_github()
 
     elapsed = (datetime.now() - start).total_seconds()
     log.info(f"Run complete in {elapsed/60:.1f} min")
