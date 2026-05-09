@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-08 10:16 UTC — 475 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-09 10:17 UTC — 477 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 140 | 85 | 132 |
-| Beauty Salon | 68 | 46 | 58 |
+| Barber | 142 | 85 | 133 |
+| Beauty Salon | 70 | 46 | 60 |
 | Cleaner | 44 | 34 | 44 |
 | Electrician | 36 | 17 | 35 |
-| Gardener | 74 | 62 | 73 |
-| Hairdresser | 70 | 49 | 68 |
-| Nail Salon | 130 | 91 | 125 |
-| Plumber | 49 | 23 | 48 |
+| Gardener | 76 | 64 | 75 |
+| Hairdresser | 72 | 49 | 69 |
+| Nail Salon | 132 | 91 | 127 |
+| Plumber | 51 | 23 | 50 |
 | Roofer | 70 | 12 | 67 |
-| Takeaway | 66 | 56 | 45 |
-| **Total** | **747** | **475** | **695** |
+| Takeaway | 69 | 56 | 48 |
+| **Total** | **762** | **477** | **708** |
 
 ### All Leads (confirmed no website)
 
@@ -504,8 +504,10 @@ _Last updated: 2026-05-08 10:16 UTC — 475 confirmed leads (no website) across 
 | 473 | Peterborough Garden Maintenance | Peterborough | Gardener | +44 7766 438589  |  |
 | 474 | Beauty Base | Blackpool | Beauty Salon | +44 7473 094546  |  |
 | 475 | Brow Junction | Middlesbrough | Beauty Salon | +44 7867 221579  |  |
+| 476 | Gorilla Garden Improvements Ltd | Huddersfield | Gardener | +44 7388 541787  |  |
+| 477 | Stu's garden maintenance | Telford | Gardener | +44 7872 943463  |  |
 
-_Emails sent:  / 475_
+_Emails sent:  / 477_
 <!-- LEADS_END -->
 
 ---
