@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-12 11:23 UTC — 477 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-13 11:25 UTC — 479 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 146 | 85 | 137 |
 | Beauty Salon | 72 | 46 | 62 |
 | Cleaner | 44 | 34 | 44 |
-| Electrician | 36 | 17 | 35 |
-| Gardener | 77 | 64 | 76 |
+| Electrician | 37 | 17 | 36 |
+| Gardener | 78 | 65 | 77 |
 | Hairdresser | 73 | 49 | 70 |
-| Nail Salon | 133 | 91 | 128 |
+| Nail Salon | 135 | 91 | 130 |
 | Plumber | 55 | 23 | 54 |
 | Roofer | 71 | 12 | 68 |
-| Takeaway | 70 | 56 | 49 |
-| **Total** | **777** | **477** | **723** |
+| Takeaway | 73 | 57 | 52 |
+| **Total** | **784** | **479** | **730** |
 
 ### All Leads (confirmed no website)
 
@@ -506,8 +506,10 @@ _Last updated: 2026-05-12 11:23 UTC — 477 confirmed leads (no website) across 
 | 475 | Brow Junction | Middlesbrough | Beauty Salon | +44 7867 221579  |  |
 | 476 | Gorilla Garden Improvements Ltd | Huddersfield | Gardener | +44 7388 541787  |  |
 | 477 | Stu's garden maintenance | Telford | Gardener | +44 7872 943463  |  |
+| 478 | Chinese fast street food | Cardiff | Takeaway | +44 7478 557057  |  |
+| 479 | H J And Son First Class Landscaping | Cardiff | Gardener | +44 7983 575558  |  |
 
-_Emails sent:  / 477_
+_Emails sent:  / 479_
 <!-- LEADS_END -->
 
 ---
