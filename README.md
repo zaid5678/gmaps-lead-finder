@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-13 11:25 UTC — 479 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-14 11:09 UTC — 483 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 146 | 85 | 137 |
-| Beauty Salon | 72 | 46 | 62 |
-| Cleaner | 44 | 34 | 44 |
-| Electrician | 37 | 17 | 36 |
-| Gardener | 78 | 65 | 77 |
-| Hairdresser | 73 | 49 | 70 |
+| Barber | 147 | 86 | 138 |
+| Beauty Salon | 74 | 47 | 64 |
+| Cleaner | 46 | 34 | 46 |
+| Electrician | 40 | 17 | 39 |
+| Gardener | 79 | 66 | 78 |
+| Hairdresser | 74 | 49 | 71 |
 | Nail Salon | 135 | 91 | 130 |
-| Plumber | 55 | 23 | 54 |
-| Roofer | 71 | 12 | 68 |
-| Takeaway | 73 | 57 | 52 |
-| **Total** | **784** | **479** | **730** |
+| Plumber | 56 | 23 | 55 |
+| Roofer | 72 | 13 | 69 |
+| Takeaway | 74 | 57 | 53 |
+| **Total** | **797** | **483** | **743** |
 
 ### All Leads (confirmed no website)
 
@@ -508,8 +508,12 @@ _Last updated: 2026-05-13 11:25 UTC — 479 confirmed leads (no website) across 
 | 477 | Stu's garden maintenance | Telford | Gardener | +44 7872 943463  |  |
 | 478 | Chinese fast street food | Cardiff | Takeaway | +44 7478 557057  |  |
 | 479 | H J And Son First Class Landscaping | Cardiff | Gardener | +44 7983 575558  |  |
+| 480 | A&S Roof Repairs | Belfast | Roofer | +44 7843 738855  |  |
+| 481 | Stylish barbershop | Belfast | Barber | +44 28 9543 0130  |  |
+| 482 | Blossom Beauty and Hair Salon | Bradford | Beauty Salon | +44 1274 728434  |  |
+| 483 | Nomi Tree & Garden Services. | Bradford | Gardener | +44 7398 197779  |  |
 
-_Emails sent:  / 479_
+_Emails sent:  / 483_
 <!-- LEADS_END -->
 
 ---
