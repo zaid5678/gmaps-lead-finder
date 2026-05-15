@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-14 11:09 UTC — 483 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-15 11:18 UTC — 491 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 147 | 86 | 138 |
-| Beauty Salon | 74 | 47 | 64 |
-| Cleaner | 46 | 34 | 46 |
+| Barber | 149 | 87 | 140 |
+| Beauty Salon | 75 | 47 | 64 |
+| Cleaner | 47 | 35 | 47 |
 | Electrician | 40 | 17 | 39 |
 | Gardener | 79 | 66 | 78 |
-| Hairdresser | 74 | 49 | 71 |
-| Nail Salon | 135 | 91 | 130 |
-| Plumber | 56 | 23 | 55 |
+| Hairdresser | 75 | 50 | 72 |
+| Nail Salon | 136 | 92 | 131 |
+| Plumber | 57 | 23 | 56 |
 | Roofer | 72 | 13 | 69 |
-| Takeaway | 74 | 57 | 53 |
-| **Total** | **797** | **483** | **743** |
+| Takeaway | 78 | 61 | 57 |
+| **Total** | **808** | **491** | **753** |
 
 ### All Leads (confirmed no website)
 
@@ -512,8 +512,16 @@ _Last updated: 2026-05-14 11:09 UTC — 483 confirmed leads (no website) across 
 | 481 | Stylish barbershop | Belfast | Barber | +44 28 9543 0130  |  |
 | 482 | Blossom Beauty and Hair Salon | Bradford | Beauty Salon | +44 1274 728434  |  |
 | 483 | Nomi Tree & Garden Services. | Bradford | Gardener | +44 7398 197779  |  |
+| 484 | Revive Barbershop | Hull | Barber | +44 7530 271554  |  |
+| 485 | grace nail and beauty lounge | Derby | Nail Salon | +44 1332 349579  |  |
+| 486 | LOCO HAIRSTYLE | Wolverhampton | Hairdresser | +44 1902 238976  |  |
+| 487 | Hock Palace | Hull | Takeaway | +44 1482 493210  |  |
+| 488 | Chopstick House | Hull | Takeaway | +44 1482 375290  |  |
+| 489 | Stoke kebab | Stoke | Takeaway | +44 7588 522334  |  |
+| 490 | Bright & Beautiful Derby | Derby | Cleaner | +44 7486 020152  |  |
+| 491 | Chicking Derby | Derby | Takeaway | +44 1332 417308  |  |
 
-_Emails sent:  / 483_
+_Emails sent:  / 491_
 <!-- LEADS_END -->
 
 ---
