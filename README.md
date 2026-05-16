@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-15 11:18 UTC — 491 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-16 10:32 UTC — 494 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 149 | 87 | 140 |
+| Barber | 152 | 89 | 141 |
 | Beauty Salon | 75 | 47 | 64 |
 | Cleaner | 47 | 35 | 47 |
 | Electrician | 40 | 17 | 39 |
-| Gardener | 79 | 66 | 78 |
-| Hairdresser | 75 | 50 | 72 |
-| Nail Salon | 136 | 92 | 131 |
-| Plumber | 57 | 23 | 56 |
+| Gardener | 80 | 66 | 79 |
+| Hairdresser | 76 | 50 | 72 |
+| Nail Salon | 137 | 92 | 132 |
+| Plumber | 58 | 23 | 57 |
 | Roofer | 72 | 13 | 69 |
-| Takeaway | 78 | 61 | 57 |
-| **Total** | **808** | **491** | **753** |
+| Takeaway | 80 | 62 | 59 |
+| **Total** | **817** | **494** | **759** |
 
 ### All Leads (confirmed no website)
 
@@ -520,8 +520,11 @@ _Last updated: 2026-05-15 11:18 UTC — 491 confirmed leads (no website) across 
 | 489 | Stoke kebab | Stoke | Takeaway | +44 7588 522334  |  |
 | 490 | Bright & Beautiful Derby | Derby | Cleaner | +44 7486 020152  |  |
 | 491 | Chicking Derby | Derby | Takeaway | +44 1332 417308  |  |
+| 492 | Barber King | Brighton | Barber | +44 7425 262427  |  |
+| 493 | Manual Barbers | Southampton | Barber | — |  |
+| 494 | GALLA SHAWARMA | Southampton | Takeaway | +44 7922 241818  |  |
 
-_Emails sent:  / 491_
+_Emails sent:  / 494_
 <!-- LEADS_END -->
 
 ---
