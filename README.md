@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-16 10:32 UTC — 494 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-17 10:46 UTC — 497 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 152 | 89 | 141 |
-| Beauty Salon | 75 | 47 | 64 |
-| Cleaner | 47 | 35 | 47 |
-| Electrician | 40 | 17 | 39 |
+| Barber | 159 | 90 | 147 |
+| Beauty Salon | 78 | 47 | 67 |
+| Cleaner | 48 | 35 | 48 |
+| Electrician | 43 | 18 | 42 |
 | Gardener | 80 | 66 | 79 |
-| Hairdresser | 76 | 50 | 72 |
-| Nail Salon | 137 | 92 | 132 |
-| Plumber | 58 | 23 | 57 |
-| Roofer | 72 | 13 | 69 |
+| Hairdresser | 78 | 50 | 74 |
+| Nail Salon | 139 | 93 | 134 |
+| Plumber | 61 | 23 | 60 |
+| Roofer | 75 | 13 | 72 |
 | Takeaway | 80 | 62 | 59 |
-| **Total** | **817** | **494** | **759** |
+| **Total** | **841** | **497** | **782** |
 
 ### All Leads (confirmed no website)
 
@@ -523,8 +523,11 @@ _Last updated: 2026-05-16 10:32 UTC — 494 confirmed leads (no website) across 
 | 492 | Barber King | Brighton | Barber | +44 7425 262427  |  |
 | 493 | Manual Barbers | Southampton | Barber | — |  |
 | 494 | GALLA SHAWARMA | Southampton | Takeaway | +44 7922 241818  |  |
+| 495 | J W Electrical | Preston | Electrician | +44 7971 421961  |  |
+| 496 | Man fade barber | Bolton | Barber | +44 7453 772650  |  |
+| 497 | Magic Nails | Bolton | Nail Salon | +44 7936 899355  |  |
 
-_Emails sent:  / 494_
+_Emails sent:  / 497_
 <!-- LEADS_END -->
 
 ---
