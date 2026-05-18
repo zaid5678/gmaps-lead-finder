@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-17 10:46 UTC — 497 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-18 12:40 UTC — 501 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 159 | 90 | 147 |
-| Beauty Salon | 78 | 47 | 67 |
+| Barber | 161 | 90 | 149 |
+| Beauty Salon | 80 | 47 | 69 |
 | Cleaner | 48 | 35 | 48 |
 | Electrician | 43 | 18 | 42 |
 | Gardener | 80 | 66 | 79 |
-| Hairdresser | 78 | 50 | 74 |
-| Nail Salon | 139 | 93 | 134 |
-| Plumber | 61 | 23 | 60 |
-| Roofer | 75 | 13 | 72 |
-| Takeaway | 80 | 62 | 59 |
-| **Total** | **841** | **497** | **782** |
+| Hairdresser | 82 | 52 | 78 |
+| Nail Salon | 141 | 94 | 136 |
+| Plumber | 62 | 23 | 61 |
+| Roofer | 77 | 13 | 73 |
+| Takeaway | 81 | 63 | 60 |
+| **Total** | **855** | **501** | **795** |
 
 ### All Leads (confirmed no website)
 
@@ -526,8 +526,12 @@ _Last updated: 2026-05-17 10:46 UTC — 497 confirmed leads (no website) across 
 | 495 | J W Electrical | Preston | Electrician | +44 7971 421961  |  |
 | 496 | Man fade barber | Bolton | Barber | +44 7453 772650  |  |
 | 497 | Magic Nails | Bolton | Nail Salon | +44 7936 899355  |  |
+| 498 | Her's Beauty | Aberdeen | Nail Salon | +44 7410 421109  |  |
+| 499 | Signature Hair | Sunderland | Hairdresser | +44 191 548 3234  |  |
+| 500 | Jon DS | Sunderland | Hairdresser | +44 191 548 5526  |  |
+| 501 | Latin and British Cafe | Sunderland | Takeaway | +44 7449 531008  |  |
 
-_Emails sent:  / 497_
+_Emails sent:  / 501_
 <!-- LEADS_END -->
 
 ---
