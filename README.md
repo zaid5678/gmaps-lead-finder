@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-20 11:41 UTC — 501 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-21 12:19 UTC — 502 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 162 | 90 | 150 |
-| Beauty Salon | 81 | 47 | 70 |
+| Beauty Salon | 82 | 47 | 71 |
 | Cleaner | 48 | 35 | 48 |
-| Electrician | 43 | 18 | 42 |
+| Electrician | 45 | 19 | 44 |
 | Gardener | 81 | 66 | 80 |
 | Hairdresser | 82 | 52 | 78 |
 | Nail Salon | 143 | 94 | 138 |
-| Plumber | 62 | 23 | 61 |
+| Plumber | 63 | 23 | 62 |
 | Roofer | 77 | 13 | 73 |
-| Takeaway | 81 | 63 | 60 |
-| **Total** | **860** | **501** | **800** |
+| Takeaway | 82 | 63 | 61 |
+| **Total** | **865** | **502** | **805** |
 
 ### All Leads (confirmed no website)
 
@@ -530,8 +530,9 @@ _Last updated: 2026-05-20 11:41 UTC — 501 confirmed leads (no website) across 
 | 499 | Signature Hair | Sunderland | Hairdresser | +44 191 548 3234  |  |
 | 500 | Jon DS | Sunderland | Hairdresser | +44 191 548 5526  |  |
 | 501 | Latin and British Cafe | Sunderland | Takeaway | +44 7449 531008  |  |
+| 502 | Callum James Electrical Limited | Blackpool | Electrician | +44 1253 587078  |  |
 
-_Emails sent:  / 501_
+_Emails sent:  / 502_
 <!-- LEADS_END -->
 
 ---
