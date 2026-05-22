@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-21 12:19 UTC — 502 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-22 11:46 UTC — 503 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 162 | 90 | 150 |
-| Beauty Salon | 82 | 47 | 71 |
-| Cleaner | 48 | 35 | 48 |
+| Beauty Salon | 83 | 48 | 72 |
+| Cleaner | 49 | 35 | 49 |
 | Electrician | 45 | 19 | 44 |
-| Gardener | 81 | 66 | 80 |
+| Gardener | 82 | 66 | 81 |
 | Hairdresser | 82 | 52 | 78 |
-| Nail Salon | 143 | 94 | 138 |
+| Nail Salon | 144 | 94 | 139 |
 | Plumber | 63 | 23 | 62 |
 | Roofer | 77 | 13 | 73 |
-| Takeaway | 82 | 63 | 61 |
-| **Total** | **865** | **502** | **805** |
+| Takeaway | 84 | 63 | 62 |
+| **Total** | **871** | **503** | **810** |
 
 ### All Leads (confirmed no website)
 
@@ -531,8 +531,9 @@ _Last updated: 2026-05-21 12:19 UTC — 502 confirmed leads (no website) across 
 | 500 | Jon DS | Sunderland | Hairdresser | +44 191 548 5526  |  |
 | 501 | Latin and British Cafe | Sunderland | Takeaway | +44 7449 531008  |  |
 | 502 | Callum James Electrical Limited | Blackpool | Electrician | +44 1253 587078  |  |
+| 503 | Beauty Royal | Warrington | Beauty Salon | +44 7522 591081  |  |
 
-_Emails sent:  / 502_
+_Emails sent:  / 503_
 <!-- LEADS_END -->
 
 ---
