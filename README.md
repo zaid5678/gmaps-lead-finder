@@ -9,13 +9,13 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-22 11:46 UTC — 503 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-23 10:22 UTC — 503 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 162 | 90 | 150 |
+| Barber | 163 | 90 | 151 |
 | Beauty Salon | 83 | 48 | 72 |
-| Cleaner | 49 | 35 | 49 |
+| Cleaner | 50 | 35 | 50 |
 | Electrician | 45 | 19 | 44 |
 | Gardener | 82 | 66 | 81 |
 | Hairdresser | 82 | 52 | 78 |
@@ -23,7 +23,7 @@ _Last updated: 2026-05-22 11:46 UTC — 503 confirmed leads (no website) across 
 | Plumber | 63 | 23 | 62 |
 | Roofer | 77 | 13 | 73 |
 | Takeaway | 84 | 63 | 62 |
-| **Total** | **871** | **503** | **810** |
+| **Total** | **873** | **503** | **812** |
 
 ### All Leads (confirmed no website)
 
