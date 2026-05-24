@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-23 10:22 UTC — 503 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-24 10:47 UTC — 506 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 163 | 90 | 151 |
+| Barber | 165 | 91 | 153 |
 | Beauty Salon | 83 | 48 | 72 |
-| Cleaner | 50 | 35 | 50 |
+| Cleaner | 52 | 35 | 52 |
 | Electrician | 45 | 19 | 44 |
-| Gardener | 82 | 66 | 81 |
-| Hairdresser | 82 | 52 | 78 |
-| Nail Salon | 144 | 94 | 139 |
-| Plumber | 63 | 23 | 62 |
-| Roofer | 77 | 13 | 73 |
-| Takeaway | 84 | 63 | 62 |
-| **Total** | **873** | **503** | **812** |
+| Gardener | 84 | 67 | 83 |
+| Hairdresser | 83 | 52 | 78 |
+| Nail Salon | 146 | 94 | 141 |
+| Plumber | 64 | 24 | 63 |
+| Roofer | 78 | 13 | 74 |
+| Takeaway | 85 | 63 | 63 |
+| **Total** | **885** | **506** | **823** |
 
 ### All Leads (confirmed no website)
 
@@ -532,8 +532,11 @@ _Last updated: 2026-05-23 10:22 UTC — 503 confirmed leads (no website) across 
 | 501 | Latin and British Cafe | Sunderland | Takeaway | +44 7449 531008  |  |
 | 502 | Callum James Electrical Limited | Blackpool | Electrician | +44 1253 587078  |  |
 | 503 | Beauty Royal | Warrington | Beauty Salon | +44 7522 591081  |  |
+| 504 | My Plumbers Didsbury | Manchester | Plumber | +44 161 410 2470  |  |
+| 505 | Fade Masters Barbers | Manchester | Barber | +44 161 248 9496  |  |
+| 506 | MJD Local Garden Services | Birmingham | Gardener | +44 7724 752631  |  |
 
-_Emails sent:  / 503_
+_Emails sent:  / 506_
 <!-- LEADS_END -->
 
 ---
