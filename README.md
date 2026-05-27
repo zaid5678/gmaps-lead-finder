@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-25 12:45 UTC — 506 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-27 12:32 UTC — 508 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 165 | 91 | 153 |
-| Beauty Salon | 83 | 48 | 72 |
+| Barber | 166 | 91 | 154 |
+| Beauty Salon | 85 | 48 | 74 |
 | Cleaner | 52 | 35 | 52 |
 | Electrician | 45 | 19 | 44 |
-| Gardener | 84 | 67 | 83 |
+| Gardener | 85 | 67 | 84 |
 | Hairdresser | 83 | 52 | 78 |
-| Nail Salon | 147 | 94 | 142 |
+| Nail Salon | 148 | 95 | 143 |
 | Plumber | 64 | 24 | 63 |
 | Roofer | 78 | 13 | 74 |
-| Takeaway | 85 | 63 | 63 |
-| **Total** | **886** | **506** | **824** |
+| Takeaway | 88 | 64 | 65 |
+| **Total** | **894** | **508** | **831** |
 
 ### All Leads (confirmed no website)
 
@@ -535,8 +535,10 @@ _Last updated: 2026-05-25 12:45 UTC — 506 confirmed leads (no website) across 
 | 504 | My Plumbers Didsbury | Manchester | Plumber | +44 161 410 2470  |  |
 | 505 | Fade Masters Barbers | Manchester | Barber | +44 161 248 9496  |  |
 | 506 | MJD Local Garden Services | Birmingham | Gardener | +44 7724 752631  |  |
+| 507 | Moon Nails Coventry | Coventry | Nail Salon | +44 7935 868888  |  |
+| 508 | Sunbridge Friary | Bradford | Takeaway | — |  |
 
-_Emails sent:  / 506_
+_Emails sent:  / 508_
 <!-- LEADS_END -->
 
 ---
