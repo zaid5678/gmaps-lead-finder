@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-27 12:32 UTC — 508 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-28 12:32 UTC — 509 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 166 | 91 | 154 |
+| Barber | 167 | 92 | 155 |
 | Beauty Salon | 85 | 48 | 74 |
 | Cleaner | 52 | 35 | 52 |
 | Electrician | 45 | 19 | 44 |
 | Gardener | 85 | 67 | 84 |
-| Hairdresser | 83 | 52 | 78 |
+| Hairdresser | 84 | 52 | 79 |
 | Nail Salon | 148 | 95 | 143 |
-| Plumber | 64 | 24 | 63 |
+| Plumber | 65 | 24 | 64 |
 | Roofer | 78 | 13 | 74 |
-| Takeaway | 88 | 64 | 65 |
-| **Total** | **894** | **508** | **831** |
+| Takeaway | 91 | 64 | 68 |
+| **Total** | **900** | **509** | **837** |
 
 ### All Leads (confirmed no website)
 
@@ -537,8 +537,9 @@ _Last updated: 2026-05-27 12:32 UTC — 508 confirmed leads (no website) across 
 | 506 | MJD Local Garden Services | Birmingham | Gardener | +44 7724 752631  |  |
 | 507 | Moon Nails Coventry | Coventry | Nail Salon | +44 7935 868888  |  |
 | 508 | Sunbridge Friary | Bradford | Takeaway | — |  |
+| 509 | Mina barber | Stoke | Barber | +44 7405 197764  |  |
 
-_Emails sent:  / 508_
+_Emails sent:  / 509_
 <!-- LEADS_END -->
 
 ---
