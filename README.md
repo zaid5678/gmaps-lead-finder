@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-30 10:56 UTC — 509 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-05-31 11:13 UTC — 527 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 167 | 92 | 155 |
-| Beauty Salon | 88 | 48 | 77 |
-| Cleaner | 53 | 35 | 53 |
-| Electrician | 45 | 19 | 44 |
-| Gardener | 86 | 67 | 85 |
-| Hairdresser | 84 | 52 | 79 |
+| Barber | 175 | 100 | 162 |
+| Beauty Salon | 89 | 49 | 78 |
+| Cleaner | 54 | 36 | 54 |
+| Electrician | 48 | 21 | 47 |
+| Gardener | 87 | 68 | 86 |
+| Hairdresser | 85 | 53 | 80 |
 | Nail Salon | 149 | 95 | 144 |
-| Plumber | 66 | 24 | 65 |
-| Roofer | 79 | 13 | 75 |
-| Takeaway | 92 | 64 | 69 |
-| **Total** | **909** | **509** | **846** |
+| Plumber | 67 | 25 | 66 |
+| Roofer | 80 | 13 | 76 |
+| Takeaway | 95 | 67 | 72 |
+| **Total** | **929** | **527** | **865** |
 
 ### All Leads (confirmed no website)
 
@@ -538,8 +538,26 @@ _Last updated: 2026-05-30 10:56 UTC — 509 confirmed leads (no website) across 
 | 507 | Moon Nails Coventry | Coventry | Nail Salon | +44 7935 868888  |  |
 | 508 | Sunbridge Friary | Bradford | Takeaway | — |  |
 | 509 | Mina barber | Stoke | Barber | +44 7405 197764  |  |
+| 510 | Emergency Electrician Aberdeen | Aberdeen | Electrician | +44 7874 029764  |  |
+| 511 | Eco plumbing N.E. ltd | Sunderland | Plumber | +44 7545 808433  |  |
+| 512 | Electrician Sunderland | Sunderland | Electrician | +44 191 580 4708  |  |
+| 513 | HaZa BarBer | Aberdeen | Barber | +44 7539 429007  |  |
+| 514 | OSKAR´S BARBER SHOP | Aberdeen | Barber | +44 7351 587535  |  |
+| 515 | Ambition Barbershop | Aberdeen | Barber | — |  |
+| 516 | barber king | Norwich | Barber | +44 1603 610484  |  |
+| 517 | The Best Barber | Norwich | Barber | +44 7877 072264  |  |
+| 518 | City Cut Barbers | Norwich | Barber | +44 1603 614985  |  |
+| 519 | Top Fades | Sunderland | Barber | +44 7983 816348  |  |
+| 520 | KAZ's BARBER SHOP | Sunderland | Barber | +44 7384 201190  |  |
+| 521 | Grace & Glamour Beauty and Hair Salon | Milton Keynes | Beauty Salon | +44 7897 058402  |  |
+| 522 | Hairhouse | Sunderland | Hairdresser | +44 191 565 9525  |  |
+| 523 | BUSYBEES CLEANING SERVICES | Sunderland | Cleaner | +44 7967 139781  |  |
+| 524 | Sunrisers fast food | Aberdeen | Takeaway | +44 1227 202225  |  |
+| 525 | Taste Of Paradise | Milton Keynes | Takeaway | +44 7579 644457  |  |
+| 526 | KD Fast Food | Norwich | Takeaway | +44 7775 880604  |  |
+| 527 | LS Home & Garden Improvements | Norwich | Gardener | +44 7424 136354  |  |
 
-_Emails sent:  / 509_
+_Emails sent:  / 527_
 <!-- LEADS_END -->
 
 ---
