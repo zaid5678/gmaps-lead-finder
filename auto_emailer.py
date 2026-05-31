@@ -484,6 +484,22 @@ def run_phase(
     subj_fn, body_fn = TEMPLATES[template]
 
     to_send = [r for r in rows if checker(r)]
+
+    # Deduplicate by email address — never send two emails to the same address in one run
+    seen_emails: set = set()
+    deduped = []
+    dup_count = 0
+    for r in to_send:
+        addr = r.get("email", "").strip().lower()
+        if addr and addr not in seen_emails:
+            seen_emails.add(addr)
+            deduped.append(r)
+        elif addr:
+            dup_count += 1
+    if dup_count:
+        log.info(f"[{template}] Skipped {dup_count} duplicate email address(es).")
+    to_send = deduped
+
     if limit > 0:
         to_send = to_send[:limit]
 
