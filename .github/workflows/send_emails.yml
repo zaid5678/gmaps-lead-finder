@@ -1,0 +1,50 @@
+name: Send Daily Emails
+
+on:
+  schedule:
+    # 9 AM UTC Mon–Fri = 9 AM GMT (winter) / 10 AM BST (summer)
+    - cron: '0 9 * * 1-5'
+  workflow_dispatch:  # allows manual trigger from GitHub Actions tab
+
+jobs:
+  send-emails:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit the updated CSV back
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install python-dotenv requests beautifulsoup4 lxml
+
+      - name: Send emails
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          GMAIL_ACCOUNTS: ${{ secrets.GMAIL_ACCOUNTS }}
+        run: |
+          python auto_emailer.py \
+            --phase initial \
+            --limit 400 \
+            --delay-min 60 \
+            --delay-max 90
+
+      - name: Commit updated lead tracking back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add output/all_leads.csv output/roofers_leads.csv
+          git diff --cached --quiet && echo "Nothing to commit." || \
+            git commit -m "chore: update contacted leads — $(date '+%Y-%m-%d')"
+          git push origin main
