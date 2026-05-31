@@ -112,7 +112,7 @@ TOP_50_UK_CITIES = [
     "Warrington", "Southend", "Telford", "Exeter", "Guildford",
 ]
 
-ALL_HTTP_SOURCES = ["thomson_local", "trustatrader", "checkatrade"]
+ALL_HTTP_SOURCES = ["companies_house", "thomson_local", "trustatrader", "checkatrade"]
 ALL_PW_SOURCES   = ["yelp", "bark", "google_maps"]
 ALL_SOURCES      = ALL_HTTP_SOURCES + ALL_PW_SOURCES
 DEFAULT_SOURCES  = ["google_maps"]
@@ -566,6 +566,124 @@ class CheckatradeScraper(BaseScraper):
 
 
 # ─────────────────────────────────────────────────────────────
+# COMPANIES HOUSE (free UK government API)
+# Register free key at: https://developer.company-information.service.gov.uk/
+# Add to .env: COMPANIES_HOUSE_API_KEY=your_key_here
+# ─────────────────────────────────────────────────────────────
+
+# SIC codes for common business categories (used to filter results)
+_CH_SIC_MAP = {
+    "plumber":         ["43220"],
+    "electrician":     ["43210"],
+    "roofer":          ["43910"],
+    "builder":         ["41201", "41202"],
+    "painter":         ["43341"],
+    "decorator":       ["43341"],
+    "gardener":        ["81300"],
+    "landscaper":      ["81300"],
+    "cleaner":         ["81210", "81220"],
+    "window cleaner":  ["81210"],
+    "barber":          ["96020"],
+    "hairdresser":     ["96020"],
+    "beauty salon":    ["96020"],
+    "nail salon":      ["96020"],
+    "dentist":         ["86230"],
+    "restaurant":      ["56101", "56102"],
+    "cafe":            ["56101"],
+    "takeaway":        ["56103"],
+    "mechanic":        ["45200"],
+    "accountant":      ["69201"],
+    "solicitor":       ["69102"],
+}
+
+
+class CompaniesHouseScraper(BaseScraper):
+    """
+    Searches Companies House free API for active UK businesses.
+    Requires COMPANIES_HOUSE_API_KEY in .env (free registration).
+    Returns leads without website info — use website_checker.py to filter.
+    """
+    name = "companies_house"
+    base_delay = 1.0
+    API_URL = "https://api.company-information.service.gov.uk/search/companies"
+
+    def __init__(self):
+        super().__init__()
+        self._api_key = os.environ.get("COMPANIES_HOUSE_API_KEY", "").strip()
+        if not self._api_key:
+            log.warning("[companies_house] COMPANIES_HOUSE_API_KEY not set — source will be skipped. "
+                        "Register free at https://developer.company-information.service.gov.uk/")
+
+    def search(self, category: str, city: str, max_results: int = 40) -> list:
+        if not self._api_key:
+            return []
+        leads = []
+        start = 0
+        per_page = min(max_results, 20)
+
+        sic_codes = set()
+        for kw, codes in _CH_SIC_MAP.items():
+            if kw in category.lower():
+                sic_codes.update(codes)
+
+        while len(leads) < max_results:
+            try:
+                self._throttle()
+                resp = self.session.get(
+                    self.API_URL,
+                    params={"q": f"{category} {city}", "items_per_page": per_page, "start_index": start},
+                    auth=(self._api_key, ""),
+                    timeout=10,
+                )
+                if resp.status_code == 401:
+                    log.error("[companies_house] Invalid API key — check COMPANIES_HOUSE_API_KEY in .env")
+                    break
+                if resp.status_code != 200:
+                    log.warning(f"[companies_house] HTTP {resp.status_code}")
+                    break
+
+                data = resp.json()
+                items = data.get("items", [])
+                if not items:
+                    break
+
+                for item in items:
+                    if item.get("company_status") != "active":
+                        continue
+                    name = item.get("title", "").strip()
+                    if not name:
+                        continue
+                    addr = item.get("address", {})
+                    address_parts = [
+                        addr.get("premises", ""),
+                        addr.get("address_line_1", ""),
+                        addr.get("address_line_2", ""),
+                        addr.get("postal_code", ""),
+                    ]
+                    address = ", ".join(p for p in address_parts if p)
+                    # Filter by SIC if we have a mapping for this category
+                    if sic_codes:
+                        item_sics = set(item.get("sic_codes", []))
+                        if not item_sics.intersection(sic_codes):
+                            continue
+                    lead = self._make_lead(name, address or city, city, "", "", category)
+                    if lead:
+                        lead.notes = f"Companies House: {item.get('company_number', '')}"
+                        leads.append(lead)
+
+                if len(items) < per_page:
+                    break
+                start += per_page
+
+            except Exception as exc:
+                log.debug(f"[companies_house] Error: {exc}")
+                break
+
+        log.info(f"[companies_house] '{category}' / '{city}' → {len(leads)} leads")
+        return leads[:max_results]
+
+
+# ─────────────────────────────────────────────────────────────
 # PLAYWRIGHT SUBPROCESS WORKERS
 # ─────────────────────────────────────────────────────────────
 
@@ -817,10 +935,11 @@ class MasterScraper:
 
     def _http_scrapers(self) -> dict:
         mapping = {
-            "yell":         YellScraper,
-            "thomson_local": ThomsonLocalScraper,
-            "trustatrader": TrustATraderScraper,
-            "checkatrade":  CheckatradeScraper,
+            "companies_house": CompaniesHouseScraper,
+            "yell":            YellScraper,
+            "thomson_local":   ThomsonLocalScraper,
+            "trustatrader":    TrustATraderScraper,
+            "checkatrade":     CheckatradeScraper,
         }
         return {k: cls() for k, cls in mapping.items() if k in self.sources}
 

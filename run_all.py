@@ -351,9 +351,9 @@ examples:
                      help="Gmail address to send from")
     eml.add_argument("--password", default=os.environ.get("GMAIL_APP_PASSWORD", ""),
                      help="Gmail app password (16 chars)")
-    eml.add_argument("--delay-min", type=float, default=8,   help="Min seconds between emails (default: 8)")
-    eml.add_argument("--delay-max", type=float, default=12,  help="Max seconds between emails (default: 12)")
-    eml.add_argument("--email-limit", type=int, default=0,   help="Max emails per run (0=unlimited)")
+    eml.add_argument("--delay-min", type=float, default=60,  help="Min seconds between emails (default: 60)")
+    eml.add_argument("--delay-max", type=float, default=90,  help="Max seconds between emails (default: 90)")
+    eml.add_argument("--email-limit", type=int, default=400, help="Max emails per run (default: 400 — ~8hrs at 72s avg)")
 
     return p
 

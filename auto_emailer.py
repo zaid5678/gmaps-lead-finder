@@ -53,8 +53,12 @@ SENDER_EMAIL = "zfkhan321@gmail.com"
 SMTP_SERVER  = "smtp.gmail.com"
 SMTP_PORT    = 587
 
-DEFAULT_DELAY_MIN = 8   # seconds between emails
-DEFAULT_DELAY_MAX = 12
+# Multi-account: set GMAIL_ACCOUNTS=email1:pass1,email2:pass2 in .env
+# Each account can send ~400/day safely. 3 accounts = ~1,200/day.
+DAILY_LIMIT_PER_ACCOUNT = 400
+
+DEFAULT_DELAY_MIN = 60   # seconds between emails — spreads 400 emails over ~8 hours
+DEFAULT_DELAY_MAX = 90
 
 INITIAL_TEMPLATE    = "initial"
 FOLLOW_UP_1_TEMPLATE = "follow_up_1"
@@ -85,26 +89,97 @@ log = logging.getLogger("auto_emailer")
 # EMAIL TEMPLATES
 # ─────────────────────────────────────────────────────────────
 
+# Map raw category/keyword strings to a broad sector for personalised copy
+_TRADE_KEYWORDS    = {"roofer", "roofing", "plumber", "plumbing", "electrician", "electrical",
+                      "carpenter", "carpentry", "painter", "decorator", "builder", "building",
+                      "window cleaner", "window cleaning", "cleaner", "cleaning", "gardener",
+                      "landscaper", "handyman", "plasterer", "tiler", "locksmith", "glazier"}
+_BEAUTY_KEYWORDS   = {"barber", "barber shop", "hairdresser", "hair salon", "beautician",
+                      "beauty salon", "nail salon", "nail technician", "dog groomer", "groomer"}
+_FOOD_KEYWORDS     = {"restaurant", "cafe", "coffee shop", "takeaway", "pizza", "kebab",
+                      "indian restaurant", "chinese restaurant", "fish and chips"}
+_HEALTH_KEYWORDS   = {"dentist", "dental", "optician", "optometrist", "personal trainer",
+                      "gym", "physio", "physiotherapist", "chiropractor", "osteopath"}
+_PROFESSIONAL_KEYWORDS = {"accountant", "solicitor", "lawyer", "estate agent", "letting agent",
+                           "financial advisor", "bookkeeper", "mortgage broker"}
+
+
+def _sector(industry: str) -> str:
+    kw = industry.lower().strip()
+    if any(k in kw for k in _TRADE_KEYWORDS):     return "trade"
+    if any(k in kw for k in _BEAUTY_KEYWORDS):    return "beauty"
+    if any(k in kw for k in _FOOD_KEYWORDS):      return "food"
+    if any(k in kw for k in _HEALTH_KEYWORDS):    return "health"
+    if any(k in kw for k in _PROFESSIONAL_KEYWORDS): return "professional"
+    return "generic"
+
+
 def _subject_initial(name: str, industry: str, city: str) -> str:
-    return f"Quick idea for {name} — get online for £500"
+    sector = _sector(industry)
+    if sector == "trade":
+        return f"More {industry} work in {city} — quick question"
+    if sector == "beauty":
+        return f"Getting more bookings for {name} — quick idea"
+    if sector == "food":
+        return f"Are you getting enough walk-ins from {city}?"
+    if sector == "health":
+        return f"New patients/clients finding {name} online"
+    if sector == "professional":
+        return f"More enquiries for {name} in {city}"
+    return f"Quick idea for {name} in {city}"
+
 
 def _subject_follow_up_1(name: str, industry: str, city: str) -> str:
-    return f"Following up — website for {name}"
+    return f"Re: {name} — just checking in"
+
 
 def _subject_follow_up_2(name: str, industry: str, city: str) -> str:
-    return f"Last message — {name} website"
+    return f"Last one from me — {name}"
 
 
 def _body_initial(name: str, industry: str, city: str) -> str:
-    return f"""Hi {name},
+    sector = _sector(industry)
 
-I noticed you don't have a website yet — I help {industry} businesses in {city} get online for £500–750, all-in.
+    if sector == "trade":
+        pain = (
+            f"Most people in {city} searching for a {industry} on Google will call whoever comes up first. "
+            f"If {name} isn't showing up, those calls are going straight to your competitors."
+        )
+    elif sector == "beauty":
+        pain = (
+            f"New clients almost always search online before booking. "
+            f"If they can't find {name} easily, they'll book with whoever shows up first."
+        )
+    elif sector == "food":
+        pain = (
+            f"When people in {city} search for somewhere to eat, the first thing they look for is a menu online. "
+            f"If they can't find yours, they'll pick somewhere they can."
+        )
+    elif sector == "health":
+        pain = (
+            f"New patients and clients in {city} check online before picking up the phone. "
+            f"Without a clear web presence, {name} is invisible to anyone searching right now."
+        )
+    elif sector == "professional":
+        pain = (
+            f"Most people looking for {industry} services in {city} do their research online before contacting anyone. "
+            f"If {name} doesn't show up, those enquiries go elsewhere."
+        )
+    else:
+        pain = (
+            f"Most people in {city} looking for {industry} services search online first. "
+            f"If {name} isn't easy to find, those enquiries are going to whoever is."
+        )
 
-Most people searching for a {industry} in {city} will go with whoever they can find online first. A simple website means more of those searches end up as calls to you.
+    return f"""Hi there,
 
-I can show you a free mock-up for {name} before you decide anything.
+{pain}
 
-Interested?
+I build simple, professional websites for local businesses like {name} — starting from £500, everything included.
+
+I can put together a free no-obligation mock-up for {name} so you can see exactly what it would look like before committing to anything.
+
+Worth a quick look?
 
 Best,
 Zaid
@@ -115,13 +190,26 @@ To stop receiving emails from me, reply with "STOP"."""
 
 
 def _body_follow_up_1(name: str, industry: str, city: str) -> str:
-    return f"""Hi {name},
+    sector = _sector(industry)
 
-Just following up on my message from a couple of days ago.
+    if sector == "trade":
+        hook = f"Every day without an online presence is another day those {city} searches go to someone else."
+    elif sector == "beauty":
+        hook = f"A lot of new bookings in {city} start with a quick Google search — just wanted to make sure {name} isn't missing out."
+    elif sector == "food":
+        hook = f"People in {city} decide where to eat online before they leave the house — just wanted to make sure {name} is showing up."
+    else:
+        hook = f"Just wanted to make sure {name} isn't missing out on enquiries from {city} searches."
 
-Quick version: I build simple websites for {industry} businesses in {city} — £500–750 all-in. Happy to send a free mock-up first so you can see what it looks like with no commitment.
+    return f"""Hi,
 
-Worth a look?
+Following up on my message from a few days ago.
+
+{hook}
+
+I build straightforward websites for local businesses — £500 all-in, free mock-up first so there's no risk.
+
+If the timing isn't right, no problem at all — just let me know.
 
 Best,
 Zaid
@@ -131,13 +219,13 @@ To unsubscribe, reply "STOP"."""
 
 
 def _body_follow_up_2(name: str, industry: str, city: str) -> str:
-    return f"""Hi {name},
+    return f"""Hi,
 
-Last one from me — I won't keep following up after this.
+Last one from me, I promise.
 
-If you ever decide you'd like a simple, affordable website for {name}, just reply to this email and I'll get back to you.
+If {name} ever decides it's the right time to start getting more enquiries online, just reply to this email and I'll pick up where we left off — free mock-up, no pressure.
 
-Wishing you all the best,
+All the best,
 Zaid
 zfkhan321@gmail.com
 
@@ -265,49 +353,117 @@ def _mark_failed(row: dict, template: str, error: str):
 
 
 # ─────────────────────────────────────────────────────────────
-# SMTP SENDER
+# SMTP SENDER (supports multiple accounts with round-robin rotation)
 # ─────────────────────────────────────────────────────────────
 
-class GmailSender:
-    def __init__(self, user: str, app_password: str):
+def _load_accounts(primary_user: str, primary_pass: str) -> list:
+    """
+    Return list of (email, password) tuples.
+    Reads GMAIL_ACCOUNTS=email1:pass1,email2:pass2 from env if set,
+    always includes the primary account as a fallback.
+    """
+    accounts = []
+    raw = os.environ.get("GMAIL_ACCOUNTS", "").strip()
+    if raw:
+        for entry in raw.split(","):
+            entry = entry.strip()
+            if ":" in entry:
+                email, pw = entry.split(":", 1)
+                accounts.append((email.strip(), pw.strip()))
+    if primary_user and primary_pass and not any(a[0] == primary_user for a in accounts):
+        accounts.insert(0, (primary_user, primary_pass))
+    return accounts
+
+
+class _SingleSender:
+    """SMTP connection for one Gmail account."""
+    def __init__(self, user: str, password: str):
         self.user = user
-        self.password = app_password
+        self.password = password
         self._server: Optional[smtplib.SMTP] = None
+        self.sent_today = 0
 
     def connect(self):
-        log.info(f"Connecting to {SMTP_SERVER}:{SMTP_PORT} as {self.user}…")
         self._server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
-        self._server.ehlo()
-        self._server.starttls()
-        self._server.ehlo()
+        self._server.ehlo(); self._server.starttls(); self._server.ehlo()
         self._server.login(self.user, self.password)
-        log.info("SMTP connected.")
 
-    def send(self, to: str, subject: str, body: str) -> bool:
+    def send(self, to: str, subject: str, body: str, from_name: str = "Zaid") -> bool:
         if self._server is None:
-            raise RuntimeError("Not connected — call connect() first")
+            raise RuntimeError("Not connected")
         msg = MIMEMultipart("alternative")
         msg["Subject"] = subject
-        msg["From"]    = self.user
+        msg["From"]    = f"{from_name} <{self.user}>"
         msg["To"]      = to
         msg.attach(MIMEText(body, "plain", "utf-8"))
         self._server.sendmail(self.user, to, msg.as_string())
+        self.sent_today += 1
         return True
 
     def close(self):
         if self._server:
-            try:
-                self._server.quit()
-            except Exception:
-                pass
+            try: self._server.quit()
+            except Exception: pass
             self._server = None
 
     def reconnect_if_needed(self):
         try:
             self._server.noop()  # type: ignore[union-attr]
         except Exception:
-            log.info("SMTP connection dropped — reconnecting…")
             self.connect()
+
+    def at_limit(self) -> bool:
+        return self.sent_today >= DAILY_LIMIT_PER_ACCOUNT
+
+
+class GmailSender:
+    """
+    Round-robin sender across multiple Gmail accounts.
+    Pass a single (user, password) for single-account mode.
+    Set GMAIL_ACCOUNTS=email1:pass1,email2:pass2 in .env for multi-account.
+    """
+    def __init__(self, user: str, app_password: str):
+        accounts = _load_accounts(user, app_password)
+        self._senders = [_SingleSender(u, p) for u, p in accounts]
+        self._idx = 0
+        if len(self._senders) > 1:
+            log.info(f"Multi-account mode: {len(self._senders)} Gmail accounts loaded.")
+        else:
+            log.info(f"Single-account mode: {self._senders[0].user}")
+
+    def _current(self) -> _SingleSender:
+        return self._senders[self._idx % len(self._senders)]
+
+    def connect(self):
+        for s in self._senders:
+            log.info(f"Connecting SMTP as {s.user}…")
+            s.connect()
+        log.info("All SMTP accounts connected.")
+
+    def send(self, to: str, subject: str, body: str) -> bool:
+        # Rotate to next account if current one hit its daily limit
+        for _ in range(len(self._senders)):
+            sender = self._current()
+            if not sender.at_limit():
+                break
+            log.warning(f"Account {sender.user} hit daily limit ({DAILY_LIMIT_PER_ACCOUNT}) — rotating.")
+            self._idx += 1
+        else:
+            raise RuntimeError("All Gmail accounts have hit their daily send limit.")
+
+        sender = self._current()
+        sender.reconnect_if_needed()
+        result = sender.send(to, subject, body)
+        # Rotate to next account for the next email (round-robin)
+        self._idx = (self._idx + 1) % len(self._senders)
+        return result
+
+    def close(self):
+        for s in self._senders:
+            s.close()
+
+    def reconnect_if_needed(self):
+        pass  # handled per-send now
 
 
 # ─────────────────────────────────────────────────────────────
@@ -448,7 +604,7 @@ examples:
     )
     p.add_argument("--delay-min", type=float, default=DEFAULT_DELAY_MIN, help=f"Min seconds between emails (default {DEFAULT_DELAY_MIN})")
     p.add_argument("--delay-max", type=float, default=DEFAULT_DELAY_MAX, help=f"Max seconds between emails (default {DEFAULT_DELAY_MAX})")
-    p.add_argument("--limit",     type=int, default=0,  help="Max emails per run (0 = unlimited)")
+    p.add_argument("--limit",     type=int, default=400, help="Max emails per run (default 400 — ~8hrs at 72s avg)")
     p.add_argument("--dry-run",   action="store_true",  help="Preview without sending")
     p.add_argument("--stats-only", action="store_true", help="Print campaign stats and exit")
     return p
