@@ -9,21 +9,21 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-05-31 11:13 UTC — 527 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-06-01 14:27 UTC — 529 confirmed leads (no website) across 10 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 175 | 100 | 162 |
-| Beauty Salon | 89 | 49 | 78 |
-| Cleaner | 54 | 36 | 54 |
-| Electrician | 48 | 21 | 47 |
+| Barber | 179 | 100 | 166 |
+| Beauty Salon | 90 | 49 | 79 |
+| Cleaner | 55 | 36 | 55 |
+| Electrician | 49 | 21 | 48 |
 | Gardener | 87 | 68 | 86 |
-| Hairdresser | 85 | 53 | 80 |
+| Hairdresser | 87 | 54 | 82 |
 | Nail Salon | 149 | 95 | 144 |
-| Plumber | 67 | 25 | 66 |
-| Roofer | 80 | 13 | 76 |
+| Plumber | 69 | 26 | 68 |
+| Roofer | 81 | 13 | 77 |
 | Takeaway | 95 | 67 | 72 |
-| **Total** | **929** | **527** | **865** |
+| **Total** | **941** | **529** | **877** |
 
 ### All Leads (confirmed no website)
 
@@ -556,8 +556,10 @@ _Last updated: 2026-05-31 11:13 UTC — 527 confirmed leads (no website) across 
 | 525 | Taste Of Paradise | Milton Keynes | Takeaway | +44 7579 644457  |  |
 | 526 | KD Fast Food | Norwich | Takeaway | +44 7775 880604  |  |
 | 527 | LS Home & Garden Improvements | Norwich | Gardener | +44 7424 136354  |  |
+| 528 | A.M Nelmes Heating and Plumbing | Gloucester | Plumber | +44 7890 390220  |  |
+| 529 | Hair | Dundee | Hairdresser | +44 1382 220222  |  |
 
-_Emails sent:  / 527_
+_Emails sent:  / 529_
 <!-- LEADS_END -->
 
 ---
