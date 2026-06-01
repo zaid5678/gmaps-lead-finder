@@ -79,7 +79,7 @@ DEFAULT_CATEGORIES = [
     "barber", "plumber", "electrician", "roofer", "restaurant",
     "cafe", "beauty salon", "car mechanic", "dentist", "cleaner",
     "window cleaner", "hairdresser", "nail salon", "locksmith",
-    "painter decorator", "gardener",
+    "painter decorator", "gardener", "driving instructor",
 ]
 
 ALL_CATEGORIES = [

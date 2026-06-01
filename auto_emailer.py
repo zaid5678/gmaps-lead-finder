@@ -101,7 +101,8 @@ _FOOD_KEYWORDS     = {"restaurant", "cafe", "coffee shop", "takeaway", "pizza", 
 _HEALTH_KEYWORDS   = {"dentist", "dental", "optician", "optometrist", "personal trainer",
                       "gym", "physio", "physiotherapist", "chiropractor", "osteopath"}
 _PROFESSIONAL_KEYWORDS = {"accountant", "solicitor", "lawyer", "estate agent", "letting agent",
-                           "financial advisor", "bookkeeper", "mortgage broker"}
+                           "financial advisor", "bookkeeper", "mortgage broker",
+                           "driving instructor", "driving school"}
 
 
 def _sector(industry: str) -> str:
