@@ -118,92 +118,137 @@ def _sector(industry: str) -> str:
 def _subject_initial(name: str, industry: str, city: str) -> str:
     sector = _sector(industry)
     if sector == "trade":
-        return f"More {industry} work in {city} — quick question"
+        return f"{name} — missing out on {city} searches?"
     if sector == "beauty":
-        return f"Getting more bookings for {name} — quick idea"
+        return f"Quick question about {name}'s bookings"
     if sector == "food":
-        return f"Are you getting enough walk-ins from {city}?"
+        return f"{name} — are you losing orders to competitors?"
     if sector == "health":
-        return f"New patients/clients finding {name} online"
+        return f"Quick question for {name}"
     if sector == "professional":
-        return f"More enquiries for {name} in {city}"
-    return f"Quick idea for {name} in {city}"
+        return f"{name} — 3-5 leads a month you might be missing"
+    return f"Quick question about {name}"
 
 
 def _subject_follow_up_1(name: str, industry: str, city: str) -> str:
-    return f"Re: {name} — just checking in"
+    return f"Re: {name}"
 
 
 def _subject_follow_up_2(name: str, industry: str, city: str) -> str:
-    return f"Last one from me — {name}"
+    return f"Last message — {name}"
 
 
 def _body_initial(name: str, industry: str, city: str, review_count: str = "", pain_signals: str = "") -> str:
     sector = _sector(industry)
+    has_pain = bool(pain_signals)
 
-    # Build a trust acknowledgement if they have meaningful reviews
     try:
         rc = int(review_count)
     except (ValueError, TypeError):
         rc = 0
 
-    trust_line = ""
-    if rc >= 50:
-        trust_line = f"With {rc} reviews, {name} is clearly well-regarded in {city}. "
-    elif rc >= 20:
-        trust_line = f"I can see {name} has built up a solid reputation in {city}. "
+    high_reviews = rc >= 20
 
-    # Pain signal personalisation — if we found keywords in their reviews
-    pain_extra = ""
-    if pain_signals:
-        pain_extra = f"\n\nI also noticed some of your customers mentioned finding it hard to contact you online — a website would fix that directly."
-
+    # ── TRADES ────────────────────────────────────────────────
     if sector == "trade":
-        pain = (
-            f"{trust_line}But most people in {city} looking for a {industry} search Google and "
-            f"call whoever comes up first — if {name} isn't showing up, those jobs are going to someone else."
-        )
-        cta = f"I can build a simple site for {name} that puts you in front of those searches — from £500, everything included."
-    elif sector == "beauty":
-        pain = (
-            f"{trust_line}But new clients in {city} almost always search online before booking. "
-            f"If they can't find {name} easily, they'll book with whoever comes up first."
-        )
-        cta = f"I can build {name} a clean, bookable website — from £500, no monthly fees."
+        if has_pain:
+            body = (
+                f"{name} has great reviews, but I'm seeing comments from customers saying they "
+                f"couldn't find info online. That's probably costing you 3-5 enquiries a week — "
+                f"basically one job a week you're not getting.\n\n"
+                f"Is that something worth fixing, or are you fully booked from word-of-mouth?"
+            )
+        elif high_reviews:
+            body = (
+                f"Saw {name} on Google Maps — clearly doing well with {rc} reviews. "
+                f"But when someone clicks through looking for a quote, there's nowhere to go except a phone number. "
+                f"Most people won't call — they'll just move to the next {industry} with a proper site.\n\n"
+                f"That's probably 3-5 jobs a week going elsewhere. Sound familiar?"
+            )
+        else:
+            body = (
+                f"Saw {name} on Google Maps, but when people click through there's nowhere to see your work "
+                f"or get a quote — just a phone number. Most people won't call, they'll move to the next "
+                f"{industry} with a proper site.\n\n"
+                f"That's probably costing you 3-5 jobs a week. Sound familiar?"
+            )
+
+    # ── FOOD ──────────────────────────────────────────────────
     elif sector == "food":
-        pain = (
-            f"{trust_line}But when people in {city} search for somewhere to eat, the first thing they want is a menu online. "
-            f"If they can't find {name}'s menu, they'll go somewhere they can."
-        )
-        cta = f"I can build a simple site with your menu and contact details — from £500, all-in."
+        if has_pain:
+            body = (
+                f"I noticed customers are leaving comments saying they couldn't find {name}'s menu online. "
+                f"Most people decide where to eat before they leave the house — if they can't find your menu, "
+                f"they're going somewhere they can.\n\n"
+                f"That's probably costing you 20-30 orders a week. Worth a quick chat?"
+            )
+        else:
+            body = (
+                f"Noticed {name} doesn't have a website with a menu. When someone's deciding between you "
+                f"and the place down the road, they go with whoever makes it easiest — and right now "
+                f"that's not {name}.\n\n"
+                f"Most people want to browse a menu online before calling (especially when your line's busy). "
+                f"That's probably costing you 20-30 orders a week. Worth discussing?"
+            )
+
+    # ── BEAUTY ────────────────────────────────────────────────
+    elif sector == "beauty":
+        if has_pain:
+            body = (
+                f"Came across {name} and noticed some customers saying they couldn't book online or find "
+                f"your prices. A proper booking page would probably bring you 10-15 extra appointments "
+                f"a month from people searching locally.\n\n"
+                f"Worth a quick chat about that?"
+            )
+        else:
+            body = (
+                f"Most salons and barbers I work with get 10-15 extra bookings a month from people "
+                f"searching '{industry} near me' once they have a proper booking page. "
+                f"Is {name} missing out on that traffic, or are you fully booked?"
+            )
+
+    # ── HEALTH ────────────────────────────────────────────────
     elif sector == "health":
-        pain = (
-            f"{trust_line}But new patients in {city} check online before picking up the phone. "
-            f"Without a clear web presence, {name} is invisible to anyone searching right now."
-        )
-        cta = f"I can put a professional site together for {name} — from £500, free mock-up first."
+        if has_pain:
+            body = (
+                f"I noticed some reviews for {name} where people mentioned it was hard to find your "
+                f"details or book online. New patients almost always check online before picking up the phone.\n\n"
+                f"That's probably costing you 3-5 new patients a month. Is that something worth addressing?"
+            )
+        else:
+            body = (
+                f"Most people searching for a {industry} in {city} won't consider anyone without a "
+                f"professional online presence — they do their research before making any calls.\n\n"
+                f"Is {name} missing out on those searches, or are referrals keeping you fully booked?"
+            )
+
+    # ── PROFESSIONAL ──────────────────────────────────────────
     elif sector == "professional":
-        pain = (
-            f"{trust_line}But most people looking for {industry} services in {city} research online before contacting anyone. "
-            f"If {name} doesn't show up, those enquiries go elsewhere."
+        body = (
+            f"Most people searching for {industry} services in {city} won't even consider firms without "
+            f"a professional website — they research online before contacting anyone.\n\n"
+            f"That's probably costing {name} 3-5 qualified leads a month. "
+            f"Are referrals keeping you busy enough, or is that worth fixing?"
         )
-        cta = f"I build clean, professional sites for {industry} businesses — from £500, everything included."
+
+    # ── GENERIC ───────────────────────────────────────────────
     else:
-        pain = (
-            f"{trust_line}But most people in {city} looking for {industry} services search online first — "
-            f"if {name} isn't easy to find, those enquiries are going to whoever is."
-        )
-        cta = f"I can build a simple, professional site for {name} — from £500, free mock-up with no commitment."
+        if has_pain:
+            body = (
+                f"{name} has some great reviews, but customers are mentioning they struggled to find "
+                f"information online. That's likely losing you enquiries every week.\n\n"
+                f"Is that something you're aware of, or are you getting enough business through word-of-mouth?"
+            )
+        else:
+            body = (
+                f"Most people in {city} looking for a {industry} will go with whoever they can find "
+                f"online first. Right now, {name} isn't easy to find when people search.\n\n"
+                f"Is that costing you enquiries, or are you already booked solid?"
+            )
 
     return f"""Hi,
 
-{pain}
-
-{cta}{pain_extra}
-
-Happy to send you a free mock-up of what a site for {name} could look like — no commitment needed.
-
-Worth a quick look?
+{body}
 
 Best,
 Zaid
@@ -217,21 +262,39 @@ def _body_follow_up_1(name: str, industry: str, city: str, review_count: str = "
     sector = _sector(industry)
 
     if sector == "trade":
-        hook = f"Every day without an online presence is another day those {city} searches go to someone else — just wanted to make sure {name} isn't missing out."
-    elif sector == "beauty":
-        hook = f"New bookings in {city} almost always start with a quick Google search. Just wanted to make sure {name} is capturing those."
+        hook = (
+            f"Just following up on my message from a few days ago about {name} missing out on "
+            f"search traffic in {city}.\n\n"
+            f"Still seeing {industry}s with basic sites picking up jobs that aren't findable online. "
+            f"Is that something you're feeling, or are you covered?"
+        )
     elif sector == "food":
-        hook = f"People decide where to eat before they leave the house — just wanted to make sure {name} is showing up when they search."
+        hook = (
+            f"Following up on {name} — people are still deciding where to eat based on who has a "
+            f"menu they can browse online.\n\n"
+            f"If that's costing you orders, happy to chat. If you're fully booked, ignore this!"
+        )
+    elif sector == "beauty":
+        hook = (
+            f"Just checking in on {name}. Still getting enquiries about booking pages for "
+            f"{industry}s in {city} — the ones with them are picking up a lot of the local search traffic.\n\n"
+            f"Are you getting enough new clients, or is it worth a conversation?"
+        )
+    elif sector == "professional":
+        hook = (
+            f"Following up on {name}. People searching for {industry} services in {city} are still "
+            f"skipping businesses without a professional online presence.\n\n"
+            f"If referrals aren't keeping you as busy as you'd like, happy to talk."
+        )
     else:
-        hook = f"Just checking in to make sure {name} isn't missing out on enquiries from people searching in {city}."
+        hook = (
+            f"Just following up on my message about {name}. "
+            f"Still happy to chat if the enquiry side of things could be busier."
+        )
 
     return f"""Hi,
 
-Following up on my message from a few days ago.
-
 {hook}
-
-Still happy to put together a free mock-up for {name} — £500 all-in if you decide to go ahead, no pressure either way.
 
 Best,
 Zaid
@@ -241,11 +304,23 @@ To unsubscribe, reply "STOP"."""
 
 
 def _body_follow_up_2(name: str, industry: str, city: str, review_count: str = "", pain_signals: str = "") -> str:
+    sector = _sector(industry)
+
+    if sector in ("trade", "beauty", "food"):
+        close = (
+            f"If things ever slow down or you want to stop relying purely on word-of-mouth, "
+            f"just reply and I'll pick up where we left off."
+        )
+    else:
+        close = (
+            f"If the enquiry pipeline ever needs a boost, just reply to this and I'll be in touch."
+        )
+
     return f"""Hi,
 
-Last one from me, I promise — I won't follow up after this.
+Last one from me — I won't follow up again after this.
 
-If {name} ever decides it's the right time to start getting more enquiries online, just reply to this email and I'll pick things up from where we left off. Free mock-up, no pressure.
+{close}
 
 All the best,
 Zaid

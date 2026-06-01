@@ -79,68 +79,88 @@ def _smtp_send(gmail_user: str, app_pw: str, to: str, subject: str, body: str):
 
 def _cold_email_subject(name: str, industry: str, city: str, country: str) -> str:
     if any(k in industry.lower() for k in ("barber", "hair", "beauty", "nail", "groomer")):
-        return f"More bookings for {name} — quick idea"
+        return f"Quick question about {name}'s bookings"
     if any(k in industry.lower() for k in ("restaurant", "cafe", "takeaway", "pizza")):
-        return f"Are you getting enough customers from {city}?"
-    return f"More {industry} work in {city} — quick question"
+        return f"{name} — losing orders to competitors?"
+    if any(k in industry.lower() for k in ("accountant", "solicitor", "lawyer", "financial")):
+        return f"{name} — 3-5 leads a month you might be missing"
+    return f"{name} — missing out on {city} searches?"
 
 
 def _cold_email_body(name: str, industry: str, city: str, country: str, review_count: str = "") -> str:
-    symbol, price_range = COUNTRY_CURRENCY.get(country, ("£", "500–750"))
-
     try:
         rc = int(review_count)
     except (ValueError, TypeError):
         rc = 0
 
-    trust_line = ""
-    if rc >= 50:
-        trust_line = f"With {rc} reviews, {name} is clearly well-regarded in {city}. "
-    elif rc >= 20:
-        trust_line = f"I can see {name} has built up a solid reputation in {city}. "
+    high_reviews = rc >= 20
 
     if any(k in industry.lower() for k in ("barber", "hair", "beauty", "nail", "groomer")):
-        pain = (
-            f"{trust_line}But new clients in {city} almost always search online before booking. "
-            f"If they can't find {name}, they'll book with whoever comes up first."
-        )
-        cta = f"I build clean, bookable websites for local beauty businesses — from {symbol}{price_range}, no monthly fees."
+        if high_reviews:
+            body = (
+                f"{name} clearly has a loyal following with {rc} reviews. But most new clients "
+                f"search '{industry} near me' and book whoever has a proper site they can browse — "
+                f"right now that's not {name}.\n\n"
+                f"That's probably 10-15 bookings a month going elsewhere. Is that something you're feeling?"
+            )
+        else:
+            body = (
+                f"Most salons and barbers I work with pick up 10-15 extra bookings a month from people "
+                f"searching '{industry} near me' once they have a proper booking page. "
+                f"Is {name} missing out on that traffic, or are you fully booked?"
+            )
+
     elif any(k in industry.lower() for k in ("restaurant", "cafe", "takeaway")):
-        pain = (
-            f"{trust_line}But when people in {city} look for somewhere to eat, the first thing they do is search for a menu online. "
-            f"If they can't find yours, they'll go somewhere they can."
+        body = (
+            f"Noticed {name} doesn't have a website with a menu. When someone's deciding where to eat "
+            f"in {city}, they go with whoever makes it easiest to browse — and right now that's not {name}.\n\n"
+            f"Most people want to see a menu before calling (especially when the line's busy). "
+            f"That's probably 20-30 orders a week going elsewhere. Worth discussing?"
         )
-        cta = f"I can build a simple site with your menu and contact details — from {symbol}{price_range}, all-in."
+
     elif any(k in industry.lower() for k in ("plumber", "electrician", "roofer", "builder",
                                                "painter", "locksmith", "gardener", "cleaner",
                                                "window", "handyman")):
-        pain = (
-            f"{trust_line}But most people in {city} looking for a {industry} call whoever comes up first on Google. "
-            f"If {name} isn't showing up, those jobs are going to your competitors."
-        )
-        cta = f"I build simple sites that put local trades in front of those searches — from {symbol}{price_range}, everything included."
+        if high_reviews:
+            body = (
+                f"{name} has {rc} reviews — clearly doing well. But when someone clicks through on "
+                f"Google Maps looking for a quote, there's nowhere to go except a phone number. "
+                f"Most people won't call — they'll move to the next {industry} with a proper site.\n\n"
+                f"That's probably 3-5 jobs a week going elsewhere. Sound familiar?"
+            )
+        else:
+            body = (
+                f"Saw {name} on Google Maps, but when people click through there's nowhere to see your "
+                f"work or get a quote — just a phone number. Most people won't call, they'll move to the "
+                f"next {industry} with a proper site.\n\n"
+                f"That's probably costing you 3-5 jobs a week. Sound familiar?"
+            )
+
     elif "driving" in industry.lower():
-        pain = (
-            f"{trust_line}But most learner drivers in {city} find their instructor through a quick Google search. "
-            f"Without a website, {name} is invisible to anyone searching right now."
+        body = (
+            f"Most learner drivers search '{industry} in {city}' and go with whoever has a proper site "
+            f"where they can see rates and book a lesson. Right now {name} isn't giving them anywhere to do that.\n\n"
+            f"That's probably 5-8 new learners a month going to someone else. Is that worth addressing?"
         )
-        cta = f"I can build {name} a simple, professional site — from {symbol}{price_range}, free mock-up first."
+
+    elif any(k in industry.lower() for k in ("accountant", "solicitor", "lawyer", "financial", "mortgage")):
+        body = (
+            f"Most people searching for {industry} services in {city} won't consider anyone without a "
+            f"professional website — they research online before contacting anyone.\n\n"
+            f"That's probably costing {name} 3-5 qualified leads a month. "
+            f"Are referrals keeping you busy enough, or is that worth fixing?"
+        )
+
     else:
-        pain = (
-            f"{trust_line}But most people in {city} search online before choosing a {industry}. "
-            f"If {name} doesn't show up easily, those enquiries are going to whoever does."
+        body = (
+            f"Most people in {city} looking for a {industry} will go with whoever they can find "
+            f"online first. Right now, {name} isn't easy to find when people search.\n\n"
+            f"Is that costing you enquiries, or are you already booked solid?"
         )
-        cta = f"I build straightforward websites for local businesses — from {symbol}{price_range}, everything included."
 
     return f"""Hi,
 
-{pain}
-
-{cta}
-
-Happy to send a free mock-up of what a site for {name} could look like — no commitment needed.
-
-Worth a quick look?
+{body}
 
 Best,
 Zaid
