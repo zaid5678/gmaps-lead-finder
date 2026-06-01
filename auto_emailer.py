@@ -260,7 +260,8 @@ def write_csv(path: Path, fieldnames: list, rows: list):
         return
     # Ensure all tracking columns exist in fieldnames
     for col in ["contacted", "contacted_date", "follow_up_1_sent", "follow_up_1_date",
-                "follow_up_2_sent", "follow_up_2_date", "replied", "unsubscribed", "send_status", "notes"]:
+                "follow_up_2_sent", "follow_up_2_date", "replied", "unsubscribed",
+                "send_status", "notes", "digest_sent"]:
         if col not in fieldnames:
             fieldnames.append(col)
     with open(path, "w", newline="", encoding="utf-8") as f:
@@ -557,6 +558,122 @@ def run_phase(
 
 
 # ─────────────────────────────────────────────────────────────
+# PHONE DIGEST — leads with no email, sent to owner daily
+# ─────────────────────────────────────────────────────────────
+
+DIGEST_RECIPIENT = "zfkhan321@gmail.com"
+
+def _is_mobile(phone: str) -> bool:
+    """Returns True for UK mobile numbers (07xxx or +447xxx)."""
+    p = phone.strip().replace(" ", "").replace("-", "")
+    return p.startswith("07") or p.startswith("+447") or p.startswith("447")
+
+
+def send_phone_digest(rows: list, gmail_user: str, app_password: str, dry_run: bool = False) -> int:
+    """
+    Email the owner a digest of new leads that have a phone number but no email.
+    Marks each included row with digest_sent=yes so they're not repeated tomorrow.
+    Returns count of leads included.
+    """
+    pending = [
+        r for r in rows
+        if r.get("phone", "").strip()
+        and not r.get("email", "").strip()
+        and not r.get("digest_sent", "").strip()
+        and not r.get("unsubscribed", "").strip()
+    ]
+
+    if not pending:
+        log.info("[digest] No new phone-only leads to send.")
+        return 0
+
+    # Sort: mobiles first, then by review count descending
+    pending.sort(key=lambda r: (not _is_mobile(r.get("phone", "")), -int(r.get("review_count") or 0)))
+
+    mobile_count  = sum(1 for r in pending if _is_mobile(r.get("phone", "")))
+    landline_count = len(pending) - mobile_count
+
+    log.info(f"[digest] {len(pending)} new phone-only leads ({mobile_count} mobiles, {landline_count} landlines).")
+
+    if dry_run:
+        for r in pending:
+            log.info(f"  [DRY-RUN digest] {r.get('name')} — {r.get('phone')} ({r.get('city')})")
+            r["digest_sent"] = datetime.now().strftime("%Y-%m-%d")
+        return len(pending)
+
+    # Build HTML table
+    rows_html = ""
+    for r in pending:
+        phone = r.get("phone", "")
+        is_mob = _is_mobile(phone)
+        phone_style = "color:#1a5e20;font-weight:bold;" if is_mob else ""
+        mob_label   = " 📱" if is_mob else ""
+        maps_url = r.get("maps_url", "")
+        name_cell = (
+            f'<a href="{maps_url}" style="color:#1a73e8;text-decoration:none;">{r.get("name","")}</a>'
+            if maps_url else r.get("name", "")
+        )
+        rows_html += f"""<tr>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{name_cell}</td>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{r.get("industry") or r.get("category","")}</td>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;">{r.get("city","")}</td>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;{phone_style}">{phone}{mob_label}</td>
+          <td style="padding:6px 12px;border-bottom:1px solid #e8eaed;text-align:right;">{r.get("review_count","")}</td>
+        </tr>"""
+
+    today = datetime.now().strftime("%d %b %Y")
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"></head>
+<body style="font-family:Arial,sans-serif;color:#202124;margin:0;padding:20px;background:#f8f9fa;">
+  <div style="max-width:900px;margin:0 auto;background:#fff;border-radius:8px;
+              padding:28px 32px;box-shadow:0 1px 4px rgba(0,0,0,.15);">
+    <h2 style="margin:0 0 4px;color:#1a73e8;font-size:20px;">Daily Leads — Phone Outreach</h2>
+    <p style="margin:0 0 24px;color:#5f6368;font-size:13px;">
+      {today} &nbsp;·&nbsp; <strong>{len(pending)}</strong> new leads &nbsp;·&nbsp;
+      <strong style="color:#1a5e20;">{mobile_count} mobile</strong> &nbsp;·&nbsp;
+      {landline_count} landline
+    </p>
+    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+      <thead>
+        <tr style="background:#f1f3f4;">
+          <th style="padding:9px 12px;text-align:left;font-weight:600;">Business</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:600;">Category</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:600;">City</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:600;">Phone</th>
+          <th style="padding:9px 12px;text-align:right;font-weight:600;">Reviews</th>
+        </tr>
+      </thead>
+      <tbody>{rows_html}</tbody>
+    </table>
+    <p style="margin:24px 0 0;font-size:11px;color:#80868b;border-top:1px solid #f1f3f4;padding-top:12px;">
+      Mobile numbers highlighted in green. These leads have no website and no email on Google Maps.
+    </p>
+  </div>
+</body>
+</html>"""
+
+    subject = f"[Leads] {len(pending)} new phone leads — {mobile_count} mobile — {today}"
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"]    = gmail_user
+    msg["To"]      = DIGEST_RECIPIENT
+    msg.attach(MIMEText(html, "html", "utf-8"))
+
+    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as s:
+        s.ehlo(); s.starttls(); s.ehlo()
+        s.login(gmail_user, app_password)
+        s.sendmail(gmail_user, DIGEST_RECIPIENT, msg.as_string())
+
+    now = datetime.now().strftime("%Y-%m-%d")
+    for r in pending:
+        r["digest_sent"] = now
+
+    log.info(f"[digest] Sent {len(pending)} leads to {DIGEST_RECIPIENT}.")
+    return len(pending)
+
+
+# ─────────────────────────────────────────────────────────────
 # STATS REPORT
 # ─────────────────────────────────────────────────────────────
 
@@ -624,6 +741,8 @@ examples:
     p.add_argument("--limit",     type=int, default=400, help="Max emails per run (default 400 — ~8hrs at 72s avg)")
     p.add_argument("--dry-run",   action="store_true",  help="Preview without sending")
     p.add_argument("--stats-only", action="store_true", help="Print campaign stats and exit")
+    p.add_argument("--digest",    action="store_true",
+                   help="Send phone-only digest to owner and run cold emails — the default combined mode")
     return p
 
 
@@ -645,7 +764,8 @@ def main():
 
     # Ensure tracking columns exist in fieldnames list
     for col in ["contacted", "contacted_date", "follow_up_1_sent", "follow_up_1_date",
-                "follow_up_2_sent", "follow_up_2_date", "replied", "unsubscribed", "send_status", "notes"]:
+                "follow_up_2_sent", "follow_up_2_date", "replied", "unsubscribed",
+                "send_status", "notes", "digest_sent"]:
         if col not in fieldnames:
             fieldnames.append(col)
         for r in rows:
@@ -705,6 +825,9 @@ def main():
             if remaining_limit == 0:
                 log.info(f"Email limit ({args.limit}) reached — stopping.")
                 break
+
+    # Send phone-only digest to owner (leads with no email but have a phone number)
+    send_phone_digest(rows, gmail_user, app_pw, dry_run=args.dry_run)
 
     # Persist changes back to CSV
     write_csv(csv_path, fieldnames, rows)
