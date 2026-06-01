@@ -400,8 +400,10 @@ def needs_initial(row: dict) -> bool:
 
 
 def needs_follow_up_1(row: dict) -> bool:
-    if row.get("unsubscribed") or row.get("replied"):
+    if row.get("unsubscribed"):
         return False
+    if row.get("replied") == "yes":
+        return False  # they replied — no follow-up needed
     if row.get("follow_up_1_sent"):
         return False
     if not row.get("contacted"):
@@ -413,12 +415,14 @@ def needs_follow_up_1(row: dict) -> bool:
 
 
 def needs_follow_up_2(row: dict) -> bool:
-    if row.get("unsubscribed") or row.get("replied"):
+    if row.get("unsubscribed"):
         return False
+    if row.get("replied") == "yes":
+        return False  # they replied — no follow-up needed
     if row.get("follow_up_2_sent"):
         return False
     if not row.get("follow_up_1_sent"):
-        return False  # must have sent follow-up 1 first
+        return False
     if not row.get("email", "").strip():
         return False
     days = _days_since(row.get("contacted_date", ""))
@@ -581,21 +585,54 @@ def run_phase(
     checker = PHASE_FILTERS[template]
     subj_fn, body_fn = TEMPLATES[template]
 
+    # Build a global set of email addresses already contacted across ALL rows —
+    # prevents double-emailing if the same address appears in multiple CSV rows.
+    globally_contacted: set = {
+        r.get("email", "").strip().lower()
+        for r in rows
+        if r.get("contacted") == "yes" and r.get("email", "").strip()
+    }
+
+    # For follow-up phases, also collect addresses that have already received that follow-up.
+    if template == FOLLOW_UP_1_TEMPLATE:
+        globally_sent_phase: set = {
+            r.get("email", "").strip().lower()
+            for r in rows
+            if r.get("follow_up_1_sent") == "yes" and r.get("email", "").strip()
+        }
+    elif template == FOLLOW_UP_2_TEMPLATE:
+        globally_sent_phase = {
+            r.get("email", "").strip().lower()
+            for r in rows
+            if r.get("follow_up_2_sent") == "yes" and r.get("email", "").strip()
+        }
+    else:
+        globally_sent_phase = set()
+
     to_send = [r for r in rows if checker(r)]
 
-    # Deduplicate by email address — never send two emails to the same address in one run
-    seen_emails: set = set()
-    deduped = []
-    dup_count = 0
+    # Global dedup: skip rows whose email was already contacted in a previous run
+    # (handles duplicate CSV entries with different fingerprints but same email)
+    deduped, global_dup_count = [], 0
+    seen_this_run: set = set()
     for r in to_send:
         addr = r.get("email", "").strip().lower()
-        if addr and addr not in seen_emails:
-            seen_emails.add(addr)
-            deduped.append(r)
-        elif addr:
-            dup_count += 1
-    if dup_count:
-        log.info(f"[{template}] Skipped {dup_count} duplicate email address(es).")
+        if not addr:
+            continue
+        if addr in globally_contacted and template == INITIAL_TEMPLATE:
+            global_dup_count += 1
+            continue
+        if addr in globally_sent_phase:
+            global_dup_count += 1
+            continue
+        if addr in seen_this_run:
+            global_dup_count += 1
+            continue
+        seen_this_run.add(addr)
+        deduped.append(r)
+
+    if global_dup_count:
+        log.info(f"[{template}] Skipped {global_dup_count} already-contacted address(es).")
     to_send = deduped
 
     if limit > 0:
@@ -608,44 +645,67 @@ def run_phase(
         return stats
 
     log.info(f"[{template}] {len(to_send)} emails queued.")
+    if template != INITIAL_TEMPLATE:
+        replied_count = sum(1 for r in rows if r.get("replied") == "yes")
+        log.info(f"[{template}] {replied_count} lead(s) skipped because they replied — follow-ups suppressed.")
 
     if sender and not dry_run:
         sender.connect()
 
     try:
         for i, row in enumerate(to_send):
-            name          = row.get("name", "there").strip() or "there"
-            city          = (row.get("city") or row.get("search_location") or "your city").replace(", UK", "").strip()
-            industry      = (row.get("industry") or row.get("category") or row.get("search_keyword") or "business").strip()
-            to_email      = row.get("email", "").strip()
-            review_count  = row.get("review_count", "")
-            pain_signals  = row.get("pain_keywords_found", "")
+            to_email = row.get("email", "").strip()
+
+            # Extract and validate all template variables before rendering
+            name     = row.get("name", "").strip()
+            city     = (row.get("city") or row.get("search_location") or "").replace(", UK", "").strip()
+            industry = (row.get("industry") or row.get("category") or row.get("search_keyword") or "").strip()
+
+            if not name:
+                log.warning(f"  SKIP [{i+1}] <{to_email}> — name is blank, would send a broken email")
+                stats["skipped"] += 1
+                continue
+            if not city:
+                log.warning(f"  SKIP [{i+1}] {name} <{to_email}> — city is blank")
+                stats["skipped"] += 1
+                continue
+            if not industry:
+                industry = "business"  # safe generic fallback
+
+            review_count = row.get("review_count", "")
+            pain_signals = row.get("pain_keywords_found", "")
 
             subject = subj_fn(name, industry, city)
             body    = body_fn(name, industry, city, review_count, pain_signals)
 
-            if dry_run:
-                log.info(f"  [DRY-RUN {i+1}/{len(to_send)}] → {name} <{to_email}>")
-                log.info(f"    Subject: {subject}")
-                log.info(f"    Preview: {body[:100].replace(chr(10), ' ')}…")
-                _mark_sent(row, template)
-                stats["sent"] += 1
+            # Final sanity check — catch any unreplaced placeholder that slipped through
+            for placeholder in ("[Name]", "[Business Name]", "[City]", "[Industry]", "{name}", "{city}"):
+                if placeholder in subject or placeholder in body:
+                    log.warning(f"  SKIP [{i+1}] {name} — unreplaced placeholder found in template: {placeholder}")
+                    stats["skipped"] += 1
+                    break
             else:
-                try:
-                    sender.reconnect_if_needed()  # type: ignore[union-attr]
-                    sender.send(to_email, subject, body)  # type: ignore[union-attr]
-                    log.info(f"  SENT [{i+1}/{len(to_send)}] {template} → {name} <{to_email}>")
+                if dry_run:
+                    log.info(f"  [DRY-RUN {i+1}/{len(to_send)}] → {name} <{to_email}>")
+                    log.info(f"    Subject: {subject}")
+                    log.info(f"    Preview: {body[:120].replace(chr(10), ' ')}…")
                     _mark_sent(row, template)
                     stats["sent"] += 1
-                except Exception as exc:
-                    log.warning(f"  FAILED {name} <{to_email}>: {exc}")
-                    _mark_failed(row, template, str(exc))
-                    stats["failed"] += 1
+                else:
+                    try:
+                        sender.reconnect_if_needed()  # type: ignore[union-attr]
+                        sender.send(to_email, subject, body)  # type: ignore[union-attr]
+                        log.info(f"  SENT [{i+1}/{len(to_send)}] {template} → {name} <{to_email}>")
+                        _mark_sent(row, template)
+                        stats["sent"] += 1
+                    except Exception as exc:
+                        log.warning(f"  FAILED {name} <{to_email}>: {exc}")
+                        _mark_failed(row, template, str(exc))
+                        stats["failed"] += 1
 
             if i < len(to_send) - 1:
                 delay = random.uniform(delay_min, delay_max)
                 if not dry_run:
-                    log.debug(f"  Waiting {delay:.1f}s…")
                     time.sleep(delay)
 
     finally:
