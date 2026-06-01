@@ -138,47 +138,70 @@ def _subject_follow_up_2(name: str, industry: str, city: str) -> str:
     return f"Last one from me — {name}"
 
 
-def _body_initial(name: str, industry: str, city: str) -> str:
+def _body_initial(name: str, industry: str, city: str, review_count: str = "", pain_signals: str = "") -> str:
     sector = _sector(industry)
+
+    # Build a trust acknowledgement if they have meaningful reviews
+    try:
+        rc = int(review_count)
+    except (ValueError, TypeError):
+        rc = 0
+
+    trust_line = ""
+    if rc >= 50:
+        trust_line = f"With {rc} reviews, {name} is clearly well-regarded in {city}. "
+    elif rc >= 20:
+        trust_line = f"I can see {name} has built up a solid reputation in {city}. "
+
+    # Pain signal personalisation — if we found keywords in their reviews
+    pain_extra = ""
+    if pain_signals:
+        pain_extra = f"\n\nI also noticed some of your customers mentioned finding it hard to contact you online — a website would fix that directly."
 
     if sector == "trade":
         pain = (
-            f"Most people in {city} searching for a {industry} on Google will call whoever comes up first. "
-            f"If {name} isn't showing up, those calls are going straight to your competitors."
+            f"{trust_line}But most people in {city} looking for a {industry} search Google and "
+            f"call whoever comes up first — if {name} isn't showing up, those jobs are going to someone else."
         )
+        cta = f"I can build a simple site for {name} that puts you in front of those searches — from £500, everything included."
     elif sector == "beauty":
         pain = (
-            f"New clients almost always search online before booking. "
-            f"If they can't find {name} easily, they'll book with whoever shows up first."
+            f"{trust_line}But new clients in {city} almost always search online before booking. "
+            f"If they can't find {name} easily, they'll book with whoever comes up first."
         )
+        cta = f"I can build {name} a clean, bookable website — from £500, no monthly fees."
     elif sector == "food":
         pain = (
-            f"When people in {city} search for somewhere to eat, the first thing they look for is a menu online. "
-            f"If they can't find yours, they'll pick somewhere they can."
+            f"{trust_line}But when people in {city} search for somewhere to eat, the first thing they want is a menu online. "
+            f"If they can't find {name}'s menu, they'll go somewhere they can."
         )
+        cta = f"I can build a simple site with your menu and contact details — from £500, all-in."
     elif sector == "health":
         pain = (
-            f"New patients and clients in {city} check online before picking up the phone. "
+            f"{trust_line}But new patients in {city} check online before picking up the phone. "
             f"Without a clear web presence, {name} is invisible to anyone searching right now."
         )
+        cta = f"I can put a professional site together for {name} — from £500, free mock-up first."
     elif sector == "professional":
         pain = (
-            f"Most people looking for {industry} services in {city} do their research online before contacting anyone. "
+            f"{trust_line}But most people looking for {industry} services in {city} research online before contacting anyone. "
             f"If {name} doesn't show up, those enquiries go elsewhere."
         )
+        cta = f"I build clean, professional sites for {industry} businesses — from £500, everything included."
     else:
         pain = (
-            f"Most people in {city} looking for {industry} services search online first. "
-            f"If {name} isn't easy to find, those enquiries are going to whoever is."
+            f"{trust_line}But most people in {city} looking for {industry} services search online first — "
+            f"if {name} isn't easy to find, those enquiries are going to whoever is."
         )
+        cta = f"I can build a simple, professional site for {name} — from £500, free mock-up with no commitment."
 
-    return f"""Hi there,
+    return f"""Hi,
 
 {pain}
 
-I build simple, professional websites for local businesses like {name} — starting from £500, everything included.
+{cta}{pain_extra}
 
-I can put together a free no-obligation mock-up for {name} so you can see exactly what it would look like before committing to anything.
+Happy to send you a free mock-up of what a site for {name} could look like — no commitment needed.
 
 Worth a quick look?
 
@@ -190,17 +213,17 @@ zfkhan321@gmail.com
 To stop receiving emails from me, reply with "STOP"."""
 
 
-def _body_follow_up_1(name: str, industry: str, city: str) -> str:
+def _body_follow_up_1(name: str, industry: str, city: str, review_count: str = "", pain_signals: str = "") -> str:
     sector = _sector(industry)
 
     if sector == "trade":
-        hook = f"Every day without an online presence is another day those {city} searches go to someone else."
+        hook = f"Every day without an online presence is another day those {city} searches go to someone else — just wanted to make sure {name} isn't missing out."
     elif sector == "beauty":
-        hook = f"A lot of new bookings in {city} start with a quick Google search — just wanted to make sure {name} isn't missing out."
+        hook = f"New bookings in {city} almost always start with a quick Google search. Just wanted to make sure {name} is capturing those."
     elif sector == "food":
-        hook = f"People in {city} decide where to eat online before they leave the house — just wanted to make sure {name} is showing up."
+        hook = f"People decide where to eat before they leave the house — just wanted to make sure {name} is showing up when they search."
     else:
-        hook = f"Just wanted to make sure {name} isn't missing out on enquiries from {city} searches."
+        hook = f"Just checking in to make sure {name} isn't missing out on enquiries from people searching in {city}."
 
     return f"""Hi,
 
@@ -208,9 +231,7 @@ Following up on my message from a few days ago.
 
 {hook}
 
-I build straightforward websites for local businesses — £500 all-in, free mock-up first so there's no risk.
-
-If the timing isn't right, no problem at all — just let me know.
+Still happy to put together a free mock-up for {name} — £500 all-in if you decide to go ahead, no pressure either way.
 
 Best,
 Zaid
@@ -219,12 +240,12 @@ Zaid
 To unsubscribe, reply "STOP"."""
 
 
-def _body_follow_up_2(name: str, industry: str, city: str) -> str:
+def _body_follow_up_2(name: str, industry: str, city: str, review_count: str = "", pain_signals: str = "") -> str:
     return f"""Hi,
 
-Last one from me, I promise.
+Last one from me, I promise — I won't follow up after this.
 
-If {name} ever decides it's the right time to start getting more enquiries online, just reply to this email and I'll pick up where we left off — free mock-up, no pressure.
+If {name} ever decides it's the right time to start getting more enquiries online, just reply to this email and I'll pick things up from where we left off. Free mock-up, no pressure.
 
 All the best,
 Zaid
@@ -235,9 +256,9 @@ To unsubscribe, reply "STOP"."""
 
 
 TEMPLATES = {
-    INITIAL_TEMPLATE:     (_subject_initial,    _body_initial),
-    FOLLOW_UP_1_TEMPLATE: (_subject_follow_up_1, _body_follow_up_1),
-    FOLLOW_UP_2_TEMPLATE: (_subject_follow_up_2, _body_follow_up_2),
+    INITIAL_TEMPLATE:      (_subject_initial,     _body_initial),
+    FOLLOW_UP_1_TEMPLATE:  (_subject_follow_up_1, _body_follow_up_1),
+    FOLLOW_UP_2_TEMPLATE:  (_subject_follow_up_2, _body_follow_up_2),
 }
 
 
@@ -518,13 +539,15 @@ def run_phase(
 
     try:
         for i, row in enumerate(to_send):
-            name     = row.get("name", "there").strip() or "there"
-            city     = (row.get("city") or row.get("search_location") or "your city").replace(", UK", "").strip()
-            industry = (row.get("industry") or row.get("category") or row.get("search_keyword") or "business").strip()
-            to_email = row.get("email", "").strip()
+            name          = row.get("name", "there").strip() or "there"
+            city          = (row.get("city") or row.get("search_location") or "your city").replace(", UK", "").strip()
+            industry      = (row.get("industry") or row.get("category") or row.get("search_keyword") or "business").strip()
+            to_email      = row.get("email", "").strip()
+            review_count  = row.get("review_count", "")
+            pain_signals  = row.get("pain_keywords_found", "")
 
             subject = subj_fn(name, industry, city)
-            body    = body_fn(name, industry, city)
+            body    = body_fn(name, industry, city, review_count, pain_signals)
 
             if dry_run:
                 log.info(f"  [DRY-RUN {i+1}/{len(to_send)}] → {name} <{to_email}>")

@@ -1,0 +1,77 @@
+name: International Lead Scraper
+
+on:
+  schedule:
+    # Mon = Ireland, Tue = Australia, Wed = Canada, Thu = USA
+    # All at 06:00 UTC so leads are ready before the 09:00 email run
+    - cron: '0 6 * * 1'   # Monday    — Ireland
+    - cron: '0 6 * * 2'   # Tuesday   — Australia
+    - cron: '0 6 * * 3'   # Wednesday — Canada
+    - cron: '0 6 * * 4'   # Thursday  — USA
+  workflow_dispatch:
+    inputs:
+      country:
+        description: 'Country to scrape (Ireland / Australia / Canada / USA / all)'
+        required: false
+        default: 'all'
+
+jobs:
+  scrape-international:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install playwright python-dotenv requests beautifulsoup4 lxml
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      - name: Determine country for today
+        id: country
+        run: |
+          # Manual trigger can override; otherwise derive from day of week
+          INPUT="${{ github.event.inputs.country }}"
+          if [ -n "$INPUT" ] && [ "$INPUT" != "all" ]; then
+            echo "country=$INPUT" >> $GITHUB_OUTPUT
+          else
+            DAY=$(date +%u)   # 1=Mon 2=Tue 3=Wed 4=Thu
+            case $DAY in
+              1) echo "country=Ireland"   >> $GITHUB_OUTPUT ;;
+              2) echo "country=Australia" >> $GITHUB_OUTPUT ;;
+              3) echo "country=Canada"    >> $GITHUB_OUTPUT ;;
+              4) echo "country=USA"       >> $GITHUB_OUTPUT ;;
+              *) echo "country=Ireland"   >> $GITHUB_OUTPUT ;;
+            esac
+          fi
+
+      - name: Scrape ${{ steps.country.outputs.country }}
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python international_scraper.py \
+            --country "${{ steps.country.outputs.country }}" \
+            --max-results 20
+
+      - name: Commit updated leads CSV
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add output/international_leads.csv output/international_leads.done 2>/dev/null || true
+          git diff --cached --quiet && echo "Nothing new." || \
+            git commit -m "chore: international leads — ${{ steps.country.outputs.country }} $(date '+%Y-%m-%d')"
+          git push origin main

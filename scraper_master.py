@@ -117,6 +117,46 @@ ALL_PW_SOURCES   = ["yelp", "bark", "google_maps"]
 ALL_SOURCES      = ALL_HTTP_SOURCES + ALL_PW_SOURCES
 DEFAULT_SOURCES  = ["google_maps"]
 
+# ── International city lists ───────────────────────────────────
+INTERNATIONAL_CITIES = {
+    "Ireland": [
+        "Dublin", "Cork", "Limerick", "Galway", "Waterford",
+        "Drogheda", "Dundalk", "Swords", "Bray", "Navan",
+    ],
+    "Australia": [
+        "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
+        "Gold Coast", "Newcastle, Australia", "Canberra", "Hobart", "Darwin",
+    ],
+    "Canada": [
+        "Toronto", "Vancouver", "Montreal", "Calgary", "Edmonton",
+        "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Halifax",
+    ],
+    "USA": [
+        "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
+        "Philadelphia", "San Antonio", "San Diego", "Dallas", "Jacksonville",
+    ],
+}
+
+# Flat list of all international cities with country suffix for Google Maps
+INTERNATIONAL_CITIES_FLAT = [
+    f"{city}, {country}"
+    for country, cities in INTERNATIONAL_CITIES.items()
+    for city in cities
+]
+
+# Currency/price hint per country — used in email templates
+COUNTRY_CURRENCY = {
+    "Ireland":   ("€", "500–750"),
+    "Australia": ("A$", "800–1,200"),
+    "Canada":    ("C$", "700–1,000"),
+    "USA":       ("$", "700–1,000"),
+}
+
+def city_country(location: str) -> str:
+    """Extract country from 'City, Country' string."""
+    parts = location.split(",")
+    return parts[-1].strip() if len(parts) > 1 else "UK"
+
 
 # ─────────────────────────────────────────────────────────────
 # DATA MODEL
