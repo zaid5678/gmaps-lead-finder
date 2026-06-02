@@ -416,9 +416,8 @@ def main():
                     existing.add(b.maps_url)
 
                 if new:
-                    _append_rows(new_rows=[
-                        r for r in session_new if r.get("maps_url") in {b.maps_url for b in new}
-                    ])
+                    new_urls = {b.maps_url for b in new}
+                    _append_rows([r for r in session_new if r.get("maps_url") in new_urls])
 
                 _mark_done(key)
                 done_keys.add(key)
