@@ -73,7 +73,7 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
           python scraper_master.py \
-            --categories "roofer,plumber,electrician,barber,nail salon,beauty salon,hairdresser,cleaner,takeaway,gardener,driving instructor" \
+            --categories "bricklayer,carpenter,joiner,roofer,scaffolder,groundworker,electrician,plumber,heating engineer,gas engineer,HVAC engineer,plasterer,painter decorator,tiler,dryliner,floor layer,carpet fitter,glazier,window fitter,landscaper,stone mason,locksmith,paviour,barber,nail salon,beauty salon,hairdresser,cleaner,takeaway,gardener,driving instructor" \
             --cities "$TODAY_CITIES" \
             --max-results 10 \
             --pw-workers 6

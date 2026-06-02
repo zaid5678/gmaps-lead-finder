@@ -90,10 +90,20 @@ log = logging.getLogger("auto_emailer")
 # ─────────────────────────────────────────────────────────────
 
 # Map raw category/keyword strings to a broad sector for personalised copy
-_TRADE_KEYWORDS    = {"roofer", "roofing", "plumber", "plumbing", "electrician", "electrical",
-                      "carpenter", "carpentry", "painter", "decorator", "builder", "building",
-                      "window cleaner", "window cleaning", "cleaner", "cleaning", "gardener",
-                      "landscaper", "handyman", "plasterer", "tiler", "locksmith", "glazier"}
+_TRADE_KEYWORDS    = {
+    "roofer", "roofing", "plumber", "plumbing", "electrician", "electrical",
+    "carpenter", "carpentry", "joiner", "joinery", "bricklayer", "bricklaying",
+    "scaffolder", "scaffolding", "groundworker", "groundwork",
+    "heating engineer", "gas engineer", "hvac", "hvac engineer",
+    "painter", "decorator", "painter decorator", "builder", "building",
+    "plasterer", "plastering", "tiler", "tiling", "dryliner", "dry liner",
+    "floor layer", "carpet fitter", "carpet fitting",
+    "glazier", "glazing", "window fitter", "window fitting",
+    "window cleaner", "window cleaning", "cleaner", "cleaning",
+    "gardener", "gardening", "landscaper", "landscaping",
+    "stone mason", "stonemason", "locksmith", "paviour", "paving",
+    "handyman",
+}
 _BEAUTY_KEYWORDS   = {"barber", "barber shop", "hairdresser", "hair salon", "beautician",
                       "beauty salon", "nail salon", "nail technician", "dog groomer", "groomer"}
 _FOOD_KEYWORDS     = {"restaurant", "cafe", "coffee shop", "takeaway", "pizza", "kebab",

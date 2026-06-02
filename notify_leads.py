@@ -39,34 +39,76 @@ def get_todays_leads(rows: list[dict]) -> list[dict]:
     return [r for r in rows if r.get("scraped_at", "").startswith(today) and r.get("name", "").strip()]
 
 
+TRADE_KEYWORDS = {
+    "bricklayer", "carpenter", "joiner", "roofer", "scaffolder",
+    "groundworker", "electrician", "plumber", "heating engineer",
+    "gas engineer", "hvac engineer", "hvac", "plasterer",
+    "painter decorator", "painter", "decorator", "tiler", "dryliner",
+    "floor layer", "carpet fitter", "glazier", "window fitter",
+    "landscaper", "stone mason", "stonemason", "locksmith", "paviour",
+    "builder", "handyman", "window cleaner",
+}
+
+
+def _sector(industry: str) -> str:
+    kw = industry.lower().strip()
+    if any(k in kw for k in TRADE_KEYWORDS):
+        return "Tradesmen"
+    if any(k in kw for k in ("barber", "hair", "beauty", "nail", "salon", "groomer")):
+        return "Beauty & Personal Care"
+    if any(k in kw for k in ("restaurant", "cafe", "takeaway", "pub", "bar", "pizza")):
+        return "Food & Hospitality"
+    if any(k in kw for k in ("dentist", "physio", "chiropractor", "gym", "trainer", "vet")):
+        return "Health & Fitness"
+    if any(k in kw for k in ("accountant", "solicitor", "estate agent", "financial")):
+        return "Professional Services"
+    if "driving" in kw:
+        return "Driving Instructors"
+    return "Other"
+
+
 def build_email(new_leads: list[dict], total_leads: int, cities: str) -> tuple[str, str]:
     n = len(new_leads)
-    subject = f"🏠 {n} new lead{'s' if n != 1 else ''} found today — {cities}"
+    subject = f"{n} new lead{'s' if n != 1 else ''} found today — {cities}"
 
-    # Group by industry
-    by_industry: dict[str, list] = {}
+    # Group by broad sector, then by specific industry within each sector
+    by_sector: dict[str, dict[str, list]] = {}
     for r in new_leads:
-        ind = r.get("industry", "unknown").strip().title()
-        by_industry.setdefault(ind, []).append(r)
+        ind    = r.get("industry", "unknown").strip().title()
+        sector = _sector(r.get("industry", ""))
+        by_sector.setdefault(sector, {}).setdefault(ind, []).append(r)
 
     lines = [
-        f"Hi Zaid,",
-        f"",
-        f"The daily scraper just ran and found {n} new lead{'s' if n != 1 else ''} without a website.",
+        "Hi Zaid,",
+        "",
+        f"The daily scraper found {n} new lead{'s' if n != 1 else ''} without a website.",
         f"Cities scraped today: {cities}",
         f"Total leads in database: {total_leads}",
-        f"",
+        "",
     ]
 
-    for industry, leads in sorted(by_industry.items()):
-        lines.append(f"── {industry}s ({len(leads)}) ──────────────────────")
-        for r in leads:
-            name  = r.get("name", "")
-            city  = r.get("city", "")
-            phone = r.get("phone", "") or "No phone listed"
-            lines.append(f"  • {name} ({city})")
-            lines.append(f"    📞 {phone}")
-        lines.append("")
+    # Tradesmen first, then other sectors alphabetically
+    sector_order = ["Tradesmen", "Driving Instructors", "Beauty & Personal Care",
+                    "Food & Hospitality", "Health & Fitness", "Professional Services", "Other"]
+
+    for sector in sector_order:
+        if sector not in by_sector:
+            continue
+        industries = by_sector[sector]
+        total_in_sector = sum(len(v) for v in industries.values())
+        lines.append(f"━━━ {sector.upper()} ({total_in_sector}) ━━━━━━━━━━━━━━━━━━━━━")
+        for ind, leads in sorted(industries.items()):
+            lines.append(f"  ── {ind} ({len(leads)})")
+            for r in leads:
+                name  = r.get("name", "")
+                city  = r.get("city", "")
+                phone = r.get("phone", "") or "No phone listed"
+                maps  = r.get("maps_url", "")
+                lines.append(f"     • {name} — {city}")
+                lines.append(f"       📞 {phone}")
+                if maps:
+                    lines.append(f"       🗺  {maps}")
+            lines.append("")
 
     lines += [
         "─────────────────────────────────────────────",

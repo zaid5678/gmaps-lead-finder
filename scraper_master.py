@@ -76,22 +76,37 @@ USER_AGENTS = [
 ]
 
 DEFAULT_CATEGORIES = [
-    "barber", "plumber", "electrician", "roofer", "restaurant",
-    "cafe", "beauty salon", "car mechanic", "dentist", "cleaner",
-    "window cleaner", "hairdresser", "nail salon", "locksmith",
-    "painter decorator", "gardener", "driving instructor",
+    # Tradesmen
+    "bricklayer", "carpenter", "joiner", "roofer", "scaffolder",
+    "groundworker", "electrician", "plumber", "heating engineer",
+    "gas engineer", "HVAC engineer", "plasterer", "painter decorator",
+    "tiler", "dryliner", "floor layer", "carpet fitter", "glazier",
+    "window fitter", "landscaper", "stone mason", "locksmith", "paviour",
+    # Other
+    "barber", "nail salon", "beauty salon", "hairdresser", "cleaner",
+    "takeaway", "gardener", "driving instructor",
 ]
 
 ALL_CATEGORIES = [
-    "restaurant", "cafe", "pub", "bar", "takeaway", "barber",
-    "hair salon", "beauty salon", "nail salon", "spa",
-    "plumber", "electrician", "heating engineer", "roofer", "builder",
-    "painter decorator", "locksmith", "mechanic", "car wash",
+    # Tradesmen
+    "bricklayer", "carpenter", "joiner", "roofer", "scaffolder",
+    "groundworker", "electrician", "plumber", "heating engineer",
+    "gas engineer", "HVAC engineer", "plasterer", "painter decorator",
+    "tiler", "dryliner", "floor layer", "carpet fitter", "glazier",
+    "window fitter", "landscaper", "stone mason", "locksmith", "paviour",
+    "builder", "mechanic", "car wash", "window cleaner",
+    "window cleaning", "window cleaning service",
+    # Beauty & personal
+    "barber", "hair salon", "beauty salon", "nail salon", "spa",
+    "hairdresser", "pet groomer",
+    # Food & hospitality
+    "restaurant", "cafe", "pub", "bar", "takeaway",
+    # Health
     "dentist", "physiotherapist", "chiropractor", "gym", "personal trainer",
-    "yoga studio", "accountant", "solicitor", "estate agent",
-    "driving instructor", "tutor", "cleaner", "window cleaner",
-    "window cleaning", "window cleaning service", "gardener",
-    "landscaper", "pet groomer", "vet",
+    "yoga studio", "vet",
+    # Professional
+    "accountant", "solicitor", "estate agent", "driving instructor",
+    "tutor", "cleaner", "gardener", "landscaper",
 ]
 
 DEFAULT_CITIES = [
