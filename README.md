@@ -9,21 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-02 12:56 UTC — 529 confirmed leads (no website) across 10 categories_
+_Last updated: 2026-06-03 15:53 UTC — 656 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 179 | 100 | 166 |
+| Barber | 181 | 102 | 167 |
 | Beauty Salon | 91 | 49 | 80 |
-| Cleaner | 55 | 36 | 55 |
+| Bricklayer | 12 | 1 | 12 |
+| Carpenter | 10 | 5 | 10 |
+| Carpet Fitter | 5 | 5 | 5 |
+| Cleaner | 56 | 37 | 56 |
+| Driving Instructor | 10 | 10 | 9 |
+| Dryliner | 15 | 15 | 15 |
 | Electrician | 49 | 21 | 48 |
+| Floor Layer | 3 | 3 | 3 |
 | Gardener | 87 | 68 | 86 |
+| Gas Engineer | 3 | 3 | 3 |
+| Glazier | 10 | 10 | 10 |
+| Groundworker | 10 | 10 | 7 |
 | Hairdresser | 87 | 54 | 82 |
-| Nail Salon | 149 | 95 | 144 |
-| Plumber | 69 | 26 | 68 |
+| Heating Engineer | 1 | 1 | 1 |
+| Hvac Engineer | 2 | 2 | 2 |
+| Joiner | 5 | 5 | 5 |
+| Landscaper | 2 | 2 | 2 |
+| Locksmith | 5 | 5 | 5 |
+| Nail Salon | 150 | 96 | 145 |
+| Painter Decorator | 6 | 6 | 6 |
+| Paviour | 5 | 5 | 5 |
+| Plasterer | 7 | 7 | 7 |
+| Plumber | 70 | 27 | 69 |
 | Roofer | 81 | 13 | 77 |
-| Takeaway | 95 | 67 | 72 |
-| **Total** | **942** | **529** | **878** |
+| Scaffolder | 7 | 7 | 7 |
+| Stone Mason | 1 | 1 | 1 |
+| Takeaway | 96 | 68 | 73 |
+| Tiler | 16 | 16 | 16 |
+| Window Fitter | 2 | 2 | 2 |
+| **Total** | **1085** | **656** | **1016** |
 
 ### All Leads (confirmed no website)
 
@@ -558,8 +579,135 @@ _Last updated: 2026-06-02 12:56 UTC — 529 confirmed leads (no website) across 
 | 527 | LS Home & Garden Improvements | Norwich | Gardener | +44 7424 136354  |  |
 | 528 | A.M Nelmes Heating and Plumbing | Gloucester | Plumber | +44 7890 390220  |  |
 | 529 | Hair | Dundee | Hairdresser | +44 1382 220222  |  |
+| 530 | Bispham Pointing & Brickwork | Blackpool | Bricklayer | +44 7828 011466  |  |
+| 531 | Richardson and Son Joinery Ltd | Blackpool | Carpenter | +44 7596 082037  |  |
+| 532 | The Wood Worker | Middlesbrough | Carpenter | +44 7531 071678  |  |
+| 533 | Bruk Carpentery&Joinery | Middlesbrough | Carpenter | +44 7375 542913  |  |
+| 534 | D&H Carpentry & Building Services | Swindon | Carpenter | +44 7833 785258  |  |
+| 535 | PJC Building & Carpentry Services | Swindon | Carpenter | +44 7767 863750  |  |
+| 536 | SW joinery ltd | Swindon | Joiner | +44 7825 525639  |  |
+| 537 | N Cooper joinery | Middlesbrough | Joiner | +44 7801 571520  |  |
+| 538 | P.H joinery services | Middlesbrough | Joiner | +44 7541 598489  |  |
+| 539 | Ben Armstrong joinery | Middlesbrough | Joiner | +44 7568 501635  |  |
+| 540 | Homestead joinery and building maintenance | Blackpool | Joiner | +44 7841 395391  |  |
+| 541 | Hardy Scaffolding (Hants & Dorset) | Bournemouth | Scaffolder | +44 1202 940043  |  |
+| 542 | Number 1 Scaffolding Co | Bournemouth | Scaffolder | +44 1202 537776  |  |
+| 543 | Kencorp Scaffolding Ltd - Scaffolders Middlesbrough | Middlesbrough | Scaffolder | +44 7591 024108  |  |
+| 544 | Pro Scaffolding specialist LTD | Middlesbrough | Scaffolder | +44 7504 992612  |  |
+| 545 | A1 scaffolding Wiltshire | Swindon | Scaffolder | +44 1793 226487  |  |
+| 546 | Alpine Scaffolding South West | Swindon | Scaffolder | +44 7775 421261  |  |
+| 547 | Top Flite Scaffolding | Swindon | Scaffolder | +44 7739 261632  |  |
+| 548 | BSO Groundworks | Blackpool | Groundworker | — |  |
+| 549 | Groundwork Improvements Ltd | Blackpool | Groundworker | +44 7966 061999  |  |
+| 550 | Just Dig - Groundworks Bournemouth | Bournemouth | Groundworker | +44 1202 779466  |  |
+| 551 | K&B Groundworks and Above | Bournemouth | Groundworker | +44 1202 330042  |  |
+| 552 | Lm Groundworks And Building Services Ltd. | Swindon | Groundworker | — |  |
+| 553 | Bright Civil Engineering & Groundworks Ltd | Swindon | Groundworker | +44 1793 741552  |  |
+| 554 | CJ Groundworks and Construction | Middlesbrough | Groundworker | +44 7837 402655  |  |
+| 555 | T.R.B Groundworks | Middlesbrough | Groundworker | +44 7913 967819  |  |
+| 556 | Groundwork North East | Middlesbrough | Groundworker | — |  |
+| 557 | Cm groundwork’s and landscapingLTD | Middlesbrough | Groundworker | +44 7494 858929  |  |
+| 558 | Grand Heat - Emergency Plumber - Blackpool | Blackpool | Plumber | +44 1253 968024  |  |
+| 559 | G T S Gas & Heating | Middlesbrough | Heating Engineer | +44 7802 647521  |  |
+| 560 | First Gas FY4 | Blackpool | Gas Engineer | +44 7712 444771  |  |
+| 561 | Tees Valley Boiler Care | Middlesbrough | Gas Engineer | +44 808 135 0902  |  |
+| 562 | Green's Gas Services | Middlesbrough | Gas Engineer | +44 7792 521198  |  |
+| 563 | G.E.J Engineering | Blackpool | Hvac Engineer | +44 1253 975490  |  |
+| 564 | Smoke And Ventilation Engineering | Bournemouth | Hvac Engineer | +44 1202 529042  |  |
+| 565 | JM Decorating & Plastering | Blackpool | Plasterer | +44 7931 945245  |  |
+| 566 | D M Plastering Covering The South | Bournemouth | Plasterer | +44 7926 888325  |  |
+| 567 | Splat Plastering | Bournemouth | Plasterer | +44 7765 665926  |  |
+| 568 | A Carling Plastering Services Ltd | Middlesbrough | Plasterer | +44 7454 734526  |  |
+| 569 | RR Plasterer | Middlesbrough | Plasterer | +44 7488 967018  |  |
+| 570 | TCW Plastering Services | Middlesbrough | Plasterer | +44 7763 198007  |  |
+| 571 | Pj's Plastering | Middlesbrough | Plasterer | +44 1642 887511  |  |
+| 572 | Emerald Decor | Bournemouth | Painter Decorator | +44 1202 985256  |  |
+| 573 | JD Decorating | Blackpool | Painter Decorator | +44 7950 367835  |  |
+| 574 | Quality First Decorating & Plastering | Blackpool | Painter Decorator | +44 7719 818638  |  |
+| 575 | M&K Decorating | Middlesbrough | Painter Decorator | +44 7552 737333  |  |
+| 576 | Hm Decorating | Middlesbrough | Painter Decorator | +44 7947 657967  |  |
+| 577 | Hutchinson's Decorators | Middlesbrough | Painter Decorator | +44 1642 453696  |  |
+| 578 | L M Tiling | Blackpool | Tiler | +44 7960 560297  |  |
+| 579 | Fortified Tiling and Bathrooms | Blackpool | Tiler | +44 7762 865348  |  |
+| 580 | Dream Tiling | Bournemouth | Tiler | +44 7827 296389  |  |
+| 581 | Majestic Tiling | Bournemouth | Tiler | +44 7727 948206  |  |
+| 582 | Creative Tiling | Bournemouth | Tiler | +44 7972 944344  |  |
+| 583 | Absolute Tiling | Bournemouth | Tiler | +44 7734 887420  |  |
+| 584 | Tiler Swift | Bournemouth | Tiler | +44 7818 505503  |  |
+| 585 | Nauboc Tiling Contractors | Bournemouth | Tiler | +44 7396 799460  |  |
+| 586 | Shaun Jackson Wall & Floor Tiling Specialist | Middlesbrough | Tiler | +44 7944 492366  |  |
+| 587 | Tiling Teesside | Middlesbrough | Tiler | +44 7526 549489  |  |
+| 588 | Premier Plastering & Tiling | Middlesbrough | Tiler | +44 7871 200929  |  |
+| 589 | B & A Ceramic Tiling Ltd | Middlesbrough | Tiler | +44 1287 610713  |  |
+| 590 | M&K Tiling - swindon tiler | Swindon | Tiler | +44 7933 077827  |  |
+| 591 | Langford Tiling | Swindon | Tiler | +44 7891 499952  |  |
+| 592 | TTS Tiling & Decorating | Swindon | Tiler | +44 7766 654189  |  |
+| 593 | Wessex Ceramic Tiling Ltd | Swindon | Tiler | +44 1793 422668  |  |
+| 594 | AcePlastering & drylining | Blackpool | Dryliner | +44 7956 221073  |  |
+| 595 | Blackpool Plasterer | Blackpool | Dryliner | +44 7742 040602  |  |
+| 596 | Parfitt Drylining Ltd | Bournemouth | Dryliner | +44 7815 131577  |  |
+| 597 | PREMIER Plastering & Dry lining Ltd | Bournemouth | Dryliner | +44 7974 923275  |  |
+| 598 | Towers Drylining Ltd | Bournemouth | Dryliner | +44 1202 601197  |  |
+| 599 | Vernon Lavell Plastering/Drylining Contractor | Bournemouth | Dryliner | +44 7941 367769  |  |
+| 600 | DPR Drylining & Plastering | Bournemouth | Dryliner | +44 7447 459359  |  |
+| 601 | ALBRIDGE DRYLINING LTD | Middlesbrough | Dryliner | +44 7878 442926  |  |
+| 602 | Wall & Ceiling Solutions (NE) Ltd | Middlesbrough | Dryliner | +44 1642 265456  |  |
+| 603 | Shepherds Drylining L.T.D | Middlesbrough | Dryliner | +44 7762 353439  |  |
+| 604 | Tru-Line Ltd | Middlesbrough | Dryliner | +44 1642 232411  |  |
+| 605 | Wall & Ceiling Solutions | Middlesbrough | Dryliner | +44 7527 880011  |  |
+| 606 | JUST LAMINATE FLOORING | Bournemouth | Floor Layer | +44 7816 501961  |  |
+| 607 | Stratford&green Plastering&Drylining LTD | Swindon | Dryliner | +44 7572 072066  |  |
+| 608 | M Whitefield Drylining | Swindon | Dryliner | +44 7407 450830  |  |
+| 609 | J Warne Drylining | Swindon | Dryliner | +44 7930 140041  |  |
+| 610 | Specialist Flooring supplies Ltd | Middlesbrough | Floor Layer | +44 1642 217517  |  |
+| 611 | F.Wilkinson Flooring | Middlesbrough | Floor Layer | +44 1642 643671  |  |
+| 612 | Martin Flooring Co | Bournemouth | Carpet Fitter | +44 7548 818909  |  |
+| 613 | Chris Carpets | Blackpool | Carpet Fitter | +44 7933 573773  |  |
+| 614 | Led Stairs & Flooring | Blackpool | Carpet Fitter | +44 7304 048695  |  |
+| 615 | R S Carpet Fitting Services | Swindon | Carpet Fitter | +44 7753 835628  |  |
+| 616 | Teesside Carpets | Middlesbrough | Carpet Fitter | +44 1642 822111  |  |
+| 617 | The Smart Glazier | Blackpool | Glazier | +44 7596 355558  |  |
+| 618 | Northwest Glass Company | Blackpool | Glazier | +44 1253 304000  |  |
+| 619 | SOS Window & Door Repairs | Bournemouth | Glazier | +44 7801 494676  |  |
+| 620 | Watts Windows | Swindon | Glazier | +44 7468 414918  |  |
+| 621 | DWS Window and Door Repairs | Bournemouth | Window Fitter | +44 7539 361267  |  |
+| 622 | WBD Double Glazing Repair | Middlesbrough | Glazier | +44 7876 595404  |  |
+| 623 | Middlesbrough Glass & Glazing Ltd | Middlesbrough | Glazier | +44 1642 457468  |  |
+| 624 | Glass Man | Middlesbrough | Glazier | +44 800 107 7055  |  |
+| 625 | Polton Windows | Middlesbrough | Glazier | +44 7534 207719  |  |
+| 626 | First glass Windows | Middlesbrough | Glazier | +44 1642 278564  |  |
+| 627 | C Waine & Sons Glazing Services | Middlesbrough | Glazier | +44 1642 601706  |  |
+| 628 | Teesside Windows Ltd | Middlesbrough | Window Fitter | +44 1642 240540  |  |
+| 629 | Cleveland Landscapes | Middlesbrough | Landscaper | +44 7498 880030  |  |
+| 630 | Tees Valley Landscaping | Middlesbrough | Landscaper | +44 7599 685238  |  |
+| 631 | All Star Tree & Landscapes | Blackpool | Stone Mason | +44 7401 250392  |  |
+| 632 | South Coast Auto Locksmiths Bournemouth | Bournemouth | Locksmith | +44 1202 059698  |  |
+| 633 | Malachy Locksmiths Swindon | Swindon | Locksmith | +44 20 4628 3356  |  |
+| 634 | Begas Car Keys | Middlesbrough | Locksmith | +44 7746 385624  |  |
+| 635 | Car keys | Middlesbrough | Locksmith | +44 7378 887910  |  |
+| 636 | LOCKS AND SILK LTD | Middlesbrough | Locksmith | +44 1642 946057  |  |
+| 637 | M B PAVING LTD | Bournemouth | Paviour | +44 1202 901959  |  |
+| 638 | Priory Roofing & Paving | Bournemouth | Paviour | +44 1202 530540  |  |
+| 639 | Five Star Paving ltd | Swindon | Paviour | +44 800 542 2541  |  |
+| 640 | Pickersgill Bathrooms | Blackpool | Paviour | +44 1253 692063  |  |
+| 641 | The Building People | Middlesbrough | Paviour | +44 1642 638546  |  |
+| 642 | Turkish Barber | Blackpool | Barber | +44 7714 016279  |  |
+| 643 | Fresh Fade Barber Shop | Blackpool | Barber | — |  |
+| 644 | THE HOUSE OF ALCHEMY | Blackpool | Nail Salon | +44 7809 716188  |  |
+| 645 | Gleaming Domestic Oven Cleaning Services | Middlesbrough | Cleaner | +44 7900 198129  |  |
+| 646 | M4 Express | Swindon | Takeaway | +44 1793 376058  |  |
+| 647 | Intensive Courses in Blackpool | Blackpool | Driving Instructor | +44 1253 320080  |  |
+| 648 | Mikes Automatic Driving School | Blackpool | Driving Instructor | +44 7970 382417  |  |
+| 649 | Kumar Driving School | Swindon | Driving Instructor | +44 7456 850150  |  |
+| 650 | Jay's Automatic Driver Training, Swindon | Swindon | Driving Instructor | +44 7447 436939  |  |
+| 651 | Amen driving school | Middlesbrough | Driving Instructor | +44 7460 189361  |  |
+| 652 | Steve Edwards Driving Instructor (AUTOMATIC) | Middlesbrough | Driving Instructor | +44 7384 256766  |  |
+| 653 | Craig's driving school Middlesbrough | Middlesbrough | Driving Instructor | +44 800 316 3633  |  |
+| 654 | Nigel's Automatic Driving School | Middlesbrough | Driving Instructor | +44 7758 057381  |  |
+| 655 | IMRAN'S AUTOMATIC DRIVING SCHOOL | Middlesbrough | Driving Instructor | — |  |
+| 656 | Fleet Driver Training Northeast | Middlesbrough | Driving Instructor | +44 7853 905064  |  |
 
-_Emails sent:  / 529_
+_Emails sent:  / 656_
 <!-- LEADS_END -->
 
 ---
