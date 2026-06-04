@@ -2,22 +2,22 @@ name: International Lead Scraper
 
 on:
   schedule:
-    # Mon = Ireland, Tue = Australia, Wed = Canada, Thu = USA
-    # All at 06:00 UTC so leads are ready before the 09:00 email run
-    - cron: '0 6 * * 1'   # Monday    — Ireland
-    - cron: '0 6 * * 2'   # Tuesday   — Australia
-    - cron: '0 6 * * 3'   # Wednesday — Canada
-    - cron: '0 6 * * 4'   # Thursday  — USA
+    # Mon = Ireland, Tue = Australia, Wed = Canada, Thu = USA  (06:00 UTC)
+    - cron: '0 6 * * 1'
+    - cron: '0 6 * * 2'
+    - cron: '0 6 * * 3'
+    - cron: '0 6 * * 4'
   workflow_dispatch:
     inputs:
       country:
-        description: 'Country to scrape (Ireland / Australia / Canada / USA / all)'
+        description: 'Country to scrape (Ireland / Australia / Canada / USA)'
         required: false
-        default: 'all'
+        default: 'Ireland'
 
 jobs:
   scrape-international:
     runs-on: ubuntu-latest
+    timeout-minutes: 240   # 4-hour hard cap — commit/email steps use if: always()
     permissions:
       contents: write
 
@@ -42,12 +42,11 @@ jobs:
       - name: Determine country for today
         id: country
         run: |
-          # Manual trigger can override; otherwise derive from day of week
           INPUT="${{ github.event.inputs.country }}"
-          if [ -n "$INPUT" ] && [ "$INPUT" != "all" ]; then
+          if [ -n "$INPUT" ]; then
             echo "country=$INPUT" >> $GITHUB_OUTPUT
           else
-            DAY=$(date +%u)   # 1=Mon 2=Tue 3=Wed 4=Thu
+            DAY=$(date +%u)
             case $DAY in
               1) echo "country=Ireland"   >> $GITHUB_OUTPUT ;;
               2) echo "country=Australia" >> $GITHUB_OUTPUT ;;
@@ -64,17 +63,20 @@ jobs:
         run: |
           python international_scraper.py \
             --country "${{ steps.country.outputs.country }}" \
-            --max-results 20
+            --max-results 10 \
+            --max-searches 120
 
+      # Always commit progress, even if the scrape step failed or timed out
       - name: Commit updated leads CSV
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add output/international_leads.csv output/international_leads.done 2>/dev/null || true
-          git stash
-          git pull --rebase origin main
+          git stash || true
+          git pull --rebase origin main || true
           git stash pop || true
           git add output/international_leads.csv output/international_leads.done 2>/dev/null || true
-          git diff --cached --quiet && echo "Nothing new." || \
+          git diff --cached --quiet && echo "Nothing new to commit." || \
             git commit -m "chore: international leads — ${{ steps.country.outputs.country }} $(date '+%Y-%m-%d')"
-          git push origin main
+          git push origin main || true

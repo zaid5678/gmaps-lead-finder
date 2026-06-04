@@ -48,10 +48,9 @@ FIELDNAMES   = [
 ]
 
 KEYWORDS = [
-    "barber", "plumber", "electrician", "roofer", "restaurant",
-    "cafe", "beauty salon", "car mechanic", "dentist", "cleaner",
-    "hairdresser", "nail salon", "locksmith", "painter decorator",
-    "gardener", "driving instructor",
+    "plumber", "electrician", "roofer", "barber",
+    "restaurant", "cafe", "beauty salon", "hairdresser",
+    "locksmith", "gardener", "cleaner", "driving instructor",
 ]
 
 
@@ -331,9 +330,10 @@ def _update_rows(updated: list):
 
 def main():
     p = argparse.ArgumentParser(description="Scrape international leads and email them.")
-    p.add_argument("--country",     default=None, help="Limit to one country (Ireland/Australia/Canada/USA)")
-    p.add_argument("--max-results", type=int, default=20)
-    p.add_argument("--dry-run",     action="store_true")
+    p.add_argument("--country",      default=None, help="Limit to one country (Ireland/Australia/Canada/USA)")
+    p.add_argument("--max-results",  type=int, default=10, help="Results per search (default 10)")
+    p.add_argument("--max-searches", type=int, default=120, help="Max searches per run, then stop and email (default 120)")
+    p.add_argument("--dry-run",      action="store_true")
     args = p.parse_args()
 
     gmail_user, app_pw = _gmail_creds()
@@ -358,14 +358,19 @@ def main():
     existing  = _existing_urls()
 
     print(f"International scrape: {total} searches across {sum(len(c) for c in cities_by_country.values())} cities")
-    print(f"Already done: {len(done_keys)} / {total}")
+    print(f"Already done: {len(done_keys)} / {total}  |  Cap this run: {args.max_searches} searches")
 
     session_new: list = []
+    searches_this_run = 0
 
     with sync_playwright() as pw:
         scraper = GoogleMapsScraper(pw, headless=True)
         try:
             for i, (keyword, city, country) in enumerate(tasks):
+                if searches_this_run >= args.max_searches:
+                    print(f"\nReached --max-searches cap ({args.max_searches}). Stopping to commit progress.")
+                    break
+
                 key = f"{keyword}|{city}|{country}"
                 if key in done_keys:
                     continue
@@ -421,6 +426,7 @@ def main():
 
                 _mark_done(key)
                 done_keys.add(key)
+                searches_this_run += 1
                 time.sleep(5)
 
         except KeyboardInterrupt:
