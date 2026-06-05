@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-03 15:53 UTC — 656 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-05 12:53 UTC — 663 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 181 | 102 | 167 |
+| Barber | 182 | 102 | 168 |
 | Beauty Salon | 91 | 49 | 80 |
-| Bricklayer | 12 | 1 | 12 |
-| Carpenter | 10 | 5 | 10 |
-| Carpet Fitter | 5 | 5 | 5 |
+| Bricklayer | 17 | 2 | 17 |
+| Carpenter | 13 | 6 | 13 |
+| Carpet Fitter | 7 | 5 | 7 |
 | Cleaner | 56 | 37 | 56 |
-| Driving Instructor | 10 | 10 | 9 |
-| Dryliner | 15 | 15 | 15 |
+| Driving Instructor | 12 | 11 | 11 |
+| Dryliner | 17 | 15 | 17 |
 | Electrician | 49 | 21 | 48 |
 | Floor Layer | 3 | 3 | 3 |
 | Gardener | 87 | 68 | 86 |
-| Gas Engineer | 3 | 3 | 3 |
-| Glazier | 10 | 10 | 10 |
-| Groundworker | 10 | 10 | 7 |
+| Gas Engineer | 5 | 4 | 4 |
+| Glazier | 12 | 10 | 11 |
+| Groundworker | 14 | 11 | 11 |
 | Hairdresser | 87 | 54 | 82 |
 | Heating Engineer | 1 | 1 | 1 |
 | Hvac Engineer | 2 | 2 | 2 |
-| Joiner | 5 | 5 | 5 |
+| Joiner | 7 | 5 | 7 |
 | Landscaper | 2 | 2 | 2 |
-| Locksmith | 5 | 5 | 5 |
+| Locksmith | 6 | 5 | 6 |
 | Nail Salon | 150 | 96 | 145 |
-| Painter Decorator | 6 | 6 | 6 |
-| Paviour | 5 | 5 | 5 |
-| Plasterer | 7 | 7 | 7 |
-| Plumber | 70 | 27 | 69 |
+| Painter Decorator | 10 | 7 | 10 |
+| Paviour | 7 | 5 | 7 |
+| Plasterer | 12 | 7 | 12 |
+| Plumber | 71 | 27 | 70 |
 | Roofer | 81 | 13 | 77 |
-| Scaffolder | 7 | 7 | 7 |
+| Scaffolder | 11 | 7 | 11 |
 | Stone Mason | 1 | 1 | 1 |
 | Takeaway | 96 | 68 | 73 |
-| Tiler | 16 | 16 | 16 |
-| Window Fitter | 2 | 2 | 2 |
-| **Total** | **1085** | **656** | **1016** |
+| Tiler | 21 | 17 | 21 |
+| Window Fitter | 4 | 2 | 3 |
+| **Total** | **1134** | **663** | **1062** |
 
 ### All Leads (confirmed no website)
 
@@ -706,8 +706,15 @@ _Last updated: 2026-06-03 15:53 UTC — 656 confirmed leads (no website) across 
 | 654 | Nigel's Automatic Driving School | Middlesbrough | Driving Instructor | +44 7758 057381  |  |
 | 655 | IMRAN'S AUTOMATIC DRIVING SCHOOL | Middlesbrough | Driving Instructor | — |  |
 | 656 | Fleet Driver Training Northeast | Middlesbrough | Driving Instructor | +44 7853 905064  |  |
+| 657 | KCAN Building and Carpentry Co | Guildford | Carpenter | +44 7799 416717  |  |
+| 658 | L&P Bricklaying Contractors | Exeter | Bricklayer | +44 7725 487318  |  |
+| 659 | DG Groundworks | Guildford | Groundworker | +44 7883 329944  |  |
+| 660 | Guildford Gas Solutions & Pllumbing | Guildford | Gas Engineer | +44 1483 802772  |  |
+| 661 | Cpm Tiling | Guildford | Tiler | +44 7712 626783  |  |
+| 662 | Patch & Paint | Guildford | Painter Decorator | +44 7368 845381  |  |
+| 663 | Clear Driving Tuition | Exeter | Driving Instructor | +44 7770 857378  |  |
 
-_Emails sent:  / 656_
+_Emails sent:  / 663_
 <!-- LEADS_END -->
 
 ---
