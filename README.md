@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-05 12:53 UTC — 663 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-06 12:51 UTC — 674 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 182 | 102 | 168 |
 | Beauty Salon | 91 | 49 | 80 |
-| Bricklayer | 17 | 2 | 17 |
-| Carpenter | 13 | 6 | 13 |
-| Carpet Fitter | 7 | 5 | 7 |
-| Cleaner | 56 | 37 | 56 |
-| Driving Instructor | 12 | 11 | 11 |
-| Dryliner | 17 | 15 | 17 |
+| Bricklayer | 25 | 2 | 23 |
+| Carpenter | 22 | 8 | 22 |
+| Carpet Fitter | 10 | 5 | 9 |
+| Cleaner | 57 | 38 | 57 |
+| Driving Instructor | 14 | 11 | 13 |
+| Dryliner | 24 | 15 | 22 |
 | Electrician | 49 | 21 | 48 |
-| Floor Layer | 3 | 3 | 3 |
-| Gardener | 87 | 68 | 86 |
-| Gas Engineer | 5 | 4 | 4 |
-| Glazier | 12 | 10 | 11 |
-| Groundworker | 14 | 11 | 11 |
+| Floor Layer | 5 | 3 | 5 |
+| Gardener | 89 | 68 | 88 |
+| Gas Engineer | 8 | 4 | 7 |
+| Glazier | 15 | 10 | 14 |
+| Groundworker | 20 | 11 | 14 |
 | Hairdresser | 87 | 54 | 82 |
-| Heating Engineer | 1 | 1 | 1 |
-| Hvac Engineer | 2 | 2 | 2 |
-| Joiner | 7 | 5 | 7 |
-| Landscaper | 2 | 2 | 2 |
-| Locksmith | 6 | 5 | 6 |
+| Heating Engineer | 2 | 1 | 2 |
+| Hvac Engineer | 6 | 3 | 6 |
+| Joiner | 10 | 6 | 10 |
+| Landscaper | 3 | 2 | 3 |
+| Locksmith | 8 | 6 | 8 |
 | Nail Salon | 150 | 96 | 145 |
-| Painter Decorator | 10 | 7 | 10 |
-| Paviour | 7 | 5 | 7 |
-| Plasterer | 12 | 7 | 12 |
+| Painter Decorator | 13 | 7 | 13 |
+| Paviour | 9 | 5 | 9 |
+| Plasterer | 20 | 9 | 19 |
 | Plumber | 71 | 27 | 70 |
 | Roofer | 81 | 13 | 77 |
-| Scaffolder | 11 | 7 | 11 |
-| Stone Mason | 1 | 1 | 1 |
-| Takeaway | 96 | 68 | 73 |
-| Tiler | 21 | 17 | 21 |
-| Window Fitter | 4 | 2 | 3 |
-| **Total** | **1134** | **663** | **1062** |
+| Scaffolder | 14 | 7 | 14 |
+| Stone Mason | 7 | 1 | 7 |
+| Takeaway | 99 | 68 | 75 |
+| Tiler | 33 | 19 | 33 |
+| Window Fitter | 5 | 3 | 4 |
+| **Total** | **1229** | **674** | **1147** |
 
 ### All Leads (confirmed no website)
 
@@ -713,8 +713,19 @@ _Last updated: 2026-06-05 12:53 UTC — 663 confirmed leads (no website) across 
 | 661 | Cpm Tiling | Guildford | Tiler | +44 7712 626783  |  |
 | 662 | Patch & Paint | Guildford | Painter Decorator | +44 7368 845381  |  |
 | 663 | Clear Driving Tuition | Exeter | Driving Instructor | +44 7770 857378  |  |
+| 664 | Shelterstone Carpentry & Joinery | Manchester | Carpenter | +44 7776 421081  |  |
+| 665 | Hudson DIY Ltd | Birmingham | Carpenter | +44 7795 154210  |  |
+| 666 | GT Joinery Services | Manchester | Joiner | +44 7764 938806  |  |
+| 667 | Covent Garden HVAC Engineer | London | Hvac Engineer | +44 844 334 2943  |  |
+| 668 | A.B PLASTERING & RENDERING | Birmingham | Plasterer | +44 7864 670314  |  |
+| 669 | Angel Plastering Services | Birmingham | Plasterer | +44 7521 635400  |  |
+| 670 | LJR Tiling Ltd | Leeds | Tiler | +44 7949 179296  |  |
+| 671 | Maryo Tiling Leeds | Leeds | Tiler | +44 7379 137840  |  |
+| 672 | JW Windows and Doors Ltd | Birmingham | Window Fitter | +44 7792 294519  |  |
+| 673 | Blurox Locksmith Manchester | Manchester | Locksmith | +44 7466 177812  |  |
+| 674 | Cleaning Direct Birmingham | Birmingham | Cleaner | +44 7973 835409  |  |
 
-_Emails sent:  / 663_
+_Emails sent:  / 674_
 <!-- LEADS_END -->
 
 ---
