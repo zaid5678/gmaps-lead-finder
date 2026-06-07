@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-06 12:51 UTC — 674 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-07 13:15 UTC — 756 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 182 | 102 | 168 |
-| Beauty Salon | 91 | 49 | 80 |
-| Bricklayer | 25 | 2 | 23 |
-| Carpenter | 22 | 8 | 22 |
-| Carpet Fitter | 10 | 5 | 9 |
+| Barber | 186 | 106 | 172 |
+| Beauty Salon | 93 | 51 | 82 |
+| Bricklayer | 35 | 2 | 33 |
+| Carpenter | 32 | 9 | 32 |
+| Carpet Fitter | 16 | 11 | 15 |
 | Cleaner | 57 | 38 | 57 |
-| Driving Instructor | 14 | 11 | 13 |
-| Dryliner | 24 | 15 | 22 |
-| Electrician | 49 | 21 | 48 |
-| Floor Layer | 5 | 3 | 5 |
+| Driving Instructor | 17 | 14 | 16 |
+| Dryliner | 28 | 19 | 26 |
+| Electrician | 50 | 21 | 49 |
+| Floor Layer | 9 | 7 | 9 |
 | Gardener | 89 | 68 | 88 |
-| Gas Engineer | 8 | 4 | 7 |
-| Glazier | 15 | 10 | 14 |
-| Groundworker | 20 | 11 | 14 |
+| Gas Engineer | 11 | 7 | 10 |
+| Glazier | 21 | 16 | 20 |
+| Groundworker | 31 | 18 | 24 |
 | Hairdresser | 87 | 54 | 82 |
-| Heating Engineer | 2 | 1 | 2 |
-| Hvac Engineer | 6 | 3 | 6 |
-| Joiner | 10 | 6 | 10 |
+| Heating Engineer | 5 | 4 | 5 |
+| Hvac Engineer | 7 | 4 | 7 |
+| Joiner | 12 | 8 | 12 |
 | Landscaper | 3 | 2 | 3 |
-| Locksmith | 8 | 6 | 8 |
-| Nail Salon | 150 | 96 | 145 |
-| Painter Decorator | 13 | 7 | 13 |
+| Locksmith | 10 | 8 | 10 |
+| Nail Salon | 153 | 99 | 148 |
+| Painter Decorator | 19 | 13 | 18 |
 | Paviour | 9 | 5 | 9 |
-| Plasterer | 20 | 9 | 19 |
-| Plumber | 71 | 27 | 70 |
-| Roofer | 81 | 13 | 77 |
-| Scaffolder | 14 | 7 | 14 |
-| Stone Mason | 7 | 1 | 7 |
+| Plasterer | 26 | 15 | 24 |
+| Plumber | 72 | 28 | 71 |
+| Roofer | 82 | 13 | 78 |
+| Scaffolder | 17 | 7 | 17 |
+| Stone Mason | 11 | 5 | 11 |
 | Takeaway | 99 | 68 | 75 |
-| Tiler | 33 | 19 | 33 |
+| Tiler | 47 | 33 | 46 |
 | Window Fitter | 5 | 3 | 4 |
-| **Total** | **1229** | **674** | **1147** |
+| **Total** | **1339** | **756** | **1253** |
 
 ### All Leads (confirmed no website)
 
@@ -724,8 +724,90 @@ _Last updated: 2026-06-06 12:51 UTC — 674 confirmed leads (no website) across 
 | 672 | JW Windows and Doors Ltd | Birmingham | Window Fitter | +44 7792 294519  |  |
 | 673 | Blurox Locksmith Manchester | Manchester | Locksmith | +44 7466 177812  |  |
 | 674 | Cleaning Direct Birmingham | Birmingham | Cleaner | +44 7973 835409  |  |
+| 675 | Glasgow Joinery Services | Glasgow | Carpenter | +44 141 266 0080  |  |
+| 676 | GLA Joiners Ltd | Glasgow | Joiner | +44 7586 902684  |  |
+| 677 | Rob Byatt | Liverpool | Joiner | +44 7917 611467  |  |
+| 678 | Millennium Groundworks | Glasgow | Groundworker | — |  |
+| 679 | abc utilities Ltd. | Glasgow | Groundworker | +44 7855 445573  |  |
+| 680 | Gillespie Groundworks | Glasgow | Groundworker | +44 1698 821710  |  |
+| 681 | ml groundworks | Glasgow | Groundworker | +44 7828 566422  |  |
+| 682 | Groundwork Coffee | Glasgow | Groundworker | +44 7377 671928  |  |
+| 683 | Aspect Civils And Groundworks Ltd | Liverpool | Groundworker | +44 7598 794534  |  |
+| 684 | O’Donnell Groundworks Ltd | Liverpool | Groundworker | +44 7511 044301  |  |
+| 685 | Nelson Plumbing Limited | Edinburgh | Plumber | +44 7738 832653  |  |
+| 686 | Feel the heat ltd | Liverpool | Heating Engineer | +44 7456 644666  |  |
+| 687 | peter dundon gas and plumbing services Ltd | Liverpool | Heating Engineer | +44 7833 428879  |  |
+| 688 | DFB Heating and Energy Ltd | Liverpool | Heating Engineer | +44 7516 092282  |  |
+| 689 | Ideal Gas Solutions | Glasgow | Gas Engineer | +44 7307 600250  |  |
+| 690 | Coppertail Energy | Edinburgh | Gas Engineer | +44 7510 830886  |  |
+| 691 | Heattech Gas Services Ltd | Edinburgh | Gas Engineer | +44 7506 042175  |  |
+| 692 | Gibson Mechanical Solutions Ltd | Edinburgh | Hvac Engineer | +44 7931 989961  |  |
+| 693 | PJN Plastering & Tiling | Glasgow | Plasterer | +44 7759 722682  |  |
+| 694 | Barclay Plastering Edinburgh | Edinburgh | Plasterer | +44 7931 810550  |  |
+| 695 | Plastertec | Edinburgh | Plasterer | — |  |
+| 696 | John Joughin Plasterer | Liverpool | Plasterer | +44 7967 377019  |  |
+| 697 | Joe the plasterer and bathroom fitter | Liverpool | Plasterer | +44 7521 465327  |  |
+| 698 | SW Plastering Services | Liverpool | Plasterer | +44 7581 234133  |  |
+| 699 | JS Decor (edin) ltd | Edinburgh | Painter Decorator | +44 7850 682349  |  |
+| 700 | Best Coat Decorating Bristol | Bristol | Painter Decorator | +44 7554 475682  |  |
+| 701 | D.F Painters and Decorators Bristol | Bristol | Painter Decorator | +44 7481 756547  |  |
+| 702 | Curletts Decorating Services | Liverpool | Painter Decorator | +44 7510 709802  |  |
+| 703 | Kiah Painters and Decorators | Liverpool | Painter Decorator | — |  |
+| 704 | Tom Barry Decor | Liverpool | Painter Decorator | +44 7967 116848  |  |
+| 705 | A Major Tiling | Glasgow | Tiler | +44 7813 253096  |  |
+| 706 | JB Tiling Services Ltd | Glasgow | Tiler | +44 7506 300638  |  |
+| 707 | Martin Douglas tiling and plastering | Glasgow | Tiler | +44 7775 637221  |  |
+| 708 | West End Tiling | Edinburgh | Tiler | — |  |
+| 709 | Kk tiling | Edinburgh | Tiler | +44 7544 903515  |  |
+| 710 | Trinity Tiling | Edinburgh | Tiler | +44 7956 006103  |  |
+| 711 | George Herd Ceramic Tiler | Edinburgh | Tiler | +44 7931 276979  |  |
+| 712 | Niall’s Tiles | Bristol | Tiler | +44 7779 585988  |  |
+| 713 | Southside Interiors Ltd | Glasgow | Dryliner | +44 7789 917557  |  |
+| 714 | R VOCE TILING | Liverpool | Tiler | +44 7793 502790  |  |
+| 715 | KD Ceramics - Tiler | Liverpool | Tiler | +44 7849 719070  |  |
+| 716 | Ms tiling | Liverpool | Tiler | +44 7415 169328  |  |
+| 717 | Mo tiling service ltd | Liverpool | Tiler | +44 7494 713287  |  |
+| 718 | She Builds Tiling | Liverpool | Tiler | +44 7303 065551  |  |
+| 719 | Liverpool tiling contractors | Liverpool | Tiler | +44 7930 630544  |  |
+| 720 | A1flooring edinburgh | Edinburgh | Floor Layer | +44 7475 929384  |  |
+| 721 | PT flooring | Edinburgh | Floor Layer | +44 7979 333237  |  |
+| 722 | Falcon Drylining | Liverpool | Dryliner | +44 151 546 3888  |  |
+| 723 | Luxton Drylining | Bristol | Dryliner | +44 7890 359986  |  |
+| 724 | Greenlea Interiors Ltd (plastering & rendering) | Bristol | Dryliner | +44 7722 591238  |  |
+| 725 | CARL HAMILTON FLOORLAYING SPECAILIST LTD | Liverpool | Floor Layer | +44 7389 884848  |  |
+| 726 | DJW Flooring | Liverpool | Floor Layer | +44 7966 934799  |  |
+| 727 | Carpet Fitter Glasgow | Glasgow | Carpet Fitter | +44 7780 283084  |  |
+| 728 | BS5 FLOORING LTD | Bristol | Carpet Fitter | +44 117 336 6216  |  |
+| 729 | G Williams Fitted Carpets & Flooring | Bristol | Carpet Fitter | +44 117 963 1580  |  |
+| 730 | Ferguson Alan | Edinburgh | Carpet Fitter | +44 131 337 8992  |  |
+| 731 | Central Carpets Ltd | Edinburgh | Carpet Fitter | +44 131 553 6092  |  |
+| 732 | Southside Glass & Glazing | Glasgow | Glazier | +44 141 882 8882  |  |
+| 733 | Pollokshaws Glazing | Glasgow | Glazier | +44 141 632 0675  |  |
+| 734 | Carpet Fitter Martin | Liverpool | Carpet Fitter | +44 7711 156954  |  |
+| 735 | Express Glazing & Son | Bristol | Glazier | +44 117 955 3738  |  |
+| 736 | Liverpool Glass & Joinery Ltd | Liverpool | Glazier | +44 151 733 4389  |  |
+| 737 | Liver Glass & Glazing | Liverpool | Glazier | +44 151 734 2438  |  |
+| 738 | Double Glazing Repair Specialist | Liverpool | Glazier | +44 151 722 7009  |  |
+| 739 | Guardian Stone Ltd | Glasgow | Stone Mason | +44 141 781 0999  |  |
+| 740 | Glaslock | Glasgow | Locksmith | +44 7484 191503  |  |
+| 741 | Mack & Keys Edinburgh's Emergency Locksmith | Edinburgh | Locksmith | +44 7308 999621  |  |
+| 742 | Green Meade Memorials | Liverpool | Stone Mason | +44 151 207 0079  |  |
+| 743 | Ashley Hunter Stonemasonry | Liverpool | Stone Mason | +44 7719 409760  |  |
+| 744 | GraveCare Liverpool | Liverpool | Stone Mason | +44 7547 924644  |  |
+| 745 | Adam Turkish Barber | Glasgow | Barber | +44 7886 350344  |  |
+| 746 | Fade Lounge | Edinburgh | Barber | +44 131 241 4164  |  |
+| 747 | Galaxy Barber | Edinburgh | Barber | +44 7494 726419  |  |
+| 748 | Khalid Barber | Edinburgh | Barber | +44 7383 277005  |  |
+| 749 | Aida laser & beauty | Glasgow | Beauty Salon | +44 7931 673111  |  |
+| 750 | Boutique Nails Liverpool | Liverpool | Nail Salon | +44 151 208 0899  |  |
+| 751 | Pink Nails & Spa | Liverpool | Nail Salon | +44 7547 709999  |  |
+| 752 | Dynamic Nails | Bristol | Nail Salon | +44 7507 859819  |  |
+| 753 | UNIVIEW ART | Edinburgh | Beauty Salon | +44 131 237 1818  |  |
+| 754 | Capital Intensive Driving Courses | Edinburgh | Driving Instructor | +44 800 013 0032  |  |
+| 755 | Sallo driving school | Bristol | Driving Instructor | +44 7460 416113  |  |
+| 756 | Kev mills @ LESSON driving school liverpool | Liverpool | Driving Instructor | +44 7485 001918  |  |
 
-_Emails sent:  / 674_
+_Emails sent:  / 756_
 <!-- LEADS_END -->
 
 ---
