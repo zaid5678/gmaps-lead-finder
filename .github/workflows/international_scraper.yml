@@ -64,7 +64,7 @@ jobs:
           python international_scraper.py \
             --country "${{ steps.country.outputs.country }}" \
             --max-results 10 \
-            --max-searches 120
+            --max-searches 30
 
       # Always commit progress, even if the scrape step failed or timed out
       - name: Commit updated leads CSV

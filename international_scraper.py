@@ -47,10 +47,13 @@ FIELDNAMES   = [
     "outreach_sent", "digest_sent",
 ]
 
+# Niche trades over generic services — small/local operators in these categories
+# are far less likely to have a website than plumbers/restaurants/salons in big metros
+# (the original generic list returned zero no-website leads across 4 runs in major cities).
 KEYWORDS = [
-    "plumber", "electrician", "roofer", "barber",
-    "restaurant", "cafe", "beauty salon", "hairdresser",
-    "locksmith", "gardener", "cleaner", "driving instructor",
+    "roofer", "bricklayer", "tiler", "plasterer", "landscaper",
+    "locksmith", "handyman", "driving instructor", "tree surgeon",
+    "carpet cleaner", "window cleaner", "gardener",
 ]
 
 

@@ -139,16 +139,16 @@ INTERNATIONAL_CITIES = {
         "Drogheda", "Dundalk", "Swords", "Bray", "Navan",
     ],
     "Australia": [
-        "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
-        "Gold Coast", "Newcastle, Australia", "Canberra", "Hobart", "Darwin",
+        "Toowoomba", "Ballarat", "Bendigo", "Wagga Wagga", "Cairns",
+        "Townsville", "Mackay", "Rockhampton", "Bunbury", "Launceston",
     ],
     "Canada": [
-        "Toronto", "Vancouver", "Montreal", "Calgary", "Edmonton",
-        "Ottawa", "Winnipeg", "Quebec City", "Hamilton", "Halifax",
+        "Kelowna", "Kingston", "Saskatoon", "Regina", "Barrie",
+        "Sudbury", "Thunder Bay", "Moncton", "Saint John", "Red Deer",
     ],
     "USA": [
-        "New York", "Los Angeles", "Chicago", "Houston", "Phoenix",
-        "Philadelphia", "San Antonio", "San Diego", "Dallas", "Jacksonville",
+        "Erie", "Topeka", "Macon", "Lubbock", "Fayetteville",
+        "Roanoke", "Chattanooga", "Bakersfield", "Spokane", "Augusta",
     ],
 }
 
