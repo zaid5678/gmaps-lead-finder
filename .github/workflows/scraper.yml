@@ -102,6 +102,6 @@ jobs:
             echo "Nothing new to commit"
           else
             git commit -m "chore: leads scrape $(date -u '+%Y-%m-%d') — $CITY_BATCH_LABEL"
-            # Push — if rejected (someone else pushed), rebase on top and retry
-            git push origin main || (git pull --rebase origin main && git push origin main)
+            # Push — if rejected, stash any untracked changes, rebase, pop, retry
+            git push origin main || (git stash && git pull --rebase origin main && git stash pop && git push origin main)
           fi
