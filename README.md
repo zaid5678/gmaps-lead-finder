@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-07 13:15 UTC — 756 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-11 15:03 UTC — 854 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 186 | 106 | 172 |
+| Barber | 187 | 107 | 173 |
 | Beauty Salon | 93 | 51 | 82 |
-| Bricklayer | 35 | 2 | 33 |
-| Carpenter | 32 | 9 | 32 |
-| Carpet Fitter | 16 | 11 | 15 |
+| Bricklayer | 48 | 12 | 46 |
+| Carpenter | 39 | 12 | 38 |
+| Carpet Fitter | 22 | 17 | 21 |
 | Cleaner | 57 | 38 | 57 |
-| Driving Instructor | 17 | 14 | 16 |
-| Dryliner | 28 | 19 | 26 |
-| Electrician | 50 | 21 | 49 |
-| Floor Layer | 9 | 7 | 9 |
-| Gardener | 89 | 68 | 88 |
-| Gas Engineer | 11 | 7 | 10 |
-| Glazier | 21 | 16 | 20 |
-| Groundworker | 31 | 18 | 24 |
+| Driving Instructor | 21 | 18 | 20 |
+| Dryliner | 32 | 23 | 29 |
+| Electrician | 51 | 22 | 50 |
+| Floor Layer | 10 | 8 | 10 |
+| Gardener | 90 | 69 | 89 |
+| Gas Engineer | 14 | 10 | 13 |
+| Glazier | 22 | 17 | 21 |
+| Groundworker | 38 | 25 | 31 |
 | Hairdresser | 87 | 54 | 82 |
-| Heating Engineer | 5 | 4 | 5 |
-| Hvac Engineer | 7 | 4 | 7 |
-| Joiner | 12 | 8 | 12 |
-| Landscaper | 3 | 2 | 3 |
-| Locksmith | 10 | 8 | 10 |
+| Heating Engineer | 6 | 5 | 6 |
+| Hvac Engineer | 12 | 9 | 12 |
+| Joiner | 13 | 9 | 13 |
+| Landscaper | 4 | 3 | 4 |
+| Locksmith | 12 | 10 | 12 |
 | Nail Salon | 153 | 99 | 148 |
-| Painter Decorator | 19 | 13 | 18 |
-| Paviour | 9 | 5 | 9 |
-| Plasterer | 26 | 15 | 24 |
-| Plumber | 72 | 28 | 71 |
-| Roofer | 82 | 13 | 78 |
-| Scaffolder | 17 | 7 | 17 |
-| Stone Mason | 11 | 5 | 11 |
-| Takeaway | 99 | 68 | 75 |
-| Tiler | 47 | 33 | 46 |
-| Window Fitter | 5 | 3 | 4 |
-| **Total** | **1339** | **756** | **1253** |
+| Painter Decorator | 23 | 17 | 22 |
+| Paviour | 14 | 10 | 14 |
+| Plasterer | 36 | 25 | 33 |
+| Plumber | 74 | 30 | 73 |
+| Roofer | 83 | 14 | 79 |
+| Scaffolder | 23 | 13 | 23 |
+| Stone Mason | 12 | 6 | 12 |
+| Takeaway | 100 | 69 | 76 |
+| Tiler | 60 | 46 | 58 |
+| Window Fitter | 8 | 6 | 7 |
+| **Total** | **1444** | **854** | **1354** |
 
 ### All Leads (confirmed no website)
 
@@ -806,8 +806,106 @@ _Last updated: 2026-06-07 13:15 UTC — 756 confirmed leads (no website) across 
 | 754 | Capital Intensive Driving Courses | Edinburgh | Driving Instructor | +44 800 013 0032  |  |
 | 755 | Sallo driving school | Bristol | Driving Instructor | +44 7460 416113  |  |
 | 756 | Kev mills @ LESSON driving school liverpool | Liverpool | Driving Instructor | +44 7485 001918  |  |
+| 757 | Royal brickwork and property Maintenance | Southampton | Bricklayer | +44 7586 791981  |  |
+| 758 | Johnson Brickwork ltd | Portsmouth | Bricklayer | +44 7592 804087  |  |
+| 759 | MB BRICKWORK | Portsmouth | Bricklayer | +44 7973 459542  |  |
+| 760 | Jcb Masonry Limited | Plymouth | Bricklayer | +44 7393 185519  |  |
+| 761 | Mtbricklayingltd | Plymouth | Bricklayer | +44 7888 274864  |  |
+| 762 | DJJ Bricklaying | Plymouth | Bricklayer | +44 1752 945502  |  |
+| 763 | Harvey Brickwork & Building Contractors | Brighton | Bricklayer | +44 7791 611713  |  |
+| 764 | A T Brickwork | Brighton | Bricklayer | +44 7957 201900  |  |
+| 765 | Burch's brickwork | Brighton | Bricklayer | +44 7902 577639  |  |
+| 766 | Hedleybuilds LTD | Brighton | Bricklayer | +44 7889 657480  |  |
+| 767 | The Handy Craftsman Carpentry | Brighton | Carpenter | — |  |
+| 768 | Chestnut Carpentry | Plymouth | Carpenter | +44 7791 694128  |  |
+| 769 | Avery Carpentry Services | Plymouth | Carpenter | +44 7852 346114  |  |
+| 770 | Arco bespoke | Portsmouth | Joiner | +44 7538 595321  |  |
+| 771 | 24/7 Roof Care Services Ltd | Portsmouth | Roofer | +44 7557 252085  |  |
+| 772 | Gemini Scaffolding Division Ltd | Southampton | Scaffolder | +44 23 8212 6667  |  |
+| 773 | A J Bull Scaffolding Ltd | Southampton | Scaffolder | +44 23 8022 1065  |  |
+| 774 | Essential Scaffold Ltd | Portsmouth | Scaffolder | +44 23 9234 5462  |  |
+| 775 | Bolt scaffolding limited | Portsmouth | Scaffolder | +44 7958 139764  |  |
+| 776 | Tamar Scaffolding Limited | Plymouth | Scaffolder | +44 1752 251824  |  |
+| 777 | Lkm Scaffolding | Plymouth | Scaffolder | +44 7809 262007  |  |
+| 778 | Sam Groundworks Ltd | Portsmouth | Groundworker | +44 7495 350460  |  |
+| 779 | Martin Paving & Groundwork ltd | Portsmouth | Groundworker | +44 7496 434351  |  |
+| 780 | Streetpave Groundworks Ltd | Brighton | Groundworker | +44 1273 704992  |  |
+| 781 | GROUNDWORK CONTRACTORS | Brighton | Groundworker | +44 7596 746405  |  |
+| 782 | Henley Groundworks | Brighton | Groundworker | +44 1273 083804  |  |
+| 783 | Elliott & Sons Groundworks | Plymouth | Groundworker | +44 7964 549873  |  |
+| 784 | Ace Plant Hire & Groundwork Services | Plymouth | Groundworker | +44 1752 265522  |  |
+| 785 | EE Electrical Services | Portsmouth | Electrician | +44 7828 268388  |  |
+| 786 | Plumbing Done Right Southampton | Southampton | Plumber | +44 23 8168 5068  |  |
+| 787 | Emergency Plumber Portsmouth | Portsmouth | Plumber | +44 23 9388 2354  |  |
+| 788 | Brighton Boiler Care Limited | Brighton | Heating Engineer | +44 1273 539225  |  |
+| 789 | JS Gas Engineering | Brighton | Gas Engineer | +44 7414 896622  |  |
+| 790 | I Gas Engineers Plumbing & Heating Ltd | Portsmouth | Gas Engineer | +44 23 9298 7117  |  |
+| 791 | Portsmouth Gas Ltd | Portsmouth | Gas Engineer | +44 800 211 8575  |  |
+| 792 | ARV Engineering Ltd | Southampton | Hvac Engineer | +44 7895 561164  |  |
+| 793 | Brighton Air Conditioning | Brighton | Hvac Engineer | +44 1273 769452  |  |
+| 794 | FH Group | Portsmouth | Hvac Engineer | +44 23 9381 2322  |  |
+| 795 | Southdowns mechanical | Portsmouth | Hvac Engineer | +44 23 9241 4416  |  |
+| 796 | Engineering Solutions (SW) | Plymouth | Hvac Engineer | +44 7743 044822  |  |
+| 797 | REFORMED PLASTERING | Southampton | Plasterer | +44 7715 450591  |  |
+| 798 | Harris and Wells Plastering and Building Services Ltd | Portsmouth | Plasterer | +44 7305 665678  |  |
+| 799 | T&A Plastering and Construction | Portsmouth | Plasterer | +44 7999 245715  |  |
+| 800 | Swift plastering and renovations | Portsmouth | Plasterer | — |  |
+| 801 | Meaghans Plastering Specialists | Portsmouth | Plasterer | +44 23 9267 9019  |  |
+| 802 | H.G.A Property Services | Southampton | Painter Decorator | +44 7469 715888  |  |
+| 803 | CDM PLASTERING | Brighton | Plasterer | +44 7837 781361  |  |
+| 804 | Brighton Plastering | Brighton | Plasterer | +44 7968 410399  |  |
+| 805 | SSW Plastering Services | Plymouth | Plasterer | +44 7542 241841  |  |
+| 806 | Ocean Plastering | Plymouth | Plasterer | +44 7301 132393  |  |
+| 807 | JRF Plastering & Rendering Specialist | Plymouth | Plasterer | +44 7498 920754  |  |
+| 808 | Coates Decorating | Portsmouth | Painter Decorator | +44 7961 498808  |  |
+| 809 | The Lux - Painting, Decorating & Property Maintenance | Portsmouth | Painter Decorator | +44 7944 303121  |  |
+| 810 | Splash Of Colour | Plymouth | Painter Decorator | +44 7950 582891  |  |
+| 811 | The Tiler | Brighton | Tiler | +44 7450 993146  |  |
+| 812 | LS Tiling Southampton | Southampton | Tiler | +44 7443 587752  |  |
+| 813 | Tiling-hampshire | Southampton | Tiler | — |  |
+| 814 | S D H Tiling | Portsmouth | Tiler | +44 23 9229 5399  |  |
+| 815 | M.A.T Tiling | Portsmouth | Tiler | +44 7887 536793  |  |
+| 816 | Southsea tiling co. | Portsmouth | Tiler | +44 7511 939688  |  |
+| 817 | Bespoke Tiling UK Ltd | Portsmouth | Tiler | +44 7912 063386  |  |
+| 818 | Raptor Drylining Ltd | Southampton | Dryliner | +44 7789 459337  |  |
+| 819 | ​CRK Dry Lining Ltd | Southampton | Dryliner | +44 7505 200958  |  |
+| 820 | SOUTHAMPTON DRY STACK LIMITED | Southampton | Dryliner | — |  |
+| 821 | Tiling and house renovation | Plymouth | Tiler | +44 7399 249711  |  |
+| 822 | tiletech southwest tiling contractor | Plymouth | Tiler | +44 7788 647304  |  |
+| 823 | AW Tiling Services | Plymouth | Tiler | +44 7514 141237  |  |
+| 824 | D A Renzi tiling | Plymouth | Tiler | +44 7941 367463  |  |
+| 825 | G&N WALL AND FLOOR TILING | Plymouth | Tiler | +44 7796 140760  |  |
+| 826 | Southwest Tiling & Property Services | Plymouth | Tiler | +44 7485 161317  |  |
+| 827 | AW Drylining | Brighton | Dryliner | +44 7979 481302  |  |
+| 828 | Floorix | Southampton | Floor Layer | +44 7444 566334  |  |
+| 829 | A 1 Carpets | Southampton | Carpet Fitter | +44 23 8043 1271  |  |
+| 830 | Angelo's Flooring | Southampton | Carpet Fitter | +44 23 8067 8903  |  |
+| 831 | Carpet Clearance Warehouse | Portsmouth | Carpet Fitter | +44 23 9287 2472  |  |
+| 832 | ELJ Flooring | Portsmouth | Carpet Fitter | +44 7474 922788  |  |
+| 833 | MDB Carpet & Vinyl supply & fitting service | Plymouth | Carpet Fitter | +44 7581 311558  |  |
+| 834 | A Quality Carpet & Vinyl Fitting | Plymouth | Carpet Fitter | +44 7861 006606  |  |
+| 835 | Glass & Mirror Centre | Portsmouth | Glazier | +44 23 9266 1091  |  |
+| 836 | Finest Group (Farlington) Ltd | Portsmouth | Window Fitter | +44 23 9235 9999  |  |
+| 837 | NextGen Windows & Doors | Brighton | Window Fitter | +44 7920 047027  |  |
+| 838 | Allen Windows, Doors & Maintenance. | Brighton | Window Fitter | +44 7867 434931  |  |
+| 839 | Daniel John Landscapes | Southampton | Landscaper | +44 7841 510110  |  |
+| 840 | Southampton Stonemasons | Southampton | Stone Mason | +44 23 8043 6269  |  |
+| 841 | Lock-on Security | Portsmouth | Locksmith | +44 7952 302102  |  |
+| 842 | Safeguard locksmith | Plymouth | Locksmith | +44 7885 775606  |  |
+| 843 | Southampton Paving | Southampton | Paviour | +44 23 8161 1174  |  |
+| 844 | Prestige Paving | Southampton | Paviour | +44 23 8043 3478  |  |
+| 845 | Pavers Shoes | Brighton | Paviour | +44 844 847 5617  |  |
+| 846 | Portsmouth Paving | Portsmouth | Paviour | +44 23 9379 0069  |  |
+| 847 | Travertine Warehouse | Portsmouth | Paviour | +44 23 9265 2923  |  |
+| 848 | Dino barber | Plymouth | Barber | +44 7898 843386  |  |
+| 849 | Bamo Restaurant | Plymouth | Takeaway | +44 7472 422835  |  |
+| 850 | Flinx Company | Portsmouth | Gardener | +44 7737 470810  |  |
+| 851 | Pass to drive Southampton | Southampton | Driving Instructor | +44 7838 339393  |  |
+| 852 | Aspire Driving School Southampton | Southampton | Driving Instructor | +44 7886 733735  |  |
+| 853 | Automatic Driving Lessons Plymouth | Plymouth | Driving Instructor | +44 7438 596383  |  |
+| 854 | Road Ahead Driving School, Plymouth | Plymouth | Driving Instructor | +44 7974 255885  |  |
 
-_Emails sent:  / 756_
+_Emails sent:  / 854_
 <!-- LEADS_END -->
 
 ---
