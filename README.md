@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-11 15:03 UTC — 854 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-13 13:19 UTC — 959 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 187 | 107 | 173 |
-| Beauty Salon | 93 | 51 | 82 |
-| Bricklayer | 48 | 12 | 46 |
-| Carpenter | 39 | 12 | 38 |
-| Carpet Fitter | 22 | 17 | 21 |
+| Beauty Salon | 94 | 52 | 83 |
+| Bricklayer | 63 | 24 | 59 |
+| Carpenter | 46 | 19 | 45 |
+| Carpet Fitter | 26 | 21 | 25 |
 | Cleaner | 57 | 38 | 57 |
-| Driving Instructor | 21 | 18 | 20 |
-| Dryliner | 32 | 23 | 29 |
-| Electrician | 51 | 22 | 50 |
-| Floor Layer | 10 | 8 | 10 |
-| Gardener | 90 | 69 | 89 |
+| Driving Instructor | 27 | 24 | 26 |
+| Dryliner | 36 | 27 | 31 |
+| Electrician | 52 | 23 | 51 |
+| Floor Layer | 11 | 9 | 11 |
+| Gardener | 92 | 71 | 91 |
 | Gas Engineer | 14 | 10 | 13 |
-| Glazier | 22 | 17 | 21 |
-| Groundworker | 38 | 25 | 31 |
+| Glazier | 26 | 21 | 24 |
+| Groundworker | 43 | 30 | 35 |
 | Hairdresser | 87 | 54 | 82 |
 | Heating Engineer | 6 | 5 | 6 |
-| Hvac Engineer | 12 | 9 | 12 |
-| Joiner | 13 | 9 | 13 |
-| Landscaper | 4 | 3 | 4 |
-| Locksmith | 12 | 10 | 12 |
-| Nail Salon | 153 | 99 | 148 |
-| Painter Decorator | 23 | 17 | 22 |
-| Paviour | 14 | 10 | 14 |
-| Plasterer | 36 | 25 | 33 |
+| Hvac Engineer | 14 | 11 | 13 |
+| Joiner | 20 | 16 | 20 |
+| Landscaper | 6 | 5 | 6 |
+| Locksmith | 14 | 12 | 14 |
+| Nail Salon | 154 | 100 | 149 |
+| Painter Decorator | 34 | 28 | 33 |
+| Paviour | 17 | 13 | 17 |
+| Plasterer | 48 | 37 | 43 |
 | Plumber | 74 | 30 | 73 |
 | Roofer | 83 | 14 | 79 |
-| Scaffolder | 23 | 13 | 23 |
+| Scaffolder | 31 | 21 | 31 |
 | Stone Mason | 12 | 6 | 12 |
-| Takeaway | 100 | 69 | 76 |
-| Tiler | 60 | 46 | 58 |
-| Window Fitter | 8 | 6 | 7 |
-| **Total** | **1444** | **854** | **1354** |
+| Takeaway | 101 | 70 | 77 |
+| Tiler | 67 | 53 | 65 |
+| Window Fitter | 10 | 8 | 9 |
+| **Total** | **1552** | **959** | **1453** |
 
 ### All Leads (confirmed no website)
 
@@ -904,8 +904,113 @@ _Last updated: 2026-06-11 15:03 UTC — 854 confirmed leads (no website) across 
 | 852 | Aspire Driving School Southampton | Southampton | Driving Instructor | +44 7886 733735  |  |
 | 853 | Automatic Driving Lessons Plymouth | Plymouth | Driving Instructor | +44 7438 596383  |  |
 | 854 | Road Ahead Driving School, Plymouth | Plymouth | Driving Instructor | +44 7974 255885  |  |
+| 855 | RG Joinery | Aberdeen | Carpenter | +44 7538 113857  |  |
+| 856 | MM Joinery | Aberdeen | Carpenter | +44 7493 451439  |  |
+| 857 | West End Joinery | Aberdeen | Carpenter | +44 7538 113857  |  |
+| 858 | SJL Brickwork Ltd | Sunderland | Bricklayer | +44 191 516 6806  |  |
+| 859 | Pringle co. | Sunderland | Bricklayer | — |  |
+| 860 | Unite Brickwork | Sunderland | Bricklayer | +44 191 514 5645  |  |
+| 861 | DLH Brickwork | Sunderland | Bricklayer | +44 7882 326697  |  |
+| 862 | Temmy Building And Renovation | Sunderland | Bricklayer | +44 7539 405685  |  |
+| 863 | HBB Bricklaying, Paving and Building Services | Milton Keynes | Bricklayer | +44 7583 655165  |  |
+| 864 | Freeman & Hook Bricklaying & Scaffolding Contractors | Milton Keynes | Bricklayer | +44 1908 262633  |  |
+| 865 | Pristine Build Milton Keynes | Milton Keynes | Bricklayer | +44 1908 966160  |  |
+| 866 | Mk Brickwork | Milton Keynes | Bricklayer | — |  |
+| 867 | First Choice Building Services | Milton Keynes | Bricklayer | +44 7378 862544  |  |
+| 868 | Shayler & Bros Brickwork | Milton Keynes | Bricklayer | +44 7572 175560  |  |
+| 869 | AB Brickwork and Building Contractor | Milton Keynes | Bricklayer | +44 7946 735389  |  |
+| 870 | A&M Norwich carpenter | Norwich | Carpenter | +44 7930 988021  |  |
+| 871 | G Robinson Joinery | Sunderland | Carpenter | +44 7891 827670  |  |
+| 872 | Molloy Joinery & construction LTD | Sunderland | Carpenter | +44 7779 116363  |  |
+| 873 | RiverForge Studios - Bespoke Joinery | Sunderland | Carpenter | +44 7523 001746  |  |
+| 874 | EDC Carpentry | Milton Keynes | Joiner | +44 7392 851468  |  |
+| 875 | Hillcroft Joiners Milton Keynes | Milton Keynes | Joiner | +44 845 459 6106  |  |
+| 876 | JMJ james mcallister joinery | Aberdeen | Joiner | +44 7521 614367  |  |
+| 877 | S2 Joinery | Aberdeen | Joiner | +44 7809 144477  |  |
+| 878 | Tyne & wear joinery ltd | Sunderland | Joiner | +44 7949 103073  |  |
+| 879 | Sayerwood Joinery | Norwich | Joiner | +44 1603 660179  |  |
+| 880 | Premier Doors | Norwich | Joiner | +44 7751 085445  |  |
+| 881 | M1 Scaffolding Limited | Milton Keynes | Scaffolder | +44 7714 822366  |  |
+| 882 | J T Groundworks Aberdeen | Aberdeen | Groundworker | +44 7783 881348  |  |
+| 883 | Muehlhan Scaffolding Ltd | Aberdeen | Scaffolder | +44 1224 875952  |  |
+| 884 | Alustar UK | Aberdeen | Scaffolder | +44 1224 722291  |  |
+| 885 | Hi Up Access Platforms | Aberdeen | Scaffolder | +44 1224 705544  |  |
+| 886 | Northern Heights Scaffolding. | Aberdeen | Scaffolder | +44 7568 557806  |  |
+| 887 | Riverside Scaffolding Ltd | Sunderland | Scaffolder | +44 7932 535380  |  |
+| 888 | Enact scaffolding & construction ltd | Sunderland | Scaffolder | +44 7398 616149  |  |
+| 889 | THOMPSON SCAFFOLDING SERVICES LTD | Sunderland | Scaffolder | +44 7368 834901  |  |
+| 890 | W. Newton Building and Groundwork Ltd | Sunderland | Groundworker | — |  |
+| 891 | MK Groundworks | Milton Keynes | Groundworker | +44 1908 231022  |  |
+| 892 | Charles Bracken Ground Works Ltd | Milton Keynes | Groundworker | +44 1908 646537  |  |
+| 893 | Pro Dig Groundworks Ltd | Norwich | Groundworker | +44 1603 894050  |  |
+| 894 | Pallion Electrical Services | Sunderland | Electrician | +44 7912 979978  |  |
+| 895 | Mk Hvac Limited | Milton Keynes | Hvac Engineer | — |  |
+| 896 | iGas UK | Sunderland | Hvac Engineer | +44 7377 909503  |  |
+| 897 | Bob Anderson Plasterer | Aberdeen | Plasterer | +44 7768 536727  |  |
+| 898 | Fresh Palace | Aberdeen | Plasterer | +44 7554 030253  |  |
+| 899 | I.H PLASTERING & BUILDING SOLUTIONS LTD | Milton Keynes | Plasterer | +44 7761 264168  |  |
+| 900 | BM Plastering&Building Solutions Ltd | Milton Keynes | Plasterer | +44 7403 172019  |  |
+| 901 | Mitchell Plastering | Milton Keynes | Plasterer | +44 7450 274709  |  |
+| 902 | Rb plastering mk | Milton Keynes | Plasterer | +44 7597 492085  |  |
+| 903 | Assured Plastering Service | Milton Keynes | Plasterer | +44 7395 336649  |  |
+| 904 | Russell & Kean Plastering/ Rendering | Sunderland | Plasterer | +44 7555 736295  |  |
+| 905 | LMK plastering | Sunderland | Plasterer | — |  |
+| 906 | R G Plastering Services | Sunderland | Plasterer | +44 7880 884557  |  |
+| 907 | Hawk Plastering & Decorating Services | Sunderland | Plasterer | +44 7743 418446  |  |
+| 908 | Elite Rendering & Plastering Ltd | Sunderland | Plasterer | — |  |
+| 909 | Balgownie Painting & Decorating | Aberdeen | Painter Decorator | +44 7592 186168  |  |
+| 910 | Alan D Cowie ( Painters & Decorators ) | Aberdeen | Painter Decorator | +44 7855 253218  |  |
+| 911 | AMS Painting Decorating | Aberdeen | Painter Decorator | +44 7752 818792  |  |
+| 912 | Pictish Decorating Services | Aberdeen | Painter Decorator | +44 7716 380490  |  |
+| 913 | H&A PAINTER AND DECORATER HOUSE MAINTENANCE | Milton Keynes | Painter Decorator | +44 7922 946438  |  |
+| 914 | MG Tarsa Painting, decor and more | Milton Keynes | Painter Decorator | +44 7902 775942  |  |
+| 915 | Wear Decorators | Sunderland | Painter Decorator | +44 7775 890517  |  |
+| 916 | CRS Decorators Limited | Sunderland | Painter Decorator | +44 7834 709376  |  |
+| 917 | ACE DECORATORS | Sunderland | Painter Decorator | +44 7960 725402  |  |
+| 918 | Dean Coombs Painter & Decorator | Sunderland | Painter Decorator | +44 7790 461432  |  |
+| 919 | Gary Marsh Quality Decorators | Sunderland | Painter Decorator | +44 191 534 1562  |  |
+| 920 | CGT Tiles | Aberdeen | Tiler | +44 1224 057381  |  |
+| 921 | Michael Findlay | Aberdeen | Tiler | +44 1224 586143  |  |
+| 922 | Tiling & Plastering Aberdeen | Aberdeen | Tiler | +44 7858 167711  |  |
+| 923 | NJ Roberts Tiling services | Milton Keynes | Tiler | +44 7563 580569  |  |
+| 924 | C D Tiling | Sunderland | Tiler | +44 191 549 9597  |  |
+| 925 | William Milne Tarpaulins Scotland | Aberdeen | Dryliner | +44 1224 631012  |  |
+| 926 | LGTiling | Norwich | Tiler | +44 7931 720668  |  |
+| 927 | Anthony Robinson Tiling | Norwich | Tiler | +44 1603 300955  |  |
+| 928 | Thistlebrook Ltd | Milton Keynes | Dryliner | +44 1582 453753  |  |
+| 929 | Norwich Drylining Limited | Norwich | Dryliner | — |  |
+| 930 | R.t Plastering & Drylining | Norwich | Dryliner | — |  |
+| 931 | Rod Taylor carpet and flooring contractors | Aberdeen | Floor Layer | +44 7523 697724  |  |
+| 932 | Carpetworld (Aberdeen) Ltd | Aberdeen | Carpet Fitter | +44 1224 596942  |  |
+| 933 | P Wright Flooring | Aberdeen | Carpet Fitter | +44 7921 922732  |  |
+| 934 | Ewen Main Carpet Fitter | Aberdeen | Carpet Fitter | +44 1224 634504  |  |
+| 935 | Pallion Carpets | Sunderland | Carpet Fitter | +44 191 510 3700  |  |
+| 936 | Milton Keynes Glass - (24 Hour Emergency Glaziers) | Milton Keynes | Glazier | +44 1908 966029  |  |
+| 937 | Robson Glaziers Ltd | Sunderland | Glazier | +44 191 514 7444  |  |
+| 938 | J & GLAZIERS | Sunderland | Glazier | — |  |
+| 939 | Local Glass & Glazing Ltd | Sunderland | Glazier | +44 191 581 9338  |  |
+| 940 | Northeast Windows & Doors Conservatories Ltd | Sunderland | Window Fitter | +44 7943 841883  |  |
+| 941 | R.C windows & doors | Sunderland | Window Fitter | +44 7598 629009  |  |
+| 942 | Bright Landscaping Services | Aberdeen | Landscaper | +44 7934 270024  |  |
+| 943 | Ezra’s Garden | Sunderland | Landscaper | +44 7894 507925  |  |
+| 944 | 24 Hour Locksmith Aberdeen & Door Repair | Aberdeen | Locksmith | +44 1224 432452  |  |
+| 945 | Key Cutter | Milton Keynes | Locksmith | +44 7850 088921  |  |
+| 946 | Pro Paving Scotland | Aberdeen | Paviour | +44 7429 991376  |  |
+| 947 | Sunderland Paving & Driveway | Sunderland | Paviour | +44 191 511 8278  |  |
+| 948 | Super paving and patios | Milton Keynes | Paviour | +44 7888 538729  |  |
+| 949 | Joy’s Room | Milton Keynes | Nail Salon | +44 7944 538558  |  |
+| 950 | Crystal's Beauty Rooms | Norwich | Beauty Salon | +44 7834 811842  |  |
+| 951 | PHO 179 | Sunderland | Takeaway | +44 7539 184534  |  |
+| 952 | Automatic Driving Instructor Aberdeen | Aberdeen | Driving Instructor | +44 7389 104517  |  |
+| 953 | CB Gardening Services | Norwich | Gardener | +44 7777 524027  |  |
+| 954 | Pb garden & tree services | Norwich | Gardener | +44 7305 682438  |  |
+| 955 | 1st Choice | Norwich | Driving Instructor | +44 1603 440908  |  |
+| 956 | Taits School of motoring (Grade 'A' Instructor) 86.96 % Pass Rate | Sunderland | Driving Instructor | +44 7779 785718  |  |
+| 957 | Drive Jeevez Driving school | Milton Keynes | Driving Instructor | +44 7446 303846  |  |
+| 958 | Rockfort driving school | Milton Keynes | Driving Instructor | +44 7951 366085  |  |
+| 959 | Eco Auto Driving School | Milton Keynes | Driving Instructor | +44 7404 558700  |  |
 
-_Emails sent:  / 854_
+_Emails sent:  / 959_
 <!-- LEADS_END -->
 
 ---
