@@ -1,18 +1,16 @@
 name: Clinic Lead Scraper
 
 on:
-  schedule:
-    # Runs daily at 07:00 UTC, chips through all 750 searches across multiple days
-    - cron: '0 7 * * *'
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # triggered once manually, then self-triggers until done
 
 jobs:
   scrape-clinics:
     runs-on: ubuntu-latest
-    timeout-minutes: 200   # ~3h cap; commit step uses if: always() so progress is never lost
+    timeout-minutes: 200
 
     permissions:
       contents: write
+      actions: write   # needed to trigger next run via API
 
     steps:
       - name: Check out repo
@@ -32,23 +30,22 @@ jobs:
       - name: Install Playwright browsers
         run: playwright install chromium --with-deps
 
-      - name: Check if already complete
+      - name: Check progress
         id: check_done
         run: |
+          TOTAL=750
           if [ -f output/clinic_leads.done ]; then
-            DONE=$(wc -l < output/clinic_leads.done)
-            echo "done_count=$DONE" >> $GITHUB_OUTPUT
-            if [ "$DONE" -ge 750 ]; then
-              echo "complete=true" >> $GITHUB_OUTPUT
-              echo "All 750 searches already done — skipping."
-            else
-              echo "complete=false" >> $GITHUB_OUTPUT
-              echo "$DONE / 750 searches done so far."
-            fi
+            DONE=$(wc -l < output/clinic_leads.done | tr -d ' ')
+          else
+            DONE=0
+          fi
+          echo "done_count=$DONE" >> $GITHUB_OUTPUT
+          if [ "$DONE" -ge "$TOTAL" ]; then
+            echo "complete=true" >> $GITHUB_OUTPUT
+            echo "All $TOTAL searches done — this is the final run."
           else
             echo "complete=false" >> $GITHUB_OUTPUT
-            echo "done_count=0" >> $GITHUB_OUTPUT
-            echo "Starting fresh."
+            echo "$DONE / $TOTAL searches done so far."
           fi
 
       - name: Scrape clinics
@@ -72,3 +69,20 @@ jobs:
           git diff --cached --quiet && echo "Nothing new to commit." || \
             git commit -m "chore: clinic leads — $(date '+%Y-%m-%d')"
           git push origin main || true
+
+      - name: Trigger next batch (if not complete)
+        if: steps.check_done.outputs.complete != 'true'
+        run: |
+          DONE="${{ steps.check_done.outputs.done_count }}"
+          NEW_DONE=$((DONE + 25))
+          if [ "$NEW_DONE" -lt 750 ]; then
+            echo "Queuing next batch ($NEW_DONE / 750 will be done)…"
+            curl -s -X POST \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/clinic_scraper.yml/dispatches" \
+              -d '{"ref":"main"}'
+            echo "Next run triggered."
+          else
+            echo "Final batch — no further runs needed."
+          fi
