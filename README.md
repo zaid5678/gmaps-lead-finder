@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-13 13:19 UTC — 959 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-14 13:37 UTC — 1031 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 187 | 107 | 173 |
+| Barber | 189 | 109 | 175 |
 | Beauty Salon | 94 | 52 | 83 |
-| Bricklayer | 63 | 24 | 59 |
-| Carpenter | 46 | 19 | 45 |
-| Carpet Fitter | 26 | 21 | 25 |
-| Cleaner | 57 | 38 | 57 |
-| Driving Instructor | 27 | 24 | 26 |
-| Dryliner | 36 | 27 | 31 |
-| Electrician | 52 | 23 | 51 |
-| Floor Layer | 11 | 9 | 11 |
-| Gardener | 92 | 71 | 91 |
-| Gas Engineer | 14 | 10 | 13 |
-| Glazier | 26 | 21 | 24 |
-| Groundworker | 43 | 30 | 35 |
-| Hairdresser | 87 | 54 | 82 |
-| Heating Engineer | 6 | 5 | 6 |
+| Bricklayer | 79 | 25 | 72 |
+| Carpenter | 55 | 20 | 54 |
+| Carpet Fitter | 33 | 28 | 32 |
+| Cleaner | 58 | 39 | 58 |
+| Driving Instructor | 38 | 35 | 37 |
+| Dryliner | 40 | 30 | 35 |
+| Electrician | 55 | 24 | 54 |
+| Floor Layer | 15 | 13 | 15 |
+| Gardener | 93 | 72 | 92 |
+| Gas Engineer | 16 | 10 | 15 |
+| Glazier | 33 | 28 | 31 |
+| Groundworker | 52 | 31 | 43 |
+| Hairdresser | 89 | 56 | 84 |
+| Heating Engineer | 11 | 6 | 11 |
 | Hvac Engineer | 14 | 11 | 13 |
-| Joiner | 20 | 16 | 20 |
-| Landscaper | 6 | 5 | 6 |
-| Locksmith | 14 | 12 | 14 |
+| Joiner | 21 | 16 | 21 |
+| Landscaper | 8 | 7 | 8 |
+| Locksmith | 15 | 13 | 15 |
 | Nail Salon | 154 | 100 | 149 |
-| Painter Decorator | 34 | 28 | 33 |
-| Paviour | 17 | 13 | 17 |
-| Plasterer | 48 | 37 | 43 |
-| Plumber | 74 | 30 | 73 |
+| Painter Decorator | 41 | 29 | 40 |
+| Paviour | 20 | 16 | 19 |
+| Plasterer | 61 | 40 | 56 |
+| Plumber | 75 | 30 | 74 |
 | Roofer | 83 | 14 | 79 |
-| Scaffolder | 31 | 21 | 31 |
-| Stone Mason | 12 | 6 | 12 |
+| Scaffolder | 38 | 24 | 38 |
+| Stone Mason | 15 | 9 | 15 |
 | Takeaway | 101 | 70 | 77 |
-| Tiler | 67 | 53 | 65 |
+| Tiler | 81 | 66 | 79 |
 | Window Fitter | 10 | 8 | 9 |
-| **Total** | **1552** | **959** | **1453** |
+| **Total** | **1687** | **1031** | **1583** |
 
 ### All Leads (confirmed no website)
 
@@ -1009,8 +1009,80 @@ _Last updated: 2026-06-13 13:19 UTC — 959 confirmed leads (no website) across 
 | 957 | Drive Jeevez Driving school | Milton Keynes | Driving Instructor | +44 7446 303846  |  |
 | 958 | Rockfort driving school | Milton Keynes | Driving Instructor | +44 7951 366085  |  |
 | 959 | Eco Auto Driving School | Milton Keynes | Driving Instructor | +44 7404 558700  |  |
+| 960 | LJM Joinery | Dundee | Carpenter | +44 7828 463865  |  |
+| 961 | Linden Hall Brickwork | York | Bricklayer | +44 7903 139727  |  |
+| 962 | Tru Blu Scaffolding | Ipswich | Scaffolder | +44 7881 286873  |  |
+| 963 | JB scaffolding York | York | Scaffolder | +44 7526 568991  |  |
+| 964 | Cel'tic Scaffolding York ltd Yorkshire | York | Scaffolder | +44 7454 306336  |  |
+| 965 | Jk Landscaping & Groundworks Ltd | Ipswich | Groundworker | — |  |
+| 966 | Ipswich Electrical Services | Ipswich | Electrician | +44 1473 325789  |  |
+| 967 | RJB GAS & HEATING SERVICES | Dundee | Heating Engineer | +44 7833 448965  |  |
+| 968 | Dansey Plastering | Dundee | Plasterer | +44 7748 673511  |  |
+| 969 | GJS PLASTERING & ROUGHCASTING | Dundee | Plasterer | +44 7549 805584  |  |
+| 970 | Prestige building & plastering services | Gloucester | Plasterer | +44 7961 513649  |  |
+| 971 | Glos 2 Perfection | Gloucester | Painter Decorator | +44 7846 612416  |  |
+| 972 | Ross Adrian | Ipswich | Tiler | +44 7801 386630  |  |
+| 973 | The suffolk tiling company | Ipswich | Tiler | +44 7508 455989  |  |
+| 974 | Cotswold Tilers | Gloucester | Tiler | +44 7977 198330  |  |
+| 975 | Allen Andy | Gloucester | Tiler | +44 7976 883412  |  |
+| 976 | Ceramica Tiling | York | Tiler | +44 7974 272514  |  |
+| 977 | York Tilerman | York | Tiler | +44 7429 525181  |  |
+| 978 | Total Plumbing and Tiling | York | Tiler | +44 7342 847667  |  |
+| 979 | Inspired Tiling York | York | Tiler | +44 7872 068873  |  |
+| 980 | City Tiling Dundee | Dundee | Tiler | +44 7517 572094  |  |
+| 981 | Chisholm tiling | Dundee | Tiler | +44 7867 380593  |  |
+| 982 | JT Tiling | Dundee | Tiler | +44 7749 009060  |  |
+| 983 | Tiler Dundee | Dundee | Tiler | +44 7900 815895  |  |
+| 984 | Tayside Tiling Solutions | Dundee | Tiler | +44 7584 374329  |  |
+| 985 | York Linings International Ltd | York | Dryliner | +44 1904 449777  |  |
+| 986 | Advanced Drylining | Gloucester | Dryliner | +44 7814 928287  |  |
+| 987 | N P S Drylining Ltd | Gloucester | Dryliner | +44 1594 827908  |  |
+| 988 | Viv Sharp carpet & flooring installations | Gloucester | Floor Layer | +44 7768 878695  |  |
+| 989 | Floorsplus limited | Dundee | Floor Layer | +44 7733 541502  |  |
+| 990 | ACA Flooring | Dundee | Floor Layer | +44 7868 190418  |  |
+| 991 | Stobswell Flooring | Dundee | Floor Layer | +44 1382 804480  |  |
+| 992 | Carpet Shed (Dundee) Limited | Dundee | Carpet Fitter | +44 1382 831313  |  |
+| 993 | Carpet Discount Dundee | Dundee | Carpet Fitter | +44 1382 665850  |  |
+| 994 | Elliot Carpet | Ipswich | Carpet Fitter | +44 7550 555559  |  |
+| 995 | M Ewen Carpet Fitter York | York | Carpet Fitter | +44 7718 153433  |  |
+| 996 | The Glass Shop | Ipswich | Glazier | +44 7908 114451  |  |
+| 997 | Shaun Rennie carpet fitter | Gloucester | Carpet Fitter | +44 7795 508956  |  |
+| 998 | Quick Quality Carpet Whipping | Gloucester | Carpet Fitter | +44 7970 304141  |  |
+| 999 | GL2 flooring | Gloucester | Carpet Fitter | +44 1452 312098  |  |
+| 1000 | Sean Dailly Glazing | Dundee | Glazier | +44 7753 986206  |  |
+| 1001 | Broughty Ferry Glaziers & Joiners | Dundee | Glazier | +44 1382 738692  |  |
+| 1002 | Discovery Glazing | Dundee | Glazier | +44 1382 201020  |  |
+| 1003 | Irons Glazing & Balustrades | Dundee | Glazier | +44 7540 770007  |  |
+| 1004 | Hartley’s-York | York | Glazier | +44 7866 141834  |  |
+| 1005 | Glazing Services York | York | Glazier | +44 7920 445819  |  |
+| 1006 | Dundee Landscapes | Dundee | Landscaper | +44 1382 825312  |  |
+| 1007 | J. Wright Stonemason | Ipswich | Stone Mason | +44 1473 745079  |  |
+| 1008 | Collins & Curtis Masonry Ltd | Ipswich | Stone Mason | +44 1473 250932  |  |
+| 1009 | JB Landscaping York | York | Landscaper | +44 7765 983807  |  |
+| 1010 | East Coast Memorials | Dundee | Stone Mason | +44 7980 940117  |  |
+| 1011 | Locksmith Euro Car Key Ipswich | Ipswich | Locksmith | +44 7762 992341  |  |
+| 1012 | Ipswich Paving | Ipswich | Paviour | — |  |
+| 1013 | Cps | Ipswich | Paviour | +44 7865 477308  |  |
+| 1014 | ZAN barber | Dundee | Barber | +44 7463 491327  |  |
+| 1015 | Stroud Paving Centre | Gloucester | Paviour | +44 7770 850199  |  |
+| 1016 | Turkish Barber Club Ipswich | Ipswich | Barber | +44 7777 277783  |  |
+| 1017 | The Hair Boutique | Dundee | Hairdresser | +44 1382 458182  |  |
+| 1018 | SISTR. HAIR | Dundee | Hairdresser | +44 1382 760339  |  |
+| 1019 | Marketa Cleaning&Service | Gloucester | Cleaner | +44 7596 158217  |  |
+| 1020 | D Versey Home & Garden Maintenance | Ipswich | Gardener | +44 7886 578784  |  |
+| 1021 | Pass Master Mal | Ipswich | Driving Instructor | +44 7805 055206  |  |
+| 1022 | Perry's Driving School | Ipswich | Driving Instructor | +44 7739 395239  |  |
+| 1023 | East End School Of Motoring | Dundee | Driving Instructor | +44 7885 213798  |  |
+| 1024 | Abracadabra Driving School | Dundee | Driving Instructor | +44 7745 044612  |  |
+| 1025 | Nicola Halliday Modern School of Motoring | Dundee | Driving Instructor | +44 1382 643829  |  |
+| 1026 | Dundee Driving School | Dundee | Driving Instructor | +44 7831 819177  |  |
+| 1027 | Sarah James Driving School | York | Driving Instructor | +44 7955 174132  |  |
+| 1028 | Will2learn Driving School York | York | Driving Instructor | +44 7903 034833  |  |
+| 1029 | Gloucester Automatic Driving Lessons | Gloucester | Driving Instructor | +44 7500 650993  |  |
+| 1030 | Passwithchrissie | Gloucester | Driving Instructor | +44 7931 420910  |  |
+| 1031 | B driving school Gloucester | Gloucester | Driving Instructor | +44 7888 000025  |  |
 
-_Emails sent:  / 959_
+_Emails sent:  / 1031_
 <!-- LEADS_END -->
 
 ---
