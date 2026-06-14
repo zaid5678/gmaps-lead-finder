@@ -1,0 +1,74 @@
+name: Clinic Lead Scraper
+
+on:
+  schedule:
+    # Runs daily at 07:00 UTC, chips through all 750 searches across multiple days
+    - cron: '0 7 * * *'
+  workflow_dispatch: {}
+
+jobs:
+  scrape-clinics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 200   # ~3h cap; commit step uses if: always() so progress is never lost
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install playwright python-dotenv requests
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      - name: Check if already complete
+        id: check_done
+        run: |
+          if [ -f output/clinic_leads.done ]; then
+            DONE=$(wc -l < output/clinic_leads.done)
+            echo "done_count=$DONE" >> $GITHUB_OUTPUT
+            if [ "$DONE" -ge 750 ]; then
+              echo "complete=true" >> $GITHUB_OUTPUT
+              echo "All 750 searches already done — skipping."
+            else
+              echo "complete=false" >> $GITHUB_OUTPUT
+              echo "$DONE / 750 searches done so far."
+            fi
+          else
+            echo "complete=false" >> $GITHUB_OUTPUT
+            echo "done_count=0" >> $GITHUB_OUTPUT
+            echo "Starting fresh."
+          fi
+
+      - name: Scrape clinics
+        if: steps.check_done.outputs.complete != 'true'
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python clinic_scraper.py --max-searches 25
+
+      - name: Commit progress
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/clinic_leads.csv output/clinic_leads.done 2>/dev/null || true
+          git stash || true
+          git pull --rebase origin main || true
+          git stash pop || true
+          git add output/clinic_leads.csv output/clinic_leads.done 2>/dev/null || true
+          git diff --cached --quiet && echo "Nothing new to commit." || \
+            git commit -m "chore: clinic leads — $(date '+%Y-%m-%d')"
+          git push origin main || true
