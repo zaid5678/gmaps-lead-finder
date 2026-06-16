@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-14 13:37 UTC — 1031 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-16 15:41 UTC — 1043 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 189 | 109 | 175 |
-| Beauty Salon | 94 | 52 | 83 |
-| Bricklayer | 79 | 25 | 72 |
+| Barber | 190 | 110 | 176 |
+| Beauty Salon | 96 | 54 | 85 |
+| Bricklayer | 80 | 25 | 73 |
 | Carpenter | 55 | 20 | 54 |
 | Carpet Fitter | 33 | 28 | 32 |
-| Cleaner | 58 | 39 | 58 |
-| Driving Instructor | 38 | 35 | 37 |
+| Cleaner | 60 | 41 | 60 |
+| Driving Instructor | 39 | 36 | 38 |
 | Dryliner | 40 | 30 | 35 |
-| Electrician | 55 | 24 | 54 |
+| Electrician | 56 | 25 | 55 |
 | Floor Layer | 15 | 13 | 15 |
 | Gardener | 93 | 72 | 92 |
 | Gas Engineer | 16 | 10 | 15 |
-| Glazier | 33 | 28 | 31 |
-| Groundworker | 52 | 31 | 43 |
-| Hairdresser | 89 | 56 | 84 |
+| Glazier | 34 | 28 | 32 |
+| Groundworker | 53 | 31 | 44 |
+| Hairdresser | 90 | 57 | 85 |
 | Heating Engineer | 11 | 6 | 11 |
-| Hvac Engineer | 14 | 11 | 13 |
+| Hvac Engineer | 15 | 11 | 14 |
 | Joiner | 21 | 16 | 21 |
-| Landscaper | 8 | 7 | 8 |
-| Locksmith | 15 | 13 | 15 |
+| Landscaper | 9 | 7 | 9 |
+| Locksmith | 16 | 14 | 16 |
 | Nail Salon | 154 | 100 | 149 |
-| Painter Decorator | 41 | 29 | 40 |
+| Painter Decorator | 42 | 29 | 41 |
 | Paviour | 20 | 16 | 19 |
-| Plasterer | 61 | 40 | 56 |
+| Plasterer | 63 | 40 | 58 |
 | Plumber | 75 | 30 | 74 |
-| Roofer | 83 | 14 | 79 |
-| Scaffolder | 38 | 24 | 38 |
+| Roofer | 85 | 14 | 81 |
+| Scaffolder | 39 | 24 | 39 |
 | Stone Mason | 15 | 9 | 15 |
-| Takeaway | 101 | 70 | 77 |
+| Takeaway | 104 | 73 | 80 |
 | Tiler | 81 | 66 | 79 |
 | Window Fitter | 10 | 8 | 9 |
-| **Total** | **1687** | **1031** | **1583** |
+| **Total** | **1710** | **1043** | **1606** |
 
 ### All Leads (confirmed no website)
 
@@ -1081,8 +1081,20 @@ _Last updated: 2026-06-14 13:37 UTC — 1031 confirmed leads (no website) across
 | 1029 | Gloucester Automatic Driving Lessons | Gloucester | Driving Instructor | +44 7500 650993  |  |
 | 1030 | Passwithchrissie | Gloucester | Driving Instructor | +44 7931 420910  |  |
 | 1031 | B driving school Gloucester | Gloucester | Driving Instructor | +44 7888 000025  |  |
+| 1032 | W&A Electrical Contractors ltd | Swindon | Electrician | +44 7588 425134  |  |
+| 1033 | Car keys | Middlesbrough | Locksmith | +44 7378 887910  |  |
+| 1034 | BAB’S BARBERS | Swindon | Barber | +44 7440 090906  |  |
+| 1035 | Divine Beauty Salon | Swindon | Beauty Salon | +44 7440 510582  |  |
+| 1036 | Reflections Beauty studio | Swindon | Beauty Salon | +44 7448 286901  |  |
+| 1037 | Salon 19 | Blackpool | Hairdresser | +44 1253 344084  |  |
+| 1038 | Geraldoos Clean Limited | Middlesbrough | Cleaner | +44 7731 314086  |  |
+| 1039 | Supreme Hygiene Cleaning Services | Middlesbrough | Cleaner | +44 7947 338811  |  |
+| 1040 | AVA Resturant | Middlesbrough | Takeaway | +44 7564 939595  |  |
+| 1041 | Sindbad restaurant | Bournemouth | Takeaway | +44 7308 966561  |  |
+| 1042 | Bombay to Bournemouth (B2B) | Bournemouth | Takeaway | +44 7721 658063  |  |
+| 1043 | Flower School of Motoring | Middlesbrough | Driving Instructor | +44 7926 237558  |  |
 
-_Emails sent:  / 1031_
+_Emails sent:  / 1043_
 <!-- LEADS_END -->
 
 ---
