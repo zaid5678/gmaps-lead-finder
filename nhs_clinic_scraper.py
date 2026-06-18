@@ -28,6 +28,8 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+from email_validation import has_valid_mx
+
 load_dotenv()
 
 SITEMAPS = {
@@ -149,6 +151,9 @@ zfkhan321@gmail.com"""
 
 def send_outreach(row: dict, gmail_user: str, app_pw: str) -> bool:
     to = row["email"]
+    if not has_valid_mx(to):
+        print(f"  ✗ Skipping {row['name']} — {to} has no valid mail domain (likely typo in NHS listing)")
+        return False
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = _subject(row["name"], row["category"])

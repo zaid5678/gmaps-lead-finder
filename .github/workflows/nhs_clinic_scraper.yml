@@ -25,7 +25,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install requests python-dotenv
+        run: pip install requests python-dotenv dnspython
 
       - name: Check progress
         id: check_done

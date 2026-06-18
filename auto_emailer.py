@@ -44,6 +44,8 @@ try:
 except ImportError:
     pass
 
+from email_validation import has_valid_mx
+
 OUTPUT_DIR   = Path("output")
 ALL_LEADS    = OUTPUT_DIR / "all_leads.csv"
 LOG_DIR      = OUTPUT_DIR / "logs"
@@ -677,6 +679,10 @@ def run_phase(
                 continue
             if not city:
                 log.warning(f"  SKIP [{i+1}] {name} <{to_email}> — city is blank")
+                stats["skipped"] += 1
+                continue
+            if not has_valid_mx(to_email):
+                log.warning(f"  SKIP [{i+1}] {name} <{to_email}> — no valid mail domain (likely typo in source listing)")
                 stats["skipped"] += 1
                 continue
             if not industry:

@@ -20,6 +20,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 
+from email_validation import has_valid_mx
 from scraper import (
     GoogleMapsScraper,
     TOP_50_UK_CITIES,
@@ -160,6 +161,9 @@ zfkhan321@gmail.com"""
 def send_outreach(biz_row: dict, gmail_user: str, app_pw: str) -> bool:
     to = biz_row.get("email", "").strip()
     if not to:
+        return False
+    if not has_valid_mx(to):
+        print(f"  ✗ Skipping {biz_row.get('name','')} — {to} has no valid mail domain (likely typo in source listing)")
         return False
     name     = biz_row.get("name", "the practice")
     city     = biz_row.get("city", "")

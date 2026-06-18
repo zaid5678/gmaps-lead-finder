@@ -32,6 +32,8 @@ from urllib.parse import quote_plus
 
 from playwright.sync_api import sync_playwright, Page, Playwright, Browser, TimeoutError as PwTimeout
 
+from email_validation import has_valid_mx
+
 # ─────────────────────────────────────────────────────────────
 # CONFIGURATION — edit these defaults or override via CLI args
 # ─────────────────────────────────────────────────────────────
@@ -908,7 +910,14 @@ def send_email_outreach(leads: list[Business], gmail_user: str, app_password: st
     if not gmail_user or not app_password:
         raise RuntimeError("Set GMAIL_USER and GMAIL_APP_PASSWORD to send outreach emails.")
 
-    emailable = [b for b in leads if b.email]
+    emailable = []
+    for b in leads:
+        if not b.email:
+            continue
+        if not has_valid_mx(b.email):
+            log.warning(f"  Skipping {b.name} — {b.email} has no valid mail domain (likely typo in source listing)")
+            continue
+        emailable.append(b)
     if not emailable:
         log.info("No leads have email addresses — skipping email outreach.")
         return []

@@ -25,7 +25,7 @@ jobs:
           cache: pip
 
       - name: Install dependencies
-        run: pip install python-dotenv requests beautifulsoup4 lxml
+        run: pip install python-dotenv requests beautifulsoup4 lxml dnspython
 
       - name: Send emails
         env:

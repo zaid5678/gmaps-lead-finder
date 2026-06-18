@@ -28,6 +28,8 @@ from email.mime.text import MIMEText
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+from email_validation import has_valid_mx
 from playwright.sync_api import sync_playwright
 
 from scraper import GoogleMapsScraper, TOP_50_UK_CITIES, deduplicate, filter_leads
@@ -176,6 +178,9 @@ def send_outreach_email(biz_dict: dict, gmail_user: str, app_pw: str, dry_run: b
     """Send cold email directly to a business. Returns True if sent."""
     to_email = biz_dict.get("email", "").strip()
     if not to_email:
+        return False
+    if not has_valid_mx(to_email):
+        print(f"  ✗ Skipping {biz_dict.get('name','')} — {to_email} has no valid mail domain (likely typo in source listing)")
         return False
 
     name         = biz_dict.get("name", "there")
