@@ -72,11 +72,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add output/international_leads.csv output/international_leads.done 2>/dev/null || true
+          [ -f output/international_leads.csv ]  && git add output/international_leads.csv
+          [ -f output/international_leads.done ] && git add output/international_leads.done
           git stash || true
           git pull --rebase origin main || true
           git stash pop || true
-          git add output/international_leads.csv output/international_leads.done 2>/dev/null || true
+          [ -f output/international_leads.csv ]  && git add output/international_leads.csv
+          [ -f output/international_leads.done ] && git add output/international_leads.done
           git diff --cached --quiet && echo "Nothing new to commit." || \
             git commit -m "chore: international leads — ${{ steps.country.outputs.country }} $(date '+%Y-%m-%d')"
           git push origin main || true
