@@ -54,7 +54,7 @@ jobs:
           GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: |
-          python clinic_scraper.py --max-searches 25
+          python clinic_scraper.py --max-searches 15
 
       - name: Commit progress
         if: always()
@@ -73,12 +73,18 @@ jobs:
           git push origin main || true
 
       - name: Trigger next batch (if not complete)
-        if: steps.check_done.outputs.complete != 'true'
+        # always() so this still fires even if the scrape step was killed by the job timeout
+        if: always() && steps.check_done.outputs.complete != 'true'
         run: |
-          DONE="${{ steps.check_done.outputs.done_count }}"
-          NEW_DONE=$((DONE + 25))
-          if [ "$NEW_DONE" -lt 750 ]; then
-            echo "Queuing next batch ($NEW_DONE / 750 will be done)…"
+          # Re-read the actual current count from disk (post-commit) rather than assuming
+          # a full batch completed — handles partial batches cut short by a timeout.
+          if [ -f output/clinic_leads.done ]; then
+            CURRENT=$(wc -l < output/clinic_leads.done | tr -d ' ')
+          else
+            CURRENT=0
+          fi
+          if [ "$CURRENT" -lt 750 ]; then
+            echo "Queuing next batch ($CURRENT / 750 done so far)…"
             curl -s -X POST \
               -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
               -H "Accept: application/vnd.github+json" \
