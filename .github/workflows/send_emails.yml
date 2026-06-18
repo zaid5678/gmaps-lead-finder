@@ -35,7 +35,7 @@ jobs:
         run: |
           python auto_emailer.py \
             --phase initial \
-            --limit 400 \
+            --limit 80 \
             --delay-min 60 \
             --delay-max 90
 

@@ -56,10 +56,11 @@ SMTP_SERVER  = "smtp.gmail.com"
 SMTP_PORT    = 587
 
 # Multi-account: set GMAIL_ACCOUNTS=email1:pass1,email2:pass2 in .env
-# Each account can send ~400/day safely. 3 accounts = ~1,200/day.
-DAILY_LIMIT_PER_ACCOUNT = 400
+# Each account can send ~80/day safely (with margin below Google's daily limit).
+# 3 accounts = ~240/day.
+DAILY_LIMIT_PER_ACCOUNT = 80
 
-DEFAULT_DELAY_MIN = 60   # seconds between emails — spreads 400 emails over ~8 hours
+DEFAULT_DELAY_MIN = 60   # seconds between emails — spreads 80 emails over ~1.5-2 hours
 DEFAULT_DELAY_MAX = 90
 
 INITIAL_TEMPLATE    = "initial"
@@ -912,7 +913,7 @@ examples:
     )
     p.add_argument("--delay-min", type=float, default=DEFAULT_DELAY_MIN, help=f"Min seconds between emails (default {DEFAULT_DELAY_MIN})")
     p.add_argument("--delay-max", type=float, default=DEFAULT_DELAY_MAX, help=f"Max seconds between emails (default {DEFAULT_DELAY_MAX})")
-    p.add_argument("--limit",     type=int, default=400, help="Max emails per run (default 400 — ~8hrs at 72s avg)")
+    p.add_argument("--limit",     type=int, default=80, help="Max emails per run (default 80 — stays under Google's daily limit with margin)")
     p.add_argument("--dry-run",   action="store_true",  help="Preview without sending")
     p.add_argument("--stats-only", action="store_true", help="Print campaign stats and exit")
     p.add_argument("--digest",    action="store_true",

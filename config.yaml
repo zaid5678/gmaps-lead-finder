@@ -12,7 +12,7 @@ outreach:
   delay_max: 12
   follow_up_1_after_days: 3    # send follow-up 1 this many days after initial
   follow_up_2_after_days: 7    # send follow-up 2 this many days after initial
-  daily_limit: 50              # max emails/day (Gmail free tier safe limit: ~100)
+  daily_limit: 80              # max emails/day — kept well under Google's daily sending limit
 
 scraper:
   # Per-source settings
