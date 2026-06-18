@@ -29,6 +29,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from daily_send_tracker import COMBINED_DAILY_LIMIT, record_send, remaining_quota
 from email_validation import has_valid_mx
 from playwright.sync_api import sync_playwright
 
@@ -182,6 +183,9 @@ def send_outreach_email(biz_dict: dict, gmail_user: str, app_pw: str, dry_run: b
     if not has_valid_mx(to_email):
         print(f"  ✗ Skipping {biz_dict.get('name','')} — {to_email} has no valid mail domain (likely typo in source listing)")
         return False
+    if remaining_quota() <= 0:
+        print(f"  ⏸ Queued {biz_dict.get('name','')} <{to_email}> — hit shared daily Gmail send limit ({COMBINED_DAILY_LIMIT})")
+        return False
 
     name         = biz_dict.get("name", "there")
     industry     = biz_dict.get("category", "business")
@@ -198,6 +202,7 @@ def send_outreach_email(biz_dict: dict, gmail_user: str, app_pw: str, dry_run: b
 
     try:
         _smtp_send(gmail_user, app_pw, to_email, subject, body)
+        record_send()
         print(f"  Emailed {name} <{to_email}>")
         return True
     except Exception as exc:

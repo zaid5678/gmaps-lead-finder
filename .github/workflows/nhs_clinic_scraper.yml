@@ -59,11 +59,13 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           [ -f output/nhs_clinic_leads.csv ]  && git add output/nhs_clinic_leads.csv
           [ -f output/nhs_clinic_leads.done ] && git add output/nhs_clinic_leads.done
+          [ -f output/daily_send_count.json ] && git add output/daily_send_count.json
           git stash || true
           git pull --rebase origin main || true
           git stash pop || true
           [ -f output/nhs_clinic_leads.csv ]  && git add output/nhs_clinic_leads.csv
           [ -f output/nhs_clinic_leads.done ] && git add output/nhs_clinic_leads.done
+          [ -f output/daily_send_count.json ] && git add output/daily_send_count.json
           git diff --cached --quiet && echo "Nothing new to commit." || \
             git commit -m "chore: NHS clinic leads — $(date '+%Y-%m-%d')"
           git push origin main || true

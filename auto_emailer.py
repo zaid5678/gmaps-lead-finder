@@ -44,6 +44,7 @@ try:
 except ImportError:
     pass
 
+from daily_send_tracker import record_send, remaining_quota
 from email_validation import has_valid_mx
 
 OUTPUT_DIR   = Path("output")
@@ -512,6 +513,10 @@ class _SingleSender:
         msg.attach(MIMEText(body, "plain", "utf-8"))
         self._server.sendmail(self.user, to, msg.as_string())
         self.sent_today += 1
+        # Also record against the tracker shared with clinic_scraper.py /
+        # nhs_clinic_scraper.py, which send from this same account outside
+        # of this process and need visibility into today's combined total.
+        record_send()
         return True
 
     def close(self):
@@ -527,7 +532,7 @@ class _SingleSender:
             self.connect()
 
     def at_limit(self) -> bool:
-        return self.sent_today >= DAILY_LIMIT_PER_ACCOUNT
+        return self.sent_today >= DAILY_LIMIT_PER_ACCOUNT or remaining_quota() <= 0
 
 
 class GmailSender:

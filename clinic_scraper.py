@@ -21,6 +21,7 @@ from zoneinfo import ZoneInfo
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 
+from daily_send_tracker import COMBINED_DAILY_LIMIT, record_send, remaining_quota
 from email_validation import has_valid_mx
 from scraper import (
     GoogleMapsScraper,
@@ -174,6 +175,9 @@ def send_outreach(biz_row: dict, gmail_user: str, app_pw: str) -> bool:
     if not has_valid_mx(to):
         print(f"  ✗ Skipping {biz_row.get('name','')} — {to} has no valid mail domain (likely typo in source listing)")
         return False
+    if remaining_quota() <= 0:
+        print(f"  ⏸ Queued {biz_row.get('name','')} <{to}> — hit shared daily Gmail send limit ({COMBINED_DAILY_LIMIT}), will send next run")
+        return False
     name     = biz_row.get("name", "the practice")
     city     = biz_row.get("city", "")
     cat      = biz_row.get("category", "")
@@ -191,6 +195,7 @@ def send_outreach(biz_row: dict, gmail_user: str, app_pw: str) -> bool:
             s.ehlo(); s.starttls(); s.ehlo()
             s.login(gmail_user, app_pw)
             s.sendmail(gmail_user, to, msg.as_string())
+        record_send()
         print(f"  ✓ Emailed {name} <{to}>")
         return True
     except Exception as exc:

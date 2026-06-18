@@ -29,6 +29,7 @@ from zoneinfo import ZoneInfo
 import requests
 from dotenv import load_dotenv
 
+from daily_send_tracker import COMBINED_DAILY_LIMIT, record_send, remaining_quota
 from email_validation import has_valid_mx
 
 load_dotenv()
@@ -163,6 +164,9 @@ def send_outreach(row: dict, gmail_user: str, app_pw: str) -> bool:
     if not has_valid_mx(to):
         print(f"  ✗ Skipping {row['name']} — {to} has no valid mail domain (likely typo in NHS listing)")
         return False
+    if remaining_quota() <= 0:
+        print(f"  ⏸ Queued {row['name']} <{to}> — hit shared daily Gmail send limit ({COMBINED_DAILY_LIMIT}), will send next run")
+        return False
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = _subject(row["name"], row["category"])
@@ -173,6 +177,7 @@ def send_outreach(row: dict, gmail_user: str, app_pw: str) -> bool:
             s.ehlo(); s.starttls(); s.ehlo()
             s.login(gmail_user, app_pw)
             s.sendmail(gmail_user, to, msg.as_string())
+        record_send()
         print(f"  ✓ Emailed {row['name']} <{to}>")
         return True
     except Exception as exc:
