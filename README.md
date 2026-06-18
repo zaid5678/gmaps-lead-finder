@@ -9,22 +9,22 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-16 15:41 UTC — 1043 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-18 13:13 UTC — 1050 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 190 | 110 | 176 |
 | Beauty Salon | 96 | 54 | 85 |
-| Bricklayer | 80 | 25 | 73 |
+| Bricklayer | 81 | 25 | 74 |
 | Carpenter | 55 | 20 | 54 |
 | Carpet Fitter | 33 | 28 | 32 |
-| Cleaner | 60 | 41 | 60 |
+| Cleaner | 61 | 42 | 61 |
 | Driving Instructor | 39 | 36 | 38 |
-| Dryliner | 40 | 30 | 35 |
+| Dryliner | 41 | 31 | 36 |
 | Electrician | 56 | 25 | 55 |
 | Floor Layer | 15 | 13 | 15 |
 | Gardener | 93 | 72 | 92 |
-| Gas Engineer | 16 | 10 | 15 |
+| Gas Engineer | 17 | 11 | 16 |
 | Glazier | 34 | 28 | 32 |
 | Groundworker | 53 | 31 | 44 |
 | Hairdresser | 90 | 57 | 85 |
@@ -33,18 +33,18 @@ _Last updated: 2026-06-16 15:41 UTC — 1043 confirmed leads (no website) across
 | Joiner | 21 | 16 | 21 |
 | Landscaper | 9 | 7 | 9 |
 | Locksmith | 16 | 14 | 16 |
-| Nail Salon | 154 | 100 | 149 |
+| Nail Salon | 155 | 101 | 150 |
 | Painter Decorator | 42 | 29 | 41 |
 | Paviour | 20 | 16 | 19 |
 | Plasterer | 63 | 40 | 58 |
-| Plumber | 75 | 30 | 74 |
+| Plumber | 76 | 31 | 75 |
 | Roofer | 85 | 14 | 81 |
-| Scaffolder | 39 | 24 | 39 |
+| Scaffolder | 40 | 25 | 40 |
 | Stone Mason | 15 | 9 | 15 |
 | Takeaway | 104 | 73 | 80 |
-| Tiler | 81 | 66 | 79 |
+| Tiler | 82 | 67 | 80 |
 | Window Fitter | 10 | 8 | 9 |
-| **Total** | **1710** | **1043** | **1606** |
+| **Total** | **1718** | **1050** | **1614** |
 
 ### All Leads (confirmed no website)
 
@@ -1093,8 +1093,15 @@ _Last updated: 2026-06-16 15:41 UTC — 1043 confirmed leads (no website) across
 | 1041 | Sindbad restaurant | Bournemouth | Takeaway | +44 7308 966561  |  |
 | 1042 | Bombay to Bournemouth (B2B) | Bournemouth | Takeaway | +44 7721 658063  |  |
 | 1043 | Flower School of Motoring | Middlesbrough | Driving Instructor | +44 7926 237558  |  |
+| 1044 | Westle Scaffolding | Exeter | Scaffolder | +44 1392 277188  |  |
+| 1045 | Honest Plumber Exeter | Exeter | Plumber | +44 1392 914052  |  |
+| 1046 | Andy Watson Plumbing & Gas Engineering | Guildford | Gas Engineer | +44 808 135 1655  |  |
+| 1047 | BWell Tiling | Exeter | Tiler | +44 7553 586581  |  |
+| 1048 | Lee Drake Plastering | Exeter | Dryliner | +44 7974 968697  |  |
+| 1049 | The Moss Nail Spa | Guildford | Nail Salon | +44 7564 022351  |  |
+| 1050 | PROMARK CLEANING | Guildford | Cleaner | +44 7512 564719  |  |
 
-_Emails sent:  / 1043_
+_Emails sent:  / 1050_
 <!-- LEADS_END -->
 
 ---
