@@ -1,0 +1,32 @@
+name: TEST DVSA Access
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install playwright
+      - run: playwright install chromium --with-deps
+      - name: Test DVSA site access
+        run: |
+          python3 -c "
+          from playwright.sync_api import sync_playwright
+          with sync_playwright() as pw:
+              browser = pw.chromium.launch(headless=True, args=['--disable-blink-features=AutomationControlled'])
+              ctx = browser.new_context(viewport={'width':1280,'height':800}, locale='en-GB')
+              page = ctx.new_page()
+              page.goto('https://finddrivinginstructor.dvsa.gov.uk/', timeout=30000, wait_until='domcontentloaded')
+              page.wait_for_timeout(8000)
+              print('TITLE:', page.title())
+              content = page.content()
+              print('LENGTH:', len(content))
+              print(content[:3000])
+              browser.close()
+          "
