@@ -1,0 +1,89 @@
+name: NHS Clinic Lead Scraper
+
+on:
+  workflow_dispatch: {}   # triggered once manually, self-triggers until done if needed
+
+jobs:
+  scrape-nhs-clinics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Check progress
+        id: check_done
+        run: |
+          TOTAL=26134
+          if [ -f output/nhs_clinic_leads.done ]; then
+            DONE=$(wc -l < output/nhs_clinic_leads.done | tr -d ' ')
+          else
+            DONE=0
+          fi
+          echo "done_count=$DONE" >> $GITHUB_OUTPUT
+          if [ "$DONE" -ge "$TOTAL" ]; then
+            echo "complete=true" >> $GITHUB_OUTPUT
+          else
+            echo "complete=false" >> $GITHUB_OUTPUT
+          fi
+          echo "$DONE / $TOTAL pages done so far."
+
+      - name: Scrape NHS directory
+        if: steps.check_done.outputs.complete != 'true'
+        env:
+          GMAIL_EMAIL: ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          python nhs_clinic_scraper.py --max-pages 27000
+
+      - name: Commit progress
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          [ -f output/nhs_clinic_leads.csv ]  && git add output/nhs_clinic_leads.csv
+          [ -f output/nhs_clinic_leads.done ] && git add output/nhs_clinic_leads.done
+          git stash || true
+          git pull --rebase origin main || true
+          git stash pop || true
+          [ -f output/nhs_clinic_leads.csv ]  && git add output/nhs_clinic_leads.csv
+          [ -f output/nhs_clinic_leads.done ] && git add output/nhs_clinic_leads.done
+          git diff --cached --quiet && echo "Nothing new to commit." || \
+            git commit -m "chore: NHS clinic leads — $(date '+%Y-%m-%d')"
+          git push origin main || true
+
+      - name: Trigger next batch (if not complete)
+        if: always() && steps.check_done.outputs.complete != 'true'
+        run: |
+          TOTAL=26134
+          if [ -f output/nhs_clinic_leads.done ]; then
+            CURRENT=$(wc -l < output/nhs_clinic_leads.done | tr -d ' ')
+          else
+            CURRENT=0
+          fi
+          if [ "$CURRENT" -lt "$TOTAL" ]; then
+            echo "Queuing next batch ($CURRENT / $TOTAL done so far)…"
+            curl -s -X POST \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -H "Accept: application/vnd.github+json" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/workflows/nhs_clinic_scraper.yml/dispatches" \
+              -d '{"ref":"main"}'
+          else
+            echo "All pages processed — done."
+          fi
