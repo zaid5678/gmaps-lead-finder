@@ -24,6 +24,7 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 from dotenv import load_dotenv
@@ -31,6 +32,14 @@ from dotenv import load_dotenv
 from email_validation import has_valid_mx
 
 load_dotenv()
+
+UK_TZ = ZoneInfo("Europe/London")
+
+
+def _within_business_hours() -> bool:
+    """Mon-Fri, 9am-5pm UK local time — outreach emails only go out during these hours."""
+    now = datetime.now(UK_TZ)
+    return now.weekday() < 5 and 9 <= now.hour < 17
 
 SITEMAPS = {
     "GP surgery":  "https://www.nhs.uk/sitemap-profiles-gp.xml",
@@ -247,6 +256,38 @@ def _append_row(row: dict):
         w.writerow(row)
 
 
+def _send_backlog(gmail_user: str, app_pw: str) -> int:
+    """Send any leads found in a previous run that were queued because it was
+    outside business hours at the time. Returns count sent."""
+    if not OUTPUT_CSV.exists():
+        return 0
+    with open(OUTPUT_CSV, newline="", encoding="utf-8") as f:
+        all_rows = list(csv.DictReader(f))
+
+    pending = [r for r in all_rows if r.get("email") and not r.get("outreach_sent")]
+    if not pending:
+        return 0
+
+    print(f"Sending {len(pending)} queued lead(s) from previous run(s)…")
+    sent_count = 0
+    for row in pending:
+        if not _within_business_hours():
+            print("  Ran out of business hours — remaining backlog will send next run.")
+            break
+        if send_outreach(row, gmail_user, app_pw):
+            row["outreach_sent"] = datetime.now().strftime("%Y-%m-%d")
+            sent_count += 1
+            time.sleep(5)
+
+    with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=FIELDNAMES, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(all_rows)
+
+    print(f"Backlog: {sent_count}/{len(pending)} sent.")
+    return sent_count
+
+
 # ─── Main ───────────────────────────────────────────────────────────────────
 
 def main():
@@ -259,6 +300,11 @@ def main():
     if not gmail_user or not app_pw:
         print("ERROR: GMAIL_EMAIL / GMAIL_APP_PASSWORD not set — aborting.")
         return
+
+    if _within_business_hours():
+        _send_backlog(gmail_user, app_pw)
+    else:
+        print("Outside business hours (Mon-Fri 9am-5pm UK) — skipping backlog send for now.")
 
     print("Fetching NHS sitemaps…")
     all_tasks = []
@@ -291,11 +337,14 @@ def main():
                 print(f"  ERROR fetching {url}: {exc}")
 
             if row and row["email"].lower() not in existing_emails:
-                sent = send_outreach(row, gmail_user, app_pw)
-                if sent:
-                    row["outreach_sent"] = datetime.now().strftime("%Y-%m-%d")
-                    emailed_rows.append(row)
-                    time.sleep(5)
+                if _within_business_hours():
+                    sent = send_outreach(row, gmail_user, app_pw)
+                    if sent:
+                        row["outreach_sent"] = datetime.now().strftime("%Y-%m-%d")
+                        emailed_rows.append(row)
+                        time.sleep(5)
+                else:
+                    print(f"  ⏸ Queued {row['name']} <{row['email']}> — outside business hours, will send next run")
                 _append_row(row)
                 session_rows.append(row)
                 existing_emails.add(row["email"].lower())
