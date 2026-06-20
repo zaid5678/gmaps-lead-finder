@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-18 13:13 UTC — 1050 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-20 13:10 UTC — 1057 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 190 | 110 | 176 |
-| Beauty Salon | 96 | 54 | 85 |
-| Bricklayer | 81 | 25 | 74 |
-| Carpenter | 55 | 20 | 54 |
-| Carpet Fitter | 33 | 28 | 32 |
+| Beauty Salon | 97 | 55 | 86 |
+| Bricklayer | 83 | 25 | 76 |
+| Carpenter | 56 | 20 | 55 |
+| Carpet Fitter | 35 | 28 | 34 |
 | Cleaner | 61 | 42 | 61 |
-| Driving Instructor | 39 | 36 | 38 |
+| Driving Instructor | 40 | 37 | 39 |
 | Dryliner | 41 | 31 | 36 |
 | Electrician | 56 | 25 | 55 |
-| Floor Layer | 15 | 13 | 15 |
-| Gardener | 93 | 72 | 92 |
+| Floor Layer | 17 | 13 | 17 |
+| Gardener | 94 | 73 | 93 |
 | Gas Engineer | 17 | 11 | 16 |
-| Glazier | 34 | 28 | 32 |
-| Groundworker | 53 | 31 | 44 |
+| Glazier | 35 | 28 | 33 |
+| Groundworker | 54 | 31 | 45 |
 | Hairdresser | 90 | 57 | 85 |
 | Heating Engineer | 11 | 6 | 11 |
 | Hvac Engineer | 15 | 11 | 14 |
-| Joiner | 21 | 16 | 21 |
+| Joiner | 22 | 16 | 22 |
 | Landscaper | 9 | 7 | 9 |
 | Locksmith | 16 | 14 | 16 |
-| Nail Salon | 155 | 101 | 150 |
-| Painter Decorator | 42 | 29 | 41 |
-| Paviour | 20 | 16 | 19 |
-| Plasterer | 63 | 40 | 58 |
+| Nail Salon | 156 | 102 | 151 |
+| Painter Decorator | 44 | 29 | 43 |
+| Paviour | 22 | 18 | 20 |
+| Plasterer | 64 | 40 | 59 |
 | Plumber | 76 | 31 | 75 |
 | Roofer | 85 | 14 | 81 |
 | Scaffolder | 40 | 25 | 40 |
-| Stone Mason | 15 | 9 | 15 |
-| Takeaway | 104 | 73 | 80 |
+| Stone Mason | 16 | 9 | 16 |
+| Takeaway | 105 | 74 | 81 |
 | Tiler | 82 | 67 | 80 |
 | Window Fitter | 10 | 8 | 9 |
-| **Total** | **1718** | **1050** | **1614** |
+| **Total** | **1739** | **1057** | **1634** |
 
 ### All Leads (confirmed no website)
 
@@ -1100,8 +1100,15 @@ _Last updated: 2026-06-18 13:13 UTC — 1050 confirmed leads (no website) across
 | 1048 | Lee Drake Plastering | Exeter | Dryliner | +44 7974 968697  |  |
 | 1049 | The Moss Nail Spa | Guildford | Nail Salon | +44 7564 022351  |  |
 | 1050 | PROMARK CLEANING | Guildford | Cleaner | +44 7512 564719  |  |
+| 1051 | Paving Paradise Ltd | Liverpool | Paviour | — |  |
+| 1052 | FourCourt paving landscaping | Edinburgh | Paviour | +44 7778 989461  |  |
+| 1053 | https://nailexpressspa.loviebooking.co.uk | Liverpool | Nail Salon | +44 151 708 7442  |  |
+| 1054 | The Beautyworks by Sarah Louise ltd | Liverpool | Beauty Salon | +44 7850 276123  |  |
+| 1055 | Noodles Home | Edinburgh | Takeaway | +44 131 563 1488  |  |
+| 1056 | Jolly Goodfellows Gardening | Bristol | Gardener | +44 7913 908428  |  |
+| 1057 | Andrew’s Driving Instruction | Bristol | Driving Instructor | +44 7884 063150  |  |
 
-_Emails sent:  / 1050_
+_Emails sent:  / 1057_
 <!-- LEADS_END -->
 
 ---
