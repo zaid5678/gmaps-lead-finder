@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-20 13:10 UTC — 1057 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-21 14:18 UTC — 1175 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 190 | 110 | 176 |
-| Beauty Salon | 97 | 55 | 86 |
-| Bricklayer | 83 | 25 | 76 |
-| Carpenter | 56 | 20 | 55 |
-| Carpet Fitter | 35 | 28 | 34 |
+| Barber | 198 | 118 | 182 |
+| Beauty Salon | 98 | 56 | 86 |
+| Bricklayer | 96 | 27 | 89 |
+| Carpenter | 62 | 22 | 61 |
+| Carpet Fitter | 42 | 35 | 41 |
 | Cleaner | 61 | 42 | 61 |
-| Driving Instructor | 40 | 37 | 39 |
-| Dryliner | 41 | 31 | 36 |
-| Electrician | 56 | 25 | 55 |
-| Floor Layer | 17 | 13 | 17 |
-| Gardener | 94 | 73 | 93 |
-| Gas Engineer | 17 | 11 | 16 |
-| Glazier | 35 | 28 | 33 |
-| Groundworker | 54 | 31 | 45 |
-| Hairdresser | 90 | 57 | 85 |
-| Heating Engineer | 11 | 6 | 11 |
-| Hvac Engineer | 15 | 11 | 14 |
-| Joiner | 22 | 16 | 22 |
-| Landscaper | 9 | 7 | 9 |
-| Locksmith | 16 | 14 | 16 |
-| Nail Salon | 156 | 102 | 151 |
-| Painter Decorator | 44 | 29 | 43 |
-| Paviour | 22 | 18 | 20 |
-| Plasterer | 64 | 40 | 59 |
-| Plumber | 76 | 31 | 75 |
+| Driving Instructor | 44 | 41 | 41 |
+| Dryliner | 48 | 38 | 43 |
+| Electrician | 59 | 28 | 58 |
+| Floor Layer | 19 | 15 | 19 |
+| Gardener | 97 | 76 | 96 |
+| Gas Engineer | 19 | 13 | 18 |
+| Glazier | 42 | 35 | 40 |
+| Groundworker | 61 | 38 | 50 |
+| Hairdresser | 91 | 58 | 86 |
+| Heating Engineer | 15 | 10 | 15 |
+| Hvac Engineer | 17 | 13 | 16 |
+| Joiner | 26 | 20 | 26 |
+| Landscaper | 11 | 9 | 11 |
+| Locksmith | 20 | 18 | 20 |
+| Nail Salon | 158 | 104 | 152 |
+| Painter Decorator | 49 | 34 | 48 |
+| Paviour | 27 | 23 | 23 |
+| Plasterer | 71 | 47 | 66 |
+| Plumber | 77 | 32 | 76 |
 | Roofer | 85 | 14 | 81 |
-| Scaffolder | 40 | 25 | 40 |
-| Stone Mason | 16 | 9 | 16 |
-| Takeaway | 105 | 74 | 81 |
-| Tiler | 82 | 67 | 80 |
-| Window Fitter | 10 | 8 | 9 |
-| **Total** | **1739** | **1057** | **1634** |
+| Scaffolder | 50 | 35 | 49 |
+| Stone Mason | 19 | 12 | 18 |
+| Takeaway | 107 | 76 | 83 |
+| Tiler | 91 | 76 | 89 |
+| Window Fitter | 12 | 10 | 11 |
+| **Total** | **1872** | **1175** | **1755** |
 
 ### All Leads (confirmed no website)
 
@@ -1107,8 +1107,126 @@ _Last updated: 2026-06-20 13:10 UTC — 1057 confirmed leads (no website) across
 | 1055 | Noodles Home | Edinburgh | Takeaway | +44 131 563 1488  |  |
 | 1056 | Jolly Goodfellows Gardening | Bristol | Gardener | +44 7913 908428  |  |
 | 1057 | Andrew’s Driving Instruction | Bristol | Driving Instructor | +44 7884 063150  |  |
+| 1058 | PHB JOINERY | Newcastle | Carpenter | +44 7709 444542  |  |
+| 1059 | LMJ Brickwork & Build | Cardiff | Bricklayer | +44 7469 997542  |  |
+| 1060 | Bricks layers Cardiff | Cardiff | Bricklayer | +44 7831 822250  |  |
+| 1061 | GY Joinery | Newcastle | Joiner | +44 7934 260742  |  |
+| 1062 | Jon Butler Property Maintenance & Repair | Nottingham | Carpenter | +44 7540 878506  |  |
+| 1063 | JG Joinery Sheffield | Sheffield | Joiner | +44 7850 378670  |  |
+| 1064 | A M B Joinery & Building services | Sheffield | Joiner | +44 7722 660774  |  |
+| 1065 | BDS Joinery Services | Sheffield | Joiner | +44 7766 741785  |  |
+| 1066 | BC SCAFFOLD LLP | Sheffield | Scaffolder | +44 7717 495775  |  |
+| 1067 | Baldwin Scaffolding Limited | Newcastle | Scaffolder | +44 7858 588116  |  |
+| 1068 | Shark Scaffold | Newcastle | Scaffolder | +44 7557 967630  |  |
+| 1069 | Rogers Scaffolding | Newcastle | Scaffolder | +44 7385 633387  |  |
+| 1070 | Savage Scaffolding Solutions | Newcastle | Scaffolder | +44 7453 202561  |  |
+| 1071 | Add violet scaffolding | Nottingham | Scaffolder | +44 7877 572706  |  |
+| 1072 | Diamond Scaffolding Services (Nottingham) Ltd | Nottingham | Scaffolder | +44 7957 168884  |  |
+| 1073 | Height Solutions Scaffolding | Nottingham | Scaffolder | — |  |
+| 1074 | jrose groundworks ltd | Newcastle | Groundworker | +44 7730 458242  |  |
+| 1075 | Chapelpark Groundworks | Newcastle | Groundworker | +44 191 264 7190  |  |
+| 1076 | JAB Scaffolding Ltd | Cardiff | Scaffolder | +44 7866 633593  |  |
+| 1077 | Don Scaffolding | Cardiff | Scaffolder | +44 7837 132939  |  |
+| 1078 | G S S Groundworks | Sheffield | Groundworker | +44 7710 158778  |  |
+| 1079 | SH Groundwork | Nottingham | Groundworker | — |  |
+| 1080 | AMB Groundwork & Development | Cardiff | Groundworker | +44 29 2000 2770  |  |
+| 1081 | S E S Groundworks | Cardiff | Groundworker | +44 7708 591839  |  |
+| 1082 | Jw Groundworks | Cardiff | Groundworker | — |  |
+| 1083 | Steel City Electrics Ltd | Sheffield | Electrician | +44 7936 498907  |  |
+| 1084 | Aurum Electrical Contractors | Newcastle | Electrician | +44 7908 531983  |  |
+| 1085 | Parkers Electrical Services | Newcastle | Electrician | +44 7943 841146  |  |
+| 1086 | M.M Plumbing Heating Engineer & Electrical Service Ltd. | Newcastle | Plumber | +44 7447 868628  |  |
+| 1087 | React Boiler Repair | Sheffield | Heating Engineer | +44 7540 582986  |  |
+| 1088 | Progas heating & plumbing services ltd | Nottingham | Heating Engineer | +44 7503 726428  |  |
+| 1089 | Notts Heating & Plumbing | Nottingham | Heating Engineer | +44 7825 216535  |  |
+| 1090 | Redbrick Plumbing and Heating Cardiff | Cardiff | Heating Engineer | +44 7490 279866  |  |
+| 1091 | Crystallized plumbing and heating gas safe | Cardiff | Gas Engineer | +44 7480 221787  |  |
+| 1092 | United Gas Engineering | Nottingham | Gas Engineer | +44 7576 230706  |  |
+| 1093 | J.O. & R.H. Baird Welding & Engineering | Newcastle | Hvac Engineer | +44 191 265 5538  |  |
+| 1094 | Heat2cool Engineering Ltd | Cardiff | Hvac Engineer | +44 29 2037 2147  |  |
+| 1095 | MJN northeast plastering | Newcastle | Plasterer | +44 7715 930518  |  |
+| 1096 | Smoothest Plastering | Newcastle | Plasterer | +44 7963 238892  |  |
+| 1097 | V&D plastering and painting | Newcastle | Plasterer | +44 7467 216111  |  |
+| 1098 | S Hartley Plastering | Sheffield | Plasterer | +44 7900 421941  |  |
+| 1099 | JSL PLASTERING | Sheffield | Plasterer | +44 7921 565766  |  |
+| 1100 | Daniel Begley Plastering | Sheffield | Plasterer | +44 7762 270577  |  |
+| 1101 | D.A.PLASTERING | Sheffield | Plasterer | +44 7707 716484  |  |
+| 1102 | J R INTERIORS PAINTING AND DECORATING SHEFFIELD | Sheffield | Painter Decorator | +44 7842 213630  |  |
+| 1103 | AJS Decorating Services | Newcastle | Painter Decorator | +44 7921 437893  |  |
+| 1104 | Visi Painter and Decorator LTD | Nottingham | Painter Decorator | +44 7706 034106  |  |
+| 1105 | S B PAINTING & DECORATING CARDIFF | Cardiff | Painter Decorator | +44 7966 280340  |  |
+| 1106 | Fresh Finish Decorators | Cardiff | Painter Decorator | +44 7538 452178  |  |
+| 1107 | J & M Tiling | Sheffield | Tiler | +44 7854 001860  |  |
+| 1108 | Sheffield Tilers - Marsden Tiling | Sheffield | Tiler | +44 7717 334848  |  |
+| 1109 | Newcastle Pro Tiling | Newcastle | Tiler | +44 7398 532056  |  |
+| 1110 | P Hindes. Quality tiling | Newcastle | Tiler | +44 7718 617929  |  |
+| 1111 | Wasim Tiler | Newcastle | Tiler | +44 7309 684041  |  |
+| 1112 | Contact Tiling Nottingham | Nottingham | Tiler | +44 7707 520032  |  |
+| 1113 | Complete Dry Lining Supplies | Sheffield | Dryliner | +44 114 233 6554  |  |
+| 1114 | SGR Tiling & Landscaping | Cardiff | Tiler | +44 7794 130107  |  |
+| 1115 | Tilers In Cardiff - Tile & Stone Flooring | Cardiff | Tiler | +44 7969 894950  |  |
+| 1116 | Cardiff Pro Tiling | Cardiff | Tiler | +44 7879 341899  |  |
+| 1117 | Bond Plastering and Drylining | Cardiff | Dryliner | +44 7814 529000  |  |
+| 1118 | CRC Drylining and partitions | Cardiff | Dryliner | +44 7506 134169  |  |
+| 1119 | Precision Plastering & Dry Lining | Nottingham | Dryliner | +44 7305 110382  |  |
+| 1120 | Fort Knox Drylining & Plastering LTD | Nottingham | Dryliner | +44 7497 182060  |  |
+| 1121 | Colway Joinery & Drylining | Nottingham | Dryliner | +44 1623 405694  |  |
+| 1122 | Real Deal Plastering | Nottingham | Dryliner | +44 7852 343138  |  |
+| 1123 | D&L Flooring | Newcastle | Floor Layer | +44 7404 690098  |  |
+| 1124 | 3rd Generation Flooring - Carpet Fitter Nottingham | Nottingham | Floor Layer | +44 7874 879444  |  |
+| 1125 | Abbeydale Carpets & Flooring | Sheffield | Carpet Fitter | +44 114 258 7555  |  |
+| 1126 | Tyne carpets and beds limited | Newcastle | Carpet Fitter | +44 7401 077914  |  |
+| 1127 | Northumberland Carpet Fitting | Newcastle | Carpet Fitter | +44 7842 996123  |  |
+| 1128 | K F Carpet Fitting | Newcastle | Carpet Fitter | +44 7706 789464  |  |
+| 1129 | J.D Carpet Fitting | Newcastle | Carpet Fitter | +44 7927 511561  |  |
+| 1130 | Alpha Carpet Services | Cardiff | Carpet Fitter | +44 7857 884187  |  |
+| 1131 | Prestige Carpet Fitters Nottingham | Nottingham | Carpet Fitter | +44 7467 535814  |  |
+| 1132 | Darrel Clarke Glazing Services | Sheffield | Glazier | +44 7725 817374  |  |
+| 1133 | Benchmark Glazing Services Ltd | Sheffield | Glazier | +44 114 248 5168  |  |
+| 1134 | Sanderson's Glass & Glazing | Sheffield | Glazier | +44 7834 835787  |  |
+| 1135 | Morton Glaziers / Double Glazing Unit Replacements | Newcastle | Glazier | +44 7910 420039  |  |
+| 1136 | Morton Glaziers | Newcastle | Glazier | +44 7910 420039  |  |
+| 1137 | David Laing Windows | Newcastle | Glazier | +44 7885 168964  |  |
+| 1138 | UPVC Repair Newcastle | Newcastle | Glazier | +44 7971 275780  |  |
+| 1139 | T L Window Services | Newcastle | Window Fitter | +44 191 264 9562  |  |
+| 1140 | S J Edwards Installations | Cardiff | Window Fitter | +44 7800 535893  |  |
+| 1141 | Notts Landscapes | Nottingham | Landscaper | +44 7552 871195  |  |
+| 1142 | James Linley & Son Ltd. | Sheffield | Stone Mason | — |  |
+| 1143 | Redden Groundworks & Landscaping | Newcastle | Landscaper | +44 7720 276490  |  |
+| 1144 | Brendan Locksmith Burngreave | Sheffield | Locksmith | +44 20 4628 3366  |  |
+| 1145 | Master locksmith | Newcastle | Locksmith | +44 7311 707704  |  |
+| 1146 | Cardiff Stone Masonry Ltd. | Cardiff | Stone Mason | +44 29 2030 7939  |  |
+| 1147 | Byron Jenkins Stonemasonry | Cardiff | Stone Mason | +44 7855 775437  |  |
+| 1148 | Sheffield Paving | Sheffield | Paviour | +44 114 239 8139  |  |
+| 1149 | Car Key Doc | Nottingham | Locksmith | +44 7526 581212  |  |
+| 1150 | Ferrell Locksmiths West Bridgford | Nottingham | Locksmith | +44 7728 409812  |  |
+| 1151 | The Original Dutch Paviour | Newcastle | Paviour | +44 191 251 5275  |  |
+| 1152 | Paving Newcastle | Newcastle | Paviour | +44 191 651 0016  |  |
+| 1153 | Pavior Road (Stop BW28) | Nottingham | Paviour | — |  |
+| 1154 | Dene Barbers | Newcastle | Barber | +44 7585 358584  |  |
+| 1155 | ZK BARBER | Newcastle | Barber | +44 7447 350435  |  |
+| 1156 | Cardiff City Paving Ltd | Cardiff | Paviour | — |  |
+| 1157 | City Cuts Barbers | Nottingham | Barber | +44 7429 479684  |  |
+| 1158 | Top Cut Barber | Sheffield | Barber | +44 7308 632099  |  |
+| 1159 | Kurd Cuts | Cardiff | Barber | +44 7361 617359  |  |
+| 1160 | A-Z Barbers | Cardiff | Barber | +44 7404 668913  |  |
+| 1161 | Babylon 2 Barbers | Cardiff | Barber | — |  |
+| 1162 | Route66 Barbershop | Cardiff | Barber | — |  |
+| 1163 | Sals cut and weave | Sheffield | Beauty Salon | — |  |
+| 1164 | Hanabi(Nail & Beauty) | Newcastle | Nail Salon | — |  |
+| 1165 | Queen Nails Under new managment still OPEN in NEW PAGE | Newcastle | Nail Salon | +44 7378 186980  |  |
+| 1166 | Maz Hairdressers &Grooming | Nottingham | Hairdresser | +44 7717 117859  |  |
+| 1167 | Mumtaz Fast Food | Newcastle | Takeaway | +44 191 273 1222  |  |
+| 1168 | Notts Grillix Kebab | Nottingham | Takeaway | +44 7466 124939  |  |
+| 1169 | Midlands Garden Care & Services | Nottingham | Gardener | +44 7787 932932  |  |
+| 1170 | M J Gardening | Sheffield | Gardener | +44 114 245 2113  |  |
+| 1171 | Mac's Gardens | Cardiff | Gardener | +44 7769 299447  |  |
+| 1172 | Automatic Driving Instructor - Sheffield | Sheffield | Driving Instructor | — |  |
+| 1173 | Pass With The Best Driving School | Newcastle | Driving Instructor | — |  |
+| 1174 | Pinnacle Driving School | Cardiff | Driving Instructor | +44 7956 412350  |  |
+| 1175 | AGM Driving School, Cardiff | Cardiff | Driving Instructor | +44 7852 493966  |  |
 
-_Emails sent:  / 1057_
+_Emails sent:  / 1175_
 <!-- LEADS_END -->
 
 ---
