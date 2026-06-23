@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-21 14:18 UTC — 1175 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-23 14:18 UTC — 1277 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 198 | 118 | 182 |
+| Barber | 199 | 119 | 182 |
 | Beauty Salon | 98 | 56 | 86 |
-| Bricklayer | 96 | 27 | 89 |
-| Carpenter | 62 | 22 | 61 |
-| Carpet Fitter | 42 | 35 | 41 |
-| Cleaner | 61 | 42 | 61 |
-| Driving Instructor | 44 | 41 | 41 |
-| Dryliner | 48 | 38 | 43 |
+| Bricklayer | 107 | 31 | 100 |
+| Carpenter | 75 | 22 | 74 |
+| Carpet Fitter | 51 | 44 | 49 |
+| Cleaner | 62 | 43 | 62 |
+| Driving Instructor | 48 | 45 | 45 |
+| Dryliner | 54 | 44 | 49 |
 | Electrician | 59 | 28 | 58 |
-| Floor Layer | 19 | 15 | 19 |
+| Floor Layer | 23 | 19 | 23 |
 | Gardener | 97 | 76 | 96 |
-| Gas Engineer | 19 | 13 | 18 |
-| Glazier | 42 | 35 | 40 |
-| Groundworker | 61 | 38 | 50 |
-| Hairdresser | 91 | 58 | 86 |
-| Heating Engineer | 15 | 10 | 15 |
-| Hvac Engineer | 17 | 13 | 16 |
-| Joiner | 26 | 20 | 26 |
-| Landscaper | 11 | 9 | 11 |
-| Locksmith | 20 | 18 | 20 |
-| Nail Salon | 158 | 104 | 152 |
-| Painter Decorator | 49 | 34 | 48 |
-| Paviour | 27 | 23 | 23 |
-| Plasterer | 71 | 47 | 66 |
-| Plumber | 77 | 32 | 76 |
+| Gas Engineer | 25 | 19 | 24 |
+| Glazier | 53 | 46 | 51 |
+| Groundworker | 67 | 39 | 56 |
+| Hairdresser | 94 | 61 | 89 |
+| Heating Engineer | 19 | 14 | 19 |
+| Hvac Engineer | 18 | 14 | 17 |
+| Joiner | 30 | 20 | 29 |
+| Landscaper | 13 | 11 | 13 |
+| Locksmith | 24 | 22 | 24 |
+| Nail Salon | 160 | 106 | 154 |
+| Painter Decorator | 59 | 44 | 58 |
+| Paviour | 28 | 24 | 24 |
+| Plasterer | 79 | 55 | 74 |
+| Plumber | 78 | 33 | 76 |
 | Roofer | 85 | 14 | 81 |
-| Scaffolder | 50 | 35 | 49 |
-| Stone Mason | 19 | 12 | 18 |
+| Scaffolder | 56 | 35 | 55 |
+| Stone Mason | 23 | 16 | 22 |
 | Takeaway | 107 | 76 | 83 |
-| Tiler | 91 | 76 | 89 |
-| Window Fitter | 12 | 10 | 11 |
-| **Total** | **1872** | **1175** | **1755** |
+| Tiler | 105 | 90 | 102 |
+| Window Fitter | 13 | 11 | 12 |
+| **Total** | **2009** | **1277** | **1887** |
 
 ### All Leads (confirmed no website)
 
@@ -1225,8 +1225,110 @@ _Last updated: 2026-06-21 14:18 UTC — 1175 confirmed leads (no website) across
 | 1173 | Pass With The Best Driving School | Newcastle | Driving Instructor | — |  |
 | 1174 | Pinnacle Driving School | Cardiff | Driving Instructor | +44 7956 412350  |  |
 | 1175 | AGM Driving School, Cardiff | Cardiff | Driving Instructor | +44 7852 493966  |  |
+| 1176 | D.A.H brickwork & groundwork | Stoke | Bricklayer | +44 7515 161112  |  |
+| 1177 | Hessle Brickwork Construction Ltd | Hull | Bricklayer | +44 1482 629608  |  |
+| 1178 | Square Line | Hull | Bricklayer | +44 1482 377543  |  |
+| 1179 | MTB Building Services LTD | Wolverhampton | Bricklayer | +44 7599 648088  |  |
+| 1180 | D&M Groundworks Ltd | Derby | Groundworker | +44 1332 518467  |  |
+| 1181 | Stoke on trent plumbing services | Stoke | Plumber | — |  |
+| 1182 | JME HEATING SOLUTIONS | Stoke | Heating Engineer | +44 7756 518118  |  |
+| 1183 | AMJ Gas & Heating Services. | Stoke | Heating Engineer | +44 7907 593880  |  |
+| 1184 | Domestic Gas Heating | Wolverhampton | Heating Engineer | +44 7930 481531  |  |
+| 1185 | Professional Heating Solutions | Derby | Heating Engineer | +44 1332 585354  |  |
+| 1186 | The Gas Company (UK) LTD | Hull | Gas Engineer | +44 1482 474646  |  |
+| 1187 | JC Gas Plumbing & Heating Limited | Stoke | Gas Engineer | +44 7380 346669  |  |
+| 1188 | Potteries Gas Services | Stoke | Gas Engineer | +44 1782 312412  |  |
+| 1189 | Meta Gas Ltd | Stoke | Gas Engineer | +44 7572 799485  |  |
+| 1190 | That Gas Guy | Wolverhampton | Gas Engineer | +44 800 016684  |  |
+| 1191 | Gms Gas engineers. | Derby | Gas Engineer | +44 7530 795527  |  |
+| 1192 | Stratton Oakmount Mechanical Engineering LTD | Stoke | Hvac Engineer | +44 7709 394344  |  |
+| 1193 | Neil's Plastering Service | Hull | Plasterer | +44 7914 731865  |  |
+| 1194 | Elite Plastering Hull | Hull | Plasterer | +44 7500 566484  |  |
+| 1195 | RenderBuild | Wolverhampton | Plasterer | +44 7847 715551  |  |
+| 1196 | JSW Plastering and Rendering Services | Derby | Plasterer | +44 7494 286921  |  |
+| 1197 | D S Silicone Rendering LTD | Derby | Plasterer | +44 7791 234993  |  |
+| 1198 | Oakwood Plastering Services | Derby | Plasterer | +44 1332 830296  |  |
+| 1199 | SGS Plastering Services | Derby | Plasterer | +44 7860 878943  |  |
+| 1200 | RLM PLASTERING | Derby | Plasterer | +44 7748 173211  |  |
+| 1201 | Blue Decorating Services | Hull | Painter Decorator | +44 7523 966205  |  |
+| 1202 | EJW Decorators | Hull | Painter Decorator | +44 7896 872588  |  |
+| 1203 | Canes Decorators | Hull | Painter Decorator | +44 7843 147036  |  |
+| 1204 | N.Lyons Painting & Decorating | Hull | Painter Decorator | +44 7930 858765  |  |
+| 1205 | Perfect Painters | Stoke | Painter Decorator | +44 7761 989936  |  |
+| 1206 | She's Painting | Stoke | Painter Decorator | +44 7947 173797  |  |
+| 1207 | DW Decorating | Derby | Painter Decorator | +44 7944 999628  |  |
+| 1208 | Darren Hulme painter and decorator | Wolverhampton | Painter Decorator | +44 7729 930027  |  |
+| 1209 | Robertos Painters and Decorators | Wolverhampton | Painter Decorator | +44 7767 197774  |  |
+| 1210 | Palm Tree Home Improvements LTD | Wolverhampton | Painter Decorator | +44 7765 139728  |  |
+| 1211 | Hykeham tiling services | Hull | Tiler | +44 1964 781842  |  |
+| 1212 | J.winter tiling | Hull | Tiler | — |  |
+| 1213 | Tiling Smart | Derby | Tiler | +44 7830 395914  |  |
+| 1214 | Derby Tiler for all wall and floor Tiling | Derby | Tiler | +44 7891 149635  |  |
+| 1215 | My_Tiler | Derby | Tiler | +44 7784 179358  |  |
+| 1216 | Hull Plastering Services | Hull | Dryliner | +44 7891 863659  |  |
+| 1217 | Ri’s Plastering and Drylining | Hull | Dryliner | +44 7383 882283  |  |
+| 1218 | A.K Tiling Staffordshire | Stoke | Tiler | +44 7817 133847  |  |
+| 1219 | Majestic Tiling Stoke | Stoke | Tiler | +44 7784 133987  |  |
+| 1220 | STL Stoke tiling and landscaping | Stoke | Tiler | +44 7484 775482  |  |
+| 1221 | Staffordshire Kiln Tiling | Stoke | Tiler | +44 7548 119467  |  |
+| 1222 | Bailey and Hodson Wall and Floor Tiling Limited | Stoke | Tiler | +44 7849 094928  |  |
+| 1223 | Khalsa Tiles | Wolverhampton | Tiler | +44 1902 453900  |  |
+| 1224 | TKS Tiling Services | Wolverhampton | Tiler | +44 1902 682322  |  |
+| 1225 | painter decorator and tiler | Wolverhampton | Tiler | +44 7884 935195  |  |
+| 1226 | Stoneworks Tiling | Wolverhampton | Tiler | +44 7702 683532  |  |
+| 1227 | Dryfix Wolverhampton | Wolverhampton | Dryliner | +44 7719 496669  |  |
+| 1228 | DM Plastering & Dry Liner | Stoke | Dryliner | +44 7368 266592  |  |
+| 1229 | Staffordshire Dry Stone Walling | Stoke | Dryliner | +44 7497 212844  |  |
+| 1230 | HS Plastering & Dry Lining | Stoke | Dryliner | +44 1332 833044  |  |
+| 1231 | Grand Flooring | Wolverhampton | Floor Layer | +44 1902 495559  |  |
+| 1232 | MJW Flooring Specialists | Stoke | Floor Layer | +44 7807 003928  |  |
+| 1233 | FLOORSTORE Staffordshire | Stoke | Floor Layer | +44 7438 791514  |  |
+| 1234 | Floor It Stoke Ltd | Stoke | Floor Layer | +44 1538 750439  |  |
+| 1235 | Smallthorne Carpets & Flooring | Stoke | Carpet Fitter | +44 1782 835763  |  |
+| 1236 | L & M Carpets | Stoke | Carpet Fitter | +44 1782 312830  |  |
+| 1237 | Carmount Carpets | Stoke | Carpet Fitter | +44 1782 461375  |  |
+| 1238 | Chris Lee Carpet Fitting Service | Hull | Carpet Fitter | +44 7860 123015  |  |
+| 1239 | Hull Carpet & Floor Design | Hull | Carpet Fitter | — |  |
+| 1240 | Dean Gwatkin Carpet Fitter Carpets and Vinyl | Hull | Carpet Fitter | +44 7944 904531  |  |
+| 1241 | Sanders Gary | Wolverhampton | Carpet Fitter | +44 7966 218637  |  |
+| 1242 | Keens Carpets | Wolverhampton | Carpet Fitter | +44 7702 584943  |  |
+| 1243 | Royal Carpets | Wolverhampton | Carpet Fitter | +44 1902 736327  |  |
+| 1244 | DISCOUNT GLASS(HULL) | Hull | Glazier | +44 1482 326764  |  |
+| 1245 | Allclear Glass & Glazing | Hull | Glazier | +44 1482 228502  |  |
+| 1246 | BS Glazing. | Stoke | Glazier | +44 7591 416500  |  |
+| 1247 | Glass-Mart | Stoke | Glazier | +44 70 9306 6131  |  |
+| 1248 | Bushbury Glass Ltd | Wolverhampton | Glazier | +44 1902 305597  |  |
+| 1249 | Whitmore Reans Glass | Wolverhampton | Glazier | +44 7960 401670  |  |
+| 1250 | Codsall Glass Centre | Wolverhampton | Glazier | +44 1902 847126  |  |
+| 1251 | Giles T Glazing Ltd | Wolverhampton | Glazier | +44 1902 453588  |  |
+| 1252 | MSJ Double Glazing | Derby | Glazier | +44 7455 554544  |  |
+| 1253 | Mickleover Glass & Glazing | Derby | Glazier | +44 7779 603435  |  |
+| 1254 | City Glass (UK) Ltd | Derby | Glazier | +44 1332 369500  |  |
+| 1255 | Wolverhampton windows and doors ltd | Wolverhampton | Window Fitter | +44 7879 790089  |  |
+| 1256 | Bull Landscapes ltd | Stoke | Landscaper | +44 7830 314740  |  |
+| 1257 | jw & s landscaping patios | Wolverhampton | Landscaper | +44 7348 389021  |  |
+| 1258 | S A Lockett & Son Ltd | Wolverhampton | Stone Mason | +44 1902 751825  |  |
+| 1259 | peace of mind memorials | Hull | Stone Mason | +44 7719 723276  |  |
+| 1260 | Hamilton Stonemasons Ltd | Stoke | Stone Mason | +44 7866 613300  |  |
+| 1261 | Moorside Memorials | Stoke | Stone Mason | +44 1782 522242  |  |
+| 1262 | The Hull Key Centre Ltd | Hull | Locksmith | +44 1482 443123  |  |
+| 1263 | Locked Out Locksmiths | Derby | Locksmith | +44 330 010 1019  |  |
+| 1264 | Derby And Son Lockmsith | Derby | Locksmith | +44 7782 689632  |  |
+| 1265 | Response Locksmiths | Derby | Locksmith | +44 20 4603 9367  |  |
+| 1266 | Dave The Pave Wolverhampton | Wolverhampton | Paviour | +44 7980 800400  |  |
+| 1267 | FİRST CLASS TURKISH BARBER | Hull | Barber | — |  |
+| 1268 | Stoke Nails | Stoke | Nail Salon | +44 1782 219199  |  |
+| 1269 | Nail Studio 21 | Wolverhampton | Nail Salon | +44 7903 421234  |  |
+| 1270 | Indulgence Hair Studio | Hull | Hairdresser | +44 1482 226417  |  |
+| 1271 | Riverside Salon | Hull | Hairdresser | +44 1482 320172  |  |
+| 1272 | The No 1 Lounge | Stoke | Hairdresser | +44 1782 333397  |  |
+| 1273 | BlueSpark Cleaning Limited | Stoke | Cleaner | +44 7407 774668  |  |
+| 1274 | JueLControl. Automatic. Stoke & Newcastle under Lyme. Estb'd 2006 | Stoke | Driving Instructor | +44 7884 484957  |  |
+| 1275 | The Journey Driving School | Wolverhampton | Driving Instructor | +44 7985 417167  |  |
+| 1276 | Drive 2 Drive | Wolverhampton | Driving Instructor | +44 7888 717543  |  |
+| 1277 | Mohammed Akhtar | Wolverhampton | Driving Instructor | +44 7535 968034  |  |
 
-_Emails sent:  / 1175_
+_Emails sent:  / 1277_
 <!-- LEADS_END -->
 
 ---
