@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-23 14:18 UTC — 1277 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-25 13:39 UTC — 1379 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 199 | 119 | 182 |
-| Beauty Salon | 98 | 56 | 86 |
-| Bricklayer | 107 | 31 | 100 |
-| Carpenter | 75 | 22 | 74 |
-| Carpet Fitter | 51 | 44 | 49 |
-| Cleaner | 62 | 43 | 62 |
-| Driving Instructor | 48 | 45 | 45 |
-| Dryliner | 54 | 44 | 49 |
-| Electrician | 59 | 28 | 58 |
-| Floor Layer | 23 | 19 | 23 |
-| Gardener | 97 | 76 | 96 |
-| Gas Engineer | 25 | 19 | 24 |
-| Glazier | 53 | 46 | 51 |
-| Groundworker | 67 | 39 | 56 |
+| Barber | 202 | 122 | 185 |
+| Beauty Salon | 100 | 58 | 87 |
+| Bricklayer | 114 | 31 | 107 |
+| Carpenter | 87 | 23 | 85 |
+| Carpet Fitter | 57 | 50 | 55 |
+| Cleaner | 63 | 44 | 63 |
+| Driving Instructor | 52 | 49 | 49 |
+| Dryliner | 62 | 52 | 56 |
+| Electrician | 60 | 29 | 59 |
+| Floor Layer | 30 | 26 | 30 |
+| Gardener | 99 | 78 | 98 |
+| Gas Engineer | 29 | 23 | 28 |
+| Glazier | 58 | 51 | 56 |
+| Groundworker | 76 | 43 | 65 |
 | Hairdresser | 94 | 61 | 89 |
-| Heating Engineer | 19 | 14 | 19 |
-| Hvac Engineer | 18 | 14 | 17 |
-| Joiner | 30 | 20 | 29 |
-| Landscaper | 13 | 11 | 13 |
-| Locksmith | 24 | 22 | 24 |
-| Nail Salon | 160 | 106 | 154 |
-| Painter Decorator | 59 | 44 | 58 |
-| Paviour | 28 | 24 | 24 |
-| Plasterer | 79 | 55 | 74 |
+| Heating Engineer | 23 | 18 | 23 |
+| Hvac Engineer | 20 | 16 | 19 |
+| Joiner | 33 | 20 | 32 |
+| Landscaper | 14 | 12 | 14 |
+| Locksmith | 26 | 24 | 26 |
+| Nail Salon | 161 | 107 | 155 |
+| Painter Decorator | 67 | 52 | 66 |
+| Paviour | 32 | 28 | 28 |
+| Plasterer | 93 | 69 | 88 |
 | Plumber | 78 | 33 | 76 |
-| Roofer | 85 | 14 | 81 |
-| Scaffolder | 56 | 35 | 55 |
-| Stone Mason | 23 | 16 | 22 |
-| Takeaway | 107 | 76 | 83 |
-| Tiler | 105 | 90 | 102 |
-| Window Fitter | 13 | 11 | 12 |
-| **Total** | **2009** | **1277** | **1887** |
+| Roofer | 87 | 14 | 83 |
+| Scaffolder | 66 | 36 | 62 |
+| Stone Mason | 25 | 18 | 24 |
+| Takeaway | 111 | 80 | 87 |
+| Tiler | 115 | 100 | 112 |
+| Window Fitter | 14 | 12 | 13 |
+| **Total** | **2148** | **1379** | **2020** |
 
 ### All Leads (confirmed no website)
 
@@ -1327,8 +1327,110 @@ _Last updated: 2026-06-23 14:18 UTC — 1277 confirmed leads (no website) across
 | 1275 | The Journey Driving School | Wolverhampton | Driving Instructor | +44 7985 417167  |  |
 | 1276 | Drive 2 Drive | Wolverhampton | Driving Instructor | +44 7888 717543  |  |
 | 1277 | Mohammed Akhtar | Wolverhampton | Driving Instructor | +44 7535 968034  |  |
+| 1278 | Reading Carpenter | Reading | Carpenter | +44 7523 924683  |  |
+| 1279 | Clarke Scaffolding | Reading | Scaffolder | +44 7970 922967  |  |
+| 1280 | Above And Below Groundwork | Reading | Groundworker | +44 7547 115321  |  |
+| 1281 | JB Groundworks | Bolton | Groundworker | +44 7973 862994  |  |
+| 1282 | MJ Groundworks & Landscaping | Preston | Groundworker | +44 7775 332312  |  |
+| 1283 | Northern County Groundworks | Preston | Groundworker | +44 1772 828911  |  |
+| 1284 | Beck Electrical Services | Preston | Electrician | +44 7729 880872  |  |
+| 1285 | Lucky Heating Services | Reading | Heating Engineer | +44 7837 865848  |  |
+| 1286 | Ua Gas Service | Reading | Heating Engineer | +44 7824 698268  |  |
+| 1287 | M.E Boilers | Bolton | Heating Engineer | +44 7400 956511  |  |
+| 1288 | DR Heating NW | Bolton | Heating Engineer | +44 7933 013385  |  |
+| 1289 | M&M Gas Ltd | Bolton | Gas Engineer | +44 7845 517340  |  |
+| 1290 | fixit gas heating commercial & domestic | Preston | Gas Engineer | +44 7401 838883  |  |
+| 1291 | Graham Johnson Gas and Plumbing Engineer | Preston | Gas Engineer | +44 1772 720121  |  |
+| 1292 | Preston (Plumbers) Heat Fix | Preston | Gas Engineer | +44 1772 237696  |  |
+| 1293 | Elmecom Ltd | Luton | Hvac Engineer | +44 1582 797355  |  |
+| 1294 | Air Source Heat Pump Services | Luton | Hvac Engineer | +44 1582 935079  |  |
+| 1295 | Hutchinson's Plastering. | Reading | Plasterer | +44 7800 944318  |  |
+| 1296 | M J Ellis Plastering & Rendering | Reading | Plasterer | +44 7754 099544  |  |
+| 1297 | P4 Plastering | Reading | Plasterer | +44 7779 161969  |  |
+| 1298 | Cp Plastering | Reading | Plasterer | +44 7788 991123  |  |
+| 1299 | LCT Plastering | Reading | Plasterer | +44 7887 548677  |  |
+| 1300 | Tony c plastering | Preston | Plasterer | +44 7708 775996  |  |
+| 1301 | Walls Specialists | Luton | Plasterer | +44 7496 589303  |  |
+| 1302 | AV Plastering Ltd | Luton | Plasterer | +44 1582 650042  |  |
+| 1303 | JH Plastering | Luton | Plasterer | +44 1525 631661  |  |
+| 1304 | Sonny’s plastering | Luton | Plasterer | +44 7900 670211  |  |
+| 1305 | KJB Plastering | Bolton | Plasterer | +44 7514 888931  |  |
+| 1306 | Smith Plastering Specialists | Bolton | Plasterer | +44 7740 966642  |  |
+| 1307 | Bolton Plastering and Decorating | Bolton | Plasterer | +44 7856 123054  |  |
+| 1308 | Ozzy Plastering Co | Bolton | Plasterer | +44 7366 989895  |  |
+| 1309 | Reading painters and decorators | Reading | Painter Decorator | +44 7417 585850  |  |
+| 1310 | D.A.Collins Decorating | Reading | Painter Decorator | +44 7836 335502  |  |
+| 1311 | Coffey Decorators | Bolton | Painter Decorator | +44 7891 997112  |  |
+| 1312 | ProMaster | Luton | Painter Decorator | +44 7471 680063  |  |
+| 1313 | Rainbow Painters - Decorating, painting, wallpapering and spraying | Luton | Painter Decorator | +44 7783 364515  |  |
+| 1314 | Flawless Finish Decorators | Luton | Painter Decorator | +44 7453 987919  |  |
+| 1315 | DAMIAN SMITH LTD | Preston | Painter Decorator | +44 7971 476711  |  |
+| 1316 | Brandon Finney Painting and Decorating | Preston | Painter Decorator | +44 7710 049766  |  |
+| 1317 | Page Tiling | Bolton | Tiler | +44 7871 517631  |  |
+| 1318 | GR Tiling | Bolton | Tiler | +44 7878 655106  |  |
+| 1319 | Mrg tiling services | Bolton | Tiler | +44 7786 245224  |  |
+| 1320 | Tollady Tiling Ltd | Bolton | Tiler | +44 1204 843929  |  |
+| 1321 | G. D. Tilers | Preston | Tiler | +44 7739 734461  |  |
+| 1322 | J.R.Tiling | Preston | Tiler | +44 7519 552674  |  |
+| 1323 | Prem Bathroom&Tiling | Preston | Tiler | +44 7983 657943  |  |
+| 1324 | GF Drylining LTD | Luton | Dryliner | +44 7841 937038  |  |
+| 1325 | GlenMac Drylining Ltd | Luton | Dryliner | +44 7407 165887  |  |
+| 1326 | Luton Tilers | Luton | Tiler | +44 1582 825085  |  |
+| 1327 | Luton Ceramics | Luton | Tiler | +44 1582 412121  |  |
+| 1328 | Max Tilers & Handyman | Luton | Tiler | +44 7840 801999  |  |
+| 1329 | Lk DRYLINING | Reading | Dryliner | — |  |
+| 1330 | EP Drylining | Reading | Dryliner | +44 7894 890614  |  |
+| 1331 | J LOTT DRYLINING LTD | Reading | Dryliner | +44 7775 848679  |  |
+| 1332 | Fourtex Dry Lining Services Ltd | Bolton | Dryliner | +44 7984 999371  |  |
+| 1333 | M R Dry Lining | Bolton | Dryliner | +44 7592 122955  |  |
+| 1334 | Rhino construction Bolton | Bolton | Dryliner | +44 7938 082922  |  |
+| 1335 | Todd's Flooring | Reading | Floor Layer | +44 118 986 9666  |  |
+| 1336 | AG carpet & flooring | Luton | Floor Layer | +44 7449 339799  |  |
+| 1337 | Stefan Flooring | Luton | Floor Layer | +44 7908 843075  |  |
+| 1338 | Cheap carpet fitters &#124; Cheap Carpet Fitting Reading - M & M Brophy Carpet Fitter | Reading | Carpet Fitter | +44 7941 834145  |  |
+| 1339 | Shiraz Khan Carpets Bolton &#124; Carpet fitter &#124; Supplier Carpets and Vinyl's | Bolton | Carpet Fitter | +44 7481 901100  |  |
+| 1340 | Mega Carpets Ltd | Bolton | Carpet Fitter | +44 1204 774223  |  |
+| 1341 | M6 Flooring & Decking Ltd | Preston | Floor Layer | +44 1772 304072  |  |
+| 1342 | Carpet Emporium | Preston | Floor Layer | +44 1772 200246  |  |
+| 1343 | Carpet & Flooring Solutions Ltd | Preston | Floor Layer | +44 7956 823951  |  |
+| 1344 | Precise Flooring | Preston | Floor Layer | +44 7780 029401  |  |
+| 1345 | Darnall Carpets | Luton | Carpet Fitter | +44 7405 376835  |  |
+| 1346 | Express Carpets | Preston | Carpet Fitter | +44 1772 797222  |  |
+| 1347 | Clean Cut Carpets | Preston | Carpet Fitter | +44 1772 733608  |  |
+| 1348 | Holland Glass | Preston | Glazier | +44 1772 821053  |  |
+| 1349 | uPVC Door/Window Repairs and Glazing | Preston | Glazier | +44 7885 466855  |  |
+| 1350 | Crystal Clear NorthWest | Bolton | Glazier | +44 7846 219107  |  |
+| 1351 | Harrington Glass | Bolton | Glazier | +44 1204 63535  |  |
+| 1352 | Glaziers Bolton | Bolton | Glazier | +44 1204 803008  |  |
+| 1353 | Johnson & Son Windows | Reading | Window Fitter | +44 118 942 5322  |  |
+| 1354 | Bolton Landscapes | Bolton | Landscaper | +44 1204 940210  |  |
+| 1355 | Always In Our Thoughts | Bolton | Stone Mason | +44 1204 529800  |  |
+| 1356 | Set In Stone | Luton | Stone Mason | +44 7775 805944  |  |
+| 1357 | Locked Out Locksmiths | Preston | Locksmith | +44 330 010 1019  |  |
+| 1358 | Auto locksmiths matin minit car keys | Luton | Locksmith | +44 7448 421116  |  |
+| 1359 | Pavestone Drives & Patios | Luton | Paviour | +44 1582 808615  |  |
+| 1360 | Paveco Driveways | Bolton | Paviour | +44 1204 775839  |  |
+| 1361 | Affordable Driveway & Patios Ltd | Bolton | Paviour | +44 7771 416554  |  |
+| 1362 | AJ Paving | Preston | Paviour | +44 1772 977541  |  |
+| 1363 | Turton barbers | Bolton | Barber | +44 7464 135704  |  |
+| 1364 | Fade barber AL | Preston | Barber | +44 7418 095384  |  |
+| 1365 | Deepdale Barber | Preston | Barber | +44 7445 104585  |  |
+| 1366 | Jark Nails | Bolton | Nail Salon | +44 7905 949364  |  |
+| 1367 | Mayas Hair & Skin Clinique | Luton | Beauty Salon | — |  |
+| 1368 | Beauty by Ash | Preston | Beauty Salon | +44 7448 493674  |  |
+| 1369 | CSM Cleaning Services Matilda | Luton | Cleaner | +44 7707 340425  |  |
+| 1370 | Crispy flavours | Reading | Takeaway | +44 118 304 8544  |  |
+| 1371 | Street Food Junction | Luton | Takeaway | +44 7415 522158  |  |
+| 1372 | Ahmed's Fast Food | Luton | Takeaway | +44 1582 321307  |  |
+| 1373 | Flower Takeaway | Bolton | Takeaway | +44 1204 366588  |  |
+| 1374 | Parker's Gardens | Bolton | Gardener | +44 7511 249944  |  |
+| 1375 | Oliver’s gardening | Luton | Gardener | +44 7835 180911  |  |
+| 1376 | Automatic driving lessons reading | Reading | Driving Instructor | +44 7825 031594  |  |
+| 1377 | F&D Driving School | Luton | Driving Instructor | +44 7492 184551  |  |
+| 1378 | City Driving School Preston | Preston | Driving Instructor | +44 7813 316530  |  |
+| 1379 | Black Gold Driving School Ltd | Preston | Driving Instructor | +44 7833 109324  |  |
 
-_Emails sent:  / 1277_
+_Emails sent:  / 1379_
 <!-- LEADS_END -->
 
 ---
