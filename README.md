@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-25 13:39 UTC — 1379 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-27 12:48 UTC — 1395 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 202 | 122 | 185 |
+| Barber | 203 | 123 | 186 |
 | Beauty Salon | 100 | 58 | 87 |
-| Bricklayer | 114 | 31 | 107 |
-| Carpenter | 87 | 23 | 85 |
+| Bricklayer | 118 | 32 | 111 |
+| Carpenter | 90 | 23 | 88 |
 | Carpet Fitter | 57 | 50 | 55 |
 | Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 52 | 49 | 49 |
-| Dryliner | 62 | 52 | 56 |
+| Driving Instructor | 53 | 50 | 50 |
+| Dryliner | 63 | 53 | 57 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 30 | 26 | 30 |
-| Gardener | 99 | 78 | 98 |
-| Gas Engineer | 29 | 23 | 28 |
-| Glazier | 58 | 51 | 56 |
+| Floor Layer | 31 | 27 | 31 |
+| Gardener | 100 | 79 | 99 |
+| Gas Engineer | 31 | 23 | 30 |
+| Glazier | 59 | 52 | 57 |
 | Groundworker | 76 | 43 | 65 |
 | Hairdresser | 94 | 61 | 89 |
-| Heating Engineer | 23 | 18 | 23 |
+| Heating Engineer | 25 | 19 | 25 |
 | Hvac Engineer | 20 | 16 | 19 |
-| Joiner | 33 | 20 | 32 |
-| Landscaper | 14 | 12 | 14 |
-| Locksmith | 26 | 24 | 26 |
+| Joiner | 34 | 20 | 33 |
+| Landscaper | 15 | 13 | 15 |
+| Locksmith | 27 | 25 | 27 |
 | Nail Salon | 161 | 107 | 155 |
-| Painter Decorator | 67 | 52 | 66 |
-| Paviour | 32 | 28 | 28 |
-| Plasterer | 93 | 69 | 88 |
-| Plumber | 78 | 33 | 76 |
-| Roofer | 87 | 14 | 83 |
+| Painter Decorator | 69 | 52 | 68 |
+| Paviour | 33 | 29 | 29 |
+| Plasterer | 98 | 70 | 93 |
+| Plumber | 79 | 33 | 77 |
+| Roofer | 88 | 14 | 84 |
 | Scaffolder | 66 | 36 | 62 |
-| Stone Mason | 25 | 18 | 24 |
-| Takeaway | 111 | 80 | 87 |
-| Tiler | 115 | 100 | 112 |
+| Stone Mason | 26 | 19 | 25 |
+| Takeaway | 112 | 81 | 88 |
+| Tiler | 117 | 102 | 114 |
 | Window Fitter | 14 | 12 | 13 |
-| **Total** | **2148** | **1379** | **2020** |
+| **Total** | **2182** | **1395** | **2054** |
 
 ### All Leads (confirmed no website)
 
@@ -1429,8 +1429,24 @@ _Last updated: 2026-06-25 13:39 UTC — 1379 confirmed leads (no website) across
 | 1377 | F&D Driving School | Luton | Driving Instructor | +44 7492 184551  |  |
 | 1378 | City Driving School Preston | Preston | Driving Instructor | +44 7813 316530  |  |
 | 1379 | Black Gold Driving School Ltd | Preston | Driving Instructor | +44 7833 109324  |  |
+| 1380 | The Craft Masonry Ltd | Dundee | Bricklayer | +44 7864 801329  |  |
+| 1381 | Cotswold Boiler Services | Gloucester | Heating Engineer | +44 7969 302449  |  |
+| 1382 | A Claydon Plastering | Ipswich | Plasterer | +44 7801 701790  |  |
+| 1383 | Allen Andy wall and floor tiler Gloucester | Gloucester | Tiler | +44 7976 883412  |  |
+| 1384 | Mitchell G Ltd | Dundee | Tiler | +44 1382 826652  |  |
+| 1385 | I J W Plastering Services | Gloucester | Dryliner | +44 7828 271663  |  |
+| 1386 | Layedwell Flooring Dundee Ltd | Dundee | Floor Layer | +44 7702 702436  |  |
+| 1387 | York Glaziers & Suppliers | York | Glazier | +44 1904 760475  |  |
+| 1388 | John Anderson-McGuinness Gardens and Landscapes | Dundee | Landscaper | +44 7505 231056  |  |
+| 1389 | S&S LOCKS SUPPLIERS LTD | Dundee | Locksmith | +44 1382 686037  |  |
+| 1390 | Forest masonry ltd | Gloucester | Stone Mason | +44 7484 326765  |  |
+| 1391 | Downfield Driveways | Dundee | Paviour | +44 1382 848766  |  |
+| 1392 | First class Dundee barber | Dundee | Barber | +44 7538 902424  |  |
+| 1393 | Red Goat Kitchen | York | Takeaway | +44 7951 991454  |  |
+| 1394 | JDT Garden Services | Ipswich | Gardener | +44 7584 328698  |  |
+| 1395 | RED driving school franchisee - Samantha Gaylor | Gloucester | Driving Instructor | +44 7784 904100  |  |
 
-_Emails sent:  / 1379_
+_Emails sent:  / 1395_
 <!-- LEADS_END -->
 
 ---
