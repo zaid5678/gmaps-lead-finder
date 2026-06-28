@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-27 12:48 UTC — 1395 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-28 13:28 UTC — 1512 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 203 | 123 | 186 |
+| Barber | 206 | 126 | 188 |
 | Beauty Salon | 100 | 58 | 87 |
-| Bricklayer | 118 | 32 | 111 |
-| Carpenter | 90 | 23 | 88 |
-| Carpet Fitter | 57 | 50 | 55 |
+| Bricklayer | 129 | 37 | 122 |
+| Carpenter | 95 | 28 | 93 |
+| Carpet Fitter | 60 | 53 | 58 |
 | Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 53 | 50 | 50 |
-| Dryliner | 63 | 53 | 57 |
+| Driving Instructor | 57 | 54 | 54 |
+| Dryliner | 67 | 57 | 60 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 31 | 27 | 31 |
+| Floor Layer | 34 | 30 | 34 |
 | Gardener | 100 | 79 | 99 |
-| Gas Engineer | 31 | 23 | 30 |
-| Glazier | 59 | 52 | 57 |
-| Groundworker | 76 | 43 | 65 |
-| Hairdresser | 94 | 61 | 89 |
-| Heating Engineer | 25 | 19 | 25 |
-| Hvac Engineer | 20 | 16 | 19 |
+| Gas Engineer | 32 | 24 | 30 |
+| Glazier | 62 | 55 | 60 |
+| Groundworker | 84 | 51 | 73 |
+| Hairdresser | 95 | 62 | 90 |
+| Heating Engineer | 26 | 20 | 26 |
+| Hvac Engineer | 21 | 17 | 20 |
 | Joiner | 34 | 20 | 33 |
-| Landscaper | 15 | 13 | 15 |
-| Locksmith | 27 | 25 | 27 |
-| Nail Salon | 161 | 107 | 155 |
-| Painter Decorator | 69 | 52 | 68 |
-| Paviour | 33 | 29 | 29 |
-| Plasterer | 98 | 70 | 93 |
-| Plumber | 79 | 33 | 77 |
+| Landscaper | 17 | 15 | 17 |
+| Locksmith | 32 | 30 | 32 |
+| Nail Salon | 164 | 110 | 157 |
+| Painter Decorator | 84 | 67 | 83 |
+| Paviour | 35 | 31 | 30 |
+| Plasterer | 110 | 82 | 105 |
+| Plumber | 80 | 34 | 78 |
 | Roofer | 88 | 14 | 84 |
-| Scaffolder | 66 | 36 | 62 |
-| Stone Mason | 26 | 19 | 25 |
-| Takeaway | 112 | 81 | 88 |
-| Tiler | 117 | 102 | 114 |
+| Scaffolder | 76 | 46 | 72 |
+| Stone Mason | 35 | 28 | 32 |
+| Takeaway | 113 | 82 | 89 |
+| Tiler | 132 | 117 | 129 |
 | Window Fitter | 14 | 12 | 13 |
-| **Total** | **2182** | **1395** | **2054** |
+| **Total** | **2305** | **1512** | **2170** |
 
 ### All Leads (confirmed no website)
 
@@ -1445,8 +1445,125 @@ _Last updated: 2026-06-27 12:48 UTC — 1395 confirmed leads (no website) across
 | 1393 | Red Goat Kitchen | York | Takeaway | +44 7951 991454  |  |
 | 1394 | JDT Garden Services | Ipswich | Gardener | +44 7584 328698  |  |
 | 1395 | RED driving school franchisee - Samantha Gaylor | Gloucester | Driving Instructor | +44 7784 904100  |  |
+| 1396 | Freelance Brickwork Oxford | Oxford | Bricklayer | +44 7779 159607  |  |
+| 1397 | john beeken Bricklayer | Peterborough | Bricklayer | +44 7727 945873  |  |
+| 1398 | IB Brickwork & General Building | Peterborough | Bricklayer | +44 7714 919179  |  |
+| 1399 | Prime builders | Peterborough | Bricklayer | +44 7384 634815  |  |
+| 1400 | DGW Stonemasons | Peterborough | Bricklayer | +44 7752 310055  |  |
+| 1401 | Original Carpentry™ | Peterborough | Carpenter | +44 7928 605862  |  |
+| 1402 | L M Carpenter & Joiner | Peterborough | Carpenter | +44 1733 348964  |  |
+| 1403 | JRS Carpentry Ltd | Peterborough | Carpenter | +44 7852 340379  |  |
+| 1404 | M DALY CARPENTRY | Peterborough | Carpenter | +44 7999 438539  |  |
+| 1405 | Steve Seymour carpentry | Swansea | Carpenter | +44 7971 061460  |  |
+| 1406 | City Scaffolding Cambridge | Cambridge | Scaffolder | +44 1223 603545  |  |
+| 1407 | I & F Scaffolding Ltd | Cambridge | Scaffolder | +44 7551 749497  |  |
+| 1408 | CL Scaffolding | Oxford | Scaffolder | +44 7714 627832  |  |
+| 1409 | Thames Tubes Scaffolding | Oxford | Scaffolder | +44 800 129 9007  |  |
+| 1410 | Bmm Scaffolding LTD | Oxford | Scaffolder | +44 1993 259359  |  |
+| 1411 | 1st Choice Scaffolding Oxford LTD | Oxford | Scaffolder | +44 1865 396123  |  |
+| 1412 | Oxford Scaffolding | Oxford | Scaffolder | +44 7766 574038  |  |
+| 1413 | J B S Scaffolding | Peterborough | Scaffolder | +44 7724 906380  |  |
+| 1414 | J & L Scaffolding Ltd | Swansea | Scaffolder | +44 1792 415170  |  |
+| 1415 | IDL Scaffolding | Swansea | Scaffolder | +44 7976 733789  |  |
+| 1416 | JRS - Groundwork and Construction - Chipping Norton - Oxfordshire | Oxford | Groundworker | +44 1608 642235  |  |
+| 1417 | M & D Ground Work Contractors Ltd | Oxford | Groundworker | +44 1865 751861  |  |
+| 1418 | CB Landscaping & Groundworks | Cambridge | Groundworker | +44 7985 739227  |  |
+| 1419 | W D C Groundwork & Building Contractors | Peterborough | Groundworker | +44 1832 274812  |  |
+| 1420 | HOG Groundworks & Landscaping | Swansea | Groundworker | +44 7827 963847  |  |
+| 1421 | B Line Groundworks Ltd | Swansea | Groundworker | +44 7774 878530  |  |
+| 1422 | GŴYR CONSTRUCTION & GROUNDWORKS | Swansea | Groundworker | +44 7464 144816  |  |
+| 1423 | Saunders groundworks services | Swansea | Groundworker | +44 7597 127295  |  |
+| 1424 | Leak Fixers Swansea Plumbing Ltd | Swansea | Plumber | +44 7350 280098  |  |
+| 1425 | WLD Plumbing And Heating Services | Swansea | Heating Engineer | +44 7727 439127  |  |
+| 1426 | GasPro Engineering Ltd | Peterborough | Gas Engineer | — |  |
+| 1427 | Henderson Engineering | Swansea | Hvac Engineer | +44 7966 627568  |  |
+| 1428 | JDB plastering | Cambridge | Plasterer | +44 1223 353365  |  |
+| 1429 | LMS Plastering & Construction | Peterborough | Plasterer | +44 7739 459013  |  |
+| 1430 | Phoenix plastering peterborough | Peterborough | Plasterer | +44 7955 002502  |  |
+| 1431 | Oxford Plasterers | Oxford | Plasterer | +44 1865 988788  |  |
+| 1432 | RJR Plastering & Construction | Oxford | Plasterer | +44 7444 619009  |  |
+| 1433 | Lockhart Plastering | Oxford | Plasterer | +44 7718 841918  |  |
+| 1434 | Mark Plastering & K-rendering | Oxford | Plasterer | +44 7808 062265  |  |
+| 1435 | Central Plastering | Oxford | Plasterer | +44 1865 730814  |  |
+| 1436 | JS PLASTERING | Swansea | Plasterer | +44 7855 446562  |  |
+| 1437 | Pinks Plastering | Swansea | Plasterer | +44 7710 686251  |  |
+| 1438 | Swansea plastering services | Swansea | Plasterer | +44 7473 337218  |  |
+| 1439 | Bespoke Construction & Plastering Ltd Bathroom Specialist | Swansea | Plasterer | +44 7966 178148  |  |
+| 1440 | J & J Decorating | Oxford | Painter Decorator | +44 7469 897611  |  |
+| 1441 | SMPROPAINTERS LIMITED | Oxford | Painter Decorator | +44 7710 896526  |  |
+| 1442 | Kerr-Brown Decorating | Oxford | Painter Decorator | +44 7944 605502  |  |
+| 1443 | Leo’s Painting & Repair | Oxford | Painter Decorator | +44 7917 569014  |  |
+| 1444 | Cambridgeshire Painting Co. | Cambridge | Painter Decorator | +44 7873 736568  |  |
+| 1445 | Ollys Painting & Decorating | Swansea | Painter Decorator | +44 7745 418859  |  |
+| 1446 | M J Decorating Services | Swansea | Painter Decorator | +44 7974 719786  |  |
+| 1447 | Ronnie Gibbins Painter & Decorator | Swansea | Painter Decorator | +44 1792 420695  |  |
+| 1448 | Greenwood Decorators & Maintenance | Peterborough | Painter Decorator | +44 7424 562760  |  |
+| 1449 | Elite Coat Decorators | Peterborough | Painter Decorator | +44 7405 639445  |  |
+| 1450 | Fox's Painting & Decorating Peterborough | Peterborough | Painter Decorator | +44 7809 217677  |  |
+| 1451 | Norris Decorating & Tiling | Peterborough | Painter Decorator | +44 7968 952961  |  |
+| 1452 | Apollo Decorators UK | Peterborough | Painter Decorator | +44 7891 953412  |  |
+| 1453 | COSCAT painters | Peterborough | Painter Decorator | +44 1733 280510  |  |
+| 1454 | Joe Hewett Painter & Decorator | Peterborough | Painter Decorator | +44 7818 262712  |  |
+| 1455 | Eatons Tiling | Peterborough | Tiler | +44 7730 899778  |  |
+| 1456 | The Peterborough Tiling Company | Peterborough | Tiler | +44 7375 931619  |  |
+| 1457 | O'Keefe Tiling Solutions | Peterborough | Tiler | +44 7377 073223  |  |
+| 1458 | The Oxford Tiler | Oxford | Tiler | +44 7377 386173  |  |
+| 1459 | Oxford Tiler | Oxford | Tiler | +44 1865 988788  |  |
+| 1460 | CMD Ceramics | Oxford | Tiler | +44 7969 916629  |  |
+| 1461 | Oxford Elite Tiling | Oxford | Tiler | +44 7881 442995  |  |
+| 1462 | Harvey's Tiling Service | Cambridge | Tiler | +44 7780 449168  |  |
+| 1463 | Jurassic Tiling | Cambridge | Tiler | +44 7548 471468  |  |
+| 1464 | C.S.Tiling walls & floors | Cambridge | Tiler | +44 7780 000093  |  |
+| 1465 | John Lovett | Swansea | Tiler | +44 7814 718610  |  |
+| 1466 | Swansea Tiling Services | Swansea | Tiler | +44 7966 241644  |  |
+| 1467 | JT Ceramics tiling Swansea | Swansea | Tiler | +44 7931 196058  |  |
+| 1468 | Carpentry & tiles (Swansea and surrounding) | Swansea | Tiler | +44 7300 125999  |  |
+| 1469 | Elite Tiling Services | Swansea | Tiler | +44 7974 080888  |  |
+| 1470 | MMG Drylining Cambridge Ltd | Cambridge | Dryliner | — |  |
+| 1471 | McNeill Plastering Ltd | Oxford | Dryliner | +44 7736 250177  |  |
+| 1472 | Finally Flooring - Oxford Carpet Shop and Fitters | Oxford | Floor Layer | +44 7377 934449  |  |
+| 1473 | KLF Plastering and Dry Lining | Peterborough | Dryliner | +44 7590 433684  |  |
+| 1474 | Drylining Systems | Peterborough | Dryliner | +44 7944 422112  |  |
+| 1475 | Peterborough carpets and vinyl flooring | Peterborough | Floor Layer | +44 7710 624606  |  |
+| 1476 | Expert Carpet Fitting | Peterborough | Floor Layer | +44 1733 361362  |  |
+| 1477 | Phill's flooring | Cambridge | Carpet Fitter | +44 7540 346100  |  |
+| 1478 | Oxford Carpets & Furniture | Oxford | Carpet Fitter | +44 1865 451618  |  |
+| 1479 | Richard Morgan Carpet Services | Peterborough | Carpet Fitter | +44 1733 511515  |  |
+| 1480 | Hancocks Glass & Glazing | Cambridge | Glazier | +44 1223 690053  |  |
+| 1481 | 24hr Glaziers Swansea | Swansea | Glazier | +44 1792 714016  |  |
+| 1482 | Period House Sash Windows | Swansea | Glazier | +44 1792 297216  |  |
+| 1483 | JSI Fencing Experts & Landscaping Peterborough | Peterborough | Landscaper | +44 7547 771143  |  |
+| 1484 | Gower Landscapes & Paving Services Swansea | Swansea | Landscaper | +44 7760 344799  |  |
+| 1485 | CM Worsley - Stone Masonry | Oxford | Stone Mason | +44 7570 546758  |  |
+| 1486 | Stonemason House &#124; Student Accommodation Oxford | Oxford | Stone Mason | +44 141 488 0926  |  |
+| 1487 | Stonemason's Garden | Swansea | Stone Mason | — |  |
+| 1488 | M J Matthews Monumental Mason | Swansea | Stone Mason | +44 7775 556101  |  |
+| 1489 | Jones Cecil J | Swansea | Stone Mason | +44 7506 188344  |  |
+| 1490 | Jamie Hitchings Memorials | Swansea | Stone Mason | +44 7890 100078  |  |
+| 1491 | M Mariani Stonemasonry | Swansea | Stone Mason | +44 7786 734435  |  |
+| 1492 | MJE Locksmith & Secure | Oxford | Locksmith | +44 7451 261231  |  |
+| 1493 | Oxford Locksmith MM | Oxford | Locksmith | +44 7777 226905  |  |
+| 1494 | Stonemason Way | Peterborough | Stone Mason | — |  |
+| 1495 | Ketton Stone Masons | Peterborough | Stone Mason | +44 1780 721536  |  |
+| 1496 | ELVIS LOCKSMITH | Peterborough | Locksmith | +44 7751 178912  |  |
+| 1497 | REP Locksmith | Cambridge | Locksmith | +44 1223 430159  |  |
+| 1498 | Locked Out Locksmiths | Cambridge | Locksmith | +44 330 010 1019  |  |
+| 1499 | Cambridge Paving | Cambridge | Paviour | +44 1223 430032  |  |
+| 1500 | Jigsaw Block Paving | Peterborough | Paviour | — |  |
+| 1501 | Botley Barber | Oxford | Barber | — |  |
+| 1502 | Kings cut | Peterborough | Barber | +44 7417 469978  |  |
+| 1503 | 𝗦𝗼 𝗚𝗲𝗹𝗶𝗰𝗶𝗼𝘂𝘀 | Oxford | Nail Salon | +44 7799 858052  |  |
+| 1504 | SHERWANS BARBER | Swansea | Barber | +44 7777 355354  |  |
+| 1505 | Onestop Nails | Peterborough | Nail Salon | +44 7939 655263  |  |
+| 1506 | M Nails | Swansea | Nail Salon | — |  |
+| 1507 | Le Rouge Hair Lounge | Swansea | Hairdresser | +44 1792 457307  |  |
+| 1508 | Hungrill | Cambridge | Takeaway | +44 7450 147294  |  |
+| 1509 | R S driving school Oxford | Oxford | Driving Instructor | +44 7846 045410  |  |
+| 1510 | L-Plate Exit Driving School | Peterborough | Driving Instructor | +44 7473 930360  |  |
+| 1511 | Simons S O M | Swansea | Driving Instructor | +44 7734 201730  |  |
+| 1512 | Myke Sanders Driving School | Swansea | Driving Instructor | +44 7941 054130  |  |
 
-_Emails sent:  / 1395_
+_Emails sent:  / 1512_
 <!-- LEADS_END -->
 
 ---
