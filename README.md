@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-28 13:28 UTC — 1512 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-06-30 13:59 UTC — 1635 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 206 | 126 | 188 |
-| Beauty Salon | 100 | 58 | 87 |
-| Bricklayer | 129 | 37 | 122 |
-| Carpenter | 95 | 28 | 93 |
-| Carpet Fitter | 60 | 53 | 58 |
+| Beauty Salon | 101 | 59 | 88 |
+| Bricklayer | 140 | 38 | 133 |
+| Carpenter | 102 | 31 | 100 |
+| Carpet Fitter | 65 | 58 | 63 |
 | Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 57 | 54 | 54 |
-| Dryliner | 67 | 57 | 60 |
+| Driving Instructor | 70 | 67 | 67 |
+| Dryliner | 75 | 65 | 67 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 34 | 30 | 34 |
-| Gardener | 100 | 79 | 99 |
-| Gas Engineer | 32 | 24 | 30 |
-| Glazier | 62 | 55 | 60 |
-| Groundworker | 84 | 51 | 73 |
-| Hairdresser | 95 | 62 | 90 |
-| Heating Engineer | 26 | 20 | 26 |
-| Hvac Engineer | 21 | 17 | 20 |
-| Joiner | 34 | 20 | 33 |
+| Floor Layer | 39 | 35 | 39 |
+| Gardener | 102 | 81 | 101 |
+| Gas Engineer | 34 | 26 | 32 |
+| Glazier | 67 | 60 | 64 |
+| Groundworker | 92 | 59 | 78 |
+| Hairdresser | 99 | 66 | 92 |
+| Heating Engineer | 28 | 22 | 28 |
+| Hvac Engineer | 25 | 21 | 24 |
+| Joiner | 36 | 22 | 35 |
 | Landscaper | 17 | 15 | 17 |
-| Locksmith | 32 | 30 | 32 |
-| Nail Salon | 164 | 110 | 157 |
-| Painter Decorator | 84 | 67 | 83 |
-| Paviour | 35 | 31 | 30 |
-| Plasterer | 110 | 82 | 105 |
+| Locksmith | 38 | 36 | 38 |
+| Nail Salon | 165 | 111 | 158 |
+| Painter Decorator | 99 | 82 | 97 |
+| Paviour | 39 | 35 | 34 |
+| Plasterer | 121 | 93 | 114 |
 | Plumber | 80 | 34 | 78 |
-| Roofer | 88 | 14 | 84 |
-| Scaffolder | 76 | 46 | 72 |
-| Stone Mason | 35 | 28 | 32 |
-| Takeaway | 113 | 82 | 89 |
-| Tiler | 132 | 117 | 129 |
+| Roofer | 89 | 15 | 85 |
+| Scaffolder | 85 | 55 | 80 |
+| Stone Mason | 36 | 29 | 33 |
+| Takeaway | 114 | 83 | 90 |
+| Tiler | 141 | 126 | 138 |
 | Window Fitter | 14 | 12 | 13 |
-| **Total** | **2305** | **1512** | **2170** |
+| **Total** | **2442** | **1635** | **2296** |
 
 ### All Leads (confirmed no website)
 
@@ -1562,8 +1562,131 @@ _Last updated: 2026-06-28 13:28 UTC — 1512 confirmed leads (no website) across
 | 1510 | L-Plate Exit Driving School | Peterborough | Driving Instructor | +44 7473 930360  |  |
 | 1511 | Simons S O M | Swansea | Driving Instructor | +44 7734 201730  |  |
 | 1512 | Myke Sanders Driving School | Swansea | Driving Instructor | +44 7941 054130  |  |
+| 1513 | Nicholls Darren | Telford | Bricklayer | +44 1952 610020  |  |
+| 1514 | Jd Joinery And Building Contractors | Huddersfield | Joiner | +44 7939 749539  |  |
+| 1515 | Telford carpenter and PVC | Telford | Carpenter | +44 7938 919069  |  |
+| 1516 | Carpenter | Telford | Carpenter | +44 7305 092069  |  |
+| 1517 | M E Bishop Carpentry Ltd | Telford | Carpenter | +44 1952 585800  |  |
+| 1518 | MX JOINERY | Warrington | Joiner | +44 7774 072391  |  |
+| 1519 | Advanced Roofing & Guttering Ltd | Telford | Roofer | +44 1952 426200  |  |
+| 1520 | Fairfax Scaffolding | Southend | Scaffolder | +44 1702 599090  |  |
+| 1521 | GT scaffolding | Southend | Scaffolder | +44 7710 491618  |  |
+| 1522 | Zoom Scaffolding Yorkshire Ltd | Huddersfield | Scaffolder | +44 7766 950851  |  |
+| 1523 | Sandwells Construction & Scaffolding | Huddersfield | Scaffolder | +44 7768 081945  |  |
+| 1524 | MSL Services | Huddersfield | Scaffolder | +44 1924 494242  |  |
+| 1525 | A & G Scaffolding Services Ltd | Huddersfield | Scaffolder | +44 7973 851839  |  |
+| 1526 | W M Scaffold | Telford | Scaffolder | +44 7824 448662  |  |
+| 1527 | A1 Scaffolding | Telford | Scaffolder | +44 1952 403045  |  |
+| 1528 | Access Scaffolding Services Ltd | Telford | Scaffolder | — |  |
+| 1529 | Cooper Groundwork & Civils | Warrington | Groundworker | +44 1925 837578  |  |
+| 1530 | M and M groundwork ltd | Warrington | Groundworker | +44 7834 360960  |  |
+| 1531 | The GroundWork Way | Warrington | Groundworker | — |  |
+| 1532 | Culcheth Paving & Groundworks | Warrington | Groundworker | +44 1925 763642  |  |
+| 1533 | 1 to 1 Services Ltd | Southend | Groundworker | +44 7771 704163  |  |
+| 1534 | Sure pump concrete services Ltd | Telford | Groundworker | +44 7902 745886  |  |
+| 1535 | G.n Groundworks Ltd | Telford | Groundworker | — |  |
+| 1536 | Mcclay Groundworks | Telford | Groundworker | — |  |
+| 1537 | New Phaze Heating | Huddersfield | Heating Engineer | +44 1484 351415  |  |
+| 1538 | Winteringham Gas Services | Huddersfield | Heating Engineer | +44 7737 331647  |  |
+| 1539 | Repair & Installation | Warrington | Gas Engineer | +44 7498 329160  |  |
+| 1540 | Boiler Installation Huddersfield | Huddersfield | Gas Engineer | +44 1484 243136  |  |
+| 1541 | CJ Connally Electrical & Mechanical Services Ltd | Huddersfield | Hvac Engineer | +44 1484 461416  |  |
+| 1542 | A D G Engineering | Huddersfield | Hvac Engineer | +44 1484 646100  |  |
+| 1543 | SLP Engineering (UK) Ltd | Huddersfield | Hvac Engineer | +44 1484 516646  |  |
+| 1544 | A1 Engineering Solutions Ltd | Warrington | Hvac Engineer | +44 1925 640569  |  |
+| 1545 | La Plastering Services | Huddersfield | Plasterer | — |  |
+| 1546 | Holme valley plastering ltd | Huddersfield | Plasterer | +44 7521 712770  |  |
+| 1547 | Top-Notch Plastering & Rendering | Southend | Plasterer | +44 7593 841305  |  |
+| 1548 | leigh plastering and rendering company | Southend | Plasterer | +44 7971 783974  |  |
+| 1549 | AJR Plastering | Southend | Plasterer | +44 7834 958618  |  |
+| 1550 | JB Plastering | Telford | Plasterer | +44 7730 357547  |  |
+| 1551 | MF Plastering & Property Services | Telford | Plasterer | +44 7494 551289  |  |
+| 1552 | Shropshire plastering services | Telford | Plasterer | +44 7747 576089  |  |
+| 1553 | Omega Plastering and Rendering | Warrington | Plasterer | +44 7595 440656  |  |
+| 1554 | JD plastering | Warrington | Plasterer | — |  |
+| 1555 | Warrington Plastering Contractors Ltd | Warrington | Plasterer | +44 1925 507211  |  |
+| 1556 | Prime Painter & Decorator | Huddersfield | Painter Decorator | — |  |
+| 1557 | Daniel Wilby Painter and Decorator | Huddersfield | Painter Decorator | +44 7841 235489  |  |
+| 1558 | AM Painters And Decorators Huddersfield | Huddersfield | Painter Decorator | +44 7702 373315  |  |
+| 1559 | Huddersfield Handyman and Painter | Huddersfield | Painter Decorator | +44 1484 598432  |  |
+| 1560 | Mk painter and decorator | Huddersfield | Painter Decorator | +44 7367 360435  |  |
+| 1561 | R.Hodson Painter & Decorator | Southend | Painter Decorator | +44 1702 315604  |  |
+| 1562 | Great Sankey Painter Decorator Handyman | Warrington | Painter Decorator | +44 7456 598514  |  |
+| 1563 | Prime coats | Warrington | Painter Decorator | +44 7366 163818  |  |
+| 1564 | Prestige Painting & Decorating | Telford | Painter Decorator | +44 7949 206180  |  |
+| 1565 | RICHARD DEAN Painting and Decorating | Telford | Painter Decorator | +44 7847 933797  |  |
+| 1566 | AHD Decorating & Painting Telford | Telford | Painter Decorator | +44 7790 251554  |  |
+| 1567 | Simon Gwynne Painter and Decorator Telford Shropshire | Telford | Painter Decorator | +44 7772 172641  |  |
+| 1568 | D-W Interiors painting and decorating telford | Telford | Painter Decorator | +44 7722 263416  |  |
+| 1569 | Terry Broadhurst Painting & Decorating | Telford | Painter Decorator | +44 1952 610681  |  |
+| 1570 | DHR Painting & Decorating | Telford | Painter Decorator | +44 7976 989992  |  |
+| 1571 | Warrington Tiling | Warrington | Tiler | +44 7841 765412  |  |
+| 1572 | Accolade Tiling Services | Warrington | Tiler | +44 1925 724709  |  |
+| 1573 | Set By Her - Female Tiling Specialist | Warrington | Tiler | +44 7752 897039  |  |
+| 1574 | S Murphy Tiling Services | Warrington | Tiler | +44 7346 133327  |  |
+| 1575 | DPL Tiling Huddersfield | Huddersfield | Tiler | +44 7594 705999  |  |
+| 1576 | Lee Toffolo Tiling Ltd | Huddersfield | Tiler | +44 7737 384580  |  |
+| 1577 | SL Tiling Ltd | Huddersfield | Tiler | +44 1484 829182  |  |
+| 1578 | Wyles Tiles | Southend | Tiler | +44 1702 468360  |  |
+| 1579 | Professional Tiling Ltd | Southend | Tiler | +44 7837 833944  |  |
+| 1580 | Cp Limited | Warrington | Dryliner | — |  |
+| 1581 | ADS Plastering & Dry-lining | Warrington | Dryliner | +44 7758 721645  |  |
+| 1582 | DUFFY plastering services | Warrington | Dryliner | +44 7856 439276  |  |
+| 1583 | T B Warren Plastering & Drylining Ltd | Telford | Dryliner | +44 1952 505132  |  |
+| 1584 | Spot on drylining ltd | Telford | Dryliner | +44 7411 170011  |  |
+| 1585 | Yorkshire Carpets Ltd | Huddersfield | Floor Layer | +44 1484 542321  |  |
+| 1586 | JRB Flooring | Huddersfield | Floor Layer | +44 7903 342764  |  |
+| 1587 | AZ Floor Fitters Ltd | Warrington | Floor Layer | +44 7943 482274  |  |
+| 1588 | JJ Floors LTD Warrington | Warrington | Floor Layer | +44 7967 715567  |  |
+| 1589 | Essex Ceiling & Drylining Ltd | Southend | Dryliner | +44 800 043 0323  |  |
+| 1590 | Traditional Castings | Southend | Dryliner | +44 1268 777450  |  |
+| 1591 | Edgsons | Southend | Dryliner | +44 1702 203259  |  |
+| 1592 | Flooring Outlet | Telford | Floor Layer | +44 1952 879871  |  |
+| 1593 | Huddersfield Carpet Centre | Huddersfield | Carpet Fitter | +44 1484 641878  |  |
+| 1594 | Carpets Direct | Huddersfield | Carpet Fitter | +44 1484 435944  |  |
+| 1595 | Cameron Flooring | Southend | Carpet Fitter | +44 7825 082853  |  |
+| 1596 | Carpetline | Southend | Carpet Fitter | +44 1702 292221  |  |
+| 1597 | Cain & Son's Carpets & Floors | Telford | Carpet Fitter | +44 1952 877012  |  |
+| 1598 | De Mello's Glass | Huddersfield | Glazier | +44 1484 535732  |  |
+| 1599 | Universal window Repairs and glazing | Huddersfield | Glazier | +44 7900 995929  |  |
+| 1600 | M W Window Repairs - Huddersfield | Huddersfield | Glazier | +44 7970 276543  |  |
+| 1601 | GLASS GLAZING & WINDOWS LTD | Telford | Glazier | — |  |
+| 1602 | Meakins & Sons Glass Ltd | Southend | Glazier | +44 800 193 2477  |  |
+| 1603 | Evans J F | Huddersfield | Stone Mason | +44 1484 539543  |  |
+| 1604 | Ciaran Locksmith & Lockout Service | Warrington | Locksmith | +44 7451 278876  |  |
+| 1605 | Huddersfield Lock & Key Centre | Huddersfield | Locksmith | +44 1484 315288  |  |
+| 1606 | Blackwater Locks | Huddersfield | Locksmith | +44 20 3958 6988  |  |
+| 1607 | PXD Locksmith & Security | Huddersfield | Locksmith | +44 7451 261381  |  |
+| 1608 | Pro Paving | Southend | Paviour | +44 7981 276347  |  |
+| 1609 | DRT Locksmith & Secure | Telford | Locksmith | +44 7451 261477  |  |
+| 1610 | LOCKSMITH (Mobile) Keywi Locks | Southend | Locksmith | +44 7530 294112  |  |
+| 1611 | Telford Driveways | Telford | Paviour | +44 7737 683260  |  |
+| 1612 | Central Paving | Telford | Paviour | +44 1952 407838  |  |
+| 1613 | PAVEWAYS CONSTRUCTION LTD | Telford | Paviour | +44 1952 898620  |  |
+| 1614 | MajesticHair and Beauty Salon | Huddersfield | Beauty Salon | +44 1484 543333  |  |
+| 1615 | Luxury nail - telford shopping centre | Telford | Nail Salon | +44 7946 187138  |  |
+| 1616 | JC's Hair & Beauty | Huddersfield | Hairdresser | +44 1484 425822  |  |
+| 1617 | Fabrik Hair Salons, | Huddersfield | Hairdresser | +44 1484 300909  |  |
+| 1618 | The Green Room | Telford | Hairdresser | — |  |
+| 1619 | Scissory Business | Telford | Hairdresser | — |  |
+| 1620 | SlamBurger Huddersfield | Huddersfield | Takeaway | +44 7943 966641  |  |
+| 1621 | Jimmy's garden care | Southend | Gardener | +44 7856 053694  |  |
+| 1622 | Steve Watkins. Shropshire Garden Maintenance | Telford | Gardener | +44 7974 931889  |  |
+| 1623 | MDT Mos | Warrington | Driving Instructor | +44 7814 037411  |  |
+| 1624 | Vinny's Driving School Huddersfield Automatic & Manual | Huddersfield | Driving Instructor | +44 7825 703369  |  |
+| 1625 | A1 Driving School - Huddersfield | Huddersfield | Driving Instructor | +44 7866 561583  |  |
+| 1626 | M. I. S Driver Training | Huddersfield | Driving Instructor | +44 7765 399566  |  |
+| 1627 | Drive By Learning - Automatic & Manual - Huddersfield | Huddersfield | Driving Instructor | +44 7476 344290  |  |
+| 1628 | Quickpass Intensive Learner Driving School | Huddersfield | Driving Instructor | +44 7957 445435  |  |
+| 1629 | Lucas Driver Training | Telford | Driving Instructor | +44 7706 748660  |  |
+| 1630 | Andy1st driving school | Telford | Driving Instructor | +44 121 778 4777  |  |
+| 1631 | Instructor Kevin West with K.S.Driving School Telford | Telford | Driving Instructor | +44 1952 794015  |  |
+| 1632 | 'PASS GO ~ AUTOMATIC'' | Southend | Driving Instructor | +44 7502 607038  |  |
+| 1633 | Sarah Koyas Driving Instructor | Southend | Driving Instructor | +44 7917 872797  |  |
+| 1634 | The Automatic Driving Instructor | Southend | Driving Instructor | +44 7931 547730  |  |
+| 1635 | Innov8 Driving School | Southend | Driving Instructor | +44 7538 694125  |  |
 
-_Emails sent:  / 1512_
+_Emails sent:  / 1635_
 <!-- LEADS_END -->
 
 ---
