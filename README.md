@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-06-30 13:59 UTC — 1635 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-02 13:18 UTC — 1640 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 206 | 126 | 188 |
+| Barber | 207 | 126 | 189 |
 | Beauty Salon | 101 | 59 | 88 |
-| Bricklayer | 140 | 38 | 133 |
-| Carpenter | 102 | 31 | 100 |
-| Carpet Fitter | 65 | 58 | 63 |
+| Bricklayer | 142 | 39 | 135 |
+| Carpenter | 106 | 31 | 104 |
+| Carpet Fitter | 68 | 58 | 66 |
 | Cleaner | 63 | 44 | 63 |
 | Driving Instructor | 70 | 67 | 67 |
-| Dryliner | 75 | 65 | 67 |
+| Dryliner | 77 | 65 | 68 |
 | Electrician | 60 | 29 | 59 |
 | Floor Layer | 39 | 35 | 39 |
-| Gardener | 102 | 81 | 101 |
+| Gardener | 103 | 81 | 102 |
 | Gas Engineer | 34 | 26 | 32 |
 | Glazier | 67 | 60 | 64 |
-| Groundworker | 92 | 59 | 78 |
+| Groundworker | 95 | 61 | 81 |
 | Hairdresser | 99 | 66 | 92 |
 | Heating Engineer | 28 | 22 | 28 |
-| Hvac Engineer | 25 | 21 | 24 |
-| Joiner | 36 | 22 | 35 |
-| Landscaper | 17 | 15 | 17 |
-| Locksmith | 38 | 36 | 38 |
+| Hvac Engineer | 27 | 21 | 26 |
+| Joiner | 37 | 22 | 36 |
+| Landscaper | 18 | 16 | 18 |
+| Locksmith | 39 | 36 | 39 |
 | Nail Salon | 165 | 111 | 158 |
 | Painter Decorator | 99 | 82 | 97 |
-| Paviour | 39 | 35 | 34 |
-| Plasterer | 121 | 93 | 114 |
-| Plumber | 80 | 34 | 78 |
+| Paviour | 40 | 35 | 35 |
+| Plasterer | 122 | 93 | 115 |
+| Plumber | 81 | 34 | 79 |
 | Roofer | 89 | 15 | 85 |
 | Scaffolder | 85 | 55 | 80 |
-| Stone Mason | 36 | 29 | 33 |
-| Takeaway | 114 | 83 | 90 |
-| Tiler | 141 | 126 | 138 |
-| Window Fitter | 14 | 12 | 13 |
-| **Total** | **2442** | **1635** | **2296** |
+| Stone Mason | 37 | 30 | 34 |
+| Takeaway | 116 | 83 | 92 |
+| Tiler | 143 | 126 | 139 |
+| Window Fitter | 15 | 12 | 14 |
+| **Total** | **2472** | **1640** | **2324** |
 
 ### All Leads (confirmed no website)
 
@@ -1685,8 +1685,13 @@ _Last updated: 2026-06-30 13:59 UTC — 1635 confirmed leads (no website) across
 | 1633 | Sarah Koyas Driving Instructor | Southend | Driving Instructor | +44 7917 872797  |  |
 | 1634 | The Automatic Driving Instructor | Southend | Driving Instructor | +44 7931 547730  |  |
 | 1635 | Innov8 Driving School | Southend | Driving Instructor | +44 7538 694125  |  |
+| 1636 | Bbk Brickwork Ltd | London | Bricklayer | +44 7583 090681  |  |
+| 1637 | Zawada Groundwork Company Gravesend, London | London | Groundworker | +44 7393 285858  |  |
+| 1638 | Bealine Groundworks Ltd | Manchester | Groundworker | +44 161 737 7517  |  |
+| 1639 | Manchester Landscaping | Manchester | Landscaper | +44 161 531 7595  |  |
+| 1640 | William Parratt Stonemasons | Birmingham | Stone Mason | +44 121 420 4610  |  |
 
-_Emails sent:  / 1635_
+_Emails sent:  / 1640_
 <!-- LEADS_END -->
 
 ---
