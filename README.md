@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-02 13:18 UTC — 1640 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-04 12:51 UTC — 1644 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
 | Barber | 207 | 126 | 189 |
 | Beauty Salon | 101 | 59 | 88 |
-| Bricklayer | 142 | 39 | 135 |
-| Carpenter | 106 | 31 | 104 |
-| Carpet Fitter | 68 | 58 | 66 |
+| Bricklayer | 143 | 39 | 136 |
+| Carpenter | 109 | 32 | 107 |
+| Carpet Fitter | 69 | 59 | 67 |
 | Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 70 | 67 | 67 |
-| Dryliner | 77 | 65 | 68 |
+| Driving Instructor | 71 | 67 | 68 |
+| Dryliner | 78 | 65 | 69 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 39 | 35 | 39 |
-| Gardener | 103 | 81 | 102 |
-| Gas Engineer | 34 | 26 | 32 |
+| Floor Layer | 40 | 35 | 40 |
+| Gardener | 104 | 81 | 103 |
+| Gas Engineer | 35 | 27 | 33 |
 | Glazier | 67 | 60 | 64 |
 | Groundworker | 95 | 61 | 81 |
 | Hairdresser | 99 | 66 | 92 |
 | Heating Engineer | 28 | 22 | 28 |
-| Hvac Engineer | 27 | 21 | 26 |
+| Hvac Engineer | 28 | 22 | 27 |
 | Joiner | 37 | 22 | 36 |
-| Landscaper | 18 | 16 | 18 |
+| Landscaper | 19 | 16 | 19 |
 | Locksmith | 39 | 36 | 39 |
 | Nail Salon | 165 | 111 | 158 |
 | Painter Decorator | 99 | 82 | 97 |
 | Paviour | 40 | 35 | 35 |
-| Plasterer | 122 | 93 | 115 |
+| Plasterer | 123 | 93 | 116 |
 | Plumber | 81 | 34 | 79 |
 | Roofer | 89 | 15 | 85 |
 | Scaffolder | 85 | 55 | 80 |
 | Stone Mason | 37 | 30 | 34 |
 | Takeaway | 116 | 83 | 92 |
-| Tiler | 143 | 126 | 139 |
+| Tiler | 144 | 126 | 140 |
 | Window Fitter | 15 | 12 | 14 |
-| **Total** | **2472** | **1640** | **2324** |
+| **Total** | **2486** | **1644** | **2338** |
 
 ### All Leads (confirmed no website)
 
@@ -1690,8 +1690,12 @@ _Last updated: 2026-07-02 13:18 UTC — 1640 confirmed leads (no website) across
 | 1638 | Bealine Groundworks Ltd | Manchester | Groundworker | +44 161 737 7517  |  |
 | 1639 | Manchester Landscaping | Manchester | Landscaper | +44 161 531 7595  |  |
 | 1640 | William Parratt Stonemasons | Birmingham | Stone Mason | +44 121 420 4610  |  |
+| 1641 | W.B Joinery & kitchen's | Newcastle | Carpenter | +44 7862 723719  |  |
+| 1642 | United Gas Engineering | Nottingham | Gas Engineer | +44 7576 230706  |  |
+| 1643 | Airflow Cooling | Sheffield | Hvac Engineer | +44 114 235 3575  |  |
+| 1644 | D&M Flooring | Cardiff | Carpet Fitter | +44 7809 894707  |  |
 
-_Emails sent:  / 1640_
+_Emails sent:  / 1644_
 <!-- LEADS_END -->
 
 ---
