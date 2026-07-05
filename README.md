@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-04 12:51 UTC — 1644 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-05 13:06 UTC — 1695 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 207 | 126 | 189 |
-| Beauty Salon | 101 | 59 | 88 |
-| Bricklayer | 143 | 39 | 136 |
-| Carpenter | 109 | 32 | 107 |
-| Carpet Fitter | 69 | 59 | 67 |
+| Barber | 214 | 133 | 196 |
+| Beauty Salon | 103 | 61 | 90 |
+| Bricklayer | 156 | 41 | 148 |
+| Carpenter | 120 | 33 | 117 |
+| Carpet Fitter | 76 | 60 | 73 |
 | Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 71 | 67 | 68 |
-| Dryliner | 78 | 65 | 69 |
+| Driving Instructor | 74 | 70 | 71 |
+| Dryliner | 84 | 67 | 75 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 40 | 35 | 40 |
-| Gardener | 104 | 81 | 103 |
-| Gas Engineer | 35 | 27 | 33 |
-| Glazier | 67 | 60 | 64 |
-| Groundworker | 95 | 61 | 81 |
-| Hairdresser | 99 | 66 | 92 |
-| Heating Engineer | 28 | 22 | 28 |
-| Hvac Engineer | 28 | 22 | 27 |
-| Joiner | 37 | 22 | 36 |
-| Landscaper | 19 | 16 | 19 |
-| Locksmith | 39 | 36 | 39 |
-| Nail Salon | 165 | 111 | 158 |
-| Painter Decorator | 99 | 82 | 97 |
-| Paviour | 40 | 35 | 35 |
-| Plasterer | 123 | 93 | 116 |
-| Plumber | 81 | 34 | 79 |
-| Roofer | 89 | 15 | 85 |
-| Scaffolder | 85 | 55 | 80 |
-| Stone Mason | 37 | 30 | 34 |
-| Takeaway | 116 | 83 | 92 |
-| Tiler | 144 | 126 | 140 |
-| Window Fitter | 15 | 12 | 14 |
-| **Total** | **2486** | **1644** | **2338** |
+| Floor Layer | 47 | 35 | 47 |
+| Gardener | 107 | 84 | 106 |
+| Gas Engineer | 37 | 27 | 35 |
+| Glazier | 72 | 60 | 69 |
+| Groundworker | 101 | 62 | 84 |
+| Hairdresser | 106 | 73 | 98 |
+| Heating Engineer | 29 | 22 | 29 |
+| Hvac Engineer | 31 | 23 | 29 |
+| Joiner | 41 | 23 | 39 |
+| Landscaper | 20 | 16 | 20 |
+| Locksmith | 42 | 38 | 42 |
+| Nail Salon | 167 | 113 | 159 |
+| Painter Decorator | 107 | 83 | 105 |
+| Paviour | 43 | 38 | 38 |
+| Plasterer | 134 | 95 | 127 |
+| Plumber | 83 | 35 | 81 |
+| Roofer | 90 | 15 | 86 |
+| Scaffolder | 92 | 56 | 86 |
+| Stone Mason | 42 | 32 | 39 |
+| Takeaway | 119 | 86 | 95 |
+| Tiler | 159 | 129 | 154 |
+| Window Fitter | 16 | 12 | 15 |
+| **Total** | **2635** | **1695** | **2475** |
 
 ### All Leads (confirmed no website)
 
@@ -1694,8 +1694,59 @@ _Last updated: 2026-07-04 12:51 UTC — 1644 confirmed leads (no website) across
 | 1642 | United Gas Engineering | Nottingham | Gas Engineer | +44 7576 230706  |  |
 | 1643 | Airflow Cooling | Sheffield | Hvac Engineer | +44 114 235 3575  |  |
 | 1644 | D&M Flooring | Cardiff | Carpet Fitter | +44 7809 894707  |  |
+| 1645 | JJ Builders (Yorkshire) | Bradford | Bricklayer | +44 7545 501546  |  |
+| 1646 | Wilson's Brickwork LTD | Coventry | Bricklayer | +44 7438 463752  |  |
+| 1647 | C&S Joinery & Building Ltd | Belfast | Carpenter | +44 7707 229537  |  |
+| 1648 | Hammer & Saw Joinery | Belfast | Joiner | — |  |
+| 1649 | Builder Leicester - Pride Groundworks & Building | Leicester | Groundworker | +44 7842 364876  |  |
+| 1650 | Patton Scaffolding | Belfast | Scaffolder | +44 7713 409542  |  |
+| 1651 | George The Plumber | Coventry | Plumber | +44 7424 703706  |  |
+| 1652 | A C D Engineering Ltd | Coventry | Hvac Engineer | +44 24 7666 7555  |  |
+| 1653 | MH Plastering | Bradford | Plasterer | +44 7704 390887  |  |
+| 1654 | C.J.A Plastering Services | Coventry | Plasterer | +44 7508 534366  |  |
+| 1655 | Kenny's painting & Decorating | Coventry | Painter Decorator | +44 7879 290049  |  |
+| 1656 | Star Bathrooms and Tiling | Leicester | Tiler | +44 7446 363888  |  |
+| 1657 | Blackstone Tiling | Bradford | Tiler | +44 7419 800901  |  |
+| 1658 | Martin McDowell Tiling Services | Belfast | Tiler | +44 7739 805250  |  |
+| 1659 | M S French Plastering & Dry Lining | Leicester | Dryliner | +44 7817 615080  |  |
+| 1660 | S Bagnall Dry Lining Ltd | Leicester | Dryliner | +44 1509 814876  |  |
+| 1661 | Arches Carpets | Belfast | Carpet Fitter | +44 28 9067 2177  |  |
+| 1662 | W Smith & Son | Coventry | Stone Mason | +44 24 7622 3431  |  |
+| 1663 | JH Builders | Coventry | Stone Mason | +44 24 7663 7324  |  |
+| 1664 | PURE LOCKSMITHS AND SUPPLIERS LTD | Bradford | Locksmith | +44 1274 950118  |  |
+| 1665 | Locksmith & Key Bradford LTD | Bradford | Locksmith | +44 1274 950017  |  |
+| 1666 | Yorkshire Driveways | Bradford | Paviour | +44 800 774 7208  |  |
+| 1667 | PT Paving LTD | Coventry | Paviour | +44 7494 126308  |  |
+| 1668 | Paving & Driveways | Leicester | Paviour | +44 800 696 5190  |  |
+| 1669 | Champ Barber | Leicester | Barber | +44 7480 946977  |  |
+| 1670 | Superstar Fade | Bradford | Barber | +44 7414 931560  |  |
+| 1671 | V2 barbershop | Coventry | Barber | +44 24 7509 6066  |  |
+| 1672 | Saif's Barber | Coventry | Barber | +44 7534 881003  |  |
+| 1673 | Perfection Turkish Barber | Belfast | Barber | +44 28 9508 3039  |  |
+| 1674 | City Kurdish Barbers | Belfast | Barber | +44 7365 797398  |  |
+| 1675 | Crumlin Turkish barber | Belfast | Barber | +44 7761 818402  |  |
+| 1676 | Nadia Hair & Beauty (Makeup Artist) | Bradford | Beauty Salon | +44 7426 167022  |  |
+| 1677 | Coventry Nails and Spa | Coventry | Nail Salon | — |  |
+| 1678 | Koi Nails & Spa | Coventry | Nail Salon | +44 7999 916668  |  |
+| 1679 | Black Beauty | Belfast | Beauty Salon | +44 28 9074 6904  |  |
+| 1680 | Hairbyhamda | Leicester | Hairdresser | — |  |
+| 1681 | Xoshk Salon | Leicester | Hairdresser | +44 116 507 6117  |  |
+| 1682 | So Hair Salon Coventry Branch | Coventry | Hairdresser | +44 7421 769979  |  |
+| 1683 | Fab61 Hair Salon | Coventry | Hairdresser | +44 24 7665 1561  |  |
+| 1684 | Cutting Crew | Coventry | Hairdresser | +44 24 7668 0857  |  |
+| 1685 | Sabir Hairdressers | Bradford | Hairdresser | +44 1274 547855  |  |
+| 1686 | Foreign Affair Hair Studio | Bradford | Hairdresser | +44 1274 637939  |  |
+| 1687 | Toronto Crispy Leicester | Leicester | Takeaway | +44 7517 651447  |  |
+| 1688 | Cravers The Taste of India | Coventry | Takeaway | +44 7818 845448  |  |
+| 1689 | 5 Akhis Coventry | Coventry | Takeaway | +44 24 7626 0000  |  |
+| 1690 | Root & Branch Tree and Garden Services | Belfast | Gardener | +44 7307 852155  |  |
+| 1691 | CL's Garden Maintenance | Bradford | Gardener | +44 7777 399995  |  |
+| 1692 | The mow and go | Bradford | Gardener | +44 7480 808391  |  |
+| 1693 | Sapphire Driving School - Driving Lessons Leicester | Leicester | Driving Instructor | +44 7890 568585  |  |
+| 1694 | Cross Roads Driving School | Leicester | Driving Instructor | +44 7749 133311  |  |
+| 1695 | A New Start Driving School | Belfast | Driving Instructor | +44 7990 762133  |  |
 
-_Emails sent:  / 1644_
+_Emails sent:  / 1695_
 <!-- LEADS_END -->
 
 ---
