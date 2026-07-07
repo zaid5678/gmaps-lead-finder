@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-05 13:06 UTC — 1695 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-07 13:35 UTC — 1697 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 214 | 133 | 196 |
-| Beauty Salon | 103 | 61 | 90 |
-| Bricklayer | 156 | 41 | 148 |
-| Carpenter | 120 | 33 | 117 |
+| Barber | 218 | 133 | 200 |
+| Beauty Salon | 104 | 61 | 91 |
+| Bricklayer | 158 | 42 | 150 |
+| Carpenter | 122 | 33 | 119 |
 | Carpet Fitter | 76 | 60 | 73 |
-| Cleaner | 63 | 44 | 63 |
-| Driving Instructor | 74 | 70 | 71 |
-| Dryliner | 84 | 67 | 75 |
+| Cleaner | 65 | 44 | 65 |
+| Driving Instructor | 75 | 70 | 72 |
+| Dryliner | 85 | 67 | 76 |
 | Electrician | 60 | 29 | 59 |
 | Floor Layer | 47 | 35 | 47 |
-| Gardener | 107 | 84 | 106 |
+| Gardener | 109 | 84 | 108 |
 | Gas Engineer | 37 | 27 | 35 |
 | Glazier | 72 | 60 | 69 |
-| Groundworker | 101 | 62 | 84 |
-| Hairdresser | 106 | 73 | 98 |
-| Heating Engineer | 29 | 22 | 29 |
+| Groundworker | 102 | 62 | 85 |
+| Hairdresser | 107 | 73 | 99 |
+| Heating Engineer | 30 | 23 | 30 |
 | Hvac Engineer | 31 | 23 | 29 |
-| Joiner | 41 | 23 | 39 |
-| Landscaper | 20 | 16 | 20 |
+| Joiner | 42 | 23 | 40 |
+| Landscaper | 21 | 16 | 21 |
 | Locksmith | 42 | 38 | 42 |
 | Nail Salon | 167 | 113 | 159 |
-| Painter Decorator | 107 | 83 | 105 |
-| Paviour | 43 | 38 | 38 |
-| Plasterer | 134 | 95 | 127 |
+| Painter Decorator | 108 | 83 | 106 |
+| Paviour | 44 | 38 | 39 |
+| Plasterer | 136 | 95 | 128 |
 | Plumber | 83 | 35 | 81 |
 | Roofer | 90 | 15 | 86 |
-| Scaffolder | 92 | 56 | 86 |
+| Scaffolder | 93 | 56 | 87 |
 | Stone Mason | 42 | 32 | 39 |
-| Takeaway | 119 | 86 | 95 |
-| Tiler | 159 | 129 | 154 |
+| Takeaway | 120 | 86 | 96 |
+| Tiler | 160 | 129 | 155 |
 | Window Fitter | 16 | 12 | 15 |
-| **Total** | **2635** | **1695** | **2475** |
+| **Total** | **2662** | **1697** | **2501** |
 
 ### All Leads (confirmed no website)
 
@@ -1745,8 +1745,10 @@ _Last updated: 2026-07-05 13:06 UTC — 1695 confirmed leads (no website) across
 | 1693 | Sapphire Driving School - Driving Lessons Leicester | Leicester | Driving Instructor | +44 7890 568585  |  |
 | 1694 | Cross Roads Driving School | Leicester | Driving Instructor | +44 7749 133311  |  |
 | 1695 | A New Start Driving School | Belfast | Driving Instructor | +44 7990 762133  |  |
+| 1696 | Shotter Brickwork & Garden Walls | Plymouth | Bricklayer | +44 7487 805635  |  |
+| 1697 | Coles Plumbing And Heating | Southampton | Heating Engineer | +44 7979 803014  |  |
 
-_Emails sent:  / 1695_
+_Emails sent:  / 1697_
 <!-- LEADS_END -->
 
 ---
