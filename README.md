@@ -9,20 +9,20 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-07 13:35 UTC — 1697 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-09 13:35 UTC — 1702 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 218 | 133 | 200 |
-| Beauty Salon | 104 | 61 | 91 |
-| Bricklayer | 158 | 42 | 150 |
-| Carpenter | 122 | 33 | 119 |
-| Carpet Fitter | 76 | 60 | 73 |
+| Barber | 219 | 133 | 201 |
+| Beauty Salon | 105 | 62 | 92 |
+| Bricklayer | 159 | 42 | 151 |
+| Carpenter | 124 | 33 | 121 |
+| Carpet Fitter | 78 | 60 | 75 |
 | Cleaner | 65 | 44 | 65 |
 | Driving Instructor | 75 | 70 | 72 |
-| Dryliner | 85 | 67 | 76 |
+| Dryliner | 86 | 67 | 77 |
 | Electrician | 60 | 29 | 59 |
-| Floor Layer | 47 | 35 | 47 |
+| Floor Layer | 48 | 35 | 48 |
 | Gardener | 109 | 84 | 108 |
 | Gas Engineer | 37 | 27 | 35 |
 | Glazier | 72 | 60 | 69 |
@@ -30,21 +30,21 @@ _Last updated: 2026-07-07 13:35 UTC — 1697 confirmed leads (no website) across
 | Hairdresser | 107 | 73 | 99 |
 | Heating Engineer | 30 | 23 | 30 |
 | Hvac Engineer | 31 | 23 | 29 |
-| Joiner | 42 | 23 | 40 |
-| Landscaper | 21 | 16 | 21 |
-| Locksmith | 42 | 38 | 42 |
-| Nail Salon | 167 | 113 | 159 |
-| Painter Decorator | 108 | 83 | 106 |
+| Joiner | 43 | 23 | 41 |
+| Landscaper | 22 | 16 | 22 |
+| Locksmith | 43 | 38 | 43 |
+| Nail Salon | 168 | 114 | 160 |
+| Painter Decorator | 109 | 83 | 107 |
 | Paviour | 44 | 38 | 39 |
-| Plasterer | 136 | 95 | 128 |
+| Plasterer | 140 | 96 | 132 |
 | Plumber | 83 | 35 | 81 |
 | Roofer | 90 | 15 | 86 |
 | Scaffolder | 93 | 56 | 87 |
 | Stone Mason | 42 | 32 | 39 |
 | Takeaway | 120 | 86 | 96 |
-| Tiler | 160 | 129 | 155 |
-| Window Fitter | 16 | 12 | 15 |
-| **Total** | **2662** | **1697** | **2501** |
+| Tiler | 162 | 130 | 156 |
+| Window Fitter | 17 | 13 | 16 |
+| **Total** | **2683** | **1702** | **2521** |
 
 ### All Leads (confirmed no website)
 
@@ -1747,8 +1747,13 @@ _Last updated: 2026-07-07 13:35 UTC — 1697 confirmed leads (no website) across
 | 1695 | A New Start Driving School | Belfast | Driving Instructor | +44 7990 762133  |  |
 | 1696 | Shotter Brickwork & Garden Walls | Plymouth | Bricklayer | +44 7487 805635  |  |
 | 1697 | Coles Plumbing And Heating | Southampton | Heating Engineer | +44 7979 803014  |  |
+| 1698 | Paul garner plastering services | Aberdeen | Plasterer | +44 7803 585913  |  |
+| 1699 | Kevin hunter excel tiling | Sunderland | Tiler | — |  |
+| 1700 | JDI Trade Frames Ltd | Sunderland | Window Fitter | +44 191 549 1474  |  |
+| 1701 | VIBE NAILS | Sunderland | Nail Salon | +44 7982 381666  |  |
+| 1702 | Dm beauty | Sunderland | Beauty Salon | +44 7415 179455  |  |
 
-_Emails sent:  / 1697_
+_Emails sent:  / 1702_
 <!-- LEADS_END -->
 
 ---
