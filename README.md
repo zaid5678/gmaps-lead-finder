@@ -9,7 +9,7 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-09 13:35 UTC — 1702 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-11 12:10 UTC — 1708 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
@@ -17,34 +17,34 @@ _Last updated: 2026-07-09 13:35 UTC — 1702 confirmed leads (no website) across
 | Beauty Salon | 105 | 62 | 92 |
 | Bricklayer | 159 | 42 | 151 |
 | Carpenter | 124 | 33 | 121 |
-| Carpet Fitter | 78 | 60 | 75 |
+| Carpet Fitter | 81 | 60 | 78 |
 | Cleaner | 65 | 44 | 65 |
-| Driving Instructor | 75 | 70 | 72 |
-| Dryliner | 86 | 67 | 77 |
-| Electrician | 60 | 29 | 59 |
+| Driving Instructor | 76 | 70 | 73 |
+| Dryliner | 88 | 68 | 79 |
+| Electrician | 62 | 29 | 61 |
 | Floor Layer | 48 | 35 | 48 |
-| Gardener | 109 | 84 | 108 |
+| Gardener | 110 | 84 | 109 |
 | Gas Engineer | 37 | 27 | 35 |
 | Glazier | 72 | 60 | 69 |
-| Groundworker | 102 | 62 | 85 |
+| Groundworker | 105 | 63 | 88 |
 | Hairdresser | 107 | 73 | 99 |
-| Heating Engineer | 30 | 23 | 30 |
-| Hvac Engineer | 31 | 23 | 29 |
-| Joiner | 43 | 23 | 41 |
-| Landscaper | 22 | 16 | 22 |
+| Heating Engineer | 31 | 23 | 31 |
+| Hvac Engineer | 32 | 24 | 29 |
+| Joiner | 44 | 23 | 42 |
+| Landscaper | 25 | 17 | 24 |
 | Locksmith | 43 | 38 | 43 |
 | Nail Salon | 168 | 114 | 160 |
-| Painter Decorator | 109 | 83 | 107 |
-| Paviour | 44 | 38 | 39 |
-| Plasterer | 140 | 96 | 132 |
+| Painter Decorator | 110 | 84 | 108 |
+| Paviour | 45 | 38 | 40 |
+| Plasterer | 143 | 96 | 135 |
 | Plumber | 83 | 35 | 81 |
 | Roofer | 90 | 15 | 86 |
-| Scaffolder | 93 | 56 | 87 |
+| Scaffolder | 95 | 56 | 89 |
 | Stone Mason | 42 | 32 | 39 |
 | Takeaway | 120 | 86 | 96 |
-| Tiler | 162 | 130 | 156 |
+| Tiler | 165 | 131 | 159 |
 | Window Fitter | 17 | 13 | 16 |
-| **Total** | **2683** | **1702** | **2521** |
+| **Total** | **2711** | **1708** | **2547** |
 
 ### All Leads (confirmed no website)
 
@@ -1752,8 +1752,14 @@ _Last updated: 2026-07-09 13:35 UTC — 1702 confirmed leads (no website) across
 | 1700 | JDI Trade Frames Ltd | Sunderland | Window Fitter | +44 191 549 1474  |  |
 | 1701 | VIBE NAILS | Sunderland | Nail Salon | +44 7982 381666  |  |
 | 1702 | Dm beauty | Sunderland | Beauty Salon | +44 7415 179455  |  |
+| 1703 | Premier landscaping and groundwork | Oxford | Groundworker | +44 7817 038916  |  |
+| 1704 | ALPINE MECHANICAL LIMITED | Swansea | Hvac Engineer | — |  |
+| 1705 | Robson Decorating Services | Peterborough | Painter Decorator | +44 7479 676419  |  |
+| 1706 | Mike O'Sullivan | Oxford | Tiler | +44 7831 569143  |  |
+| 1707 | Apex Drylining | Peterborough | Dryliner | +44 7368 484062  |  |
+| 1708 | Great Oak Landscaping Ltd | Oxford | Landscaper | +44 7928 385595  |  |
 
-_Emails sent:  / 1702_
+_Emails sent:  / 1708_
 <!-- LEADS_END -->
 
 ---
