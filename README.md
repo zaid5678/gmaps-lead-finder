@@ -9,42 +9,42 @@ Built for selling web development services to local businesses missing an online
 ## Current Leads
 
 <!-- LEADS_START -->
-_Last updated: 2026-07-11 12:10 UTC — 1708 confirmed leads (no website) across 31 categories_
+_Last updated: 2026-07-12 12:43 UTC — 1711 confirmed leads (no website) across 31 categories_
 
 | Category | Total scraped | Confirmed no website | With phone |
 |----------|:---:|:---:|:---:|
-| Barber | 219 | 133 | 201 |
-| Beauty Salon | 105 | 62 | 92 |
+| Barber | 223 | 133 | 205 |
+| Beauty Salon | 107 | 62 | 94 |
 | Bricklayer | 159 | 42 | 151 |
-| Carpenter | 124 | 33 | 121 |
-| Carpet Fitter | 81 | 60 | 78 |
-| Cleaner | 65 | 44 | 65 |
-| Driving Instructor | 76 | 70 | 73 |
-| Dryliner | 88 | 68 | 79 |
-| Electrician | 62 | 29 | 61 |
-| Floor Layer | 48 | 35 | 48 |
-| Gardener | 110 | 84 | 109 |
-| Gas Engineer | 37 | 27 | 35 |
-| Glazier | 72 | 60 | 69 |
+| Carpenter | 128 | 33 | 125 |
+| Carpet Fitter | 84 | 60 | 81 |
+| Cleaner | 66 | 44 | 65 |
+| Driving Instructor | 77 | 70 | 74 |
+| Dryliner | 90 | 68 | 81 |
+| Electrician | 64 | 29 | 63 |
+| Floor Layer | 49 | 35 | 49 |
+| Gardener | 111 | 84 | 110 |
+| Gas Engineer | 38 | 27 | 36 |
+| Glazier | 73 | 60 | 69 |
 | Groundworker | 105 | 63 | 88 |
-| Hairdresser | 107 | 73 | 99 |
+| Hairdresser | 108 | 73 | 100 |
 | Heating Engineer | 31 | 23 | 31 |
-| Hvac Engineer | 32 | 24 | 29 |
-| Joiner | 44 | 23 | 42 |
-| Landscaper | 25 | 17 | 24 |
-| Locksmith | 43 | 38 | 43 |
-| Nail Salon | 168 | 114 | 160 |
-| Painter Decorator | 110 | 84 | 108 |
+| Hvac Engineer | 33 | 24 | 30 |
+| Joiner | 46 | 23 | 44 |
+| Landscaper | 26 | 17 | 25 |
+| Locksmith | 44 | 38 | 44 |
+| Nail Salon | 169 | 114 | 161 |
+| Painter Decorator | 113 | 85 | 111 |
 | Paviour | 45 | 38 | 40 |
-| Plasterer | 143 | 96 | 135 |
-| Plumber | 83 | 35 | 81 |
+| Plasterer | 149 | 97 | 141 |
+| Plumber | 85 | 35 | 83 |
 | Roofer | 90 | 15 | 86 |
-| Scaffolder | 95 | 56 | 89 |
-| Stone Mason | 42 | 32 | 39 |
-| Takeaway | 120 | 86 | 96 |
-| Tiler | 165 | 131 | 159 |
+| Scaffolder | 98 | 56 | 92 |
+| Stone Mason | 43 | 32 | 40 |
+| Takeaway | 122 | 86 | 97 |
+| Tiler | 166 | 132 | 159 |
 | Window Fitter | 17 | 13 | 16 |
-| **Total** | **2711** | **1708** | **2547** |
+| **Total** | **2759** | **1711** | **2591** |
 
 ### All Leads (confirmed no website)
 
@@ -1758,8 +1758,11 @@ _Last updated: 2026-07-11 12:10 UTC — 1708 confirmed leads (no website) across
 | 1706 | Mike O'Sullivan | Oxford | Tiler | +44 7831 569143  |  |
 | 1707 | Apex Drylining | Peterborough | Dryliner | +44 7368 484062  |  |
 | 1708 | Great Oak Landscaping Ltd | Oxford | Landscaper | +44 7928 385595  |  |
+| 1709 | Frame Plastering & Rendering | Blackpool | Plasterer | +44 7496 980312  |  |
+| 1710 | A&T painters and decorators | Middlesbrough | Painter Decorator | +44 7395 263915  |  |
+| 1711 | MABERO porcelain & stone | Bournemouth | Tiler | — |  |
 
-_Emails sent:  / 1708_
+_Emails sent:  / 1711_
 <!-- LEADS_END -->
 
 ---
